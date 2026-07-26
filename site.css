@@ -82,7 +82,12 @@ section{padding:76px 0}
 /* Сетки */
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.grid5{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.grid5{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+.grid5>*{grid-column:span 2}
+.grid5>*:nth-child(4),.grid5>*:nth-child(5){grid-column:span 3}
+.grid5 .card{padding:20px 18px}
+.grid5 .card p{font-size:.86rem}
+.only-m{display:none}
 .nails3{grid-template-columns:repeat(3,1fr)}
 .card{background:var(--linen);border:1px solid var(--line);border-radius:8px;padding:26px 24px}
 .card h3{margin-bottom:8px}
@@ -202,6 +207,7 @@ footer .fine{margin-top:44px;padding-top:20px;border-top:1px solid rgba(242,237,
   section{padding:52px 0}
   .grid2,.grid3,.split,.diagrow{grid-template-columns:1fr}
   .grid5{grid-template-columns:1fr 1fr}
+  .grid5>*,.grid5>*:nth-child(4),.grid5>*:nth-child(5){grid-column:auto}
   .nails3{grid-template-columns:1fr 1fr}
   .mosaic{grid-template-columns:1fr 1fr;grid-auto-rows:160px}
   .nails,.spheres{grid-template-columns:1fr 1fr}
@@ -210,12 +216,17 @@ footer .fine{margin-top:44px;padding-top:20px;border-top:1px solid rgba(242,237,
 }
 @media (max-width:600px){
   .bignum{display:none}
+  .only-d{display:none}
+  .only-m{display:block}
+  .chiplist span{font-size:.78rem;padding:6px 12px}
   .poster h3{font-size:1.5rem;overflow-wrap:break-word}
   .timeline{display:none}
   .timeline-m{display:block}
 }
 @media (max-width:480px){
-  .nails,.nails2,.nails3,.grid5{grid-template-columns:1fr}
+  .nails,.nails2,.nails3{grid-template-columns:1fr}
+  .grid5{grid-template-columns:1fr}
+  .grid5>*,.grid5>*:nth-child(4),.grid5>*:nth-child(5){grid-column:auto}
   footer .cols{grid-template-columns:1fr}
   .btn{padding:14px 20px;font-size:.92rem}
   .hero .acts .btn{width:100%;text-align:center}
