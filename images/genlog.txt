@@ -1,0 +1,45 @@
+OK /Users/q8111706yandex.ru/Documents/Чижовы-Настоящие-отношения/chizhovy/images/gid-hero.png | gen4_image | 1920:1080
+[gen_image] не получилось сгенерировать: Error code: 400 - {'error': 'Validation of body failed', 'issues': [{'code': 'invalid_value', 'values': ['1024:1024', '1080:1080', '1168:880', '1360:768', '1440:1080', '1080:1440', '1808:768', '1920:1080', '1080:1920', '2112:912', '1280:720', '720:1280', '720:720', '960:720', '720:960', '1680:720'], 'path': ['ratio'], 'message': 'Invalid option: expected one of "1024:1024"|"1080:1080"|"1168:880"|"1360:768"|"1440:1080"|"1080:1440"|"1808:768"|"1920:1080"|"1080:1920"|"2112:912"|"1280:720"|"720:1280"|"720:720"|"960:720"|"720:960"|"1680:720"'}], 'docUrl': 'https://docs.dev.runwayml.com/api'}
+[gen_image] не получилось сгенерировать: Error code: 400 - {'error': 'Validation of body failed', 'issues': [{'code': 'invalid_value', 'values': ['1024:1024', '1080:1080', '1168:880', '1360:768', '1440:1080', '1080:1440', '1808:768', '1920:1080', '1080:1920', '2112:912', '1280:720', '720:1280', '720:720', '960:720', '720:960', '1680:720'], 'path': ['ratio'], 'message': 'Invalid option: expected one of "1024:1024"|"1080:1080"|"1168:880"|"1360:768"|"1440:1080"|"1080:1440"|"1808:768"|"1920:1080"|"1080:1920"|"2112:912"|"1280:720"|"720:1280"|"720:720"|"960:720"|"720:960"|"1680:720"'}], 'docUrl': 'https://docs.dev.runwayml.com/api'}
+[gen_image] не получилось сгенерировать: Error code: 400 - {'error': 'Validation of body failed', 'issues': [{'code': 'invalid_value', 'values': ['1024:1024', '1080:1080', '1168:880', '1360:768', '1440:1080', '1080:1440', '1808:768', '1920:1080', '1080:1920', '2112:912', '1280:720', '720:1280', '720:720', '960:720', '720:960', '1680:720'], 'path': ['ratio'], 'message': 'Invalid option: expected one of "1024:1024"|"1080:1080"|"1168:880"|"1360:768"|"1440:1080"|"1080:1440"|"1808:768"|"1920:1080"|"1080:1920"|"2112:912"|"1280:720"|"720:1280"|"720:720"|"960:720"|"720:960"|"1680:720"'}], 'docUrl': 'https://docs.dev.runwayml.com/api'}
+[gen_image] не получилось сгенерировать: Error code: 400 - {'error': 'Validation of body failed', 'issues': [{'code': 'invalid_value', 'values': ['1024:1024', '1080:1080', '1168:880', '1360:768', '1440:1080', '1080:1440', '1808:768', '1920:1080', '1080:1920', '2112:912', '1280:720', '720:1280', '720:720', '960:720', '720:960', '1680:720'], 'path': ['ratio'], 'message': 'Invalid option: expected one of "1024:1024"|"1080:1080"|"1168:880"|"1360:768"|"1440:1080"|"1080:1440"|"1808:768"|"1920:1080"|"1080:1920"|"2112:912"|"1280:720"|"720:1280"|"720:720"|"960:720"|"720:960"|"1680:720"'}], 'docUrl': 'https://docs.dev.runwayml.com/api'}
+OK /Users/q8111706yandex.ru/Documents/Чижовы-Настоящие-отношения/chizhovy/images/gid-cta.png | gen4_image | 1808:768
+OK /Users/q8111706yandex.ru/Documents/Чижовы-Настоящие-отношения/chizhovy/images/site-hero.png | gen4_image | 1920:1080
+[gen_image] не получилось сгенерировать: Error code: 400 - {'error': 'Validation of body failed', 'issues': [{'code': 'invalid_value', 'values': ['1024:1024', '1080:1080', '1168:880', '1360:768', '1440:1080', '1080:1440', '1808:768', '1920:1080', '1080:1920', '2112:912', '1280:720', '720:1280', '720:720', '960:720', '720:960', '1680:720'], 'path': ['ratio'], 'message': 'Invalid option: expected one of "1024:1024"|"1080:1080"|"1168:880"|"1360:768"|"1440:1080"|"1080:1440"|"1808:768"|"1920:1080"|"1080:1920"|"2112:912"|"1280:720"|"720:1280"|"720:720"|"960:720"|"720:960"|"1680:720"'}], 'docUrl': 'https://docs.dev.runwayml.com/api'}
+OK /Users/q8111706yandex.ru/Documents/Чижовы-Настоящие-отношения/chizhovy/images/site-m1.png | gen4_image | 1168:880
+[gen_image] не получилось сгенерировать: Error code: 400 - {'error': 'Validation of body failed', 'issues': [{'code': 'invalid_value', 'values': ['1024:1024', '1080:1080', '1168:880', '1360:768', '1440:1080', '1080:1440', '1808:768', '1920:1080', '1080:1920', '2112:912', '1280:720', '720:1280', '720:720', '960:720', '720:960', '1680:720'], 'path': ['ratio'], 'message': 'Invalid option: expected one of "1024:1024"|"1080:1080"|"1168:880"|"1360:768"|"1440:1080"|"1080:1440"|"1808:768"|"1920:1080"|"1080:1920"|"2112:912"|"1280:720"|"720:1280"|"720:720"|"960:720"|"720:960"|"1680:720"'}], 'docUrl': 'https://docs.dev.runwayml.com/api'}
+OK /Users/q8111706yandex.ru/Documents/Чижовы-Настоящие-отношения/chizhovy/images/site-dark.png | gen4_image | 1808:768
+[gen_image] не получилось сгенерировать: Error code: 400 - {'error': 'Validation of body failed', 'issues': [{'code': 'invalid_value', 'values': ['1024:1024', '1080:1080', '1168:880', '1360:768', '1440:1080', '1080:1440', '1808:768', '1920:1080', '1080:1920', '2112:912', '1280:720', '720:1280', '720:720', '960:720', '720:960', '1680:720'], 'path': ['ratio'], 'message': 'Invalid option: expected one of "1024:1024"|"1080:1080"|"1168:880"|"1360:768"|"1440:1080"|"1080:1440"|"1808:768"|"1920:1080"|"1080:1920"|"2112:912"|"1280:720"|"720:1280"|"720:720"|"960:720"|"720:960"|"1680:720"'}], 'docUrl': 'https://docs.dev.runwayml.com/api'}
+OK /Users/q8111706yandex.ru/Documents/Чижовы-Настоящие-отношения/chizhovy/images/gid-zapis.png | gen4_image | 1360:768
+OK /Users/q8111706yandex.ru/Documents/Чижовы-Настоящие-отношения/chizhovy/images/gid-ustalost.png | gen4_image | 1360:768
+OK /Users/q8111706yandex.ru/Documents/Чижовы-Настоящие-отношения/chizhovy/images/gid-tochka-a.png | gen4_image | 1360:768
+OK /Users/q8111706yandex.ru/Documents/Чижовы-Настоящие-отношения/chizhovy/images/gid-posle.png | gen4_image | 1360:768
+OK /Users/q8111706yandex.ru/Documents/Чижовы-Настоящие-отношения/chizhovy/images/site-metod.png | gen4_image | 1360:768
+OK /Users/q8111706yandex.ru/Documents/Чижовы-Настоящие-отношения/chizhovy/images/site-sessiya.png | gen4_image | 1360:768
+OK /Users/q8111706yandex.ru/Documents/Чижовы-Настоящие-отношения/chizhovy/images/site-para-itog.png | gen4_image | 1360:768
+OK /Users/q8111706yandex.ru/Documents/Чижовы-Настоящие-отношения/chizhovy/images/gid-hero.png | gen4_image | 1920:1080
+OK /Users/q8111706yandex.ru/Documents/Чижовы-Настоящие-отношения/chizhovy/images/gid-posle.png | gen4_image | 1360:768
+Traceback (most recent call last):
+  File "/Users/q8111706yandex.ru/.claude/skills/site-panel/scripts/gen_image.py", line 79, in <module>
+    main()
+    ~~~~^^
+  File "/Users/q8111706yandex.ru/.claude/skills/site-panel/scripts/gen_image.py", line 60, in main
+    ).wait_for_task_output(timeout=600)
+      ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.14/site-packages/runwayml/lib/polling.py", line 97, in wait_for_task_output
+    raise TaskFailedError(task_details)
+runwayml.TaskFailedError: Task failed
+OK /Users/q8111706yandex.ru/Documents/Чижовы-Настоящие-отношения/chizhovy/images/site-para-itog.png | gen4_image | 1360:768
+OK /Users/q8111706yandex.ru/Documents/Чижовы-Настоящие-отношения/chizhovy/images/site-sessiya.png | gen4_image | 1360:768
+OK images/gid-hero.png | gen4_image | 1920:1080
+OK images/metod-scena.png | gen4_image | 1360:768
+Traceback (most recent call last):
+  File "/Users/q8111706yandex.ru/.claude/skills/site-panel/scripts/gen_image.py", line 79, in <module>
+    main()
+    ~~~~^^
+  File "/Users/q8111706yandex.ru/.claude/skills/site-panel/scripts/gen_image.py", line 60, in main
+    ).wait_for_task_output(timeout=600)
+      ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.14/site-packages/runwayml/lib/polling.py", line 97, in wait_for_task_output
+    raise TaskFailedError(task_details)
+runwayml.TaskFailedError: Task failed
