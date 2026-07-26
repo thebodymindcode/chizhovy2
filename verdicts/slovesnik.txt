@@ -1,0 +1,74 @@
+ГОТОВО
+СЛОВЕСНИК: правка повторов и ритма, chizhovy2, 26.07.2026
+
+detektor.py по каждой странице (burstiness / маркеры / тире / negX):
+bezopasnost                      burstiness(CV)=0.51 маркеры/1000=0.0 тире=0 negX=1 
+dlya-predprinimatelej            burstiness(CV)=0.50 маркеры/1000=0.0 тире=0 negX=0 
+dlya-zhenshchin                  burstiness(CV)=0.55 маркеры/1000=0.0 тире=0 negX=0 
+glavnaya                         burstiness(CV)=0.53 маркеры/1000=0.0 тире=0 negX=1 
+istoki-est-transformaciya        burstiness(CV)=0.54 маркеры/1000=0.0 тире=0 negX=0 
+istoki-goddard                   burstiness(CV)=0.65 маркеры/1000=0.0 тире=0 negX=0 
+istoki-moreno-psihodrama         burstiness(CV)=0.51 маркеры/1000=0.0 тире=0 negX=1 
+istoki-nauka                     burstiness(CV)=0.50 маркеры/1000=0.0 тире=0 negX=1 
+istoki-zeland-transerfing        burstiness(CV)=0.52 маркеры/1000=0.0 тире=0 negX=1 
+istoki                           burstiness(CV)=0.58 маркеры/1000=0.0 тире=0 negX=0 
+istorii-komanda-mir              burstiness(CV)=0.53 маркеры/1000=0.0 тире=0 negX=0 
+istorii-predprinimatel           burstiness(CV)=0.52 маркеры/1000=0.0 тире=0 negX=1 
+istorii                          burstiness(CV)=0.52 маркеры/1000=0.0 тире=0 negX=0 
+kak-prohodit                     burstiness(CV)=0.50 маркеры/1000=0.0 тире=0 negX=1 
+kontakty                         burstiness(CV)=0.61 маркеры/1000=0.0 тире=0 negX=0 
+manifest                         burstiness(CV)=0.54 маркеры/1000=0.0 тире=0 negX=0 
+marafon                          burstiness(CV)=0.50 маркеры/1000=0.0 тире=0 negX=1 
+metod                            burstiness(CV)=0.50 маркеры/1000=0.0 тире=0 negX=1 
+modul-1                          burstiness(CV)=0.53 маркеры/1000=0.0 тире=0 negX=0 
+modul-2                          burstiness(CV)=0.52 маркеры/1000=0.0 тире=0 negX=0 
+otzyvy                           burstiness(CV)=0.53 маркеры/1000=0.0 тире=0 negX=0 
+para                             burstiness(CV)=0.50 маркеры/1000=0.0 тире=0 negX=1 
+praktiki                         burstiness(CV)=0.52 маркеры/1000=0.0 тире=0 negX=1 
+programma                        burstiness(CV)=0.53 маркеры/1000=0.0 тире=0 negX=0 
+sessiya                          burstiness(CV)=0.54 маркеры/1000=0.0 тире=0 negX=0 
+slovar                           burstiness(CV)=0.50 маркеры/1000=0.0 тире=0 negX=1 
+somneniya                        burstiness(CV)=0.50 маркеры/1000=0.0 тире=0 negX=1 
+soobshchestvo                    burstiness(CV)=0.53 маркеры/1000=0.0 тире=0 negX=1 
+start                            burstiness(CV)=0.50 маркеры/1000=0.0 тире=0 negX=0 
+stati                            burstiness(CV)=0.57 маркеры/1000=0.0 тире=0 negX=0 
+tehniki-sceny                    burstiness(CV)=0.51 маркеры/1000=0.0 тире=0 negX=0 
+vedushchie                       burstiness(CV)=0.51 маркеры/1000=0.0 тире=0 negX=0 
+voprosy                          burstiness(CV)=0.52 маркеры/1000=0.0 тире=0 negX=0 
+
+dubli.py: BODY-ПОВТОРЫ
+bezopasnost                      BODY-ПОВТОРЫ: 0
+dlya-predprinimatelej            BODY-ПОВТОРЫ: 0
+dlya-zhenshchin                  BODY-ПОВТОРЫ: 0
+glavnaya                         BODY-ПОВТОРЫ: 0
+istoki-est-transformaciya        BODY-ПОВТОРЫ: 0
+istoki-goddard                   BODY-ПОВТОРЫ: 0
+istoki-moreno-psihodrama         BODY-ПОВТОРЫ: 0
+istoki-nauka                     BODY-ПОВТОРЫ: 0
+istoki-zeland-transerfing        BODY-ПОВТОРЫ: 0
+istoki                           BODY-ПОВТОРЫ: 0
+istorii-komanda-mir              BODY-ПОВТОРЫ: 1
+istorii-predprinimatel           BODY-ПОВТОРЫ: 1
+istorii                          BODY-ПОВТОРЫ: 0
+kak-prohodit                     BODY-ПОВТОРЫ: 0
+kontakty                         BODY-ПОВТОРЫ: 0
+manifest                         BODY-ПОВТОРЫ: 0
+marafon                          BODY-ПОВТОРЫ: 0
+metod                            BODY-ПОВТОРЫ: 3
+modul-1                          BODY-ПОВТОРЫ: 0
+modul-2                          BODY-ПОВТОРЫ: 0
+otzyvy                           BODY-ПОВТОРЫ: 3
+para                             BODY-ПОВТОРЫ: 0
+praktiki                         BODY-ПОВТОРЫ: 0
+programma                        BODY-ПОВТОРЫ: 0
+sessiya                          BODY-ПОВТОРЫ: 0
+slovar                           BODY-ПОВТОРЫ: 0
+somneniya                        BODY-ПОВТОРЫ: 0
+soobshchestvo                    BODY-ПОВТОРЫ: 0
+start                            BODY-ПОВТОРЫ: 0
+stati                            BODY-ПОВТОРЫ: 0
+tehniki-sceny                    BODY-ПОВТОРЫ: 0
+vedushchie                       BODY-ПОВТОРЫ: 0
+voprosy                          BODY-ПОВТОРЫ: 0
+
+redkie.py: все 33 страницы РЕДКИХ СЛОВ: 0
