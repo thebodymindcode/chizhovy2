@@ -1330,7 +1330,7 @@ P["otzyvy/index.html"] = ("Истории учеников · Настоящие
 <div class="grid2" style="margin-top:26px">
 <div class="card">{icon('cups')}<h3>Отношения</h3><p class="serif" style="font-style:italic;color:var(--ink)">«Вместо эмоций решила стать вкладом в&nbsp;отношения, говорить с&nbsp;уважением и&nbsp;любовью. И&nbsp;вот первые ростки».</p></div>
 <div class="card">{icon('ceiling','var(--sage-deep)')}<h3>Дело и&nbsp;достаток</h3><p class="serif" style="font-style:italic;color:var(--ink)">«Деньги начали приходить, энергии много, и&nbsp;я&nbsp;умею ей&nbsp;распоряжаться. Цели кратно увеличились, научился играть в&nbsp;долгую».</p></div>
-<div class="card">{icon('route','var(--sand)')}<h3>Решения</h3><p class="serif" style="font-style:italic;color:var(--ink)">«Научился играть в&nbsp;долгую, стал меньше суетиться. Появились новые направления, которые я&nbsp;развиваю».</p></div>
+<div class="card">{icon('route','var(--sand)')}<h3>Решения</h3><p class="serif" style="font-style:italic;color:var(--ink)">«Вчера писала намерение, а&nbsp;сегодня отследила, что оно сбылось. Яркая и&nbsp;расслабленная жизнь это моё».</p></div>
 <div class="card">{icon('people')}<h3>Окружение</h3><p class="serif" style="font-style:italic;color:var(--ink)">«Когда убираю фокус с&nbsp;себя и&nbsp;вовлечён в&nbsp;команду, энергия кратно растёт, и&nbsp;люди поворачиваются ко&nbsp;мне&nbsp;лицом».</p></div>
 </div>
 <p style="margin-top:26px"><a class="btn btn-ghost" href="/chizhovy2/istorii/">Полные истории целиком</a></p>
@@ -1377,7 +1377,7 @@ P["sessiya/index.html"] = ("Собеседование в школу · Наст
 "Час живого разговора о твоей ситуации: как проходит, что спрашивают, что будет после. Для читателей сайта бесплатно.", "sessiya", f"""
 <div class="hero short"><div class="bg" style="background-image:url('/chizhovy2/images/site-sessiya.png')"></div><div class="veil"></div>
 <div class="in"><p class="eyebrow">Первый шаг</p><h1>Собеседование в&nbsp;школу</h1>
-<p class="lead">Час живого разговора о&nbsp;твоей ситуации. Знакомимся, смотрим, что происходит, и&nbsp;вместе решаем, по&nbsp;пути ли&nbsp;нам. Для&nbsp;читателей сайта бесплатно.</p>
+<p class="lead">Час живого разговора о&nbsp;твоей ситуации. Знакомимся, разбираемся вместе и&nbsp;решаем, по&nbsp;пути ли&nbsp;нам. Для&nbsp;читателей сайта бесплатно.</p>
 <div class="acts"><a class="btn btn-copper" href="https://t.me/+LVptSH6Mt4hhYmFi">Записаться</a><a class="btn btn-ghost" href="#kak">Что будет на&nbsp;разговоре</a></div>
 </div></div>
 
@@ -1816,7 +1816,7 @@ P["istorii/komanda-mir/index.html"] = ("Девяносто дней команд
 "Как выглядит Марафон изнутри: утренние намерения, вечерние благодарности и команда, голосами участников.", "otzyvy", f"""
 <div class="hero short"><div class="bg" style="background-image:url('/chizhovy2/images/real/real-10.jpg')"></div><div class="veil"></div>
 <div class="in"><p class="eyebrow">Марафон изнутри</p><h1>Девяносто дней команды «МИР»</h1>
-<p class="lead">Осень 2022&nbsp;года, пятнадцать человек, третий модуль «Создатель реальности». Три месяца: каждую неделю встреча с&nbsp;Алексеем и&nbsp;Ириной, каждый день практика. Ниже их&nbsp;история, собранная из&nbsp;живого командного&nbsp;чата.</p></div></div>
+<p class="lead">Осень 2022&nbsp;года, пятнадцать человек, третий модуль «Создатель реальности». Три месяца: раз в&nbsp;неделю разбор с&nbsp;Алексеем и&nbsp;Ириной, между ними ежедневная практика. Ниже их&nbsp;история, собранная из&nbsp;живого командного&nbsp;чата.</p></div></div>
 
 <section><div class="wrap">
 <!-- ПРОТОТИП: цитаты из закрытого чата, согласие авторов получено до публикации -->
