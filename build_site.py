@@ -424,7 +424,7 @@ FOOTER = """<footer><div class="wrap">
 <a href="/chizhovy2/gid/">Гайд «Кто пишет сценарий твоей жизни»</a>
 <a href="/chizhovy2/stati/">Статьи школы</a>
 <a href="/chizhovy2/somneniya/">Частые сомнения</a>
-<a href="/chizhovy2/bezopasnost/">Безопасность и&nbsp;границы</a>
+<a href="/chizhovy2/bezopasnost/" style="white-space:nowrap">Безопасность и&nbsp;границы</a>
 <a href="/chizhovy2/sessiya/">Собеседование</a>
 <a href="/chizhovy2/kontakty/">Контакты</a>
 <a href="https://t.me/+LVptSH6Mt4hhYmFi">Telegram-канал</a>
@@ -537,7 +537,7 @@ P["index.html"] = ("Настоящие отношения · школа тран
 <div class="gap">3-5 недель интеграции</div>
 <div class="tm"><div class="c">II</div><div><b>Внутренняя свобода</b><span>5 дней очно</span></div></div>
 <div class="gap">3-5 недель интеграции</div>
-<div class="tm last"><div class="c">III</div><div><b>Создатель реальности</b><span>3 месяца в&nbsp;жизни, результаты остаются</span></div></div>
+<div class="tm last"><div class="c">III</div><div><b>Создатель реальности</b><span>3 месяца в&nbsp;жизни, результаты&nbsp;остаются</span></div></div>
 </div>
 <div class="grid3" style="margin-top:26px">
 <div class="card white"><div class="ph" style="aspect-ratio:4/3;margin-bottom:18px"><img src="/chizhovy2/images/site-m1.png" alt="Утро, женщина пишет в дневник у окна" loading="lazy"></div><h3>I. Возвращение к&nbsp;себе</h3><p>Увидеть свои паттерны, установки и&nbsp;то, откуда они родом. Первый честный контакт с&nbsp;собой.</p><p style="margin-top:12px"><a href="/chizhovy2/modul-1/">Про первый модуль</a></p></div>
@@ -604,7 +604,7 @@ P["index.html"] = ("Настоящие отношения · школа тран
 <a href="/chizhovy2/istoki/zeland-transerfing/">{ICONS['loop']}<div><b>Вадим Зеланд и&nbsp;трансерфинг</b><span>маятники, важность, зеркало мира</span></div></a>
 <a href="/chizhovy2/istoki/est-transformaciya/">{ICONS['flame']}<div><b>est и&nbsp;«Трансформация» Рейнхарта</b><span>откуда пошли тренинги погружения</span></div></a>
 <a href="/chizhovy2/istoki/goddard/">{ICONS['sunrise']}<div><b>Невилл Годдард</b><span>состояние уже сбывшегося</span></div></a>
-<a href="/chizhovy2/istoki/nauka/">{ICONS['book']}<div><b>Наука за&nbsp;методом</b><span>ЛеДу, Гоулман, Болте&nbsp;Тейлор, Голвитцер</span></div></a>
+<a href="/chizhovy2/istoki/nauka/">{ICONS['book']}<div><b>Наука за&nbsp;методом</b><span>ЛеДу, Гоулман, Болте&nbsp;Тейлор,&nbsp;Голвитцер</span></div></a>
 </div>
 </div>
 </div></section>
@@ -643,8 +643,8 @@ P["metod/index.html"] = ("Метод школы · Настоящие отнош
 </div>
 <div class="wrap"><div class="nails nails3" style="margin-top:26px">
 <div class="nail"><b>95%</b><span>дня человек живёт на&nbsp;автопилоте привычных&nbsp;реакций</span></div>
-<div class="nail"><b>12&nbsp;мс</b><span>фора эмоционального мозга перед думающим (ЛеДу)</span></div>
-<div class="nail"><b>90&nbsp;сек</b><span>живёт химия эмоции, если её&nbsp;не&nbsp;кормить (Болте&nbsp;Тейлор)</span></div>
+<div class="nail"><b>12&nbsp;мс</b><span>фора эмоционального мозга перед&nbsp;думающим (ЛеДу)</span></div>
+<div class="nail"><b>90&nbsp;сек</b><span>живёт химия эмоции, если&nbsp;её&nbsp;не&nbsp;кормить (Болте&nbsp;Тейлор)</span></div>
 </div></div></section>
 
 <section class="dark"><div class="wrap">
@@ -685,8 +685,8 @@ P["metod/index.html"] = ("Метод школы · Настоящие отнош
 </div>
 <div class="grid5" style="margin-top:30px" id="psy-steps">
 <div class="card"><span class="bignum">1</span><h3>Запрос</h3><p>Называешь сцену, которая держит: ссора, разговор, который откладываешь годами, момент из&nbsp;детства.</p></div>
-<div class="card"><span class="bignum">2</span><h3>Сцена</h3><p>Участники группы становятся героями твоей истории. Пространство зала превращается в&nbsp;ту&nbsp;кухню, тот кабинет, тот двор.</p></div>
-<div class="card"><span class="bignum">3</span><h3>Проживание</h3><p>Говоришь из&nbsp;себя настоящего то, что тогда осталось несказанным. Тело включается раньше слов, и&nbsp;это правильно.</p></div>
+<div class="card"><span class="bignum">2</span><h3>Сцена</h3><p>Участники группы становятся героями твоей истории. Пространство зала превращается в&nbsp;ту&nbsp;кухню, тот кабинет, тот&nbsp;двор.</p></div>
+<div class="card"><span class="bignum">3</span><h3>Проживание</h3><p>Говоришь из&nbsp;себя настоящего то, что тогда осталось несказанным. Тело включается раньше слов, и&nbsp;это&nbsp;правильно.</p></div>
 <div class="card"><span class="bignum">4</span><h3>Обмен ролями</h3><p>Встаёшь на&nbsp;место другого: отца, партнёра, себя-ребёнка. Сцена, которую ты&nbsp;носил годами, впервые видна целиком.</p></div>
 <div class="card"><span class="bignum">5</span><h3>Новое решение</h3><p>Прямо в&nbsp;сцене принимаешь другое решение. Теперь оно записано так&nbsp;же глубоко, как старое: телом и&nbsp;эмоцией.</p></div>
 </div>
@@ -732,9 +732,9 @@ P["metod/index.html"] = ("Метод школы · Настоящие отнош
 <p class="eyebrow">Три опоры результата</p>
 <h2>Почему изменения остаются</h2>
 <div class="grid3" style="margin-top:26px">
-<div class="card">{icon('layers')}<h3>Глубина</h3><p>Очные модули по&nbsp;несколько дней: время дойти до&nbsp;причины, а&nbsp;не&nbsp;снять симптом.</p></div>
+<div class="card">{icon('layers')}<h3>Глубина</h3><p>Очные модули по&nbsp;несколько дней: время дойти до&nbsp;причины, а&nbsp;не&nbsp;снять&nbsp;симптом.</p></div>
 <div class="card">{icon('people','var(--sage-deep)')}<h3>Группа</h3><p>Малая группа, каждого знаем по&nbsp;имени. В&nbsp;чужих историях узнаёшь свою, в&nbsp;своих перестаёшь быть один.</p></div>
-<div class="card">{icon('calendar','var(--sand)')}<h3>Практика</h3><p>Три месяца сопровождения: новые реакции закрепляются действиями в&nbsp;обычной жизни, пока не&nbsp;станут своими.</p></div>
+<div class="card">{icon('calendar','var(--sand)')}<h3>Практика</h3><p>Три месяца сопровождения: новые реакции закрепляются действиями в&nbsp;обычной жизни, пока не&nbsp;станут&nbsp;своими.</p></div>
 </div>
 </div></section>
 
@@ -826,7 +826,7 @@ P["marafon/index.html"] = ("Модуль III. Создатель реально�
 <div class="card white">{icon('target')}<h3>Реальные цели</h3><p>Работа идёт на&nbsp;твоих живых задачах: дело, деньги, отношения, тело. Результат меряем фактами, не&nbsp;ощущениями.</p></div>
 
 <div class="pull"><div class="q">«Раньше я&nbsp;отсеивал людей по&nbsp;уровню жизни. Сейчас просто строю настоящие отношения, и&nbsp;люди вокруг собрались такие, что доходы выросли сами.»</div><div class="who">Выпускник Марафона, предприниматель</div></div>
-<p><strong>Результат: новые действия и&nbsp;новые результаты.</strong> Не&nbsp;состояние после тренинга, а&nbsp;жизнь, которая продолжает расти, когда сопровождение&nbsp;закончилось.</p>
+<p><strong>Результат: новые действия и&nbsp;новые результаты.</strong> Не&nbsp;состояние после тренинга, а&nbsp;жизнь, которая продолжает расти,&nbsp;когда сопровождение закончилось.</p>
 </div></section>
 
 <section style="padding-top:0"><div class="wrap">
@@ -917,7 +917,7 @@ P["otzyvy/index.html"] = ("Истории учеников · Настоящие
 </div>
 <div class="card white">
 <p class="eyebrow" style="margin-bottom:10px">Выпускница Марафона</p>
-<p style="margin-bottom:0">«Полгода не&nbsp;могла решиться на&nbsp;поездку, даже паспорт найти не&nbsp;могла. После работы в&nbsp;группе просто приняла решение внутри, и&nbsp;всё сложилось за&nbsp;день. Мелочь? Для меня это была первая за&nbsp;годы вещь, сделанная для себя».</p>
+<p style="margin-bottom:0">«Полгода не&nbsp;могла решиться на&nbsp;поездку, даже паспорт найти не&nbsp;могла. После работы в&nbsp;группе просто приняла решение внутри, и&nbsp;всё сложилось за&nbsp;день. Мелочь? Для&nbsp;меня это была первая за&nbsp;годы вещь, сделанная для&nbsp;себя».</p>
 </div>
 
 <p style="margin-bottom:22px"><a class="btn btn-ghost" href="/chizhovy2/istorii/">Полные истории: с&nbsp;точкой&nbsp;А и&nbsp;переломом</a></p>
@@ -1242,7 +1242,7 @@ P["istoki/goddard/index.html"] = ("Невилл Годдард · Истоки �
 <p style="font-size:.72rem;font-weight:800;letter-spacing:.16em;color:rgba(242,237,228,.55);margin-bottom:8px">ПРИВЫЧНЫЙ ХОД</p>
 <div class="card" style="margin-bottom:14px"><p style="margin:0">хочу и&nbsp;прошу → жду и&nbsp;сомневаюсь → всё как вчера</p></div>
 <p style="font-size:.72rem;font-weight:800;letter-spacing:.16em;color:#D08A5F;margin-bottom:8px">ХОД ГОДДАРДА</p>
-<div class="card" style="background:#6E3B4B;border-color:#6E3B4B"><p style="margin:0;color:#FAF5F0;font-weight:700">живу состоянием итога → решаю и&nbsp;действую иначе → события меняются</p></div>
+<div class="card" style="background:#6E3B4B;border-color:#6E3B4B"><p style="margin:0;color:#FAF5F0;font-weight:700">живу состоянием итога → решаю и&nbsp;действую иначе → события&nbsp;меняются</p></div>
 </div></section>
 {istoki_dalee(("/chizhovy2/istoki/zeland-transerfing/", "Зеланд и трансерфинг"), ("/chizhovy2/istoki/nauka/", "Наука за методом"), ("/chizhovy2/marafon/", "Марафон: 90 дней практики"))}
 {MOST}
@@ -1256,7 +1256,7 @@ P["istoki/nauka/index.html"] = ("Наука за методом · Истоки 
 
 <section><div class="wrap"><div class="nails nails3" style="margin-bottom:26px">
 <div class="nail"><b>12&nbsp;мс</b><span>фора эмоционального мозга перед&nbsp;думающим</span></div>
-<div class="nail"><b>90&nbsp;сек</b><span>живёт химия эмоции, если её&nbsp;не&nbsp;кормить</span></div>
+<div class="nail"><b>90&nbsp;сек</b><span>живёт химия эмоции, если&nbsp;её&nbsp;не&nbsp;кормить</span></div>
 <div class="nail"><b>100&nbsp;лет</b><span>групповой сцене&nbsp;Морено</span></div>
 </div></div>
 <div class="narrow">
@@ -1369,7 +1369,7 @@ P["istorii/komanda-mir/index.html"] = ("Девяносто дней команд
 
 <h2 style="margin-top:34px">Что происходило с&nbsp;людьми</h2>
 <p>У&nbsp;каждого своя история внутри общей. Одна участница полгода не&nbsp;могла решиться на&nbsp;поездку, даже паспорт не&nbsp;находился: после работы в&nbsp;группе приняла решение внутри, и&nbsp;всё сложилось за&nbsp;день, паспорт нашёлся, тур куплен. Другой заметил: стоит убрать фокус с&nbsp;себя и&nbsp;вложиться в&nbsp;команду, энергия кратно растёт, и&nbsp;люди поворачиваются&nbsp;лицом.</p>
-<div class="pull"><div class="q">«Намерение это когда я&nbsp;знаю, что в&nbsp;моей жизни возможно только так. В&nbsp;чём я&nbsp;так была уверена по&nbsp;жизни, всё сбылось.»</div><div class="who">Участница команды «МИР»</div></div>
+<div class="pull"><div class="q">«Намерение это когда я&nbsp;знаю, что в&nbsp;моей жизни возможно только так. В&nbsp;чём я&nbsp;так была уверена по&nbsp;жизни, всё&nbsp;сбылось.»</div><div class="who">Участница команды «МИР»</div></div>
 <p>К&nbsp;финалу модуля в&nbsp;чате появились слова, ради которых школа и&nbsp;работает: «жизнь становится легче и&nbsp;лучше, пусть пока в&nbsp;мелочах, но&nbsp;я&nbsp;это вижу». Перемены приходят малым и&nbsp;остаются, потому что их&nbsp;держат девяносто дней&nbsp;практики.</p>
 <p class="note">Цитаты из&nbsp;закрытого командного чата, публикуются с&nbsp;согласия участников. Имена убраны. Результат у&nbsp;каждого свой.</p>
 </div></section>
@@ -1445,8 +1445,8 @@ P["dlya-predprinimatelej/index.html"] = ("Для предпринимателе�
 <div class="grid2" style="margin-top:24px">
 <div class="card">{icon('ceiling')}<h3>Потолок в&nbsp;деле</h3><p>Рывки вверх быстро выравниваются обратно. Цифра оборота годами почти одна, и&nbsp;рынок тут ни&nbsp;при&nbsp;чём: держит старая запись.</p></div>
 <div class="card">{icon('shield','var(--sand)')}<h3>Держать лицо</h3><p>Просить о&nbsp;помощи стыдно, показывать усталость нельзя. Панцирь, который когда-то спасал, теперь просто тяжёлый.</p></div>
-<div class="card">{icon('gear','var(--sage-deep)')}<h3>Решения из&nbsp;страха</h3><p>Суета, перестраховка, откладывание больших ходов. Он&nbsp;шепчет тише жадности, но&nbsp;рулит чаще.</p></div>
-<div class="card">{icon('cups')}<h3>Дом на&nbsp;остатке батареи</h3><p>Семье достаётся остаток после дела. Обычно он&nbsp;мал, и&nbsp;все это чувствуют.</p></div>
+<div class="card">{icon('gear','var(--sage-deep)')}<h3>Решения из&nbsp;страха</h3><p>Суета, перестраховка, откладывание больших ходов. Он&nbsp;шепчет тише жадности, но&nbsp;рулит&nbsp;чаще.</p></div>
+<div class="card">{icon('cups')}<h3>Дом на&nbsp;остатке батареи</h3><p>Семье достаётся остаток после дела. Обычно он&nbsp;мал, и&nbsp;все это&nbsp;чувствуют.</p></div>
 </div>
 <div class="pull"><div class="q">«Я&nbsp;понимал крах, но&nbsp;не&nbsp;понимал, как начать снова и&nbsp;где найти силы.»</div><div class="who">Из истории ученика-предпринимателя</div></div>
 <p>Один из&nbsp;наших учеников пришёл ровно из&nbsp;этой точки: кассовый разрыв, долги, отвернувшиеся друзья. Его полная история, с&nbsp;сопротивлением и&nbsp;переломом, опубликована с&nbsp;его согласия: <a href="/chizhovy2/istorii/predprinimatel/">заново после дна</a>.</p>
@@ -1474,10 +1474,10 @@ P["dlya-zhenshchin/index.html"] = ("Для женщин · Настоящие о
 <section><div class="narrow">
 <h2>С чем приходят чаще всего</h2>
 <div class="grid2" style="margin-top:24px">
-<div class="card">{icon('loop')}<h3>Один сценарий с&nbsp;разными людьми</h3><p>Мужчины разные, финал одинаковый. Значит, общий знаменатель не&nbsp;в&nbsp;них: сценарий приходит с&nbsp;тобой, и&nbsp;его можно переписать.</p></div>
+<div class="card">{icon('loop')}<h3>Один сценарий с&nbsp;разными людьми</h3><p>Мужчины разные, финал одинаковый. Значит, общий знаменатель не&nbsp;в&nbsp;них: сценарий приходит с&nbsp;тобой, и&nbsp;его можно&nbsp;переписать.</p></div>
 <div class="card">{icon('cups','var(--sand)')}<h3>Быт вместо близости</h3><p>Календарь общий, разговоры про логистику. Не&nbsp;ссоритесь, потому что&nbsp;незачем. А&nbsp;хочется, чтобы снова было о&nbsp;чём молчать вдвоём.</p></div>
 <div class="card">{icon('flame','var(--sage-deep)')}<h3>Чувства под анестезией</h3><p>Научилась обезболивать и&nbsp;не&nbsp;слышать себя. Снаружи «всё нормально», внутри давно тихо и&nbsp;пусто.</p></div>
-<div class="card">{icon('speech')}<h3>Сказать и&nbsp;не&nbsp;быть услышанной</h3><p>Просьбы звучат как упрёки, разговоры кончаются глухой стеной. Дело не&nbsp;в&nbsp;словах: в&nbsp;состоянии, из&nbsp;которого они сказаны.</p></div>
+<div class="card">{icon('speech')}<h3>Сказать и&nbsp;не&nbsp;быть услышанной</h3><p>Просьбы звучат как упрёки, разговоры кончаются глухой стеной. Дело не&nbsp;в&nbsp;словах: в&nbsp;состоянии, из&nbsp;которого они&nbsp;сказаны.</p></div>
 </div>
 <div class="pull"><div class="q">«Теперь знаю, что могу быть яркой, настоящей, звонкой, сама по&nbsp;себе.»</div><div class="who">Участница второго модуля</div></div>
 </div></section>
@@ -1510,12 +1510,12 @@ P["kak-prohodit/index.html"] = ("Как проходит обучение · Н�
 <div class="gap">3-5 недель интеграции</div>
 <div class="tm"><div class="c">II</div><div><b>Внутренняя свобода</b><span>5 дней очно</span></div></div>
 <div class="gap">3-5 недель интеграции</div>
-<div class="tm last"><div class="c">III</div><div><b>Создатель реальности</b><span>3 месяца в&nbsp;жизни, результаты остаются</span></div></div>
+<div class="tm last"><div class="c">III</div><div><b>Создатель реальности</b><span>3 месяца в&nbsp;жизни, результаты&nbsp;остаются</span></div></div>
 </div>
 <div class="grid3" style="margin-top:26px">
-<div class="card"><span class="bignum">0</span>{icon('speech')}<h3>Собеседование</h3><p>Час живого разговора: твоя ситуация, честный взгляд и&nbsp;решение с&nbsp;двух сторон, по&nbsp;пути&nbsp;ли нам. Для читателей сайта&nbsp;бесплатно.</p></div>
+<div class="card"><span class="bignum">0</span>{icon('speech')}<h3>Собеседование</h3><p>Час живого разговора: твоя ситуация, честный взгляд и&nbsp;решение с&nbsp;двух сторон, по&nbsp;пути&nbsp;ли нам. Для&nbsp;читателей сайта бесплатно.</p></div>
 <div class="card"><span class="bignum">1-2</span>{icon('people','var(--sage-deep)')}<h3>Очные модули</h3><p>Погружение на&nbsp;несколько дней: сцены, разборы, работа с&nbsp;состоянием в&nbsp;группе 10-20 человек. Между модулями недели интеграции: новое проверяется обычной жизнью.</p></div>
-<div class="card"><span class="bignum">3</span>{icon('calendar','var(--sand)')}<h3>Марафон</h3><p>Три месяца практики в&nbsp;настоящей жизни: команда, еженедельные разборы с&nbsp;ведущими, ежедневные <a href="/chizhovy2/praktiki/">практики</a>.</p></div>
+<div class="card"><span class="bignum">3</span>{icon('calendar','var(--sand)')}<h3>Марафон</h3><p>Три месяца практики в&nbsp;настоящей жизни: команда, еженедельные разборы с&nbsp;ведущими, ежедневные&nbsp;<a href="/chizhovy2/praktiki/">практики</a>.</p></div>
 </div>
 </div></section>
 
@@ -1523,7 +1523,7 @@ P["kak-prohodit/index.html"] = ("Как проходит обучение · Н�
 <h2>Что происходит в&nbsp;зале</h2>
 <p>Ядро работы: <a href="/chizhovy2/istoki/moreno-psihodrama/">живая сцена</a>. Ты&nbsp;называешь ситуацию, которая держит, группа помогает её&nbsp;построить, и&nbsp;разговор, который не&nbsp;случился в&nbsp;жизни, происходит здесь. Рядом разборы, работа с&nbsp;состоянием и&nbsp;простые практики, которые остаются с&nbsp;тобой после зала.</p>
 <p>Глубина всегда добровольна: никто не&nbsp;вытаскивает силой, темп каждый выбирает сам. Обычно уже к&nbsp;вечеру первого дня группа перестаёт быть чужой: у&nbsp;людей одинаковые боли, и&nbsp;в&nbsp;чужой истории ты&nbsp;узнаёшь свою. Подробнее о&nbsp;рамках: <a href="/chizhovy2/bezopasnost/">безопасность и&nbsp;границы</a>.</p>
-<div class="pull"><div class="q">«Ты получишь ровно ту&nbsp;порцию, которая нужна именно сейчас.»</div><div class="who">Слова выпускника новичкам</div></div>
+<div class="pull"><div class="q">«Ты получишь ровно ту&nbsp;порцию, которая нужна именно&nbsp;сейчас.»</div><div class="who">Слова выпускника новичкам</div></div>
 </div></section>
 {FINCTA}
 """)
@@ -1538,12 +1538,12 @@ P["praktiki/index.html"] = ("Ежедневные практики · Насто
 <section><div class="narrow">
 <div class="timeline-m" style="display:block;margin-bottom:26px">
 <div class="tm"><div class="c" style="background:var(--sand);color:#1B1410">У</div><div><b>Утро: намерение</b><span>из какого состояния иду в&nbsp;день и&nbsp;что создаю</span></div></div>
-<div class="gap">днём: замечать маятники, снимать важность</div>
+<div class="gap">днём: замечать маятники, снимать&nbsp;важность</div>
 <div class="tm last"><div class="c">В</div><div><b>Вечер: открытия и&nbsp;благодарности</b><span>что понял за&nbsp;день, за&nbsp;что спасибо</span></div></div>
 </div>
 
 <h2>Практики по&nbsp;одной</h2>
-<div class="card white" style="margin:20px 0 12px">{icon('route')}<h3>Намерение на&nbsp;день</h3><p>Утром формулируешь не&nbsp;список дел, а&nbsp;состояние и&nbsp;фокус: «в&nbsp;моей жизни возможно только так». Желание просит, намерение спокойно&nbsp;знает. Научная опора: <a href="/chizhovy2/istoki/nauka/">Голвитцер о&nbsp;силе намерения</a>.</p></div>
+<div class="card white" style="margin:20px 0 12px">{icon('route')}<h3>Намерение на&nbsp;день</h3><p>Утром формулируешь не&nbsp;список дел, а&nbsp;состояние и&nbsp;фокус: «в&nbsp;моей жизни возможно только так». Желание просит, намерение спокойно&nbsp;знает. Научная опора: <a href="/chizhovy2/istoki/nauka/">Голвитцер о&nbsp;силе&nbsp;намерения</a>.</p></div>
 <div class="card white" style="margin-bottom:12px">{icon('pendulum','var(--sage-deep)')}<h3>Выход из&nbsp;маятников</h3><p>Днём замечаешь, что кормится твоей реакцией: скандал, лента, чужая паника. Заметил крючок, не&nbsp;схватился, сохранил энергию. Словами ученика: «отследил, не&nbsp;среагировал, удержал состояние весь день».</p></div>
 <div class="card white" style="margin-bottom:12px">{icon('ceiling','var(--sand)')}<h3>Снятие важности</h3><p>Где вцепился, там и&nbsp;заклинило: раздутая ставка включает страх. Снял важность, вернулась лёгкость: переговоры, свидания, большие решения идут иначе.</p></div>
 <div class="card white" style="margin-bottom:12px">{icon('people')}<h3>Быть вкладом</h3><p>Развернуть фокус с&nbsp;«что мне дадут» на&nbsp;«что я&nbsp;даю». Участники отмечают: энергия от&nbsp;этого прибывает, и&nbsp;люди поворачиваются лицом.</p></div>
@@ -1563,16 +1563,16 @@ P["manifest/index.html"] = ("Манифест школы · Настоящие �
 
 <section><div class="narrow">
 <div class="pull" style="margin-top:0"><div class="q">«У&nbsp;нас не&nbsp;было идеальной истории. Было непонимание, ошибки, потери, моменты, где казалось: дальше некуда. Именно там началось настоящее.»</div><div class="who">Алексей и&nbsp;Ирина Чижовы</div></div>
-<p>Школу ведёт пара, которая семнадцать лет строит свои отношения: с&nbsp;бытом, кризисами и&nbsp;выходами из&nbsp;них. Поэтому здесь не&nbsp;учат жить и&nbsp;не&nbsp;мотивируют со&nbsp;сцены. Здесь разбираются вместе: почему ты&nbsp;реагируешь так, как реагируешь, и&nbsp;что с&nbsp;этим делать по-настоящему.</p>
+<p>Школу ведёт пара, которая семнадцать лет строит свои отношения: с&nbsp;бытом, кризисами и&nbsp;выходами из&nbsp;них. Поэтому здесь не&nbsp;учат жить и&nbsp;не&nbsp;мотивируют со&nbsp;сцены. Здесь разбираются вместе: почему ты&nbsp;реагируешь так, как реагируешь, и&nbsp;что с&nbsp;этим делать&nbsp;по‑настоящему.</p>
 </div></section>
 
 <section class="dark"><div class="wrap">
 <p class="eyebrow">Принципы, которые не&nbsp;продаются</p>
 <h2>На чём стоим</h2>
 <div class="grid2" style="margin-top:26px">
-<div class="card">{icon('target','var(--copper)')}<h3>Отбор важнее выручки</h3><p>Вход через собеседование, и&nbsp;это фильтр, а&nbsp;не&nbsp;формальность. Отговорить можем так&nbsp;же честно, как пригласить.</p></div>
+<div class="card">{icon('target','var(--copper)')}<h3>Отбор важнее выручки</h3><p>Вход через собеседование, и&nbsp;это фильтр, а&nbsp;не&nbsp;формальность. Отговорить можем так&nbsp;же честно, как&nbsp;пригласить.</p></div>
 <div class="card">{icon('people','var(--copper)')}<h3>Камерность важнее масштаба</h3><p>Группы 10-20 человек, каждого знаем по&nbsp;имени. Расти будем числом групп, зал большим не&nbsp;станет.</p></div>
-<div class="card">{icon('speech','var(--copper)')}<h3>Честность важнее красоты</h3><p>Истории учеников публикуем с&nbsp;согласия и&nbsp;без глянца, результат у&nbsp;каждого свой. Истоки метода <a href="/chizhovy2/istoki/" style="color:#D08A5F">называем открыто</a>.</p></div>
+<div class="card">{icon('speech','var(--copper)')}<h3>Честность важнее красоты</h3><p>Истории учеников публикуем с&nbsp;согласия и&nbsp;без глянца, результат у&nbsp;каждого свой. Истоки метода <a href="/chizhovy2/istoki/" style="color:#D08A5F">называем&nbsp;открыто</a>.</p></div>
 <div class="card">{icon('mountain','var(--copper)')}<h3>Глубина важнее скорости</h3><p>Мы&nbsp;за&nbsp;работу с&nbsp;причиной, поэтому формат длинный: погружение, интеграция, сопровождение. Быстрых чудес не&nbsp;обещаем.</p></div>
 </div>
 </div></section>
@@ -1608,12 +1608,12 @@ P["soobshchestvo/index.html"] = ("Сообщество выпускников ·
 
 <section><div class="narrow">
 <h2>Во что превращается группа</h2>
-<div class="grid3" style="margin-top:24px">
-<div class="card">{icon('people')}<h3>Команда</h3><p>На&nbsp;Марафоне группа становится командой с&nbsp;общей целью и&nbsp;напарником у&nbsp;каждого. Такой уровень окружения многим встречается впервые.</p></div>
-<div class="card">{icon('flame','var(--sand)')}<h3>Забеги</h3><p>Команды выходят на&nbsp;старты вместе с&nbsp;Алексеем: тело быстро выдаёт, где ты&nbsp;себя обманываешь, и&nbsp;честно радуется, когда ты&nbsp;настоящий.</p></div>
-<div class="card">{icon('cups','var(--sage-deep)')}<h3>Свои люди</h3><p>Выпускники дружат домами, делают дела вместе и&nbsp;приводят в&nbsp;школу близких: сарафан у&nbsp;нас главный канал с&nbsp;первого года.</p></div>
 </div>
-</div></section>
+<div class="wrap"><div class="grid3" style="margin-top:24px">
+<div class="card">{icon('people')}<h3>Команда</h3><p>На&nbsp;Марафоне группа становится командой с&nbsp;общей целью и&nbsp;напарником у&nbsp;каждого. Такой уровень окружения многим встречается&nbsp;впервые.</p></div>
+<div class="card">{icon('flame','var(--sand)')}<h3>Забеги</h3><p>Команды выходят на&nbsp;старты вместе с&nbsp;Алексеем: тело быстро выдаёт, где ты&nbsp;себя обманываешь, и&nbsp;честно радуется, когда ты&nbsp;настоящий.</p></div>
+<div class="card">{icon('cups','var(--sage-deep)')}<h3>Свои люди</h3><p>Выпускники дружат домами, делают дела вместе и&nbsp;приводят в&nbsp;школу близких: сарафан у&nbsp;нас главный канал с&nbsp;первого&nbsp;года.</p></div>
+</div></div></section>
 
 <section style="padding-top:0"><div class="wrap">
 <p class="eyebrow">Живые кадры</p>
@@ -1637,9 +1637,9 @@ P["start/index.html"] = ("С чего начать · Настоящие отн�
 <p class="lead">Не&nbsp;нужно сразу решаться на&nbsp;модуль. Вот короткий маршрут: каждый шаг бесплатный, добровольный и&nbsp;что-то проясняет.</p></div></div>
 
 <section><div class="narrow">
-<div class="card white" style="margin-bottom:12px"><span class="bignum">01</span>{icon('book')}<h3>Прочитай гайд</h3><p>«Кто пишет сценарий твоей жизни»: главное ядро метода в&nbsp;одном выпуске, с&nbsp;самодиагностикой. Полчаса чтения, чтобы примерить механику на&nbsp;себя. <a href="/chizhovy2/gid/">Читать гайд</a></p></div>
-<div class="card white" style="margin-bottom:12px"><span class="bignum">02</span>{icon('lens','var(--sage-deep)')}<h3>Осмотрись</h3><p>Как устроен <a href="/chizhovy2/metod/">метод</a> и&nbsp;<a href="/chizhovy2/kak-prohodit/">путь ученика</a>, из&nbsp;чего <a href="/chizhovy2/istoki/">собран подход</a>, что говорят <a href="/chizhovy2/istorii/">люди в&nbsp;историях</a>. Всё открыто, без «узнаете на&nbsp;вебинаре».</p></div>
-<div class="card white"><span class="bignum">03</span>{icon('speech','var(--sand)')}<h3>Приходи на&nbsp;собеседование</h3><p>Час живого разговора о&nbsp;твоей ситуации: честный взгляд со&nbsp;стороны и&nbsp;понятный следующий шаг. Для читателей сайта&nbsp;бесплатно. <a href="/chizhovy2/sessiya/">Записаться</a></p></div>
+<div class="card white" style="margin-bottom:12px"><span class="bignum">01</span>{icon('book')}<h3>Прочитай гайд</h3><p>«Кто пишет сценарий твоей жизни»: главное ядро метода в&nbsp;одном выпуске, с&nbsp;самодиагностикой. Полчаса чтения, чтобы примерить механику на&nbsp;себя. <a href="/chizhovy2/gid/">Читать&nbsp;гайд</a></p></div>
+<div class="card white" style="margin-bottom:12px"><span class="bignum">02</span>{icon('lens','var(--sage-deep)')}<h3>Осмотрись</h3><p>Как устроен <a href="/chizhovy2/metod/">метод</a> и&nbsp;<a href="/chizhovy2/kak-prohodit/">путь ученика</a>, из&nbsp;чего <a href="/chizhovy2/istoki/">собран подход</a>, что говорят <a href="/chizhovy2/istorii/">люди в&nbsp;историях</a>. Всё открыто, без&nbsp;«узнаете на&nbsp;вебинаре».</p></div>
+<div class="card white"><span class="bignum">03</span>{icon('speech','var(--sand)')}<h3>Приходи на&nbsp;собеседование</h3><p>Час живого разговора о&nbsp;твоей ситуации: честный взгляд со&nbsp;стороны и&nbsp;понятный следующий шаг. Для&nbsp;читателей сайта бесплатно. <a href="/chizhovy2/sessiya/">Записаться</a></p></div>
 <p class="note" style="margin-top:18px">Дальше всё по&nbsp;порядку: <a href="/chizhovy2/programma/">программа из&nbsp;трёх модулей</a>, между ними интеграция, после: Марафон и&nbsp;сообщество.</p>
 </div></section>
 {FINCTA}
@@ -1671,7 +1671,7 @@ P["tehniki-sceny/index.html"] = ("Техники сцены · Настоящи�
 
 <section><div class="narrow">
 <div class="card white" style="margin-bottom:12px">{icon('people')}<h3>Обмен ролями</h3><p>Встаёшь на&nbsp;место другого человека из&nbsp;своей сцены и&nbsp;отвечаешь себе его словами. Пять минут в&nbsp;чужой роли показывают то, что годами не&nbsp;видно из&nbsp;своей: почему он&nbsp;молчит, чего она боится, что на&nbsp;самом деле стоит за&nbsp;фразой, которая тебя ранит.</p></div>
-<div class="card white" style="margin-bottom:12px">{icon('speech','var(--sage-deep)')}<h3>Дублирование</h3><p>Человек из&nbsp;группы становится рядом и&nbsp;договаривает то, что ты&nbsp;чувствуешь, но&nbsp;не&nbsp;решаешься произнести. Когда невысказанное впервые звучит вслух, тело отзывается сразу: значит, попали.</p></div>
+<div class="card white" style="margin-bottom:12px">{icon('speech','var(--sage-deep)')}<h3>Дублирование</h3><p>Человек из&nbsp;группы становится рядом и&nbsp;договаривает то, что ты&nbsp;чувствуешь, но&nbsp;не&nbsp;решаешься произнести. Когда невысказанное впервые звучит вслух, тело отзывается сразу: значит,&nbsp;попали.</p></div>
 <div class="card white" style="margin-bottom:12px">{icon('mirror','var(--sand)')}<h3>Зеркало</h3><p>Выходишь из&nbsp;собственной сцены и&nbsp;смотришь её&nbsp;со&nbsp;стороны, как зритель. Так впервые видно сценарий целиком: где включилась старая запись и&nbsp;в&nbsp;какой момент финал стал предрешён.</p></div>
 <div class="card white" style="margin-bottom:12px">{icon('cups')}<h3>Пустой стул</h3><p>Напротив ставится стул, и&nbsp;на&nbsp;нём «сидит» тот, с&nbsp;кем разговор так и&nbsp;не&nbsp;случился: отец, бывший, ты&nbsp;сам из&nbsp;прошлого. Разговор, отложенный на&nbsp;годы, происходит здесь, и&nbsp;у&nbsp;него наконец появляется финал.</p></div>
 <div class="card white">{icon('sunrise','var(--sage-deep)')}<h3>Новое решение</h3><p>Кульминация сцены: в&nbsp;точке, где когда-то было принято старое решение, ты&nbsp;принимаешь другое. Оно записывается так&nbsp;же глубоко, как прежнее: телом и&nbsp;эмоцией, поэтому и&nbsp;держится.</p></div>
@@ -1704,7 +1704,7 @@ P["somneniya/index.html"] = ("Частые сомнения · Настоящи�
 P["stati/index.html"] = ("Статьи школы · Настоящие отношения",
 "Библиотека школы: разборы про отношения, состояние, сценарии, трансерфинг и психодраму языком метода.", "stati", f"""
 <div class="hero short"><div class="bg" style="background-image:url('/chizhovy2/images/stati-hero.png')"></div><div class="veil"></div>
-<div class="in"><p class="eyebrow">Библиотека школы</p><h1 style="font-size:clamp(2rem,5.5vw,3.7rem)">Статьи, после которых что‑то&nbsp;щёлкает</h1>
+<div class="in"><p class="eyebrow">Библиотека школы</p><h1 style="font-size:clamp(2rem,5.5vw,3.7rem)">Статьи, после&nbsp;которых что‑то&nbsp;щёлкает</h1>
 <p class="lead">Разборы болей, с&nbsp;которыми приходят в&nbsp;школу: почему ссоры идут по&nbsp;кругу, куда уходят силы и&nbsp;кто на&nbsp;самом деле пишет твой сценарий. Языком метода, с&nbsp;опорой на&nbsp;науку.</p></div></div>
 
 <section><div class="wrap">
@@ -1727,7 +1727,7 @@ P["stati/index.html"] = ("Статьи школы · Настоящие отно
 
 <section class="center" style="padding-top:0"><div class="narrow" style="text-align:center">
 <h2>Пока библиотека растёт</h2>
-<p class="sub" style="margin:0 auto 26px">Главное ядро метода уже собрано в&nbsp;бесплатном гайде «Кто пишет сценарий твоей жизни». А&nbsp;живые вопросы можно принести на&nbsp;собеседование: для читателей сайта оно бесплатное.</p>
+<p class="sub" style="margin:0 auto 26px">Главное ядро метода уже собрано в&nbsp;бесплатном гайде «Кто пишет сценарий твоей жизни». А&nbsp;живые вопросы можно принести на&nbsp;собеседование: для&nbsp;читателей сайта оно бесплатное.</p>
 <p><a class="btn btn-wine" href="/chizhovy2/gid/">Читать гайд</a> <a class="btn btn-ghost" href="/chizhovy2/sessiya/" style="margin-left:8px">Записаться на&nbsp;собеседование</a></p>
 </div></section>
 """)
