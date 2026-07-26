@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 # Сборщик прототипа сайта «Настоящие отношения». v2: иконки, инфографика, журнальная сетка.
+import re
 import pathlib
 
 ROOT = pathlib.Path(__file__).parent
@@ -137,10 +138,14 @@ img{max-width:100%;display:block}
 a{color:var(--wine)}
 .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
 .narrow{max-width:720px;margin:0 auto;padding:0 24px}
-h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.2;text-wrap:balance;margin:0 0 .5em}
+h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;line-height:1.2;text-wrap:balance;margin:0 0 .5em}
+/* Держим последнюю пару слов заголовка вместе там, где она влезает в колонку */
+.kp{white-space:nowrap}@media (max-width:920px){.kp{white-space:normal}}
+.kpm{white-space:nowrap}@media (max-width:399px){.kpm{white-space:normal}}
 h2{font-size:clamp(1.7rem,4vw,2.3rem);font-weight:600}
 h3{font-size:1.22rem;font-weight:600}
 p{margin:0 0 1.1em}
+p,li,figcaption,blockquote,dd,dt,summary,td,th{text-wrap:pretty}
 section{padding:76px 0}
 .eyebrow{font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--wine);margin:0 0 16px;display:flex;align-items:center;gap:10px}
 .eyebrow::before{content:'';width:26px;height:2px;background:var(--sand)}
@@ -151,7 +156,8 @@ section{padding:76px 0}
 .btn-wine{background:var(--wine);color:#FAF5F0}.btn-wine:hover{background:var(--wine-deep)}
 .btn-ghost{color:var(--wine);border:1.5px solid var(--wine)}
 .btn-copper{background:var(--copper);color:#1B1410}
-.dark .btn-ghost{color:var(--ntext);border-color:rgba(242,237,228,.5)}
+.dark .btn-ghost,.hero .btn-ghost{color:var(--ntext);border-color:rgba(242,237,228,.5)}
+.hero .btn-ghost:hover{background:rgba(242,237,228,.12)}
 
 /* Иконки */
 .icwrap{display:inline-flex;width:46px;height:46px;align-items:center;justify-content:center;border-radius:10px;background:rgba(110,59,75,.07);margin-bottom:16px}
@@ -185,13 +191,14 @@ section{padding:76px 0}
 .menu>a:hover,.mi:hover>.mtop,.mi.on>.mtop{color:var(--wine);background:rgba(110,59,75,.06)}
 .menu>a.on{color:var(--wine)}
 .mi{position:relative}
-.sub{position:absolute;top:calc(100% + 6px);left:-4px;min-width:274px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px;box-shadow:0 26px 50px -28px rgba(50,45,43,.55);opacity:0;visibility:hidden;transform:translateY(7px);transition:opacity .2s ease,transform .2s ease,visibility .2s;z-index:60}
+.msub{position:absolute;top:calc(100% + 6px);left:-4px;min-width:274px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px;box-shadow:0 26px 50px -28px rgba(50,45,43,.55);opacity:0;visibility:hidden;transform:translateY(7px);transition:opacity .2s ease,transform .2s ease,visibility .2s;z-index:60}
+.mi:last-of-type .msub{left:auto;right:-4px}
 .mi::after{content:'';position:absolute;top:100%;left:0;right:0;height:10px}
-.mi:hover .sub,.mi:focus-within .sub{opacity:1;visibility:visible;transform:none}
-.sub a{display:block;padding:9px 12px;border-radius:6px;font-size:.88rem;font-weight:600;color:var(--ink);text-decoration:none;line-height:1.35}
-.sub a span{display:block;font-size:.76rem;font-weight:400;color:var(--ink-soft);margin-top:2px}
-.sub a:hover{background:var(--linen);color:var(--wine)}
-.sub .sep{height:1px;background:var(--line);margin:7px 10px}
+.mi:hover .msub,.mi:focus-within .msub{opacity:1;visibility:visible;transform:none}
+.msub a{display:block;padding:9px 12px;border-radius:6px;font-size:.88rem;font-weight:600;color:var(--ink);text-decoration:none;line-height:1.35}
+.msub a span{display:block;font-size:.76rem;font-weight:400;color:var(--ink-soft);margin-top:2px}
+.msub a:hover{background:var(--linen);color:var(--wine)}
+.msub .sep{height:1px;background:var(--line);margin:7px 10px}
 .menu .cta{padding:10px 18px;border-radius:5px;background:var(--wine);color:#FAF5F0;font-size:.88rem;font-weight:600;text-decoration:none;white-space:nowrap;margin-left:6px}
 .menu .cta:hover{background:var(--wine-deep);color:#FAF5F0}
 @media (max-width:1240px) and (min-width:921px){.logo span{display:none}.menu{gap:1px}.menu>a,.mi>.mtop{font-size:.83rem;padding:9px 8px}.menu .cta{padding:10px 14px;font-size:.83rem}}
@@ -206,15 +213,16 @@ section{padding:76px 0}
   #mtoggle:checked ~ .menu{display:flex}
   .menu>a,.mi>.mtop{font-size:1rem;padding:12px 4px;border-bottom:1px solid var(--line);border-radius:0}
   .mi{width:100%}
-  .mi>.mtop::after{float:right;margin-top:7px;transition:transform .2s}
-  .mi.on>.mtop::after{transform:translateY(0) rotate(-135deg)}
-  .sub{position:static;opacity:1;visibility:visible;transform:none;box-shadow:none;border:none;background:transparent;min-width:0;padding:0;display:none}
-  .mi.on .sub{display:block;padding:4px 0 8px 12px}
-  .mi:hover .sub{display:none}
-  .mi.on:hover .sub{display:block}
-  .sub a{padding:10px 8px;font-size:.95rem}
-  .sub a span{display:none}
-  .sub .sep{display:none}
+  .mi>.mtop{display:flex;width:100%;justify-content:space-between;align-items:center;text-align:left}
+  .mi>.mtop::after{margin-left:auto;margin-right:4px;transform:translateY(-2px) rotate(45deg);transition:transform .2s}
+  .mi.on>.mtop::after{transform:translateY(2px) rotate(-135deg)}
+  .msub{position:static;opacity:1;visibility:visible;transform:none;box-shadow:none;border:none;background:transparent;min-width:0;padding:0;display:none}
+  .mi.on .msub{display:block;padding:4px 0 8px 12px}
+  .mi:hover .msub{display:none}
+  .mi.on:hover .msub{display:block}
+  .msub a{padding:12px 8px;font-size:.95rem}
+  .msub a span{display:none}
+  .msub .sep{display:none}
   .menu .cta{margin:12px 0 0;text-align:center;padding:14px;font-size:1rem}
 }
 
@@ -354,6 +362,9 @@ footer .fine{margin-top:44px;padding-top:20px;border-top:1px solid rgba(242,237,
 @media (prefers-reduced-motion: reduce){.rv{opacity:1;transform:none;transition:none}}
 
 @media (max-width:860px){
+  /* Пальцу нужно не меньше 44px: на телефоне поднимаем зоны нажатия */
+  .chiplist a,.chiplist span{padding:12px 16px}
+  footer a{padding:9px 0}
   section{padding:52px 0}
   .grid2,.grid3,.split,.diagrow{grid-template-columns:1fr}
   .grid5{grid-template-columns:1fr 1fr}
@@ -391,7 +402,7 @@ MENU_GROUPS = [
         ("/chizhovy2/programma/", "Программа целиком", "три модуля и сопровождение"),
         ("/chizhovy2/modul-1/", "Модуль I. Возвращение к себе", "2,5 дня очно"),
         ("/chizhovy2/modul-2/", "Модуль II. Внутренняя свобода", "5 дней очно"),
-        ("/chizhovy2/marafon/", "Модуль III. Создатель реальности", "3 месяца в жизни"),
+        ("/chizhovy2/marafon/", "Модуль III. Создатель&nbsp;реальности", "3 месяца в жизни"),
         ("sep", "", ""),
         ("/chizhovy2/kak-prohodit/", "Как проходит обучение", "путь ученика по шагам"),
         ("/chizhovy2/tehniki-sceny/", "Техники сцены", "инструменты работы"),
@@ -454,7 +465,7 @@ def nav(active=""):
                     links += '<div class="sep"></div>'
                 else:
                     links += f'<a href="{u}">{t}<span>{cap}</span></a>'
-            parts.append(f'<div class="mi"><button class="mtop" type="button" aria-expanded="false">{gname}</button><div class="sub">{links}</div></div>')
+            parts.append(f'<div class="mi"><button class="mtop" type="button" aria-expanded="false">{gname}</button><div class="msub">{links}</div></div>')
     items_html = "".join(parts)
     return f"""<nav class="nav"><div class="wrap">
 <a class="logo" href="/chizhovy2/">{LOGO_SVG}<div><b>Настоящие отношения</b><span>Школа Алексея и&nbsp;Ирины Чижовых</span></div></a>
@@ -512,7 +523,125 @@ FOOTER = """<footer><div class="wrap">
 <div class="fine"><span>«Настоящие отношения» · chizhovy.ru</span><span>Прототип сайта. Результаты участников&nbsp;индивидуальны.</span></div>
 </div></footer>"""
 
+# Заголовки, у которых последняя пара слов НЕ влезает в колонку на узком экране.
+# Замерено рендером (headfit): для них перенос оставляем естественный.
+_FORCED_LIMIT = [None]
+_NO_GLUE_HEADS = {
+    "Внутренняя свобода",
+    "Возвращение к себе",
+    "Вспомни последнюю ссору, которая пошла по знакомому кругу",
+    "Всё понимаешь, а не меняется",
+    "Группа, которая не расходится",
+    "Двое, у которых совпадают слова и жизнь",
+    "Джилл Болте Тейлор · нейроанатом",
+    "Жизнь слушается состояния",
+    "Жизнь слушается состояния, а не усилий",
+    "Запись не берёт выходных",
+    "Запись нельзя переубедить. Её можно только переписать",
+    "Как мы обращаемся с истоками",
+    "Как мы обращаемся с отзывами",
+    "Кто пишет сценарий твоей жизни",
+    "Модуль II. Внутренняя свобода",
+    "О чём договариваемся на старте",
+    "От собеседования до Марафона",
+    "Открытия и благодарности",
+    "Почему «Настоящие отношения»",
+    "Путь ученика по шагам",
+    "Разговор, который ты откладывал годами",
+    "Сложа руки ты не сидел. В том-то и дело",
+    "Собеседование в школу",
+    "Создатель реальности",
+    "Спокойствие и уверенность",
+    "Статьи, после которых что‑то щёлкает",
+    "Тренинг «Настоящие отношения»",
+    "Три идеи, которые мы используем",
+    "Чего на собеседовании не будет",
+    "Что ещё работает на перезапись",
+    "Что происходило с людьми",
+    "Что становится возможным",
+}
+
+_BLOCK_RE = re.compile(
+    r'<(p|h1|h2|h3|h4|li|blockquote|figcaption|dd|dt)(\s[^>]*)?>(.*?)</\1>',
+    re.S | re.I)
+
+def _glue_last_pair(inner: str, tag: str = 'p', limit: int = None) -> str:
+    """Склеивает последние два слова блока неразрывным пробелом, чтобы последнее
+    слово не падало сиротой на отдельную строку ни на одной ширине экрана.
+    Следит, чтобы получившийся НЕРАЗРЫВНЫЙ КУСОК не стал шире колонки:
+    иначе заголовок обрежется краем экрана на телефоне."""
+    if re.search(r'<(p|div|ul|ol|li|h[1-4]|table|section)\b', inner, re.I):
+        return inner
+    # предел длины неразрывного куска: у заголовков шрифт крупный, им нужно строже
+    # Заголовки: склеиваем последнюю пару, КРОМЕ тех, у которых пара шире колонки
+    # на узком экране (замерено рендером, список ниже). Иначе крупный заголовок
+    # вылезет за край и потянет горизонтальную прокрутку.
+    if tag.lower() in ('h1', 'h2', 'h3', 'h4'):
+        plain = re.sub(r'<[^>]*>', '', inner)
+        plain = plain.replace('&nbsp;', ' ').replace('\xa0', ' ')
+        plain = re.sub(r'\s+', ' ', plain).strip()
+        if plain in _NO_GLUE_HEADS:
+            return inner
+        limit = 99
+    else:
+        limit = 26
+    if limit is not None and tag.lower() not in ('h1', 'h2', 'h3', 'h4'):
+        pass
+    if _FORCED_LIMIT[0] is not None:
+        limit = _FORCED_LIMIT[0]
+    # позиции ОБЫЧНЫХ пробелов вне тегов (неразрывные не считаем)
+    spaces, depth = [], 0
+    for i, ch in enumerate(inner):
+        if ch == '<':
+            depth += 1
+        elif ch == '>':
+            depth = max(0, depth - 1)
+        elif ch == ' ' and depth == 0:
+            spaces.append(i)
+    if not spaces:
+        return inner
+    vis = lambda s: (s.replace('&nbsp;', '\xa0').replace('&#8288;', '')
+                      .replace('&nbsp', '\xa0'))
+    for pos in reversed(spaces):
+        tail = re.sub(r'<[^>]*>', '', inner[pos + 1:]).strip()
+        head = re.sub(r'<[^>]*>', '', inner[:pos]).strip()
+        if not tail or not head:
+            continue
+        # что реально склеится: хвостовая неразрывная цепочка головы
+        # плюс головная неразрывная цепочка хвоста
+        prev_chain = vis(head).split(' ')[-1]
+        next_chain = vis(tail).split(' ')[0]
+        if not prev_chain or not next_chain:
+            continue
+        run = len(prev_chain) + 1 + len(next_chain)
+        if run > limit:
+            return inner
+        return inner[:pos] + '&nbsp;' + inner[pos + 1:]
+    return inner
+
+# Текстовые блоки, свёрстанные не абзацем, а div/span: цитаты, подписи под фото.
+# Их обычный разбор по тегам не ловит, а сирота там видна так же.
+_TEXTBOX_RE = re.compile(
+    r'(<(?:div|span)\s+class="(?:q|who|cap|t-lead|t-body|gap)"[^>]*>|<span>)'
+    r'([^<]{20,}?)(</(?:div|span)>)',
+    re.S)
+
+def typo(html: str) -> str:
+    """Типографский проход: ни одного слова-сироты в конце абзаца, заголовка, цитаты."""
+    html = _BLOCK_RE.sub(
+        lambda m: f'<{m.group(1)}{m.group(2) or ""}>'
+                  f'{_glue_last_pair(m.group(3), m.group(1))}</{m.group(1)}>',
+        html)
+    def fix_box(m):
+        _FORCED_LIMIT[0] = 26          # столько влезает и в цитату, и в подпись
+        try:
+            return m.group(1) + _glue_last_pair(m.group(2), 'p') + m.group(3)
+        finally:
+            _FORCED_LIMIT[0] = None
+    return _TEXTBOX_RE.sub(fix_box, html)
+
 def page(title, desc, active, body):
+    body = typo(body)
     return f"""<!doctype html>
 <html lang="ru">
 <head>
@@ -526,7 +655,7 @@ def page(title, desc, active, body):
 <body>
 {nav(active)}
 {body}
-{FOOTER}
+{typo(FOOTER)}
 <script>
 document.querySelectorAll('.mi > .mtop').forEach(btn => {{
   btn.addEventListener('click', e => {{
@@ -636,7 +765,7 @@ P["index.html"] = ("Настоящие отношения · школа тран
 
 <section style="padding-top:0"><div class="wrap">
 <p class="eyebrow">Какие возможности откроются</p>
-<h2>Что становится возможным</h2>
+<h2>Что <span class="kpm">становится возможным</span></h2>
 <div class="grid3" style="margin-top:30px">
 <div class="card"><span class="bignum">01</span>{icon('ceiling')}<h3>Дело выходит из&nbsp;потолка</h3><p>Видишь, что именно держало обороты и&nbsp;заставляло цепляться за&nbsp;«стабильный» заработок. Убираешь причину, не&nbsp;симптом.</p></div>
 <div class="card"><span class="bignum">02</span>{icon('route','var(--sage-deep)')}<h3>Ясность про себя</h3><p>Кто я, куда бегу, почему всё повторяется по&nbsp;спирали. Видишь свои сильные стороны и&nbsp;путь к&nbsp;целям.</p></div>
@@ -670,7 +799,7 @@ P["index.html"] = ("Настоящие отношения · школа тран
 <div class="split">
 <div>
 <p class="eyebrow">Ведущие</p>
-<h2>Двое, у&nbsp;которых совпадают&nbsp;слова&nbsp;и&nbsp;жизнь</h2>
+<h2>Двое, у&nbsp;которых совпадают слова&nbsp;и&nbsp;жизнь</h2>
 <p>Алексей: коуч с&nbsp;сертификацией ICF, 16&nbsp;лет в&nbsp;трансформационной практике, триатлет. Ирина: трансформационный тренер, шесть лет готовилась к&nbsp;этому формату, работает на&nbsp;глубине, которую участники вспоминают&nbsp;годами.</p>
 <p>Вместе 17&nbsp;лет. Школу отношений ведёт пара, у&nbsp;которой отношения живые: с&nbsp;бытом, кризисами и&nbsp;выходами из&nbsp;них.</p>
 <p style="margin-top:20px"><a class="btn btn-ghost" href="/chizhovy2/vedushchie/">Познакомиться</a></p>
@@ -683,7 +812,7 @@ P["index.html"] = ("Настоящие отношения · школа тран
 <div class="split">
 <div>
 <p class="eyebrow">Истоки метода</p>
-<h2>Метод с&nbsp;открытыми истоками</h2>
+<h2 style="font-size:clamp(1.55rem,4vw,2.3rem)">Метод с&nbsp;открытыми истоками</h2>
 <p>Сильной работе нечего прятать. Мы&nbsp;открыто называем школы и&nbsp;авторов, на&nbsp;которых выросли: психодрама Морено, трансерфинг Зеланда, тренинги погружения от&nbsp;est, практика состояния Годдарда. И&nbsp;показываем, что взяли, что переработали за&nbsp;16&nbsp;лет и&nbsp;почему это работает с&nbsp;точки зрения науки.</p>
 <p style="margin-top:20px"><a class="btn btn-ghost" href="/chizhovy2/istoki/">Разобрать истоки</a></p>
 </div>
@@ -718,7 +847,7 @@ P["index.html"] = ("Настоящие отношения · школа тран
 P["metod/index.html"] = ("Метод школы · Настоящие отношения",
 "Событийный круг, состояние и психодрама: подробный разбор, как устроена перезапись сценариев.", "metod", f"""
 <div class="hero short"><div class="bg" style="background-image:url('/chizhovy2/images/site-metod.png')"></div><div class="veil"></div>
-<div class="in"><p class="eyebrow">Метод школы</p><h1>Жизнь слушается состояния</h1>
+<div class="in"><p class="eyebrow">Метод школы</p><h1>Жизнь <span class="kp">слушается состояния</span></h1>
 <p class="lead">Мы&nbsp;не&nbsp;учим «правильно общаться» и&nbsp;не&nbsp;выдаём мотивацию на&nbsp;неделю. Мы&nbsp;находим запись, которая пишет твои реакции, и&nbsp;помогаем переписать её&nbsp;там, где она хранится. Ниже метод разобран по&nbsp;винтикам.</p>
 <div class="acts"><a class="btn btn-copper" href="/chizhovy2/sessiya/">Записаться на&nbsp;собеседование</a><a class="btn btn-ghost" href="/chizhovy2/vedushchie/">Кто ведёт</a></div>
 </div></div>
@@ -786,7 +915,7 @@ P["metod/index.html"] = ("Метод школы · Настоящие отнош
 <p class="eyebrow">Пустой стул</p>
 <h2>Разговор, который ты&nbsp;откладывал годами</h2>
 <p>Иногда сцена строится вокруг пустого стула. На&nbsp;нём сидит тот, с&nbsp;кем разговор так и&nbsp;не&nbsp;случился: отец, бывший, ты&nbsp;сам из&nbsp;прошлого. Разговор происходит сейчас, и&nbsp;тело отпускает то, что держало.</p>
-<p>После таких процессов участники говорят: «снял рюкзак», «стало легче дышать». Это не&nbsp;образы, это буквальные ощущения: напряжение, которое тело держало годами, находит выход.</p>
+<p>После таких процессов участники говорят: «снял рюкзак», «стало легче дышать». Это буквальные ощущения: напряжение, которое тело держало годами, находит выход.</p>
 </div>
 <div class="ph"><img src="/chizhovy2/images/metod-stul.png" alt="Пустой стул в луче тёплого света" loading="lazy"></div>
 </div>
@@ -1097,7 +1226,7 @@ P["para/index.html"] = ("Тренинг для пар · Настоящие от
 P["vedushchie/index.html"] = ("Алексей и Ирина Чижовы · Настоящие отношения",
 "Ведущие школы: коуч ICF и трансформационный тренер, вместе 17 лет.", "vedushchie", f"""
 <div class="hero short"><div class="bg" style="background-image:url('/chizhovy2/images/real/portret.jpg');background-position:center 25%"></div><div class="veil"></div>
-<div class="in"><p class="eyebrow">Ведущие</p><h1>Алексей и&nbsp;Ирина Чижовы</h1>
+<div class="in"><p class="eyebrow">Ведущие</p><h1>Алексей и&nbsp;<span class="kpm">Ирина Чижовы</span></h1>
 <p class="lead">Школу отношений ведёт пара, которая 17&nbsp;лет строит свои. С&nbsp;бытом, кризисами и&nbsp;выходами из&nbsp;них, поэтому в&nbsp;зале нет теории с&nbsp;чужих&nbsp;слов.</p></div></div>
 
 <section><div class="narrow">
@@ -1249,9 +1378,9 @@ P["sessiya/index.html"] = ("Собеседование в школу · Наст
 
 <section id="kak"><div class="narrow">
 <h2>Как проходит</h2>
-<div class="card white" style="margin:20px 0 12px">{{icon('speech')}}<h3>Ты рассказываешь</h3><p>Что происходит и&nbsp;что уже пробовал. Без подготовки и&nbsp;правильных слов: как&nbsp;есть. Сумбурно, с&nbsp;паузами, перескакивая с&nbsp;темы на&nbsp;тему: нормально. Мы&nbsp;слушаем и&nbsp;задаём вопросы.</p></div>
-<div class="card white" style="margin-bottom:12px">{{icon('gear','var(--sage-deep)')}}<h3>Разбираем механику</h3><p>Где в&nbsp;твоей истории крутится сценарий и&nbsp;что его держит. Обычно уже этот час даёт первое «вот оно&nbsp;что»: человек видит свой круг со&nbsp;стороны, часто впервые за&nbsp;годы. Опора та&nbsp;же, что и&nbsp;в&nbsp;зале: <a href="/chizhovy2/metod/">событийный круг</a> из&nbsp;четырёх точек.</p></div>
-<div class="card white">{{icon('route','var(--sand)')}}<h3>Вы решаете, что дальше</h3><p>Годится&nbsp;ли тебе школа, с&nbsp;какого модуля заходить и&nbsp;стоит&nbsp;ли вообще. Отговорить можем так&nbsp;же честно, как&nbsp;пригласить. Условия участия обсудим здесь&nbsp;же, спокойно и&nbsp;без давления.</p></div>
+<div class="card white" style="margin:20px 0 12px">{icon('speech')}<h3>Ты рассказываешь</h3><p>Что происходит и&nbsp;что уже пробовал. Без подготовки и&nbsp;правильных слов: как&nbsp;есть. Сумбурно, с&nbsp;паузами, перескакивая с&nbsp;темы на&nbsp;тему: нормально. Мы&nbsp;слушаем и&nbsp;задаём вопросы.</p></div>
+<div class="card white" style="margin-bottom:12px">{icon('gear','var(--sage-deep)')}<h3>Разбираем механику</h3><p>Где в&nbsp;твоей истории крутится сценарий и&nbsp;что его держит. Обычно уже этот час даёт первое «вот оно&nbsp;что»: человек видит свой круг со&nbsp;стороны, часто впервые за&nbsp;годы. Опора та&nbsp;же, что и&nbsp;в&nbsp;зале: <a href="/chizhovy2/metod/">событийный круг</a> из&nbsp;четырёх точек.</p></div>
+<div class="card white">{icon('route','var(--sand)')}<h3>Вы решаете, что дальше</h3><p>Годится&nbsp;ли тебе школа, с&nbsp;какого модуля заходить и&nbsp;стоит&nbsp;ли вообще. Отговорить можем так&nbsp;же честно, как&nbsp;пригласить. Условия участия обсудим здесь&nbsp;же, спокойно и&nbsp;без давления.</p></div>
 
 <div class="nails nails3" style="margin-top:28px">
 <div class="nail"><b>60&nbsp;минут</b><span>личного разговора, онлайн или&nbsp;очно</span></div>
@@ -1265,10 +1394,10 @@ P["sessiya/index.html"] = ("Собеседование в школу · Наст
 <h2>О чём обычно спрашиваем</h2>
 <p class="sub">Готовиться не&nbsp;нужно, но&nbsp;если хочется понимать заранее, вот примерные направления разговора. Отвечать на&nbsp;все не&nbsp;обязательно.</p>
 <div class="grid2" style="margin-top:26px">
-<div class="card">{{icon('target')}}<h3>Что происходит сейчас</h3><p>Какая ситуация привела тебя сюда: отношения, состояние, дело, здоровье. Что именно болит и&nbsp;как&nbsp;давно.</p></div>
-<div class="card">{{icon('loop','var(--sage-deep)')}}<h3>Что повторяется</h3><p>Есть&nbsp;ли сюжет, который идёт по&nbsp;кругу с&nbsp;разными людьми или в&nbsp;разных местах. Обычно человек называет его сам за&nbsp;пять&nbsp;минут.</p></div>
-<div class="card">{{icon('book','var(--sand)')}}<h3>Что уже пробовал</h3><p>Книги, курсы, терапия, спорт, смена работы. Это важно: значит, ты&nbsp;не&nbsp;сидел сложа руки, и&nbsp;мы&nbsp;не&nbsp;будем предлагать пройденное.</p></div>
-<div class="card">{{icon('sunrise')}}<h3>Чего хочешь на&nbsp;выходе</h3><p>Как выглядит жизнь, ради которой стоит идти в&nbsp;работу. Даже приблизительный ответ показывает направление.</p></div>
+<div class="card">{icon('target')}<h3>Что происходит сейчас</h3><p>Какая ситуация привела тебя сюда: отношения, состояние, дело, здоровье. Что именно болит и&nbsp;как&nbsp;давно.</p></div>
+<div class="card">{icon('loop','var(--sage-deep)')}<h3>Что повторяется</h3><p>Есть&nbsp;ли сюжет, который идёт по&nbsp;кругу с&nbsp;разными людьми или в&nbsp;разных местах. Обычно человек называет его сам за&nbsp;пять&nbsp;минут.</p></div>
+<div class="card">{icon('book','var(--sand)')}<h3>Что уже пробовал</h3><p>Книги, курсы, терапия, спорт, смена работы. Это важно: значит, ты&nbsp;не&nbsp;сидел сложа руки, и&nbsp;мы&nbsp;не&nbsp;будем предлагать пройденное.</p></div>
+<div class="card">{icon('sunrise')}<h3>Чего хочешь на&nbsp;выходе</h3><p>Как выглядит жизнь, ради которой стоит идти в&nbsp;работу. Даже приблизительный ответ показывает направление.</p></div>
 </div>
 </div></section>
 
@@ -1276,10 +1405,10 @@ P["sessiya/index.html"] = ("Собеседование в школу · Наст
 <h2>Чего на&nbsp;собеседовании не&nbsp;будет</h2>
 <p>Мы&nbsp;знаем, чего люди опасаются, когда идут «на&nbsp;разговор со&nbsp;школой». Поэтому говорим прямо.</p>
 <div class="grid2" style="margin-top:22px">
-<div class="card">{{icon('shield','var(--copper)')}}<h3>Давления и&nbsp;дожима</h3><p>Никаких «места заканчиваются, решай сейчас». Думай столько, сколько нужно: неделю, месяц, полгода.</p></div>
-<div class="card">{{icon('speech','var(--copper)')}}<h3>Скриптов и&nbsp;менеджеров</h3><p>Разговор ведут те, кто ведёт группы. Не&nbsp;отдел продаж и&nbsp;не&nbsp;бот с&nbsp;анкетой.</p></div>
-<div class="card">{{icon('lens','var(--copper)')}}<h3>Ярлыков и&nbsp;диагнозов</h3><p>Мы&nbsp;не&nbsp;объясняем человеку, какой он, и&nbsp;не&nbsp;выдаём заключений. Смотрим на&nbsp;механику повтора, а&nbsp;не&nbsp;на&nbsp;личность.</p></div>
-<div class="card">{{icon('gear','var(--copper)')}}<h3>Обещаний чуда</h3><p>Гарантий перемен не&nbsp;даём: метод срабатывает там, где человек включается сам. Об&nbsp;этом честно говорим сразу.</p></div>
+<div class="card">{icon('shield','var(--copper)')}<h3>Давления и&nbsp;дожима</h3><p>Никаких «места заканчиваются, решай сейчас». Думай столько, сколько нужно: неделю, месяц, полгода.</p></div>
+<div class="card">{icon('speech','var(--copper)')}<h3>Скриптов и&nbsp;менеджеров</h3><p>Разговор ведут те, кто ведёт группы. Не&nbsp;отдел продаж и&nbsp;не&nbsp;бот с&nbsp;анкетой.</p></div>
+<div class="card">{icon('lens','var(--copper)')}<h3>Ярлыков и&nbsp;диагнозов</h3><p>Мы&nbsp;не&nbsp;объясняем человеку, какой он, и&nbsp;не&nbsp;выдаём заключений. Смотрим на&nbsp;механику повтора, а&nbsp;не&nbsp;на&nbsp;личность.</p></div>
+<div class="card">{icon('gear','var(--copper)')}<h3>Обещаний чуда</h3><p>Гарантий перемен не&nbsp;даём: метод срабатывает там, где человек включается сам. Об&nbsp;этом честно говорим сразу.</p></div>
 </div>
 </div></section>
 
@@ -1446,7 +1575,7 @@ P["istoki/index.html"] = ("Истоки метода · Настоящие от�
 P["istoki/moreno-psihodrama/index.html"] = ("Якоб Морено и психодрама · Истоки метода",
 "Психодрама: живая сцена, обмен ролями, пустой стул. Что школа взяла у Морено и что переработала.", "istoki", f"""
 <div class="hero short"><div class="bg" style="background-image:url('/chizhovy2/images/metod-scena.png')"></div><div class="veil"></div>
-<div class="in"><p class="eyebrow">Истоки · Психодрама</p><h1>Сцена, на&nbsp;которой переигрывают жизнь</h1>
+<div class="in"><p class="eyebrow">Истоки · Психодрама</p><h1 style="font-size:clamp(1.75rem,6vw,3.7rem)">Сцена, на&nbsp;которой переигрывают жизнь</h1>
 <p class="lead">Якоб Леви Морено, венский психиатр, ещё в&nbsp;1921&nbsp;году заметил: человек меняется на&nbsp;сцене быстрее, чем в&nbsp;кресле напротив врача. Так родилась психодрама, академическое ядро нашего&nbsp;метода.</p></div></div>
 
 <section><div class="narrow">
@@ -1499,7 +1628,7 @@ P["istoki/zeland-transerfing/index.html"] = ("Вадим Зеланд и тра�
 <section class="dark"><div class="narrow">
 <h2>Что мы&nbsp;взяли и&nbsp;что переработали</h2>
 <p><b style="color:#D08A5F">Взяли:</b> рабочий язык (он&nbsp;теперь живёт в&nbsp;нашем <a href="/chizhovy2/slovar/" style="color:#D08A5F">словаре школы</a>). На&nbsp;Марафоне трансерфинг входит в&nbsp;список чтения, а&nbsp;его термины живут в&nbsp;ежедневной практике: утром намерение, вечером разбор, где катался на&nbsp;маятниках и&nbsp;где удержал состояние.</p>
-<p><b style="color:#D08A5F">Переработали:</b> у&nbsp;Зеланда это философия для самостоятельного чтения, и&nbsp;у&nbsp;неё есть слабое место: прочитал, восхитился, через месяц забыл. Мы&nbsp;дали каждому термину механизм и&nbsp;тренировку. Маятник у&nbsp;нас это твоя знакомая петля реакции, и&nbsp;её видно на&nbsp;событийном круге. Важность это ставка, которая включает страх и&nbsp;сжимает выбор. А&nbsp;держать состояние учит не&nbsp;книга, а&nbsp;девяносто дней практики с&nbsp;командой и&nbsp;разборами.</p>
+<p><b style="color:#D08A5F">Переработали:</b> у&nbsp;Зеланда это философия для самостоятельного чтения, и&nbsp;у&nbsp;неё есть слабое место: прочитал, восхитился, через месяц забыл. Мы&nbsp;дали каждому термину механизм и&nbsp;тренировку. Маятник у&nbsp;нас это твоя знакомая петля реакции, и&nbsp;её видно на&nbsp;событийном круге. Важность это ставка, которая включает страх и&nbsp;сжимает выбор. Книга даёт карту. Держать состояние учат девяносто дней практики с&nbsp;командой и&nbsp;разборами.</p>
 </div></section>
 {istoki_dalee(("/chizhovy2/istoki/goddard/", "Невилл Годдард"), ("/chizhovy2/istoki/est-transformaciya/", "est и «Трансформация»"), ("/chizhovy2/istoki/nauka/", "Наука за методом"))}
 {MOST}
@@ -1662,7 +1791,7 @@ P["istorii/predprinimatel/index.html"] = ("Предприниматель: за�
 <h2 style="margin-top:34px">Что происходило</h2>
 <p>«Долго сопротивлялся, как баран. Проваливался в&nbsp;своё. Труднее всего было принять точку&nbsp;А: признать, где я&nbsp;на&nbsp;самом деле. Потребовалось время, чтобы увидеть, в&nbsp;чём я&nbsp;жил.</p>
 <p>Главное, что я&nbsp;увидел: мир это зеркало. Всё, что со&nbsp;мной происходит, это то, что я&nbsp;сам транслирую. Я&nbsp;покупал отношения вместо того, чтобы их&nbsp;строить, использовал людей ради выгоды. Когда защита наконец упала, в&nbsp;группе это называют «нолик провалился», я&nbsp;впервые обрадовался правде о&nbsp;себе».</p>
-<div class="pull"><div class="q">«Ура, нолик наконец-то провалился.»</div><div class="who">Из его сообщения группе в&nbsp;тот вечер</div></div>
+<div class="pull"><div class="q">«Ура, нолик <span style="white-space:nowrap">наконец-то провалился.»</span></div><div class="who">Из его сообщения группе в&nbsp;тот вечер</div></div>
 
 <h2 style="margin-top:34px">Что изменилось</h2>
 <p>«Сейчас я&nbsp;строю настоящие отношения везде: в&nbsp;деле, с&nbsp;близкими, с&nbsp;собой. Деньги начали приходить, энергии много, и&nbsp;я&nbsp;умею ей&nbsp;распоряжаться: держу состояние через спорт и&nbsp;благодарности, не&nbsp;сливаю её&nbsp;по&nbsp;мелочам. Раньше отсеивал людей по&nbsp;уровню жизни, сейчас просто строю отношения, и&nbsp;люди вокруг собрались такие, что доходы выросли сами. Цели кратно увеличились, научился играть в&nbsp;долгую. И&nbsp;мне стало всё равно на&nbsp;чужое мнение обо мне.</p>
@@ -1785,7 +1914,7 @@ P["dlya-predprinimatelej/index.html"] = ("Для предпринимателе�
 </div></section>
 
 <section class="dark"><div class="narrow">
-<h2>Что здесь получает предприниматель</h2>
+<h2>Что меняется у владельца бизнеса</h2>
 <p>Работа идёт с&nbsp;причиной, и&nbsp;она у&nbsp;потолка, страха и&nbsp;усталости общая: старые решения, которые крутят <a href="/chizhovy2/metod/" style="color:#D08A5F">событийный круг</a>. Когда запись переписана, меняется сразу несколько сфер: большие ходы делаются из&nbsp;спокойствия, дело перестаёт держаться на&nbsp;надрыве, дома снова видно человека, а&nbsp;не&nbsp;функцию.</p>
 </div>
 <div class="wrap"><div class="nails nails3" style="margin-top:24px">
@@ -1805,7 +1934,7 @@ P["dlya-predprinimatelej/index.html"] = ("Для предпринимателе�
 <section class="dark"><div class="narrow">
 <h2>Что меняется в&nbsp;деле</h2>
 <p>Мы&nbsp;не&nbsp;учим управлять компанией и&nbsp;не&nbsp;даём бизнес-советов. Работа идёт с&nbsp;тем, из&nbsp;какого состояния принимаются решения. Рычаг оказывается сильным: из&nbsp;покоя человек по-другому ведёт переговоры, легче делегирует и&nbsp;точнее считает риск.</p>
-<p>Ученики чаще всего называют три сдвига: перестал держать всё на&nbsp;себе, начал видеть доску целиком вместо одной клетки, стал играть в&nbsp;долгую. Подробности в&nbsp;<a href="/chizhovy2/istorii/predprinimatel/" style="color:#D08A5F">истории ученика-предпринимателя</a>.</p>
+<p>Ученики чаще всего называют три сдвига: перестал держать всё на&nbsp;себе, начал видеть доску целиком вместо одной клетки, стал играть в&nbsp;долгую. Как это выглядело в&nbsp;жизни, видно в&nbsp;<a href="/chizhovy2/istorii/predprinimatel/" style="color:#D08A5F">истории ученика</a>.</p>
 </div></section>
 {FINCTA}
 """)
@@ -2097,7 +2226,7 @@ P["kontakty/index.html"] = ("Контакты · Настоящие отноше
 <div class="card white">{icon('speech')}<h3>Telegram</h3><p>Канал школы: анонсы наборов, живые тексты пары, ответы на&nbsp;вопросы.</p><p style="margin-top:12px"><a href="https://t.me/+LVptSH6Mt4hhYmFi">Открыть Telegram</a></p></div>
 <div class="card white">{icon('calendar','var(--sage-deep)')}<h3>Собеседование</h3><p>Час разговора о&nbsp;твоей ситуации, онлайн или очно. Для читателей сайта&nbsp;бесплатно.</p><p style="margin-top:12px"><a href="/chizhovy2/sessiya/">Записаться</a></p></div>
 </div>
-<p class="note" style="margin-top:20px">Реквизиты и&nbsp;документы для оплаты появятся здесь вместе с&nbsp;онлайн-оплатой мини-продуктов.</p>
+<p class="note" style="margin-top:20px">Реквизиты и&nbsp;документы для оплаты появятся здесь вместе с&nbsp;онлайн-оплатой.</p>
 </div></section>
 {FINCTA}
 """)
@@ -2139,7 +2268,7 @@ P["tehniki-sceny/index.html"] = ("Техники сцены · Настоящи�
 P["somneniya/index.html"] = ("Частые сомнения · Настоящие отношения",
 "«Не верю, что поможет», «боюсь группы», «нет времени», «а вдруг станет хуже»: восемь честных разборов перед решением.", "somneniya", f"""
 <div class="hero short"><div class="bg" style="background-image:url('/chizhovy2/images/somneniya-hero.png')"></div><div class="veil"></div>
-<div class="in"><p class="eyebrow">Перед решением</p><h1>Сомнения, с&nbsp;которыми приходят</h1>
+<div class="in"><p class="eyebrow">Перед решением</p><h1>Сомнения перед первым шагом</h1>
 <p class="lead">Мы&nbsp;слышим их&nbsp;на&nbsp;каждом собеседовании и&nbsp;считаем хорошим знаком: сомневается тот, кто относится к&nbsp;делу серьёзно. Ниже восемь самых частых, разобранных начистоту. Где ты&nbsp;прав в&nbsp;своих опасениях, там мы&nbsp;так и&nbsp;скажем.</p></div></div>
 
 <section style="padding-bottom:40px"><div class="wrap">
@@ -2184,7 +2313,7 @@ P["somneniya/index.html"] = ("Частые сомнения · Настоящи�
 </div></section>
 
 <section style="padding:0"><div class="wrap">
-<div class="ph" style="aspect-ratio:16/7"><img src="/chizhovy2/images/somneniya-nedoverie.png" alt="Мужчина у окна утром, решение принимается" loading="lazy"></div>
+<div class="ph" style="aspect-ratio:16/7"><img src="/chizhovy2/images/somneniya-nedoverie.png" alt="Мужчина у окна утром, решение принимается" style="object-position:center 8%" loading="lazy"></div>
 </div></section>
 
 <section><div class="narrow">
@@ -2203,9 +2332,9 @@ P["somneniya/index.html"] = ("Частые сомнения · Настоящи�
 <h2>Когда сомнение право</h2>
 <p class="lead" style="color:rgba(242,237,228,.75)">Бывают ситуации, где правильный ответ «не&nbsp;сейчас» или «не&nbsp;сюда». Мы&nbsp;говорим об&nbsp;этом прямо на&nbsp;собеседовании и&nbsp;не&nbsp;берём человека ради заполненной группы.</p>
 <div class="grid3" style="margin-top:24px">
-<div class="card">{{icon('shield','var(--copper)')}}<h3>Нужна медицинская помощь</h3><p>Острое состояние, психиатрический диагноз в&nbsp;обострении: тренинг не&nbsp;заменяет врача. Подскажем, куда идти.</p></div>
-<div class="card">{{icon('calendar','var(--copper)')}}<h3>Нет ресурса именно сейчас</h3><p>Переезд, роды, похороны, аврал на&nbsp;работе. Погружение требует сил, лучше прийти через полгода в&nbsp;своём темпе.</p></div>
-<div class="card">{{icon('target','var(--copper)')}}<h3>Ищешь быстрый рецепт</h3><p>Если нужен готовый скрипт «как заставить его измениться», мы&nbsp;не&nbsp;поможем: работа идёт с&nbsp;тем, кто пришёл.</p></div>
+<div class="card">{icon('shield','var(--copper)')}<h3>Нужна медицинская помощь</h3><p>Острое состояние, психиатрический диагноз в&nbsp;обострении: тренинг не&nbsp;заменяет врача. Подскажем, куда идти.</p></div>
+<div class="card">{icon('calendar','var(--copper)')}<h3>Нет ресурса именно сейчас</h3><p>Переезд, роды, похороны, аврал на&nbsp;работе. Погружение требует сил, лучше прийти через полгода в&nbsp;своём темпе.</p></div>
+<div class="card">{icon('target','var(--copper)')}<h3>Ищешь быстрый рецепт</h3><p>Если нужен готовый скрипт «как заставить его измениться», мы&nbsp;не&nbsp;поможем: работа идёт с&nbsp;тем, кто пришёл.</p></div>
 </div>
 <p style="margin-top:24px"><a class="btn btn-ghost" href="/chizhovy2/bezopasnost/">Все границы работы</a></p>
 </div></section>

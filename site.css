@@ -11,10 +11,14 @@ img{max-width:100%;display:block}
 a{color:var(--wine)}
 .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
 .narrow{max-width:720px;margin:0 auto;padding:0 24px}
-h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.2;text-wrap:balance;margin:0 0 .5em}
+h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;line-height:1.2;text-wrap:balance;margin:0 0 .5em}
+/* Держим последнюю пару слов заголовка вместе там, где она влезает в колонку */
+.kp{white-space:nowrap}@media (max-width:920px){.kp{white-space:normal}}
+.kpm{white-space:nowrap}@media (max-width:399px){.kpm{white-space:normal}}
 h2{font-size:clamp(1.7rem,4vw,2.3rem);font-weight:600}
 h3{font-size:1.22rem;font-weight:600}
 p{margin:0 0 1.1em}
+p,li,figcaption,blockquote,dd,dt,summary,td,th{text-wrap:pretty}
 section{padding:76px 0}
 .eyebrow{font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--wine);margin:0 0 16px;display:flex;align-items:center;gap:10px}
 .eyebrow::before{content:'';width:26px;height:2px;background:var(--sand)}
@@ -25,7 +29,8 @@ section{padding:76px 0}
 .btn-wine{background:var(--wine);color:#FAF5F0}.btn-wine:hover{background:var(--wine-deep)}
 .btn-ghost{color:var(--wine);border:1.5px solid var(--wine)}
 .btn-copper{background:var(--copper);color:#1B1410}
-.dark .btn-ghost{color:var(--ntext);border-color:rgba(242,237,228,.5)}
+.dark .btn-ghost,.hero .btn-ghost{color:var(--ntext);border-color:rgba(242,237,228,.5)}
+.hero .btn-ghost:hover{background:rgba(242,237,228,.12)}
 
 /* Иконки */
 .icwrap{display:inline-flex;width:46px;height:46px;align-items:center;justify-content:center;border-radius:10px;background:rgba(110,59,75,.07);margin-bottom:16px}
@@ -59,13 +64,14 @@ section{padding:76px 0}
 .menu>a:hover,.mi:hover>.mtop,.mi.on>.mtop{color:var(--wine);background:rgba(110,59,75,.06)}
 .menu>a.on{color:var(--wine)}
 .mi{position:relative}
-.sub{position:absolute;top:calc(100% + 6px);left:-4px;min-width:274px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px;box-shadow:0 26px 50px -28px rgba(50,45,43,.55);opacity:0;visibility:hidden;transform:translateY(7px);transition:opacity .2s ease,transform .2s ease,visibility .2s;z-index:60}
+.msub{position:absolute;top:calc(100% + 6px);left:-4px;min-width:274px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px;box-shadow:0 26px 50px -28px rgba(50,45,43,.55);opacity:0;visibility:hidden;transform:translateY(7px);transition:opacity .2s ease,transform .2s ease,visibility .2s;z-index:60}
+.mi:last-of-type .msub{left:auto;right:-4px}
 .mi::after{content:'';position:absolute;top:100%;left:0;right:0;height:10px}
-.mi:hover .sub,.mi:focus-within .sub{opacity:1;visibility:visible;transform:none}
-.sub a{display:block;padding:9px 12px;border-radius:6px;font-size:.88rem;font-weight:600;color:var(--ink);text-decoration:none;line-height:1.35}
-.sub a span{display:block;font-size:.76rem;font-weight:400;color:var(--ink-soft);margin-top:2px}
-.sub a:hover{background:var(--linen);color:var(--wine)}
-.sub .sep{height:1px;background:var(--line);margin:7px 10px}
+.mi:hover .msub,.mi:focus-within .msub{opacity:1;visibility:visible;transform:none}
+.msub a{display:block;padding:9px 12px;border-radius:6px;font-size:.88rem;font-weight:600;color:var(--ink);text-decoration:none;line-height:1.35}
+.msub a span{display:block;font-size:.76rem;font-weight:400;color:var(--ink-soft);margin-top:2px}
+.msub a:hover{background:var(--linen);color:var(--wine)}
+.msub .sep{height:1px;background:var(--line);margin:7px 10px}
 .menu .cta{padding:10px 18px;border-radius:5px;background:var(--wine);color:#FAF5F0;font-size:.88rem;font-weight:600;text-decoration:none;white-space:nowrap;margin-left:6px}
 .menu .cta:hover{background:var(--wine-deep);color:#FAF5F0}
 @media (max-width:1240px) and (min-width:921px){.logo span{display:none}.menu{gap:1px}.menu>a,.mi>.mtop{font-size:.83rem;padding:9px 8px}.menu .cta{padding:10px 14px;font-size:.83rem}}
@@ -80,15 +86,16 @@ section{padding:76px 0}
   #mtoggle:checked ~ .menu{display:flex}
   .menu>a,.mi>.mtop{font-size:1rem;padding:12px 4px;border-bottom:1px solid var(--line);border-radius:0}
   .mi{width:100%}
-  .mi>.mtop::after{float:right;margin-top:7px;transition:transform .2s}
-  .mi.on>.mtop::after{transform:translateY(0) rotate(-135deg)}
-  .sub{position:static;opacity:1;visibility:visible;transform:none;box-shadow:none;border:none;background:transparent;min-width:0;padding:0;display:none}
-  .mi.on .sub{display:block;padding:4px 0 8px 12px}
-  .mi:hover .sub{display:none}
-  .mi.on:hover .sub{display:block}
-  .sub a{padding:10px 8px;font-size:.95rem}
-  .sub a span{display:none}
-  .sub .sep{display:none}
+  .mi>.mtop{display:flex;width:100%;justify-content:space-between;align-items:center;text-align:left}
+  .mi>.mtop::after{margin-left:auto;margin-right:4px;transform:translateY(-2px) rotate(45deg);transition:transform .2s}
+  .mi.on>.mtop::after{transform:translateY(2px) rotate(-135deg)}
+  .msub{position:static;opacity:1;visibility:visible;transform:none;box-shadow:none;border:none;background:transparent;min-width:0;padding:0;display:none}
+  .mi.on .msub{display:block;padding:4px 0 8px 12px}
+  .mi:hover .msub{display:none}
+  .mi.on:hover .msub{display:block}
+  .msub a{padding:12px 8px;font-size:.95rem}
+  .msub a span{display:none}
+  .msub .sep{display:none}
   .menu .cta{margin:12px 0 0;text-align:center;padding:14px;font-size:1rem}
 }
 
@@ -228,6 +235,9 @@ footer .fine{margin-top:44px;padding-top:20px;border-top:1px solid rgba(242,237,
 @media (prefers-reduced-motion: reduce){.rv{opacity:1;transform:none;transition:none}}
 
 @media (max-width:860px){
+  /* Пальцу нужно не меньше 44px: на телефоне поднимаем зоны нажатия */
+  .chiplist a,.chiplist span{padding:12px 16px}
+  footer a{padding:9px 0}
   section{padding:52px 0}
   .grid2,.grid3,.split,.diagrow{grid-template-columns:1fr}
   .grid5{grid-template-columns:1fr 1fr}
