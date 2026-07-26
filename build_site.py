@@ -826,7 +826,7 @@ P["marafon/index.html"] = ("Модуль III. Создатель реально�
 <div class="card white">{icon('target')}<h3>Реальные цели</h3><p>Работа идёт на&nbsp;твоих живых задачах: дело, деньги, отношения, тело. Результат меряем фактами, не&nbsp;ощущениями.</p></div>
 
 <div class="pull"><div class="q">«Раньше я&nbsp;отсеивал людей по&nbsp;уровню жизни. Сейчас просто строю настоящие отношения, и&nbsp;люди вокруг собрались такие, что доходы выросли сами.»</div><div class="who">Выпускник Марафона, предприниматель</div></div>
-<p><strong>Результат: новые действия и&nbsp;новые результаты.</strong> Не&nbsp;состояние после тренинга, а&nbsp;жизнь, которая продолжает расти,&nbsp;когда сопровождение закончилось.</p>
+<p><strong>Результат: новые действия и&nbsp;новые результаты.</strong> Не&nbsp;состояние после тренинга, а&nbsp;жизнь, которая продолжает расти,&nbsp;когда сопровождение&nbsp;закончилось.</p>
 </div></section>
 
 <section style="padding-top:0"><div class="wrap">
@@ -1704,7 +1704,7 @@ P["somneniya/index.html"] = ("Частые сомнения · Настоящи�
 P["stati/index.html"] = ("Статьи школы · Настоящие отношения",
 "Библиотека школы: разборы про отношения, состояние, сценарии, трансерфинг и психодраму языком метода.", "stati", f"""
 <div class="hero short"><div class="bg" style="background-image:url('/chizhovy2/images/stati-hero.png')"></div><div class="veil"></div>
-<div class="in"><p class="eyebrow">Библиотека школы</p><h1 style="font-size:clamp(2rem,5.5vw,3.7rem)">Статьи, после&nbsp;которых что‑то&nbsp;щёлкает</h1>
+<div class="in"><p class="eyebrow">Библиотека школы</p><h1 style="font-size:clamp(1.75rem,5.5vw,3.7rem)">Статьи, после&nbsp;которых что‑то&nbsp;щёлкает</h1>
 <p class="lead">Разборы болей, с&nbsp;которыми приходят в&nbsp;школу: почему ссоры идут по&nbsp;кругу, куда уходят силы и&nbsp;кто на&nbsp;самом деле пишет твой сценарий. Языком метода, с&nbsp;опорой на&nbsp;науку.</p></div></div>
 
 <section><div class="wrap">
