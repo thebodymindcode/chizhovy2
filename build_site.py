@@ -622,7 +622,7 @@ P["index.html"] = ("Настоящие отношения · школа тран
 <div class="timeline" style="margin-top:28px">{timeline_svg()}</div>
 <div class="timeline-m" style="margin-top:28px">
 <div class="tm"><div class="c">I</div><div><b>Возвращение к&nbsp;себе</b><span>2,5 дня очно</span></div></div>
-<div class="gap">месяц интеграции в&nbsp;жизни</div>
+<div class="gap">месяц на&nbsp;интеграцию</div>
 <div class="tm"><div class="c">II</div><div><b>Внутренняя свобода</b><span>5 дней очно</span></div></div>
 <div class="gap">ещё 3-5 недель до&nbsp;финала</div>
 <div class="tm last"><div class="c">III</div><div><b>Создатель реальности</b><span>3 месяца в&nbsp;жизни, результаты&nbsp;остаются</span></div></div>
@@ -1866,7 +1866,7 @@ P["kak-prohodit/index.html"] = ("Как проходит обучение · Н�
 <div class="timeline" style="margin-top:28px">{timeline_svg()}</div>
 <div class="timeline-m" style="margin-top:28px">
 <div class="tm"><div class="c">I</div><div><b>Возвращение к&nbsp;себе</b><span>2,5 дня очно</span></div></div>
-<div class="gap">месяц интеграции в&nbsp;жизни</div>
+<div class="gap">месяц на&nbsp;интеграцию</div>
 <div class="tm"><div class="c">II</div><div><b>Внутренняя свобода</b><span>5 дней очно</span></div></div>
 <div class="gap">ещё 3-5 недель до&nbsp;финала</div>
 <div class="tm last"><div class="c">III</div><div><b>Создатель реальности</b><span>3 месяца в&nbsp;жизни, результаты&nbsp;остаются</span></div></div>
