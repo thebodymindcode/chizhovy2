@@ -140,7 +140,7 @@ a{color:var(--wine)}
 .narrow{max-width:720px;margin:0 auto;padding:0 24px}
 h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;line-height:1.2;text-wrap:balance;margin:0 0 .5em}
 /* Держим последнюю пару слов заголовка вместе там, где она влезает в колонку */
-.kp{white-space:nowrap}@media (max-width:920px){.kp{white-space:normal}}
+.kp{white-space:nowrap}@media (max-width:980px){.kp{white-space:normal}}
 .kpm{white-space:nowrap}@media (max-width:399px){.kpm{white-space:normal}}
 h2{font-size:clamp(1.7rem,4vw,2.3rem);font-weight:600}
 h3{font-size:1.22rem;font-weight:600}
@@ -205,7 +205,7 @@ section{padding:76px 0}
 #mtoggle{display:none}
 .burger{display:none;cursor:pointer;padding:8px;margin-left:auto}
 .burger span{display:block;width:22px;height:2px;background:var(--ink);margin:5px 0}
-@media (max-width:920px){
+@media (max-width:980px){
   .burger{display:block}
   .logo{margin-right:0}
   .nav .wrap{flex-wrap:wrap;gap:8px}
@@ -397,6 +397,7 @@ footer .fine{margin-top:44px;padding-top:20px;border-top:1px solid rgba(242,237,
 LOGO_SVG = """<svg width="42" height="36" viewBox="0 0 100 100" aria-hidden="true"><circle cx="38" cy="50" r="28" fill="none" stroke="#7D8C74" stroke-width="4"/><circle cx="62" cy="50" r="28" fill="none" stroke="#6E3B4B" stroke-width="4"/><path d="M50 24.7 A28 28 0 0 1 50 75.3 A28 28 0 0 1 50 24.7 Z" fill="#6E3B4B" opacity=".9"/></svg>"""
 
 MENU_GROUPS = [
+    ("Главная", "/chizhovy2/", None),
     ("Метод", "/chizhovy2/metod/", None),
     ("Обучение", None, [
         ("/chizhovy2/programma/", "Программа целиком", "три модуля и сопровождение"),
@@ -456,7 +457,10 @@ def nav(active=""):
     parts = []
     for gname, gurl, items in MENU_GROUPS:
         if items is None:
-            on = " class=\"on\"" if active and gurl.strip("/").endswith(active) else ""
+            if gurl == "/chizhovy2/":
+                on = " class=\"on\"" if active == "glavnaya" else ""
+            else:
+                on = " class=\"on\"" if active and gurl.strip("/").endswith(active) else ""
             parts.append(f'<a href="{gurl}"{on}>{gname}</a>')
         else:
             links = ""
@@ -659,7 +663,7 @@ def page(title, desc, active, body):
 <script>
 document.querySelectorAll('.mi > .mtop').forEach(btn => {{
   btn.addEventListener('click', e => {{
-    if (window.innerWidth > 920) return;
+    if (window.innerWidth > 980) return;
     e.preventDefault();
     const mi = btn.parentElement, wasOpen = mi.classList.contains('on');
     document.querySelectorAll('.mi.on').forEach(o => {{ o.classList.remove('on'); o.querySelector('.mtop').setAttribute('aria-expanded','false'); }});
@@ -688,7 +692,7 @@ P = {}
 
 # ================= ГЛАВНАЯ =================
 P["index.html"] = ("Настоящие отношения · школа трансформации Чижовых",
-"Очный тренинг и три месяца сопровождения: выход из повторяющихся сценариев в отношениях, деле и состоянии.", "", f"""
+"Очный тренинг и три месяца сопровождения: выход из повторяющихся сценариев в отношениях, деле и состоянии.", "glavnaya", f"""
 <div class="hero"><div class="bg" style="background-image:url('/chizhovy2/images/site-hero.png')"></div><div class="veil"></div>
 <div class="in">
 <p class="eyebrow">Школа трансформации Алексея и&nbsp;Ирины Чижовых</p>

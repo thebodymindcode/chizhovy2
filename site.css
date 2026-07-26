@@ -13,7 +13,7 @@ a{color:var(--wine)}
 .narrow{max-width:720px;margin:0 auto;padding:0 24px}
 h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;line-height:1.2;text-wrap:balance;margin:0 0 .5em}
 /* Держим последнюю пару слов заголовка вместе там, где она влезает в колонку */
-.kp{white-space:nowrap}@media (max-width:920px){.kp{white-space:normal}}
+.kp{white-space:nowrap}@media (max-width:980px){.kp{white-space:normal}}
 .kpm{white-space:nowrap}@media (max-width:399px){.kpm{white-space:normal}}
 h2{font-size:clamp(1.7rem,4vw,2.3rem);font-weight:600}
 h3{font-size:1.22rem;font-weight:600}
@@ -78,7 +78,7 @@ section{padding:76px 0}
 #mtoggle{display:none}
 .burger{display:none;cursor:pointer;padding:8px;margin-left:auto}
 .burger span{display:block;width:22px;height:2px;background:var(--ink);margin:5px 0}
-@media (max-width:920px){
+@media (max-width:980px){
   .burger{display:block}
   .logo{margin-right:0}
   .nav .wrap{flex-wrap:wrap;gap:8px}
