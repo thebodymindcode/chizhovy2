@@ -156,7 +156,7 @@ section > .narrow > h2 + p{text-align:center;max-width:760px;margin-left:auto;ma
 /* кнопки в центрированной секции стоят по центру, в узкой колонке слева */
 .btns{text-align:center;margin-left:auto;margin-right:auto}
 .btns .btn+.btn{margin-left:10px}
-.tside .btns,.split .btns,.hero .btns{text-align:left}
+.tside .btns,.split .btns,.hero .btns,.diagrow .btns{text-align:left}
 /* Система: широкая секция по центру, узкая колонка рядом с фото или врезкой слева */
 .tside > .col > .eyebrow,
 .tside > .col > h2,
@@ -202,6 +202,29 @@ h3{font-size:1.22rem;font-weight:600}
 p{margin:0 0 1.1em}
 p,li,figcaption,blockquote,dd,dt,summary,td,th{text-wrap:pretty}
 section{padding:76px 0}
+/* ЖЕЛЕЗНОЕ ПРАВИЛО ВЫРАВНИВАНИЯ:
+   секция целиком по центру, содержимое карточек и колонок по левому краю */
+section > .wrap,
+section > .narrow{text-align:center}
+section .card,
+section .box,
+section .nail,
+section .legend,
+section details,
+section .pull,
+section .q,
+section .who,
+section li,
+section .tm,
+section table,
+.tside > .col,
+.split > div,
+.hero .in{text-align:left}
+section > .wrap > ul,
+section > .narrow > ul,
+section > .wrap > ol,
+section > .narrow > ol{text-align:left;display:inline-block}
+
 /* ЕДИНАЯ ШКАЛА ОТСТУПОВ: кратно 8, без разнобоя */
 section > .wrap > .eyebrow,
 section > .narrow > .eyebrow,
@@ -220,7 +243,7 @@ section > .narrow > h2 + .sub,
 .tside > .col > h2 + p,
 .split > div > h2 + p{margin-top:0}
 section > .wrap > p,
-section > .narrow > p,
+section > .narrow > p{margin:0 auto 20px}
 .tside > .col > p,
 .split > div > p{margin:0 0 20px}
 section > .wrap > h3,
@@ -234,9 +257,9 @@ section > .wrap > .mosaic,
 section > .wrap > .split,
 section > .wrap > .tside,
 section > .narrow > .grid2,
-section > .narrow > .grid3{margin:32px 0 0}
+section > .narrow > .grid3{margin:32px auto 0}
 section > .wrap > .btns,
-section > .narrow > .btns{margin:32px 0 0}
+section > .narrow > .btns{margin:32px auto 0;max-width:none}
 section > .wrap > :last-child,
 section > .narrow > :last-child{margin-bottom:0}
 details + details{margin-top:12px}
@@ -737,6 +760,21 @@ _TEXTBOX_RE = re.compile(
     r'(<(?:div|span)\s+class="(?:q|who|cap|t-lead|t-body|gap)"[^>]*>|<span>)'
     r'([^<]{20,}?)(</(?:div|span)>)',
     re.S)
+
+_BTN_P = re.compile(r'<p(?![^>]*class=)([^>]*)>(\s*<a class="btn)', re.S)
+_BTN_P2 = re.compile(r'<p class="((?:(?!btns)[^"])*)"([^>]*)>(\s*<a class="btn)', re.S)
+
+_BTN_BARE = re.compile(
+    r'(<div class="(?:narrow|wrap)"[^>]*>(?:(?!</div>).)*?)\n((?:<a class="btn[^>]*>.*?</a>\s*)+)(\n</div>)',
+    re.S)
+
+def btns_class(html: str) -> str:
+    """Каждая кнопка живёт в контейнере .btns: одно правило выравнивает их все."""
+    html = _BTN_P.sub(r'<p class="btns"\1>\2', html)
+    html = _BTN_P2.sub(r'<p class="\1 btns"\2>\3', html)
+    # кнопки, лежащие прямо в контейнере без обёртки
+    html = _BTN_BARE.sub(lambda m: m.group(1) + '\n<p class="btns">' + m.group(2).strip() + '</p>' + m.group(3), html)
+    return html
 
 def typo(html: str) -> str:
     """Типографский проход: ни одного слова-сироты в конце абзаца, заголовка, цитаты."""
@@ -3801,6 +3839,6 @@ CSS_VER = _h.md5(CSS.encode()).hexdigest()[:8]
 for rel, (title, desc, active, body) in P.items():
     f = ROOT / rel
     f.parent.mkdir(parents=True, exist_ok=True)
-    f.write_text(page(title, desc, active, body), encoding="utf-8")
+    f.write_text(btns_class(page(title, desc, active, body)), encoding="utf-8")
     n += 1
 print(f"OK v2: site.css + {n} страниц (иконки, диаграмма, таймлайн, мозаика, фавикон)")
