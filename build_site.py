@@ -1117,11 +1117,11 @@ P["metod/index.html"] = ("Метод школы · Настоящие отнош
 
 <section><div class="wrap">
 <div class="split" style="margin-bottom:44px">
-<div class="ph"><img src="/chizhovy2/images/real/real-02.jpg" alt="Команда школы за общим столом после модуля" loading="lazy"></div>
+<div class="ph"><img src="/chizhovy2/images/ob-zal-krug.png" alt="Зал со стульями по кругу" loading="lazy"></div>
 <div>
 <p class="eyebrow">Формат работы</p>
 <h2 style="font-size:1.9rem">Как устроен зал</h2>
-<p>Небольшая группа, стулья по&nbsp;кругу, двое ведущих. К&nbsp;третьему дню участники знают друг друга по&nbsp;имени. Люди на&nbsp;фото прошли модуль вместе, часть из&nbsp;них общается до&nbsp;сих&nbsp;пор.</p>
+<p>Небольшая группа, стулья по&nbsp;кругу, двое ведущих. Ни&nbsp;рядов, ни&nbsp;кафедры, ни&nbsp;мест «получше»: каждый видит каждого, и&nbsp;ведущие сидят в&nbsp;том&nbsp;же круге.</p>
 </div>
 </div>
 <p class="eyebrow">Три опоры результата</p>
@@ -1213,7 +1213,7 @@ P["programma/index.html"] = ("Программа · Настоящие отно�
 
 <section><div class="wrap">
 <div class="split">
-<div class="ph"><img src="/chizhovy2/images/real/real-09.jpg" alt="Группа во время модуля" loading="lazy"></div>
+<div class="ph"><img src="/chizhovy2/images/ob-lestnica.png" alt="Три ступени старой лестницы" loading="lazy"></div>
 <div>
 <p class="eyebrow">Чем этот путь отличается</p>
 <h2 style="font-size:1.9rem">Почему три ступени, а&nbsp;не&nbsp;один интенсив</h2>
@@ -1313,7 +1313,7 @@ P["modul-1/index.html"] = ("Модуль I. Возвращение к себе �
 
 <section><div class="wrap">
 <div class="split">
-<div class="ph"><img src="/chizhovy2/images/real/real-05.jpg" alt="Выпуск группы первого модуля" loading="lazy"></div>
+<div class="ph"><img src="/chizhovy2/images/ob-doroga.png" alt="Дорога через поля на рассвете" loading="lazy"></div>
 <div>
 <p class="eyebrow">После модуля</p>
 <h2 style="font-size:1.9rem">Что происходит в&nbsp;первые недели</h2>
@@ -1452,7 +1452,7 @@ P["modul-2/index.html"] = ("Модуль II. Внутренняя свобода
 
 <section><div class="wrap">
 <div class="split">
-<div class="ph"><img src="/chizhovy2/images/real/real-06.jpg" alt="Работа группы в зале" loading="lazy"></div>
+<div class="ph"><img src="/chizhovy2/images/ob-zerkalo.png" alt="Зеркало в тёплом коридоре" loading="lazy"></div>
 <div>
 <p class="eyebrow">Что происходит с&nbsp;группой</p>
 <h2 style="font-size:1.9rem">Чужая сцена работает как&nbsp;своя</h2>
@@ -3034,7 +3034,7 @@ P["slovar/index.html"] = ("Словарь школы · Настоящие от�
 
 <section><div class="wrap">
 <div class="split">
-<div class="ph"><img src="/chizhovy2/images/real/real-12.jpg" alt="Команда на забеге" loading="lazy"></div>
+<div class="ph"><img src="/chizhovy2/images/ob-zapis.png" alt="Рукописные страницы на столе" loading="lazy"></div>
 <div>
 <p class="eyebrow">Откуда взялись эти слова</p>
 <h2 style="font-size:1.9rem">Откуда взялись эти слова</h2>
@@ -3913,7 +3913,7 @@ P["tehniki-sceny/index.html"] = ("Техники сцены · Настоящи�
 
 <section><div class="wrap">
 <div class="split">
-<div class="ph"><img src="/chizhovy2/images/real/real-06.jpg" alt="Работа группы в зале" loading="lazy"></div>
+<div class="ph"><img src="/chizhovy2/images/ob-krug-sverhu.png" alt="Круг стульев сверху" loading="lazy"></div>
 <div>
 <p class="eyebrow">Где это происходит</p>
 <h2 style="font-size:1.9rem">Как устроен зал</h2>
