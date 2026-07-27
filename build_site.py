@@ -136,15 +136,15 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:'Manrope',-apple
 svg{max-width:100%}
 img{max-width:100%;display:block}
 a{color:var(--wine)}
-.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
-.narrow{max-width:1080px;margin:0 auto;padding:0 24px}
-.narrow>*{max-width:760px;margin-left:auto;margin-right:auto}
+.wrap{max-width:940px;margin:0 auto;padding:0 24px}
+.narrow{max-width:940px;margin:0 auto;padding:0 24px}
+.narrow>*{max-width:none}
 /* Двухколоночный разворот: текст слева, врезка справа. Правая пустота заполняется смыслом */
 /* Заголовки секций по центру, текст под ними колонкой по центру */
 section > .wrap > .eyebrow,
 section > .wrap > h2,
 section > .narrow > .eyebrow,
-section > .narrow > h2{text-align:center;max-width:none;margin-left:auto;margin-right:auto}
+section > .narrow > h2{text-align:left;max-width:none;margin-left:0;margin-right:0}
 section > .wrap > .eyebrow::before,
 section > .narrow > .eyebrow::before{display:inline-block;vertical-align:middle}
 section > .wrap > .eyebrow::before,
@@ -152,9 +152,9 @@ section > .narrow > .eyebrow::before{margin:0 10px 3px 0}
 section > .wrap > h2 + .sub,
 section > .narrow > h2 + .sub,
 section > .wrap > h2 + p,
-section > .narrow > h2 + p{text-align:center;max-width:760px;margin-left:auto;margin-right:auto}
+section > .narrow > h2 + p{text-align:left;max-width:none;margin-left:0;margin-right:0}
 /* кнопки в центрированной секции стоят по центру, в узкой колонке слева */
-.btns{text-align:center;margin-left:auto;margin-right:auto}
+.btns{text-align:left}
 .btns .btn+.btn{margin-left:10px}
 .tside .btns,.split .btns,.hero .btns,.diagrow .btns{text-align:left}
 /* Система: широкая секция по центру, узкая колонка рядом с фото или врезкой слева */
@@ -202,10 +202,17 @@ h3{font-size:1.22rem;font-weight:600}
 p{margin:0 0 1.1em}
 p,li,figcaption,blockquote,dd,dt,summary,td,th{text-wrap:pretty}
 section{padding:76px 0}
+/* каждый прямой ребёнок секции стоит по центру своего контейнера */
+section > .wrap > *,
+section > .narrow > *{margin-left:0;margin-right:0}
+.tside > .col > *,
+.split > div > *,
+.hero .in > *{margin-left:0;margin-right:0}
+
 /* ЖЕЛЕЗНОЕ ПРАВИЛО ВЫРАВНИВАНИЯ:
    секция целиком по центру, содержимое карточек и колонок по левому краю */
 section > .wrap,
-section > .narrow{text-align:center}
+section > .narrow{text-align:left}
 section .card,
 section .box,
 section .nail,
@@ -243,7 +250,7 @@ section > .narrow > h2 + .sub,
 .tside > .col > h2 + p,
 .split > div > h2 + p{margin-top:0}
 section > .wrap > p,
-section > .narrow > p{margin:0 auto 20px}
+section > .narrow > p{margin:0 0 20px}
 .tside > .col > p,
 .split > div > p{margin:0 0 20px}
 section > .wrap > h3,
@@ -257,9 +264,9 @@ section > .wrap > .mosaic,
 section > .wrap > .split,
 section > .wrap > .tside,
 section > .narrow > .grid2,
-section > .narrow > .grid3{margin:32px auto 0}
+section > .narrow > .grid3{margin:32px 0 0}
 section > .wrap > .btns,
-section > .narrow > .btns{margin:32px auto 0;max-width:none}
+section > .narrow > .btns{margin:32px 0 0;max-width:none}
 section > .wrap > :last-child,
 section > .narrow > :last-child{margin-bottom:0}
 details + details{margin-top:12px}
@@ -355,8 +362,8 @@ section > .narrow > .grid2:last-child{margin-bottom:0}
 .hero{position:relative;background:var(--night);color:var(--ntext)}
 .hero .bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.48}
 .hero .veil{position:absolute;inset:0;background:linear-gradient(165deg,rgba(23,34,44,.5),rgba(23,34,44,.93) 80%)}
-.hero .in{position:relative;z-index:1;max-width:1080px;margin:0 auto;padding:110px 24px 92px;text-align:left}
-.hero .in>*{max-width:860px;margin-left:0;margin-right:0}
+.hero .in{position:relative;z-index:1;max-width:940px;margin:0 auto;padding:110px 24px 92px;text-align:left}
+.hero .in>*{max-width:none;margin-left:0;margin-right:0}
 .hero .acts{justify-content:flex-start}
 .hero.short .in{padding:78px 24px 64px}
 .hero .eyebrow{color:var(--copper)}
@@ -445,7 +452,10 @@ section > .narrow > .grid2:last-child{margin-bottom:0}
 .poster .veil{position:absolute;inset:0;background:linear-gradient(rgba(23,34,44,.55),rgba(23,34,44,.92))}
 .poster .in{position:relative;z-index:1;padding:56px 48px}
 .poster h3{font-size:2rem;font-weight:500;color:#fff}
-.poster p{color:rgba(242,237,228,.75);max-width:520px}
+.poster p{color:rgba(242,237,228,.75);max-width:600px}
+.poster .in{text-align:left}
+.poster .in>*{margin-left:0;margin-right:0}
+.poster .btns{text-align:left}
 
 /* FAQ */
 details{background:#fff;border:1px solid var(--line);border-radius:8px;padding:4px 24px;margin-bottom:12px}
@@ -989,7 +999,7 @@ P["index.html"] = ("Настоящие отношения · школа тран
 
 <section><div class="narrow">
 <h2>Начни с разговора</h2>
-<p class="sub" style="margin:0 auto 26px">Собеседование в&nbsp;школу: разговор о&nbsp;твоей ситуации и&nbsp;честный ответ, чем школа может помочь. Для читателей сайта&nbsp;бесплатно.</p>
+<p class="sub" style="margin:0 0 26px">Собеседование в&nbsp;школу: разговор о&nbsp;твоей ситуации и&nbsp;честный ответ, чем школа может помочь. Для читателей сайта&nbsp;бесплатно.</p>
 <a class="btn btn-wine" href="/chizhovy2/sessiya/">Записаться на&nbsp;собеседование</a>
 </div></section>
 """)
@@ -1812,7 +1822,7 @@ P["vedushchie/index.html"] = ("Алексей и Ирина Чижовы · На
 
 <section><div class="narrow">
 <h2>Познакомиться лично</h2>
-<p class="sub" style="margin:0 auto 26px">Час разговора о&nbsp;твоей ситуации: смотрим, что происходит, и&nbsp;вместе решаем, по пути ли&nbsp;нам. Для&nbsp;читателей сайта бесплатно.</p>
+<p class="sub" style="margin:0 0 26px">Час разговора о&nbsp;твоей ситуации: смотрим, что происходит, и&nbsp;вместе решаем, по пути ли&nbsp;нам. Для&nbsp;читателей сайта бесплатно.</p>
 <p class="btns"><a class="btn btn-wine" href="/chizhovy2/sessiya/">Записаться на&nbsp;собеседование</a> <a class="btn btn-ghost" href="/chizhovy2/gid/" style="margin-left:8px">Читать гайд</a></p>
 </div></section>
 """)
@@ -2139,7 +2149,7 @@ MOST = """<section><div class="narrow">
 
 MOST = """<section><div class="narrow">
 <h2>Читать полезно, а&nbsp;меняет жизнь работа в&nbsp;зале</h2>
-<p class="sub" style="margin:0 auto 26px">Книги дают карту, а&nbsp;сценарий переписывается в&nbsp;зале, телом и&nbsp;эмоцией. Начни с&nbsp;бесплатного гайда или приходи на&nbsp;собеседование: разговор о твоей&nbsp;ситуации.</p>
+<p class="sub" style="margin:0 0 26px">Книги дают карту, а&nbsp;сценарий переписывается в&nbsp;зале, телом и&nbsp;эмоцией. Начни с&nbsp;бесплатного гайда или приходи на&nbsp;собеседование: разговор о твоей&nbsp;ситуации.</p>
 <p class="btns"><a class="btn btn-wine" href="/chizhovy2/sessiya/">Записаться на&nbsp;собеседование</a> <a class="btn btn-ghost" href="/chizhovy2/gid/" style="margin-left:8px">Читать гайд</a></p>
 </div></section>"""
 
@@ -2605,7 +2615,7 @@ P["istorii/index.html"] = ("Истории учеников · Настоящи�
 
 <section><div class="narrow">
 <h2>Начать свою историю</h2>
-<p class="sub" style="margin:0 auto 26px">Первый шаг у&nbsp;всех один: час честного разговора. Для читателей сайта он&nbsp;&#8288;бесплатный.</p>
+<p class="sub" style="margin:0 0 26px">Первый шаг у&nbsp;всех один: час честного разговора. Для читателей сайта он&nbsp;&#8288;бесплатный.</p>
 <a class="btn btn-wine" href="/chizhovy2/sessiya/">Записаться на&nbsp;собеседование</a>
 </div></section>
 <section><div class="wrap"><div class="tside">
@@ -2683,7 +2693,7 @@ P["istorii/predprinimatel/index.html"] = ("Предприниматель: за�
 
 <section><div class="narrow">
 <h2>Узнал себя в этом?</h2>
-<p class="sub" style="margin:0 auto 26px">Его путь начался с&nbsp;одного честного разговора о&nbsp;том, где он на&nbsp;самом деле находится. Твой может начаться так&nbsp;же. Собеседование для читателей сайта&nbsp;бесплатное.</p>
+<p class="sub" style="margin:0 0 26px">Его путь начался с&nbsp;одного честного разговора о&nbsp;том, где он на&nbsp;самом деле находится. Твой может начаться так&nbsp;же. Собеседование для читателей сайта&nbsp;бесплатное.</p>
 <p class="btns"><a class="btn btn-wine" href="/chizhovy2/sessiya/">Записаться на&nbsp;собеседование</a> <a class="btn btn-ghost" href="/chizhovy2/istorii/komanda-mir/" style="margin-left:8px">Ещё история: команда «МИР»</a></p>
 </div></section>
 <section><div class="wrap"><div class="tside">
@@ -2846,7 +2856,7 @@ P["slovar/index.html"] = ("Словарь школы · Настоящие от�
 
 <section><div class="narrow">
 <h2>Слова оживают в&nbsp;зале</h2>
-<p class="sub" style="margin:0 auto 26px">Читать словарь полезно, а&nbsp;по-настоящему эти слова понимаешь телом, в&nbsp;зале, когда очередь доходит до&nbsp;твоей сцены. Начни с&nbsp;гайда или запишись на&nbsp;собеседование.</p>
+<p class="sub" style="margin:0 0 26px">Читать словарь полезно, а&nbsp;по-настоящему эти слова понимаешь телом, в&nbsp;зале, когда очередь доходит до&nbsp;твоей сцены. Начни с&nbsp;гайда или запишись на&nbsp;собеседование.</p>
 <p class="btns"><a class="btn btn-wine" href="/chizhovy2/sessiya/">Записаться на&nbsp;собеседование</a> <a class="btn btn-ghost" href="/chizhovy2/gid/" style="margin-left:8px">Читать гайд</a></p>
 </div></section>
 <section><div class="wrap"><div class="tside">
@@ -2906,7 +2916,7 @@ P["slovar/index.html"] = ("Словарь школы · Настоящие от�
 # ================= КОМУ: ПРЕДПРИНИМАТЕЛИ =================
 FINCTA = """<section><div class="narrow">
 <h2>Начни с разговора</h2>
-<p class="sub" style="margin:0 auto 26px">Собеседование в&nbsp;школу: разговор о&nbsp;твоей ситуации и&nbsp;честный ответ, чем мы&nbsp;можем помочь. Для читателей сайта&nbsp;бесплатно.</p>
+<p class="sub" style="margin:0 0 26px">Собеседование в&nbsp;школу: разговор о&nbsp;твоей ситуации и&nbsp;честный ответ, чем мы&nbsp;можем помочь. Для читателей сайта&nbsp;бесплатно.</p>
 <p class="btns"><a class="btn btn-wine" href="/chizhovy2/sessiya/">Записаться на&nbsp;собеседование</a> <a class="btn btn-ghost" href="/chizhovy2/gid/" style="margin-left:8px">Сначала почитать гайд</a></p>
 </div></section>"""
 
@@ -3780,7 +3790,7 @@ P["stati/index.html"] = ("Статьи школы · Настоящие отно
 
 <section><div class="narrow">
 <h2>Пока библиотека растёт</h2>
-<p class="sub" style="margin:0 auto 26px">Главное ядро школы уже собрано в&nbsp;бесплатном гайде «Кто пишет сценарий твоей&nbsp;жизни». Полчаса чтения. А&nbsp;живые вопросы можно принести на&nbsp;собеседование: для&nbsp;читателей сайта оно бесплатное.</p>
+<p class="sub" style="margin:0 0 26px">Главное ядро школы уже собрано в&nbsp;бесплатном гайде «Кто пишет сценарий твоей&nbsp;жизни». Полчаса чтения. А&nbsp;живые вопросы можно принести на&nbsp;собеседование: для&nbsp;читателей сайта оно бесплатное.</p>
 <p class="btns"><a class="btn btn-wine" href="/chizhovy2/gid/">Читать гайд</a> <a class="btn btn-ghost" href="/chizhovy2/sessiya/" style="margin-left:8px">Записаться на&nbsp;собеседование</a></p>
 </div></section>
 <section><div class="wrap"><div class="tside">
