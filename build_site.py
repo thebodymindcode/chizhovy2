@@ -733,9 +733,9 @@ P["index.html"] = ("Настоящие отношения · школа тран
 
 <section><div class="wrap">
 <div class="nails">
-<div class="nail"><b>16&nbsp;лет</b><span>в&nbsp;трансформационной практике</span></div>
+<div class="nail"><b>16&nbsp;лет</b><span>в&nbsp;практике, залы и&nbsp;группы</span></div>
 <div class="nail"><b>10-20</b><span>человек в&nbsp;группе, каждого знаем по&nbsp;имени</span></div>
-<div class="nail"><b>3</b><span>модуля очного погружения</span></div>
+<div class="nail"><b>3</b><span>модуля очно, по&nbsp;2,5 и&nbsp;5 дней</span></div>
 <div class="nail"><b>3&nbsp;месяца</b><span>сопровождения после тренинга</span></div>
 </div>
 </div></section>
@@ -785,20 +785,20 @@ P["index.html"] = ("Настоящие отношения · школа тран
 <div class="timeline" style="margin-top:28px">{timeline_svg()}</div>
 <div class="timeline-m" style="margin-top:28px">
 <div class="tm"><div class="c">I</div><div><b>Возвращение к&nbsp;себе</b><span>2,5 дня очно</span></div></div>
-<div class="gap">месяц на&nbsp;интеграцию</div>
+<div class="gap">месяц на&nbsp;проверку в жизни</div>
 <div class="tm"><div class="c">II</div><div><b>Внутренняя свобода</b><span>5 дней очно</span></div></div>
 <div class="gap">ещё 3-5 недель до&nbsp;финала</div>
 <div class="tm last"><div class="c">III</div><div><b>Создатель реальности</b><span>3 месяца в&nbsp;жизни, результаты&nbsp;остаются</span></div></div>
 </div>
 <div class="grid3" style="margin-top:26px">
-<div class="card white"><div class="ph" style="aspect-ratio:4/3;margin-bottom:18px"><img src="/chizhovy2/images/site-m1.png" alt="Утро, женщина пишет в дневник у окна" loading="lazy"></div><h3>I. Возвращение к&nbsp;себе</h3><p>Увидеть свои паттерны, установки и&nbsp;то, откуда они родом. Первый честный контакт с&nbsp;собой.</p><p style="margin-top:12px"><a href="/chizhovy2/modul-1/">Про первый модуль</a></p></div>
-<div class="card white"><div class="ph" style="aspect-ratio:4/3;margin-bottom:18px"><img src="/chizhovy2/images/real/real-07.jpg" alt="Группа тренинга в тёплом зале" loading="lazy"></div><h3>II. Внутренняя свобода</h3><p>Страх, вина, обида, чужие ожидания. Перезапись решений, которые правили годами.</p><p style="margin-top:12px"><a href="/chizhovy2/modul-2/">Про второй модуль</a></p></div>
+<div class="card white"><div class="ph" style="aspect-ratio:4/3;margin-bottom:18px"><img src="/chizhovy2/images/site-m1.png" alt="Утро, женщина пишет в дневник у окна" loading="lazy"></div><h3>I. Возвращение к&nbsp;себе</h3><p>Увидеть, что повторяется, во&nbsp;что веришь и&nbsp;откуда это взялось. Первый честный контакт с&nbsp;собой.</p><p style="margin-top:12px"><a href="/chizhovy2/modul-1/">Про первый модуль</a></p></div>
+<div class="card white"><div class="ph" style="aspect-ratio:4/3;margin-bottom:18px"><img src="/chizhovy2/images/real/real-07.jpg" alt="Группа тренинга в тёплом зале" loading="lazy"></div><h3>II. Внутренняя свобода</h3><p>Страх, вина, обида, чужие ожидания. Меняешь решения, которые управляли тобой годами.</p><p style="margin-top:12px"><a href="/chizhovy2/modul-2/">Про второй модуль</a></p></div>
 <div class="card white"><div class="ph" style="aspect-ratio:4/3;margin-bottom:18px"><img src="/chizhovy2/images/real/real-10.jpg" alt="Команда выпуска тренинга" loading="lazy"></div><h3>III. Создатель реальности</h3><p>Команда, еженедельные встречи, новые действия и&nbsp;результаты, которые остаются.</p><p style="margin-top:12px"><a href="/chizhovy2/marafon/">Про Марафон</a></p></div>
 </div>
 </div></section>
 
 <section style="padding-top:0"><div class="wrap">
-<p class="eyebrow">Какие возможности откроются</p>
+<p class="eyebrow">Что меняется в жизни</p>
 <h2>Что <span class="kpm">становится возможным</span></h2>
 <div class="grid3" style="margin-top:30px">
 <div class="card"><span class="bignum">01</span>{icon('ceiling')}<h3>Дело пробивает потолок</h3><p>Видишь, что именно держало обороты и&nbsp;заставляло цепляться за&nbsp;«стабильный» заработок. Убираешь причину, не&nbsp;симптом.</p></div>
@@ -820,6 +820,7 @@ P["index.html"] = ("Настоящие отношения · школа тран
 <div class="ph"><img src="/chizhovy2/images/real/real-01.jpg" alt="Группа у камина с сертификатами" loading="lazy"></div>
 <div class="ph"><img src="/chizhovy2/images/real/real-11.jpg" alt="Команда участников" loading="lazy"></div>
 <div class="ph"><img src="/chizhovy2/images/real/real-13.jpg" alt="Выпуск модуля" loading="lazy"></div>
+<div class="ph"><img src="/chizhovy2/images/real/real-04.jpg" alt="Работа в зале" loading="lazy"></div>
 </div>
 </div></section>
 
@@ -1050,7 +1051,7 @@ P["programma/index.html"] = ("Программа · Настоящие отно�
 
 # ================= МОДУЛЬ 1 =================
 P["modul-1/index.html"] = ("Модуль I. Возвращение к себе · Настоящие отношения",
-"Два с половиной дня: увидеть свои паттерны и их источники.", "modul-1", f"""
+"Два с половиной дня: увидеть, что повторяется, и откуда это взялось.", "modul-1", f"""
 <div class="hero short"><div class="bg" style="background-image:url('/chizhovy2/images/site-m1.png')"></div><div class="veil"></div>
 <div class="in"><p class="eyebrow">Модуль I · два с&nbsp;половиной дня</p><h1>Возвращение к&nbsp;себе</h1>
 <p class="lead">Первый модуль отвечает на&nbsp;вопрос, с&nbsp;которого начинается любой сдвиг: что со&nbsp;мной происходит на&nbsp;самом деле и&nbsp;откуда это&nbsp;взялось.</p></div></div>
@@ -1071,7 +1072,7 @@ P["modul-1/index.html"] = ("Модуль I. Возвращение к себе �
 <div class="grid3" style="margin-top:26px">
 <div class="card"><span class="bignum">1</span>{icon('speech')}<h3>Вечер пятницы</h3><p>Знакомство группы и&nbsp;вход в&nbsp;пространство. Первые честные ответы на&nbsp;вопрос «зачем я&nbsp;здесь». К&nbsp;концу вечера зал перестаёт быть комнатой незнакомых людей.</p></div>
 <div class="card"><span class="bignum">2</span>{icon('people','var(--sage-deep)')}<h3>Суббота</h3><p>Самый длинный день: живые процессы, работа в&nbsp;парах и&nbsp;группе, первые сцены. Здесь обычно и&nbsp;случается то, ради чего люди приезжают.</p></div>
-<div class="card"><span class="bignum">3</span>{icon('sunrise','var(--sand)')}<h3>Воскресенье</h3><p>Сборка: что увидел, что с&nbsp;этим делать в&nbsp;понедельник. Договорённости с&nbsp;собой на&nbsp;недели интеграции до&nbsp;второго модуля.</p></div>
+<div class="card"><span class="bignum">3</span>{icon('sunrise','var(--sand)')}<h3>Воскресенье</h3><p>Сборка: что увидел, что с&nbsp;этим делать в&nbsp;понедельник. Договорённости с&nbsp;собой на&nbsp;недели на проверку в жизни до&nbsp;второго модуля.</p></div>
 </div>
 </div></section>
 
@@ -1088,7 +1089,7 @@ P["modul-1/index.html"] = ("Модуль I. Возвращение к себе �
 
 <section class="dark"><div class="narrow">
 <h2>Что забирают с&nbsp;собой</h2>
-<p>Первый модуль не&nbsp;решает всё: он&nbsp;открывает глаза и&nbsp;даёт первые инструменты. Дальше идут недели интеграции, когда увиденное проверяется обычной жизнью, а за&nbsp;ними <a href="/chizhovy2/modul-2/" style="color:#D08A5F">второй модуль</a>, где старые решения переписываются.</p>
+<p>Первый модуль не&nbsp;решает всё: он&nbsp;открывает глаза и&nbsp;даёт первые инструменты. Дальше идут недели, когда увиденное проверяется обычной жизнью, а за&nbsp;ними <a href="/chizhovy2/modul-2/" style="color:#D08A5F">второй модуль</a>, где старые решения переписываются.</p>
 <div class="nails nails3" style="margin-top:24px">
 <div class="nail"><b>2,5 дня</b><span>вечер пятницы плюс выходные, без отрыва от&nbsp;работы</span></div>
 <div class="nail"><b>10-20</b><span>человек в&nbsp;группе, каждого знаем по&nbsp;имени</span></div>
@@ -1153,7 +1154,7 @@ P["modul-2/index.html"] = ("Модуль II. Внутренняя свобода
 </div></section>
 
 <section><div class="narrow">
-<p>Второй модуль идут те, кто прошёл <a href="/chizhovy2/modul-1/">первый</a> и&nbsp;выдержал недели интеграции: увидел свою запись в&nbsp;деле и&nbsp;захотел с&nbsp;ней разобраться. Дальше <a href="/chizhovy2/marafon/">Марафон</a>, где новое поведение закрепляется девяноста днями практики.</p>
+<p>Второй модуль идут те, кто прошёл <a href="/chizhovy2/modul-1/">первый</a> и&nbsp;выдержал недели на проверку в жизни: увидел свою запись в&nbsp;деле и&nbsp;захотел с&nbsp;ней разобраться. Дальше <a href="/chizhovy2/marafon/">Марафон</a>, где новое поведение закрепляется девяноста днями практики.</p>
 <p style="margin-top:26px"><a class="btn btn-wine" href="/chizhovy2/sessiya/">Занять место</a> <a class="btn btn-ghost" href="/chizhovy2/marafon/" style="margin-left:8px">Дальше: Марафон</a></p>
 </div></section>
 """)
@@ -1189,7 +1190,7 @@ P["marafon/index.html"] = ("Модуль III. Создатель реально�
 
 <section style="padding-top:0"><div class="narrow">
 <h2>Почему так долго</h2>
-<p>После погружения человек возвращается в ту&nbsp;же квартиру, к тем&nbsp;же людям и в тот&nbsp;же рабочий чат. Всё вокруг помнит его прежним и&nbsp;мягко тянет обратно в&nbsp;знакомую роль. Без поддержки на&nbsp;этом отрезке инсайты выветриваются за&nbsp;пару недель: это главная причина, по&nbsp;которой тренинги «не&nbsp;работают».</p>
+<p>После погружения человек возвращается в ту&nbsp;же квартиру, к тем&nbsp;же людям и в тот&nbsp;же рабочий чат. Всё вокруг помнит его прежним и&nbsp;мягко тянет обратно в&nbsp;знакомую роль. Без поддержки на&nbsp;этом отрезке понятое выветривается за&nbsp;пару недель: это главная причина, по&nbsp;которой тренинги «не&nbsp;работают».</p>
 <p>Марафон закрывает именно этот разрыв. Каждый день ты&nbsp;делаешь новый выбор в&nbsp;реальных обстоятельствах, каждую неделю приносишь результат на&nbsp;разбор, и&nbsp;рядом идёт команда, которая видит твои сдвиги со&nbsp;стороны. За&nbsp;девяносто дней новое поведение перестаёт требовать усилий.</p>
 <div class="nails nails3" style="margin-top:24px">
 <div class="nail"><b>90 дней</b><span>ежедневной практики в обычной&nbsp;жизни</span></div>
@@ -1210,6 +1211,7 @@ P["marafon/index.html"] = ("Модуль III. Создатель реально�
 <div class="ph"><img src="/chizhovy2/images/real/real-10.jpg" alt="Команда Марафона" loading="lazy"></div>
 <div class="ph"><img src="/chizhovy2/images/real/real-11.jpg" alt="Выпуск Марафона" loading="lazy"></div>
 <div class="ph"><img src="/chizhovy2/images/real/real-13.jpg" alt="Финал модуля" loading="lazy"></div>
+<div class="ph"><img src="/chizhovy2/images/real/real-08.jpg" alt="Разбор в кругу" loading="lazy"></div>
 </div>
 <p style="margin-top:30px"><a class="btn btn-wine" href="/chizhovy2/sessiya/">Обсудить участие на&nbsp;собеседовании</a></p>
 </div></section>
@@ -2503,7 +2505,7 @@ P["dlya-zhenshchin/index.html"] = ("Для женщин · Настоящие о
 
 # ================= КАК ПРОХОДИТ =================
 P["kak-prohodit/index.html"] = ("Как проходит обучение · Настоящие отношения",
-"Путь ученика по шагам: собеседование, три модуля с интеграцией, сопровождение. Что происходит в зале.", "programma", f"""
+"Путь ученика по шагам: собеседование, три модуля, недели на проверку в жизни, сопровождение. Что происходит в зале.", "programma", f"""
 <div class="hero short"><div class="bg" style="background-image:url('/chizhovy2/images/real/real-06.jpg')"></div><div class="veil"></div>
 <div class="in"><p class="eyebrow">Как проходит</p><h1>Путь ученика по&nbsp;шагам</h1>
 <p class="lead">Без сюрпризов: рассказываем по&nbsp;порядку, что&nbsp;будет от&nbsp;первого разговора до&nbsp;перемен, которые остаются надолго. Каждый шаг добровольный, на&nbsp;любом можно остановиться.</p></div></div>
@@ -2514,14 +2516,14 @@ P["kak-prohodit/index.html"] = ("Как проходит обучение · Н�
 <div class="timeline" style="margin-top:28px">{timeline_svg()}</div>
 <div class="timeline-m" style="margin-top:28px">
 <div class="tm"><div class="c">I</div><div><b>Возвращение к&nbsp;себе</b><span>2,5 дня очно</span></div></div>
-<div class="gap">месяц на&nbsp;интеграцию</div>
+<div class="gap">месяц на&nbsp;проверку в жизни</div>
 <div class="tm"><div class="c">II</div><div><b>Внутренняя свобода</b><span>5 дней очно</span></div></div>
 <div class="gap">ещё 3-5 недель до&nbsp;финала</div>
 <div class="tm last"><div class="c">III</div><div><b>Создатель реальности</b><span>3 месяца в&nbsp;жизни, результаты&nbsp;остаются</span></div></div>
 </div>
 <div class="grid3" style="margin-top:26px">
 <div class="card"><span class="bignum">0</span>{icon('speech')}<h3>Собеседование</h3><p>Час живого разговора: твоя ситуация, честный взгляд и&nbsp;решение с&nbsp;двух сторон, по пути&nbsp;ли нам. Для&nbsp;читателей сайта бесплатно.</p></div>
-<div class="card"><span class="bignum">1-2</span>{icon('people','var(--sage-deep)')}<h3>Очные модули</h3><p>Погружение на&nbsp;несколько дней: сцены, разборы, работа с&nbsp;состоянием в&nbsp;группе 10-20 человек. Между модулями недели интеграции: новое проверяется обычной жизнью.</p></div>
+<div class="card"><span class="bignum">1-2</span>{icon('people','var(--sage-deep)')}<h3>Очные модули</h3><p>Погружение на&nbsp;несколько дней: сцены, разборы, работа с&nbsp;состоянием в&nbsp;группе 10-20 человек. Между модулями несколько недель: новое проверяется обычной жизнью.</p></div>
 <div class="card"><span class="bignum">3</span>{icon('calendar','var(--sand)')}<h3>Марафон</h3><p>Три месяца в&nbsp;настоящей жизни: команда, еженедельные разборы с&nbsp;ведущими и&nbsp;<a href="/chizhovy2/praktiki/">ежедневная практика</a>.</p></div>
 </div>
 </div></section>
@@ -2668,7 +2670,7 @@ P["manifest/index.html"] = ("Манифест школы · Настоящие �
 <div class="card">{icon('target','var(--copper)')}<h3>Отбор важнее выручки</h3><p>Вход через собеседование, и&nbsp;это фильтр, а не&nbsp;формальность. Отговорить можем так&nbsp;же честно, как&nbsp;пригласить.</p></div>
 <div class="card">{icon('people','var(--copper)')}<h3>Маленькая группа важнее большого зала</h3><p>Группы 10-20 человек, каждого знаем по&nbsp;имени. Расти будем числом групп, зал большим не&nbsp;станет.</p></div>
 <div class="card">{icon('speech','var(--copper)')}<h3>Честность важнее красивой картинки</h3><p>Истории учеников публикуем с&nbsp;согласия и&nbsp;без глянца, результат у&nbsp;каждого свой. Истоки метода <a href="/chizhovy2/istoki/" style="color:#D08A5F">называем&nbsp;открыто</a>.</p></div>
-<div class="card">{icon('mountain','var(--copper)')}<h3>Глубина важнее скорости</h3><p>Мы за&nbsp;работу с&nbsp;причиной, поэтому формат длинный: погружение, интеграция, сопровождение. Быстрых чудес не&nbsp;обещаем.</p></div>
+<div class="card">{icon('mountain','var(--copper)')}<h3>Глубина важнее скорости</h3><p>Мы за&nbsp;работу с&nbsp;причиной, поэтому формат длинный: очные дни, недели на&nbsp;проверку в&nbsp;жизни, сопровождение. Быстрых чудес не&nbsp;обещаем.</p></div>
 </div>
 </div></section>
 
@@ -2822,6 +2824,7 @@ P["soobshchestvo/index.html"] = ("Сообщество выпускников ·
 <div class="ph"><img src="/chizhovy2/images/real/real-12.jpg" alt="Команда на забеге" loading="lazy"></div>
 <div class="ph"><img src="/chizhovy2/images/real/real-03.jpg" alt="Выпуск группы" loading="lazy"></div>
 <div class="ph"><img src="/chizhovy2/images/real/real-13.jpg" alt="Финал модуля" loading="lazy"></div>
+<div class="ph"><img src="/chizhovy2/images/real/real-08.jpg" alt="Разбор в кругу" loading="lazy"></div>
 </div>
 <p style="margin-top:26px"><a class="btn btn-ghost" href="/chizhovy2/istorii/">Истории людей с&nbsp;этих фото</a></p>
 </div></section>
@@ -3101,7 +3104,7 @@ P["somneniya/index.html"] = ("Частые сомнения · Настоящи�
 <section><div class="narrow">
 <h2>7. «Уже пробовал тренинги. Эффект держался неделю»</h2>
 <p>Знакомо, и&nbsp;причина обычно одна: работа шла на&nbsp;верхнем этаже. Вдохновение, конспект, новые слова, а&nbsp;запись осталась там&nbsp;же, где была, в&nbsp;эмоции и&nbsp;теле. Первый стресс возвращает старую реакцию, и&nbsp;человек решает, что дело в&nbsp;нём.</p>
-<p>Поэтому у&nbsp;нас формат длинный: погружение, недели интеграции между модулями и&nbsp;три месяца сопровождения. За&nbsp;девяносто дней новое поведение перестаёт быть праздничным и&nbsp;становится обычным. Как это выглядит день за&nbsp;днём: <a href="/chizhovy2/praktiki/">ежедневные практики</a> и&nbsp;<a href="/chizhovy2/istorii/komanda-mir/">история команды «МИР»</a>.</p>
+<p>Поэтому у&nbsp;нас формат длинный: погружение, недели на проверку в жизни между модулями и&nbsp;три месяца сопровождения. За&nbsp;девяносто дней новое поведение перестаёт быть праздничным и&nbsp;становится обычным. Как это выглядит день за&nbsp;днём: <a href="/chizhovy2/praktiki/">ежедневные практики</a> и&nbsp;<a href="/chizhovy2/istorii/komanda-mir/">история команды «МИР»</a>.</p>
 
 <h2 style="margin-top:36px">8. «Мужчине такое не&nbsp;нужно»</h2>
 <p>В зале примерно поровну тех и&nbsp;других. Мужская часть обычно упрямее всех на&nbsp;входе и&nbsp;благодарнее всех на&nbsp;выходе. Приходят за&nbsp;ясностью в&nbsp;решениях, за&nbsp;потолком в&nbsp;деле, за&nbsp;отношениями, которые перестали работать.</p>
