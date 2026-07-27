@@ -483,7 +483,8 @@ details p{color:var(--ink-soft);padding-bottom:16px;margin:0}
 /* Футер */
 footer{background:var(--night);color:var(--ntext);padding:64px 0 40px}
 footer h4{font-family:'Playfair Display',Georgia,serif;font-size:1rem;color:var(--copper);margin:0 0 14px}
-footer .cols{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:32px}
+footer .cols{display:grid;grid-template-columns:1.25fr .95fr .95fr .95fr 1.05fr;gap:26px;align-items:start}
+@media (max-width:1200px){footer .cols{grid-template-columns:1.2fr 1fr 1fr}}
 footer a{font-size:.86rem;line-height:1.5;color:rgba(242,237,228,.8);text-decoration:none;display:block;padding:4px 0;font-size:.9rem}
 footer a:hover{color:#fff}
 footer .fine{margin-top:44px;padding-top:20px;border-top:1px solid rgba(242,237,228,.15);font-size:.78rem;color:rgba(242,237,228,.5);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
@@ -628,9 +629,9 @@ FOOTER = """<footer><div class="wrap" style="max-width:1180px">
 <div><h4>Школа</h4>
 <a href="/chizhovy2/metod/">Метод</a>
 <a href="/chizhovy2/programma/">Программа целиком</a>
-<a href="/chizhovy2/modul-1/">Модуль I. Возвращение к&nbsp;себе</a>
-<a href="/chizhovy2/modul-2/">Модуль II. Внутренняя&nbsp;свобода</a>
-<a href="/chizhovy2/marafon/">Модуль III. Марафон</a>
+<a href="/chizhovy2/modul-1/">Модуль I</a>
+<a href="/chizhovy2/modul-2/">Модуль II</a>
+<a href="/chizhovy2/marafon/">Модуль III</a>
 <a href="/chizhovy2/kak-prohodit/">Как проходит обучение</a>
 <a href="/chizhovy2/praktiki/">Ежедневные практики</a>
 <a href="/chizhovy2/tehniki-sceny/">Техники сцены</a>
@@ -640,7 +641,7 @@ FOOTER = """<footer><div class="wrap" style="max-width:1180px">
 <a href="/chizhovy2/istoki/">Из чего собран метод</a>
 <a href="/chizhovy2/istoki/moreno-psihodrama/">Морено и&nbsp;психодрама</a>
 <a href="/chizhovy2/istoki/zeland-transerfing/">Зеланд и&nbsp;трансерфинг</a>
-<a href="/chizhovy2/istoki/est-transformaciya/">est и&nbsp;«Трансформация»</a>
+<a href="/chizhovy2/istoki/est-transformaciya/">est и Рейнхарт</a>
 <a href="/chizhovy2/istoki/goddard/">Невилл Годдард</a>
 <a href="/chizhovy2/istoki/nauka/">Наука за&nbsp;методом</a>
 </div>
@@ -651,15 +652,15 @@ FOOTER = """<footer><div class="wrap" style="max-width:1180px">
 <a href="/chizhovy2/otzyvy/">Короткие отзывы</a>
 <a href="/chizhovy2/soobshchestvo/">Сообщество</a>
 <a href="/chizhovy2/para/">Тренинг для пар</a>
-<a href="/chizhovy2/dlya-predprinimatelej/">Для предпринимателей</a>
+<a href="/chizhovy2/dlya-predprinimatelej/">Предпринимателям</a>
 <a href="/chizhovy2/dlya-zhenshchin/">Для женщин</a>
 </div>
 <div><h4>Начать</h4>
 <a href="/chizhovy2/start/">С чего начать</a>
-<a href="/chizhovy2/gid/">Гайд «Кто пишет сценарий твоей&nbsp;жизни»</a>
+<a href="/chizhovy2/gid/">Гайд школы</a>
 <a href="/chizhovy2/stati/">Статьи школы</a>
 <a href="/chizhovy2/somneniya/">Частые сомнения</a>
-<a href="/chizhovy2/bezopasnost/" style="white-space:nowrap">Безопасность и&nbsp;границы</a>
+<a href="/chizhovy2/bezopasnost/" style="white-space:nowrap">Границы работы</a>
 <a href="/chizhovy2/sessiya/">Собеседование</a>
 <a href="/chizhovy2/kontakty/">Контакты</a>
 <a href="https://t.me/+LVptSH6Mt4hhYmFi">Telegram-канал</a>
