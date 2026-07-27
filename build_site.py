@@ -981,6 +981,14 @@ P["metod/index.html"] = ("Метод школы · Настоящие отнош
 </div></section>
 
 <section style="padding-top:0"><div class="wrap">
+<div class="split" style="margin-bottom:44px">
+<div class="ph"><img src="/chizhovy2/images/real/real-02.jpg" alt="Команда школы за общим столом после модуля" loading="lazy"></div>
+<div>
+<p class="eyebrow">Как это выглядит на&nbsp;самом деле</p>
+<h2 style="font-size:1.9rem">Не&nbsp;лекция, а&nbsp;живые люди рядом</h2>
+<p>Никаких рядов и&nbsp;слайдов. Небольшая группа, где к&nbsp;третьему дню знаешь всех по&nbsp;имени и&nbsp;уже слышал их&nbsp;настоящие истории. Люди на&nbsp;этом фото прошли модуль вместе и&nbsp;половина из&nbsp;них продолжает общаться спустя годы.</p>
+</div>
+</div>
 <p class="eyebrow">Три опоры результата</p>
 <h2>Почему изменения остаются</h2>
 <div class="grid3" style="margin-top:26px">
