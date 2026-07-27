@@ -700,7 +700,7 @@ P["index.html"] = ("Настоящие отношения · школа тран
 <p class="eyebrow">Школа трансформации Алексея и&nbsp;Ирины Чижовых</p>
 <h1>Перепиши сценарий своей жизни</h1>
 <p class="lead">Очный тренинг и&nbsp;три месяца сопровождения. Перестаёшь ходить по&nbsp;одному и&nbsp;тому же&nbsp;кругу и&nbsp;начинаешь строить отношения, дело и&nbsp;себя по&nbsp;своему выбору.</p>
-<div class="acts"><a class="btn btn-copper" href="/chizhovy2/sessiya/">Записаться на&nbsp;собеседование</a><a class="btn btn-ghost" href="/chizhovy2/gid/">Скачать гайд бесплатно</a></div>
+<div class="acts"><a class="btn btn-copper" href="/chizhovy2/sessiya/">Записаться на&nbsp;собеседование</a><a class="btn btn-ghost" href="/chizhovy2/gid/">Читать гайд бесплатно</a></div>
 </div></div>
 
 <section><div class="wrap">
@@ -1526,10 +1526,16 @@ def istoki_dalee(*items):
 <div class="chiplist">{links}<a href="/chizhovy2/istoki/">Все истоки</a></div>
 </div></section>"""
 
+MOST = """<section><div class="narrow">
+<h2>Читать полезно, а&nbsp;меняет жизнь работа в&nbsp;зале</h2>
+<p class="sub">Книги дают карту, а&nbsp;сценарий переписывается в&nbsp;зале, телом и&nbsp;эмоцией. Начни с&nbsp;бесплатного гайда или приходи на&nbsp;собеседование: час разговора о&nbsp;твоей&nbsp;ситуации.</p>
+<p><a class="btn btn-wine" href="/chizhovy2/sessiya/">Записаться на&nbsp;собеседование</a> <a class="btn btn-ghost" href="/chizhovy2/gid/" style="margin-left:8px">Читать гайд</a></p>
+</div></section>"""
+
 MOST = """<section class="center" style="padding-top:0"><div class="narrow" style="text-align:center">
 <h2>Читать полезно, а&nbsp;меняет жизнь работа в&nbsp;зале</h2>
 <p class="sub" style="margin:0 auto 26px">Книги дают карту, а&nbsp;сценарий переписывается в&nbsp;зале, телом и&nbsp;эмоцией. Начни с&nbsp;бесплатного гайда или приходи на&nbsp;собеседование: час разговора о&nbsp;твоей&nbsp;ситуации.</p>
-<p><a class="btn btn-wine" href="/chizhovy2/sessiya/">Записаться на&nbsp;собеседование</a> <a class="btn btn-ghost" href="/chizhovy2/gid/" style="margin-left:8px">Скачать гайд</a></p>
+<p><a class="btn btn-wine" href="/chizhovy2/sessiya/">Записаться на&nbsp;собеседование</a> <a class="btn btn-ghost" href="/chizhovy2/gid/" style="margin-left:8px">Читать гайд</a></p>
 </div></section>"""
 
 P["istoki/index.html"] = ("Истоки метода · Настоящие отношения",
@@ -1891,7 +1897,7 @@ P["slovar/index.html"] = ("Словарь школы · Настоящие от�
 <section class="center" style="padding-top:0"><div class="narrow" style="text-align:center">
 <h2>Слова оживают в&nbsp;зале</h2>
 <p class="sub" style="margin:0 auto 26px">Читать словарь полезно, а&nbsp;по-настоящему эти слова понимаешь телом, в&nbsp;зале, когда очередь доходит до&nbsp;твоей сцены. Начни с&nbsp;гайда или запишись на&nbsp;собеседование.</p>
-<p><a class="btn btn-wine" href="/chizhovy2/sessiya/">Записаться на&nbsp;собеседование</a> <a class="btn btn-ghost" href="/chizhovy2/gid/" style="margin-left:8px">Скачать гайд</a></p>
+<p><a class="btn btn-wine" href="/chizhovy2/sessiya/">Записаться на&nbsp;собеседование</a> <a class="btn btn-ghost" href="/chizhovy2/gid/" style="margin-left:8px">Читать гайд</a></p>
 </div></section>
 """)
 
