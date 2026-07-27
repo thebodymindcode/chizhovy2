@@ -11,7 +11,7 @@ img{max-width:100%;display:block}
 a{color:var(--wine)}
 .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
 .narrow{max-width:1080px;margin:0 auto;padding:0 24px}
-.narrow>*{max-width:720px}
+.narrow>*{max-width:760px;margin-left:auto;margin-right:auto}
 /* Двухколоночный разворот: текст слева, врезка справа. Правая пустота заполняется смыслом */
 /* Заголовки секций по центру, текст под ними колонкой по центру */
 section > .wrap > .eyebrow,
@@ -25,13 +25,13 @@ section > .narrow > h2 + .sub,
 section > .wrap > h2 + p,
 section > .narrow > h2 + p{text-align:center;max-width:760px;margin-left:auto;margin-right:auto}
 .tside > .col > .eyebrow,
-.tside > .col > h2{text-align:left}
-.tside > .col > h2 + p{text-align:left;max-width:660px;margin-left:0;margin-right:0}
+.tside > .col > h2{text-align:center}
+
 .tside{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:56px;align-items:start}
 .card{display:flex;flex-direction:column}
 .card>p:last-child:has(>a:only-child){margin-top:auto;padding-top:10px}
 .tside>.col{min-width:0}
-.tside>.col>*{max-width:660px}
+.tside>.col>*{max-width:none}
 .side{min-width:0;position:sticky;top:96px}
 .side .box{background:#fff;border:1px solid var(--line);border-radius:12px;padding:22px 22px 20px}
 .side .box+.box{margin-top:14px}
@@ -142,8 +142,9 @@ section{padding:76px 0}
 .hero{position:relative;background:var(--night);color:var(--ntext)}
 .hero .bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.48}
 .hero .veil{position:absolute;inset:0;background:linear-gradient(165deg,rgba(23,34,44,.5),rgba(23,34,44,.93) 80%)}
-.hero .in{position:relative;z-index:1;max-width:1080px;margin:0 auto;padding:110px 24px 92px}
-.hero .in>*{max-width:860px}
+.hero .in{position:relative;z-index:1;max-width:1080px;margin:0 auto;padding:110px 24px 92px;text-align:center}
+.hero .in>*{max-width:880px;margin-left:auto;margin-right:auto}
+.hero .acts{justify-content:center}
 .hero.short .in{padding:78px 24px 64px}
 .hero .eyebrow{color:var(--copper)}
 .hero h1{font-size:clamp(2.3rem,6vw,3.7rem);font-weight:500;color:#fff}

@@ -138,7 +138,7 @@ img{max-width:100%;display:block}
 a{color:var(--wine)}
 .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
 .narrow{max-width:1080px;margin:0 auto;padding:0 24px}
-.narrow>*{max-width:720px}
+.narrow>*{max-width:760px;margin-left:auto;margin-right:auto}
 /* Двухколоночный разворот: текст слева, врезка справа. Правая пустота заполняется смыслом */
 /* Заголовки секций по центру, текст под ними колонкой по центру */
 section > .wrap > .eyebrow,
@@ -152,13 +152,13 @@ section > .narrow > h2 + .sub,
 section > .wrap > h2 + p,
 section > .narrow > h2 + p{text-align:center;max-width:760px;margin-left:auto;margin-right:auto}
 .tside > .col > .eyebrow,
-.tside > .col > h2{text-align:left}
-.tside > .col > h2 + p{text-align:left;max-width:660px;margin-left:0;margin-right:0}
+.tside > .col > h2{text-align:center}
+
 .tside{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:56px;align-items:start}
 .card{display:flex;flex-direction:column}
 .card>p:last-child:has(>a:only-child){margin-top:auto;padding-top:10px}
 .tside>.col{min-width:0}
-.tside>.col>*{max-width:660px}
+.tside>.col>*{max-width:none}
 .side{min-width:0;position:sticky;top:96px}
 .side .box{background:#fff;border:1px solid var(--line);border-radius:12px;padding:22px 22px 20px}
 .side .box+.box{margin-top:14px}
@@ -269,8 +269,9 @@ section{padding:76px 0}
 .hero{position:relative;background:var(--night);color:var(--ntext)}
 .hero .bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.48}
 .hero .veil{position:absolute;inset:0;background:linear-gradient(165deg,rgba(23,34,44,.5),rgba(23,34,44,.93) 80%)}
-.hero .in{position:relative;z-index:1;max-width:1080px;margin:0 auto;padding:110px 24px 92px}
-.hero .in>*{max-width:860px}
+.hero .in{position:relative;z-index:1;max-width:1080px;margin:0 auto;padding:110px 24px 92px;text-align:center}
+.hero .in>*{max-width:880px;margin-left:auto;margin-right:auto}
+.hero .acts{justify-content:center}
 .hero.short .in{padding:78px 24px 64px}
 .hero .eyebrow{color:var(--copper)}
 .hero h1{font-size:clamp(2.3rem,6vw,3.7rem);font-weight:500;color:#fff}
@@ -826,7 +827,7 @@ P["index.html"] = ("Настоящие отношения · школа тран
 
 <section style="padding-top:0"><div class="wrap">
 <p class="eyebrow">Как это выглядит</p>
-<h2>Наши группы, фотографии без постановки</h2>
+<h2>Наши группы</h2>
 <p class="sub">Это живые выпуски школы. Малые группы, очная работа, люди, которых мы&nbsp;знаем по&nbsp;именам и&nbsp;историям.</p>
 <div class="mosaic" style="margin-top:28px">
 <div class="ph"><img src="/chizhovy2/images/real/real-05.jpg" alt="Выпуск группы тренинга" loading="lazy"></div>
@@ -998,9 +999,9 @@ P["metod/index.html"] = ("Метод школы · Настоящие отнош
 <div class="split" style="margin-bottom:44px">
 <div class="ph"><img src="/chizhovy2/images/real/real-02.jpg" alt="Команда школы за общим столом после модуля" loading="lazy"></div>
 <div>
-<p class="eyebrow">Как это выглядит на&nbsp;самом деле</p>
-<h2 style="font-size:1.9rem">Не&nbsp;лекция, а&nbsp;живые люди рядом</h2>
-<p>Никаких рядов и&nbsp;слайдов. Небольшая группа, где к&nbsp;третьему дню знаешь всех по&nbsp;имени и&nbsp;уже слышал их&nbsp;настоящие истории. Люди на&nbsp;этом фото прошли модуль вместе и&nbsp;половина из&nbsp;них продолжает общаться спустя годы.</p>
+<p class="eyebrow">Формат работы</p>
+<h2 style="font-size:1.9rem">Как устроен зал</h2>
+<p>Небольшая группа, стулья по&nbsp;кругу, двое ведущих. К&nbsp;третьему дню участники знают друг друга по&nbsp;имени. Люди на&nbsp;фото прошли модуль вместе, часть из&nbsp;них общается до&nbsp;сих&nbsp;пор.</p>
 </div>
 </div>
 <p class="eyebrow">Три опоры результата</p>
@@ -1504,7 +1505,7 @@ P["vedushchie/index.html"] = ("Алексей и Ирина Чижовы · На
 <div class="card white">{icon('flame','var(--sand)')}<h3>Ирина</h3><p>Трансформационный тренер. Шесть лет готовилась к&nbsp;этому формату под руководством наставника. Работает на&nbsp;глубине. Участники говорят, что она «вскрывает и&nbsp;собирает», и&nbsp;вспоминают её работу&nbsp;годами.</p></div>
 </div>
 <p style="margin-top:24px">Роли в&nbsp;зале дополняют друг друга: его&nbsp;опора и её&nbsp;чувствование, структура и&nbsp;глубина. В&nbsp;паре ведущих это видно с&nbsp;первого часа: один размечает дорогу, вторая идёт туда, где живое.</p>
-<p>Поэтому здесь не&nbsp;учат жить и не&nbsp;мотивируют. Вместе разбираются, откуда берётся твоя реакция и по&nbsp;какой причине в&nbsp;паре повторяется один сюжет. Иногда непросто. Зато по-настоящему.</p>
+<p>Поэтому здесь не&nbsp;учат жить и не&nbsp;мотивируют. Вместе разбираются, откуда берётся твоя реакция и по&nbsp;какой причине в&nbsp;паре повторяется один сюжет. Иногда это непросто.</p>
 </div>
 <aside class="side">
 <div class="box"><div class="lbl">Вместе</div><div class="big">17 лет</div><p>Свой быт, свои кризисы и&nbsp;свои выходы из&nbsp;них. Отношения, о&nbsp;которых говорят в&nbsp;зале, они строят каждый&nbsp;день.</p></div>
@@ -1565,8 +1566,8 @@ P["vedushchie/index.html"] = ("Алексей и Ирина Чижовы · На
 
 <section style="padding-top:0"><div class="wrap">
 <p class="eyebrow">Они вне зала</p>
-<h2>Та&nbsp;самая пара, без&nbsp;постановки</h2>
-<p class="sub">Никаких студийных съёмок. Обычные выходные, набережная, парк, кофе на&nbsp;веранде. Ровно те&nbsp;отношения, о&nbsp;которых идёт речь в&nbsp;зале, только со&nbsp;стороны.</p>
+<h2>Алексей и&nbsp;Ирина вне&nbsp;зала</h2>
+<p class="sub">Обычные выходные: набережная, парк, кофе на&nbsp;веранде.</p>
 <div class="mosaic" style="margin-top:30px">
 <div class="ph"><img src="/chizhovy2/images/para-real/chizhovy-7.jpg" alt="Алексей и Ирина на набережной" loading="lazy"></div>
 <div class="ph"><img src="/chizhovy2/images/para-real/chizhovy-6.jpg" alt="Алексей и Ирина в парке" loading="lazy"></div>
@@ -1789,8 +1790,8 @@ P["sessiya/index.html"] = ("Собеседование в школу · Наст
 <div class="ph"><img src="/chizhovy2/images/real/real-01.jpg" alt="Группа школы" loading="lazy"></div>
 <div>
 <p class="eyebrow">К чему ведёт разговор</p>
-<h2 style="font-size:1.9rem">Сюда ты&nbsp;попадёшь, если решишь идти</h2>
-<p>Собеседование ничего не&nbsp;обязывает. Но&nbsp;если по&nbsp;итогам вы&nbsp;решите, что дорога общая, дальше будет вот это: небольшая группа, несколько дней очно и&nbsp;люди, которые к&nbsp;концу знают тебя настоящим.</p>
+<h2 style="font-size:1.9rem">Что будет дальше</h2>
+<p>Собеседование ни&nbsp;к&nbsp;чему не&nbsp;обязывает. Если решите идти дальше, следующий шаг это первый модуль: небольшая группа, 2,5&nbsp;дня очно.</p>
 </div>
 </div>
 </div></section>
@@ -2854,8 +2855,8 @@ P["kak-prohodit/index.html"] = ("Как проходит обучение · Н�
 <div class="ph"><img src="/chizhovy2/images/real/real-03.jpg" alt="Группа после модуля" loading="lazy"></div>
 <div>
 <p class="eyebrow">Путь целиком</p>
-<h2 style="font-size:1.9rem">Как выглядит финал</h2>
-<p>Последний вечер модуля проходит в&nbsp;кругу: каждый говорит, с&nbsp;чем уезжает. Фотографируются уже после, когда всё сказано. На&nbsp;снимках школы почти нет постановки, это просто люди, которые вместе прошли несколько тяжёлых и&nbsp;честных дней.</p>
+<h2 style="font-size:1.9rem">Последний вечер модуля</h2>
+<p>Последний вечер модуля проходит в&nbsp;кругу: каждый говорит, с&nbsp;чем уезжает. Фотографируются уже после, когда всё сказано.</p>
 </div>
 </div>
 </div></section>
@@ -3384,7 +3385,7 @@ P["tehniki-sceny/index.html"] = ("Техники сцены · Настоящи�
 <div>
 <p class="eyebrow">Где это происходит</p>
 <h2 style="font-size:1.9rem">Зал, в&nbsp;котором работают техники</h2>
-<p>Ни&nbsp;сцены, ни&nbsp;рядов, ни&nbsp;кафедры. Стулья по&nbsp;кругу, свободная середина и&nbsp;двое ведущих. Всё, что описано выше, разворачивается вот в&nbsp;таком зале, в&nbsp;нескольких шагах от&nbsp;остальных участников.</p>
+<p>Стулья по&nbsp;кругу, свободная середина, двое ведущих. Техники, описанные выше, работают в&nbsp;таком зале: участники сидят в&nbsp;нескольких шагах друг от&nbsp;друга.</p>
 </div>
 </div>
 </div></section>
