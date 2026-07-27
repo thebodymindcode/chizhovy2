@@ -19,6 +19,8 @@ section > .wrap > h2,
 section > .narrow > .eyebrow,
 section > .narrow > h2{text-align:center;max-width:none;margin-left:auto;margin-right:auto}
 section > .wrap > .eyebrow::before,
+section > .narrow > .eyebrow::before{display:inline-block;vertical-align:middle}
+section > .wrap > .eyebrow::before,
 section > .narrow > .eyebrow::before{margin:0 10px 3px 0}
 section > .wrap > h2 + .sub,
 section > .narrow > h2 + .sub,
@@ -73,8 +75,48 @@ h3{font-size:1.22rem;font-weight:600}
 p{margin:0 0 1.1em}
 p,li,figcaption,blockquote,dd,dt,summary,td,th{text-wrap:pretty}
 section{padding:76px 0}
-/* ровный вертикальный ритм: соседние секции не складывают отступы */
-section + section{padding-top:0}
+/* ЕДИНАЯ ШКАЛА ОТСТУПОВ: кратно 8, без разнобоя */
+section > .wrap > .eyebrow,
+section > .narrow > .eyebrow,
+.tside > .col > .eyebrow,
+.split > div > .eyebrow{margin:0 0 12px}
+section > .wrap > h2,
+section > .narrow > h2,
+.tside > .col > h2,
+.split > div > h2{margin:0 0 26px}
+section > .wrap > h2 + p,
+section > .narrow > h2 + p{margin-top:2px}
+section > .wrap > h2 + p,
+section > .narrow > h2 + p,
+section > .wrap > h2 + .sub,
+section > .narrow > h2 + .sub,
+.tside > .col > h2 + p,
+.split > div > h2 + p{margin-top:0}
+section > .wrap > p,
+section > .narrow > p,
+.tside > .col > p,
+.split > div > p{margin:0 0 20px}
+section > .wrap > h3,
+section > .narrow > h3,
+.tside > .col > h3{margin:32px 0 12px}
+section > .wrap > .grid2,
+section > .wrap > .grid3,
+section > .wrap > .grid5,
+section > .wrap > .nails,
+section > .wrap > .mosaic,
+section > .wrap > .split,
+section > .wrap > .tside,
+section > .narrow > .grid2,
+section > .narrow > .grid3{margin:32px 0 0}
+section > .wrap > .btns,
+section > .narrow > .btns{margin:32px 0 0}
+section > .wrap > :last-child,
+section > .narrow > :last-child{margin-bottom:0}
+details + details{margin-top:12px}
+/* ровный вертикальный ритм: соседние секции на одном фоне не складывают отступы,
+   но секция со сменой фона всегда получает свой воздух */
+section{padding-top:64px;padding-bottom:64px}
+section.dark{padding-top:76px;padding-bottom:76px}
 section > .wrap > :last-child,
 section > .narrow > :last-child{margin-bottom:0}
 section > .wrap > .grid2:last-child,
