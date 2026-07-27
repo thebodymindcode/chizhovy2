@@ -1471,13 +1471,21 @@ P["sessiya/index.html"] = ("Собеседование в школу · Наст
 </div>
 </div></section>
 
-<section><div class="narrow">
+<section><div class="wrap"><div class="tside">
+<div class="col">
+<p class="eyebrow">После разговора</p>
 <h2>Что происходит после</h2>
 <p>Если по&nbsp;итогам разговора мы&nbsp;оба видим, что дорога общая, ты&nbsp;узнаёшь даты ближайшего набора, условия участия и&nbsp;с&nbsp;какого модуля заходить: чаще всего это первый, 2,5&nbsp;дня. Дальше решение за&nbsp;тобой: никто не&nbsp;звонит с&nbsp;напоминаниями и&nbsp;не&nbsp;шлёт «последний шанс».</p>
 <p>Если видим, что сейчас не&nbsp;время или задача не&nbsp;наша, тоже скажем прямо и&nbsp;подскажем, куда смотреть. Такие разговоры у&nbsp;нас бывают, и&nbsp;мы&nbsp;считаем их&nbsp;нормальной частью работы: <a href="/chizhovy2/bezopasnost/">границы описаны отдельно</a>.</p>
 <div class="pull"><div class="q">«Труднее всего было принять точку&nbsp;А. Принять, что мир это зеркало, и&nbsp;всё, что со&nbsp;мной происходит, я&nbsp;транслирую сам.»</div><div class="who">Участник тренинга</div></div>
 <p>Многие говорят, что сам этот час уже сдвинул что-то с&nbsp;места: за&nbsp;16&nbsp;лет через такие встречи прошли сотни человек, а&nbsp;в&nbsp;группу мы&nbsp;берём по&nbsp;10-20. Так и&nbsp;задумано: беседа строится по&nbsp;той&nbsp;же логике, что и&nbsp;работа в&nbsp;зале, просто в&nbsp;очень коротком формате. Что бывает дальше, можно почитать в&nbsp;<a href="/chizhovy2/istorii/">историях учеников</a>, а&nbsp;частые опасения разобраны на&nbsp;странице <a href="/chizhovy2/somneniya/">сомнений</a>.</p>
-</div></section>
+</div>
+<aside class="side">
+<div class="box"><div class="lbl">Сколько идёт</div><div class="big">1 час</div><p>Один разговор, без второго круга и&nbsp;без «мы&nbsp;вам перезвоним».</p></div>
+<div class="box"><div class="lbl">Сколько стоит</div><div class="big">0 ₽</div><p>Для читателей сайта бесплатно. Оплата обсуждается только если решаешь идти в&nbsp;модуль.</p></div>
+<div class="box"><div class="lbl">Кто напротив</div><p>Разговор ведут те, кто ведёт группы: Алексей или Ирина. Не&nbsp;отдел продаж и&nbsp;не&nbsp;бот с&nbsp;анкетой.</p></div>
+</aside>
+</div></div></section>
 
 <section style="padding-top:0"><div class="narrow">
 <div style="background:var(--linen);border:1px solid var(--line);border-radius:10px;padding:34px">
@@ -1974,7 +1982,7 @@ P["dlya-predprinimatelej/index.html"] = ("Для предпринимателе�
 <div class="card">{icon('gear','var(--sage-deep)')}<h3>Решения из&nbsp;страха</h3><p>Суета, перестраховка, откладывание больших ходов. Он&nbsp;шепчет тише жадности, но&nbsp;рулит&nbsp;чаще.</p></div>
 <div class="card">{icon('cups')}<h3>Дома сил уже нет</h3><p>Семье достаётся остаток после дела. Обычно он&nbsp;мал, и&nbsp;все это&nbsp;чувствуют.</p></div>
 </div>
-<div class="pull"><div class="q">«Я&nbsp;понимал крах, но&nbsp;не&nbsp;понимал, как начать снова и&nbsp;где найти силы.»</div><div class="who">Из истории ученика-предпринимателя</div></div>
+<div class="pull"><div class="q">«Я&nbsp;понимал крах, но&nbsp;не&nbsp;понимал, как начать снова и&nbsp;где найти&nbsp;силы.»</div><div class="who">Из истории ученика-предпринимателя</div></div>
 <p>Один из&nbsp;наших учеников пришёл ровно из&nbsp;этой точки: кассовый разрыв, долги, отвернувшиеся друзья. Его полная история, с&nbsp;сопротивлением и&nbsp;переломом, опубликована с&nbsp;его согласия: <a href="/chizhovy2/istorii/predprinimatel/">заново после дна</a>.</p>
 </div></section>
 
@@ -1988,13 +1996,19 @@ P["dlya-predprinimatelej/index.html"] = ("Для предпринимателе�
 <div class="nail"><b>3&nbsp;месяца</b><span>сопровождения: результат закрепляется в&nbsp;деле</span></div>
 </div></div></section>
 
-<section><div class="narrow">
+<section><div class="wrap"><div class="tside">
+<div class="col">
 <h2>Что обычно мешает решиться</h2>
 <p>Люди этого склада откладывают такую работу годами, и&nbsp;причины повторяются. Разберём три главные, потому что они&nbsp;же держат и&nbsp;сам потолок.</p>
 <div class="card white" style="margin:20px 0 12px">{icon('hourglass')}<h3>«Разберусь, когда станет посвободнее»</h3><p>Свободнее не&nbsp;становится: дело забирает ровно то&nbsp;время, которое ему отдаёшь. Пять дней погружения выглядят дорого до&nbsp;тех пор, пока не&nbsp;посчитаешь, сколько лет уже съел один и&nbsp;тот&nbsp;же круг.</p></div>
 <div class="card white" style="margin-bottom:12px">{icon('shield','var(--sage-deep)')}<h3>«Я не&nbsp;из&nbsp;тех, кто ходит на&nbsp;тренинги»</h3><p>Понятная позиция после рынка, где обещают миллионы за&nbsp;выходные. Здесь другой формат: малая группа, отбор через разговор и&nbsp;никаких залов с&nbsp;таймерами. Проверить просто, начав с&nbsp;<a href="/chizhovy2/somneniya/">честного разбора сомнений</a>.</p></div>
 <div class="card white">{icon('people','var(--sand)')}<h3>«Не&nbsp;хочу говорить о&nbsp;личном при чужих»</h3><p>В группе оказываются такие&nbsp;же взрослые люди с&nbsp;похожими историями, а&nbsp;личное остаётся в&nbsp;зале: это <a href="/chizhovy2/bezopasnost/">базовое правило</a>. Глубину выбираешь сам, темп твой.</p></div>
-</div></section>
+</div>
+<aside class="side">
+<div class="box"><div class="lbl">Из анкеты ученика</div><div class="cit">«Я&nbsp;понимал крах, но&nbsp;не&nbsp;понимал, как начать снова и&nbsp;где найти&nbsp;силы.»</div><div class="who">Предприниматель, пришёл весной 2024</div></div>
+<div class="box"><div class="lbl">Что было в&nbsp;точке А</div><div class="big">50 млн</div><p>Кассовый разрыв, с&nbsp;которым он&nbsp;пришёл. Через полтора года: новые направления и&nbsp;цели кратно&nbsp;выше.</p></div>
+</aside>
+</div></div></section>
 
 <section class="dark"><div class="narrow">
 <h2>Что меняется в&nbsp;деле</h2>
@@ -2032,12 +2046,18 @@ P["dlya-zhenshchin/index.html"] = ("Для женщин · Настоящие о
 <div class="nail"><b>90&nbsp;дней</b><span>практики, чтобы новое состояние стало&nbsp;обычным</span></div>
 </div></div></section>
 
-<section><div class="narrow">
+<section><div class="wrap"><div class="tside">
+<div class="col">
 <h2>Три вопроса, которые задают почти все</h2>
 <div class="card white" style="margin:20px 0 12px">{icon('speech')}<h3>«А если муж против?»</h3><p>Так бывает часто, и&nbsp;это не&nbsp;повод отказываться от&nbsp;своей работы: приходить одной можно и&nbsp;нужно, потому что твоя половина общего сценария всё равно в&nbsp;твоих руках. Многие мужчины приходят вторым заходом сами, увидев перемены дома. Про совместный формат: <a href="/chizhovy2/para/">тренинг для пар</a>.</p></div>
 <div class="card white" style="margin-bottom:12px">{icon('cups','var(--sage-deep)')}<h3>«Куда деть детей на&nbsp;пять дней?»</h3><p>Вопрос решаемый, и&nbsp;его стоит решить. Пять дней в&nbsp;году на&nbsp;себя это меньше, чем женщины обычно тратят на&nbsp;чужие дела за&nbsp;неделю. Первый модуль вообще идёт с&nbsp;вечера пятницы по&nbsp;воскресенье.</p></div>
 <div class="card white">{icon('flame','var(--sand)')}<h3>«Я снова буду плакать при всех?»</h3><p>Слёзы в&nbsp;зале случаются, и&nbsp;это разморозка, а&nbsp;вовсе не&nbsp;слабость. Участницы говорят об&nbsp;этом как о&nbsp;самом ценном: «впервые за&nbsp;годы плакала при людях и&nbsp;поняла, что это не&nbsp;стыдно».</p></div>
-</div></section>
+</div>
+<aside class="side">
+<div class="box"><div class="lbl">Формат</div><div class="big">2,5 дня</div><p>Первый модуль очно. Дальше решаешь сама, идти&nbsp;ли дальше.</p></div>
+<div class="box"><div class="lbl">Из чата команды</div><div class="cit">«Как только я&nbsp;выдохнула и&nbsp;взяла себя в&nbsp;руки, всё моментально&nbsp;успокоилось.»</div><div class="who">Юлиана Ш., участница модуля</div></div>
+</aside>
+</div></div></section>
 
 <section class="dark"><div class="narrow">
 <h2>Чего здесь точно не&nbsp;будет</h2>
