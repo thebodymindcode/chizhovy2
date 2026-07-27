@@ -139,6 +139,28 @@ a{color:var(--wine)}
 .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
 .narrow{max-width:1080px;margin:0 auto;padding:0 24px}
 .narrow>*{max-width:720px}
+/* Двухколоночный разворот: текст слева, врезка справа. Правая пустота заполняется смыслом */
+.tside{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:56px;align-items:start}
+.tside>.col{min-width:0}
+.tside>.col>*{max-width:660px}
+.side{min-width:0;position:sticky;top:96px}
+.side .box{background:#fff;border:1px solid var(--line);border-radius:12px;padding:22px 22px 20px}
+.side .box+.box{margin-top:14px}
+.side .lbl{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--copper);margin-bottom:10px}
+.side .big{font-family:'Playfair Display',Georgia,serif;font-size:2.2rem;line-height:1;color:var(--wine);margin-bottom:8px}
+.side p{font-size:.9rem;line-height:1.55;color:var(--ink-soft);margin:0}
+.side .cit{font-family:'Lora',Georgia,serif;font-style:italic;font-size:.98rem;line-height:1.5;color:var(--ink)}
+.side .who{font-size:.78rem;color:var(--ink-soft);margin-top:8px}
+.side img{width:100%;border-radius:10px;display:block}
+.side .cap{font-size:.78rem;color:var(--ink-soft);margin-top:8px}
+.dark .side .box{background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.13)}
+.dark .side .cit,.dark .side .big{color:#fff}
+.dark .side p,.dark .side .who,.dark .side .cap{color:rgba(255,255,255,.72)}
+@media (max-width:980px){
+  .tside{grid-template-columns:1fr;gap:24px}
+  .side{position:static}
+  .tside>.col>*{max-width:none}
+}
 h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;line-height:1.2;text-wrap:balance;margin:0 0 .5em}
 /* Держим последнюю пару слов заголовка вместе там, где она влезает в колонку */
 .kp{white-space:nowrap}@media (max-width:980px){.kp{white-space:normal}}
@@ -1235,29 +1257,39 @@ P["vedushchie/index.html"] = ("Алексей и Ирина Чижовы · На
 <div class="in"><p class="eyebrow">Ведущие</p><h1>Алексей и&nbsp;<span class="kpm">Ирина Чижовы</span></h1>
 <p class="lead">Школу отношений ведёт пара, которая 17&nbsp;лет живёт вместе: быт, кризисы и&nbsp;выход из&nbsp;них они прошли сами. Поэтому в&nbsp;зале нет теории с&nbsp;чужих слов.</p></div></div>
 
-<section><div class="narrow">
-<div class="grid2">
-<div class="card white">{icon('mountain')}<h3>Алексей</h3><p>Коуч с&nbsp;сертификацией ICF, 16&nbsp;лет в&nbsp;трансформационной практике. Держит структуру и&nbsp;точность процесса: с&nbsp;ним безопасно идти в&nbsp;глубину, потому что он&nbsp;видит дорогу&nbsp;целиком.</p></div>
+<section><div class="wrap"><div class="tside">
+<div class="col">
+<p class="eyebrow">Кто ведёт</p>
+<h2>Двое, которые живут так, как&nbsp;учат</h2>
+<div class="grid2" style="margin-top:24px">
+<div class="card white">{icon('mountain')}<h3>Алексей</h3><p>Коуч с&nbsp;сертификацией ICF, 16&nbsp;лет практики. Держит структуру и&nbsp;точность процесса: с&nbsp;ним безопасно идти в&nbsp;глубину, потому что он&nbsp;видит дорогу&nbsp;целиком.</p></div>
 <div class="card white">{icon('flame','var(--sand)')}<h3>Ирина</h3><p>Трансформационный тренер. Шесть лет готовилась к&nbsp;этому формату под руководством наставника. Работает на&nbsp;глубине. Участники говорят, что она «вскрывает и&nbsp;собирает», и&nbsp;вспоминают её&nbsp;работу&nbsp;годами.</p></div>
 </div>
-<p style="margin-top:26px">Роли в&nbsp;зале дополняют друг друга: его&nbsp;опора и&nbsp;её&nbsp;чувствование, структура и&nbsp;глубина.</p>
+<p style="margin-top:24px">Роли в&nbsp;зале дополняют друг друга: его&nbsp;опора и&nbsp;её&nbsp;чувствование, структура и&nbsp;глубина. В&nbsp;паре ведущих это видно с&nbsp;первого часа: один размечает дорогу, вторая идёт туда, где живое.</p>
+<p>Поэтому здесь не&nbsp;учат жить и&nbsp;не&nbsp;мотивируют. Вместе разбираются, откуда берётся твоя реакция и&nbsp;по&nbsp;какой причине в&nbsp;паре повторяется один сюжет. Иногда непросто. Зато по-настоящему.</p>
+</div>
+<aside class="side">
+<div class="box"><div class="lbl">Вместе</div><div class="big">17 лет</div><p>Свой быт, свои кризисы и&nbsp;свои выходы из&nbsp;них. Отношения, о&nbsp;которых говорят в&nbsp;зале, они строят каждый&nbsp;день.</p></div>
+<div class="box"><div class="lbl">Из чата команды</div><div class="cit">«Благодарю Ирину и&nbsp;Алексея за&nbsp;вклад в&nbsp;мою&nbsp;трансформацию.»</div><div class="who">Солвита И., участница третьего модуля</div></div>
+</aside>
+</div></div></section>
+
+<section class="dark"><div class="wrap"><div class="tside">
+<div class="col">
+<p class="eyebrow">Как они пришли к&nbsp;этому</p>
+<h2>Сначала своя жизнь, потом&nbsp;зал</h2>
+<p>Школа выросла не&nbsp;из&nbsp;теории. Сначала были свои повторяющиеся круги: разговоры на&nbsp;одних и&nbsp;тех&nbsp;же местах, попытки договориться словами, откаты после хороших недель. Всё то, с&nbsp;чем люди приходят сюда сейчас. Знакомо изнутри.</p>
 <div class="pull"><div class="q">«У&nbsp;нас не&nbsp;было идеальной истории. Было непонимание, ошибки, потери, моменты, где казалось: дальше некуда. Именно там началось настоящее.»</div><div class="who">Из обращения Алексея и&nbsp;Ирины к&nbsp;каналу школы</div></div>
-<p>Поэтому здесь не&nbsp;учат жить и&nbsp;не&nbsp;мотивируют. Вместе разбираются, откуда берётся твоя реакция и&nbsp;по&nbsp;какой причине в&nbsp;паре повторяется один сюжет. Иногда непросто. Зато&nbsp;по-настоящему.</p>
-</div></section>
-
-<section style="padding-top:0"><div class="wrap">
-<div class="split">
-<div class="ph"><img src="/chizhovy2/images/real/zabeg-selfi.jpg" alt="Алексей и Ирина на набережной после старта" loading="lazy"></div>
-<div>
-<p class="eyebrow">Дисциплина это часть метода</p>
-<h2>Говорят только о&nbsp;том, что&nbsp;прошли сами</h2>
-<p>Алексей: триатлет, финишер IronMan&nbsp;70.3. Не&nbsp;ради медалей. Длинная дистанция каждый день проверяет то, чему школа учит в&nbsp;зале. На&nbsp;трассе это видно буквально: состояние первично, решения принимаются из&nbsp;спокойствия, а&nbsp;доходит тот, кто играет в&nbsp;долгую.</p>
-<p>Команды школы выходят на&nbsp;забеги вместе: тело быстро выдаёт, где ты&nbsp;себя обманываешь, и&nbsp;честно радуется, когда ты&nbsp;настоящий.</p>
+<p>Дальше шестнадцать лет практики: сотни залов, тысячи разобранных сцен, свои ошибки ведущих и&nbsp;свои находки. Из&nbsp;пяти источников осталось то, что реально меняет жизнь участников, остальное отсеялось. Как именно отбирали, разобрано в&nbsp;<a href="/chizhovy2/istoki/" style="color:#D08A5F">истоках метода</a>.</p>
+<p>Ирина шесть лет готовилась к&nbsp;этому формату под руководством наставника, прежде чем встать в&nbsp;пару ведущих. Не&nbsp;курс выходного дня, а&nbsp;долгая работа с&nbsp;собственной глубиной: вести человека можно только туда, где был сам. Иначе никак.</p>
 </div>
-</div>
-</div></section>
+<aside class="side">
+<div class="box"><div class="lbl">Практика</div><div class="big">16 лет</div><p>Столько за&nbsp;спиной у&nbsp;Алексея: залы, группы, сопровождение. Метод собран и&nbsp;проверен на&nbsp;этой&nbsp;дистанции.</p></div>
+<div class="box"><div class="lbl">Подготовка Ирины</div><div class="big">6 лет</div><p>Под руководством наставника, до&nbsp;первого зала в&nbsp;роли&nbsp;ведущей.</p></div>
+</aside>
+</div></div></section>
 
-<section style="padding-top:0"><div class="wrap">
+<section><div class="wrap">
 <p class="eyebrow">Как они работают вместе</p>
 <h2>Две роли в&nbsp;зале</h2>
 <div class="grid2" style="margin-top:26px">
@@ -1267,20 +1299,40 @@ P["vedushchie/index.html"] = ("Алексей и Ирина Чижовы · На
 <p class="sub" style="margin-top:22px;max-width:none">Это те&nbsp;же два начала, которые мы&nbsp;помогаем соединить внутри каждого участника: опора и&nbsp;чувствительность, структура и&nbsp;живость. Пара ведущих показывает их&nbsp;в&nbsp;работе, а&nbsp;не&nbsp;объясняет на&nbsp;словах.</p>
 </div></section>
 
-<section style="padding-top:0"><div class="narrow">
-<h2>Почему это важно для группы</h2>
+<section style="padding-top:0"><div class="wrap">
+<div class="split">
+<div class="ph"><img src="/chizhovy2/images/real/zabeg-selfi.jpg" alt="Алексей и Ирина на набережной после старта" loading="lazy"></div>
+<div>
+<p class="eyebrow">Дисциплина это часть метода</p>
+<h2>Говорят только о&nbsp;том, что&nbsp;прошли сами</h2>
+<p>Алексей: триатлет, финишер IronMan&nbsp;70.3. Не&nbsp;ради медалей. Длинная дистанция каждый день проверяет то, чему школа учит в&nbsp;зале. На&nbsp;трассе это видно буквально: сначала состояние, решения принимаются из&nbsp;спокойствия, а&nbsp;доходит тот, кто играет в&nbsp;долгую.</p>
+<p>Команды школы выходят на&nbsp;забеги вместе: тело быстро выдаёт, где ты&nbsp;себя обманываешь, и&nbsp;честно радуется, когда ты&nbsp;настоящий.</p>
+</div>
+</div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap"><div class="tside">
+<div class="col">
+<p class="eyebrow">Что видят участники</p>
+<h2>Почему это важно для&nbsp;группы</h2>
 <p>Когда школу отношений ведёт один человек, всегда остаётся вопрос: а&nbsp;как у&nbsp;него самого. Здесь ответ виден сразу: работают двое, вместе семнадцать лет, со&nbsp;своим бытом, своими кризисами и&nbsp;выходами из&nbsp;них.</p>
 <p>В зале это даёт две вещи. Первое: любую семейную сцену участники разбирают с&nbsp;двух сторон, мужской и&nbsp;женской, без перекоса в&nbsp;чью-то пользу. Второе: ведущие не&nbsp;идеализируют отношения и&nbsp;не&nbsp;делают вид, что у&nbsp;них всё гладко. Об&nbsp;этом прямо сказано в&nbsp;<a href="/chizhovy2/manifest/">манифесте школы</a>.</p>
-</div></section>
+<p>Есть и&nbsp;третье, о&nbsp;котором говорят чаще всего: с&nbsp;группой остаются после модуля. Разборы каждую неделю, ответы в&nbsp;чате, поддержка на&nbsp;забегах и&nbsp;в&nbsp;два часа ночи. Как это устроено, видно на&nbsp;странице <a href="/chizhovy2/soobshchestvo/">сообщества</a>.</p>
+</div>
+<aside class="side">
+<div class="box"><div class="lbl">Слова участников</div><div class="cit">«Благодарен Ирине за&nbsp;её&nbsp;погружённость.»</div><div class="who">Из ежедневных записей команды</div></div>
+<div class="box"><div class="cit">«Благодарю Алексея за&nbsp;разговор и&nbsp;включённость в&nbsp;мою жизнь.»</div><div class="who">Участник третьего модуля</div></div>
+<div class="box"><div class="cit">«Спасибо за&nbsp;поддержку, понимание и&nbsp;пространство, где можно&nbsp;проявиться.»</div><div class="who">Из чата команды МИР</div></div>
+</aside>
+</div></div></section>
 
 <section style="padding-top:0"><div class="narrow">
 <h2>Познакомиться лично</h2>
-<p class="sub" style="margin:0 0 26px">Собеседование: час разговора о&nbsp;твоей ситуации, честный взгляд со&nbsp;стороны и&nbsp;понятный следующий шаг. Для читателей сайта бесплатно.</p>
-<a class="btn btn-wine" href="/chizhovy2/sessiya/">Записаться</a>
+<p class="sub" style="margin:0 0 26px">Час разговора о&nbsp;твоей ситуации: смотрим, что происходит, и&nbsp;вместе решаем, по&nbsp;пути&nbsp;ли&nbsp;нам. Для&nbsp;читателей сайта бесплатно.</p>
+<p><a class="btn btn-wine" href="/chizhovy2/sessiya/">Записаться на&nbsp;собеседование</a> <a class="btn btn-ghost" href="/chizhovy2/gid/" style="margin-left:8px">Читать гайд</a></p>
 </div></section>
 """)
 
-# ================= ОТЗЫВЫ =================
 P["otzyvy/index.html"] = ("Истории учеников · Настоящие отношения",
 "Живые истории выпускников школы: до, во время и после тренинга.", "otzyvy", f"""
 <div class="hero short"><div class="bg" style="background-image:url('/chizhovy2/images/real/real-05.jpg')"></div><div class="veil"></div>
