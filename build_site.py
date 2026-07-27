@@ -140,6 +140,20 @@ a{color:var(--wine)}
 .narrow{max-width:1080px;margin:0 auto;padding:0 24px}
 .narrow>*{max-width:720px}
 /* Двухколоночный разворот: текст слева, врезка справа. Правая пустота заполняется смыслом */
+/* Заголовки секций по центру, текст под ними колонкой по центру */
+section > .wrap > .eyebrow,
+section > .wrap > h2,
+section > .narrow > .eyebrow,
+section > .narrow > h2{text-align:center;max-width:none;margin-left:auto;margin-right:auto}
+section > .wrap > .eyebrow::before,
+section > .narrow > .eyebrow::before{margin:0 10px 3px 0}
+section > .wrap > h2 + .sub,
+section > .narrow > h2 + .sub,
+section > .wrap > h2 + p,
+section > .narrow > h2 + p{text-align:center;max-width:760px;margin-left:auto;margin-right:auto}
+.tside > .col > .eyebrow,
+.tside > .col > h2{text-align:left}
+.tside > .col > h2 + p{text-align:left;max-width:660px;margin-left:0;margin-right:0}
 .tside{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:56px;align-items:start}
 .card{display:flex;flex-direction:column}
 .card>p:last-child:has(>a:only-child){margin-top:auto;padding-top:10px}
@@ -1004,6 +1018,18 @@ P["metod/index.html"] = ("Метод школы · Настоящие отнош
 <p>Для всех остальных вход один: собеседование. Час честного разговора, где вместе решаем, твой это метод или нет. Для пришедших с&nbsp;сайта бесплатно.</p>
 <p style="margin-top:26px"><a class="btn btn-wine" href="/chizhovy2/sessiya/">Записаться на&nbsp;собеседование</a> <a class="btn btn-ghost" href="/chizhovy2/programma/" style="margin-left:8px">Смотреть программу</a></p>
 </div></section>
+
+<section style="padding-top:0"><div class="wrap">
+<div class="split">
+<div class="ph"><img src="/chizhovy2/images/ob-okno.png" alt="Вечер, который повторяется" loading="lazy"></div>
+<div>
+<p class="eyebrow">Почему это не&nbsp;лечится разговором</p>
+<h2 style="font-size:1.9rem">Вечер, который повторяется</h2>
+<p>Сцена знакомая: разговор закончился, дверь хлопнула, ты&nbsp;сидишь и&nbsp;прокручиваешь по&nbsp;кругу. Умом всё понятно уже давно. Меняется только тогда, когда доходишь до&nbsp;решения, которое всё это держит.</p>
+</div>
+</div>
+</div></section>
+
 """)
 
 # ================= ПРОГРАММА =================
@@ -1017,8 +1043,8 @@ P["programma/index.html"] = ("Программа · Настоящие отно�
 <div class="timeline">{timeline_svg()}</div>
 <div class="grid3" style="margin-top:26px">
 <div class="card white"><div class="ph" style="aspect-ratio:4/3;margin-bottom:18px"><img src="/chizhovy2/images/site-m1.png" alt="Модуль I" loading="lazy"></div><p class="eyebrow" style="margin-bottom:6px">Модуль I · 2,5 дня</p><h3>Возвращение к&nbsp;себе</h3><p>Видишь свои повторяющиеся паттерны, установки и их&nbsp;источники. Результат: осознанность и&nbsp;первый честный контакт с&nbsp;собой.</p><p style="margin-top:12px"><a href="/chizhovy2/modul-1/">Подробнее</a></p></div>
-<div class="card white"><div class="ph" style="aspect-ratio:4/3;margin-bottom:18px"><img src="/chizhovy2/images/real/real-07.jpg" alt="Модуль II" loading="lazy"></div><p class="eyebrow" style="margin-bottom:6px">Модуль II · 5 дней</p><h3>Внутренняя свобода</h3><p>Глубокая работа с&nbsp;состояниями: страх, вина, обида, зависимость от&nbsp;чужого мнения. Результат: сила, спокойствие, ясность.</p><p style="margin-top:12px"><a href="/chizhovy2/modul-2/">Подробнее</a></p></div>
-<div class="card white"><div class="ph" style="aspect-ratio:4/3;margin-bottom:18px"><img src="/chizhovy2/images/real/real-13.jpg" alt="Модуль III" loading="lazy"></div><p class="eyebrow" style="margin-bottom:6px">Модуль III · 3 месяца</p><h3>Создатель реальности</h3><p>Интеграция в&nbsp;жизнь: видение, команда, ежедневная практика, результаты в&nbsp;деле и&nbsp;отношениях. Это и&nbsp;есть Марафон.</p><p style="margin-top:12px"><a href="/chizhovy2/marafon/">Подробнее</a></p></div>
+<div class="card white"><div class="ph" style="aspect-ratio:4/3;margin-bottom:18px"><img src="/chizhovy2/images/real/real-07.jpg" alt="Модуль II" loading="lazy"></div><p class="eyebrow" style="margin-bottom:6px">Модуль II · 5 дней</p><h3>Внутренняя свобода</h3><p>Работа со&nbsp;страхом, виной, обидой и&nbsp;зависимостью от&nbsp;чужого мнения. Дальше приходят сила и&nbsp;спокойствие.</p><p style="margin-top:12px"><a href="/chizhovy2/modul-2/">Подробнее</a></p></div>
+<div class="card white"><div class="ph" style="aspect-ratio:4/3;margin-bottom:18px"><img src="/chizhovy2/images/real/real-13.jpg" alt="Модуль III" loading="lazy"></div><p class="eyebrow" style="margin-bottom:6px">Модуль III · 3 месяца</p><h3>Создатель реальности</h3><p>Три месяца в&nbsp;обычной жизни: команда, ежедневная практика, результаты в&nbsp;деле и&nbsp;отношениях. Это и&nbsp;есть Марафон.</p><p style="margin-top:12px"><a href="/chizhovy2/marafon/">Подробнее</a></p></div>
 </div>
 </div></section>
 
@@ -1085,6 +1111,18 @@ P["programma/index.html"] = ("Программа · Настоящие отно�
 <p style="margin-top:24px">Больше ответов: <a href="/chizhovy2/voprosy/">вопросы и&nbsp;ответы</a>, <a href="/chizhovy2/somneniya/">частые сомнения</a>, <a href="/chizhovy2/bezopasnost/">безопасность и&nbsp;границы</a>.</p>
 <p style="margin-top:28px"><a class="btn btn-wine" href="/chizhovy2/sessiya/">Записаться на&nbsp;собеседование</a></p>
 </div></section>
+
+<section style="padding-top:0"><div class="wrap">
+<div class="split">
+<div class="ph"><img src="/chizhovy2/images/ob-lestnica.png" alt="Путь идёт ступенями" loading="lazy"></div>
+<div>
+<p class="eyebrow">Три ступени</p>
+<h2 style="font-size:1.9rem">Путь идёт ступенями</h2>
+<p>Каждая ступень стоит на&nbsp;предыдущей. Перепрыгнуть через одну можно, но&nbsp;тогда верхняя не&nbsp;держит: человек возвращается к&nbsp;той&nbsp;же точке через год, только с&nbsp;бо́льшим разочарованием.</p>
+</div>
+</div>
+</div></section>
+
 """)
 
 # ================= МОДУЛЬ 1 =================
@@ -1171,6 +1209,18 @@ P["modul-1/index.html"] = ("Модуль I. Возвращение к себе �
 <p>Специальной подготовки не&nbsp;нужно: ни&nbsp;книг, ни&nbsp;опыта терапии, ни&nbsp;умения красиво говорить о&nbsp;чувствах. Нужна готовность три дня быть честным с&nbsp;собой. Как проходит вход в&nbsp;школу и&nbsp;почему через разговор, описано на&nbsp;странице <a href="/chizhovy2/sessiya/">собеседования</a>.</p>
 <p style="margin-top:26px"><a class="btn btn-wine" href="/chizhovy2/sessiya/">Начать с&nbsp;собеседования</a> <a class="btn btn-ghost" href="/chizhovy2/modul-2/" style="margin-left:8px">Дальше: Модуль II</a></p>
 </div></section>
+
+<section style="padding-top:0"><div class="wrap">
+<div class="split">
+<div class="ph"><img src="/chizhovy2/images/ob-tetrad.png" alt="Тетрадь, с которой всё начинается" loading="lazy"></div>
+<div>
+<p class="eyebrow">Первые записи</p>
+<h2 style="font-size:1.9rem">Тетрадь, с&nbsp;которой всё начинается</h2>
+<p>На&nbsp;первом модуле много пишут от&nbsp;руки. Не&nbsp;конспект ведущих, а&nbsp;свои открытия: что повторяется, откуда пришло, где именно ты&nbsp;принимаешь одно и&nbsp;то&nbsp;же решение. Эти листы люди хранят годами.</p>
+</div>
+</div>
+</div></section>
+
 """)
 
 # ================= МОДУЛЬ 2 =================
@@ -1255,6 +1305,18 @@ P["modul-2/index.html"] = ("Модуль II. Внутренняя свобода
 <p>Второй модуль идут те, кто прошёл <a href="/chizhovy2/modul-1/">первый</a> и&nbsp;выдержал недели на проверку в жизни: увидел свою запись в&nbsp;деле и&nbsp;захотел с&nbsp;ней разобраться. Дальше <a href="/chizhovy2/marafon/">Марафон</a>, где новое поведение закрепляется девяноста днями практики.</p>
 <p style="margin-top:26px"><a class="btn btn-wine" href="/chizhovy2/sessiya/">Занять место</a> <a class="btn btn-ghost" href="/chizhovy2/marafon/" style="margin-left:8px">Дальше: Марафон</a></p>
 </div></section>
+
+<section style="padding-top:0"><div class="wrap">
+<div class="split">
+<div class="ph"><img src="/chizhovy2/images/ob-stul.png" alt="Тот самый пустой стул" loading="lazy"></div>
+<div>
+<p class="eyebrow">Главный инструмент</p>
+<h2 style="font-size:1.9rem">Тот самый пустой стул</h2>
+<p>Напротив ставится стул, и&nbsp;на&nbsp;нём «сидит» тот, с&nbsp;кем разговор так и&nbsp;не&nbsp;случился: отец, бывший, ты&nbsp;сам десять лет назад. Отложенный на&nbsp;годы разговор происходит здесь, и&nbsp;у&nbsp;него наконец появляется финал.</p>
+</div>
+</div>
+</div></section>
+
 """)
 
 # ================= МАРАФОН =================
@@ -1331,6 +1393,18 @@ P["marafon/index.html"] = ("Модуль III. Создатель реально�
 </div>
 <p style="margin-top:30px"><a class="btn btn-wine" href="/chizhovy2/sessiya/">Обсудить участие на&nbsp;собеседовании</a></p>
 </div></section>
+
+<section style="padding-top:0"><div class="wrap">
+<div class="split">
+<div class="ph"><img src="/chizhovy2/images/ob-tropa.png" alt="Дорога длиннее, чем кажется" loading="lazy"></div>
+<div>
+<p class="eyebrow">Три месяца</p>
+<h2 style="font-size:1.9rem">Дорога длиннее, чем кажется</h2>
+<p>Марафон устроен как длинная дистанция: важно не&nbsp;как ты&nbsp;стартовал, а&nbsp;доходишь&nbsp;ли. Первые недели идут легко, потом начинается настоящая работа, и&nbsp;именно там команда вытаскивает тех, кто выдохся.</p>
+</div>
+</div>
+</div></section>
+
 """)
 
 # ================= ДЛЯ ПАР =================
@@ -1487,6 +1561,21 @@ P["vedushchie/index.html"] = ("Алексей и Ирина Чижовы · На
 <aside class="side">
 </aside>
 </div></div></section>
+
+
+<section style="padding-top:0"><div class="wrap">
+<p class="eyebrow">Они вне зала</p>
+<h2>Та&nbsp;самая пара, без&nbsp;постановки</h2>
+<p class="sub">Никаких студийных съёмок. Обычные выходные, набережная, парк, кофе на&nbsp;веранде. Ровно те&nbsp;отношения, о&nbsp;которых идёт речь в&nbsp;зале, только со&nbsp;стороны.</p>
+<div class="mosaic" style="margin-top:30px">
+<div class="ph"><img src="/chizhovy2/images/para-real/chizhovy-7.jpg" alt="Алексей и Ирина на набережной" loading="lazy"></div>
+<div class="ph"><img src="/chizhovy2/images/para-real/chizhovy-6.jpg" alt="Алексей и Ирина в парке" loading="lazy"></div>
+<div class="ph"><img src="/chizhovy2/images/para-real/chizhovy-4.jpg" alt="Алексей и Ирина на веранде" loading="lazy"></div>
+<div class="ph"><img src="/chizhovy2/images/para-real/chizhovy-3.jpg" alt="Алексей и Ирина вдвоём" loading="lazy"></div>
+<div class="ph"><img src="/chizhovy2/images/para-real/chizhovy-2.jpg" alt="Алексей и Ирина летом" loading="lazy"></div>
+<div class="ph"><img src="/chizhovy2/images/para-real/chizhovy-1.jpg" alt="Алексей и Ирина" loading="lazy"></div>
+</div>
+</div></section>
 
 <section style="padding-top:0"><div class="narrow">
 <h2>Познакомиться лично</h2>
@@ -1702,6 +1791,18 @@ P["sessiya/index.html"] = ("Собеседование в школу · Наст
 <p class="eyebrow">К чему ведёт разговор</p>
 <h2 style="font-size:1.9rem">Сюда ты&nbsp;попадёшь, если решишь идти</h2>
 <p>Собеседование ничего не&nbsp;обязывает. Но&nbsp;если по&nbsp;итогам вы&nbsp;решите, что дорога общая, дальше будет вот это: небольшая группа, несколько дней очно и&nbsp;люди, которые к&nbsp;концу знают тебя настоящим.</p>
+</div>
+</div>
+</div></section>
+
+
+<section style="padding-top:0"><div class="wrap">
+<div class="split">
+<div class="ph"><img src="/chizhovy2/images/ob-chashki.png" alt="Разговор на двоих" loading="lazy"></div>
+<div>
+<p class="eyebrow">Как это выглядит</p>
+<h2 style="font-size:1.9rem">Разговор на&nbsp;двоих</h2>
+<p>Час без анкет и&nbsp;скриптов. Ты&nbsp;рассказываешь, что происходит, мы&nbsp;задаём вопросы и&nbsp;называем вслух то, что видим. Дальше вместе решаем, по&nbsp;пути&nbsp;ли нам.</p>
 </div>
 </div>
 </div></section>
@@ -2555,6 +2656,18 @@ P["slovar/index.html"] = ("Словарь школы · Настоящие от�
 </div>
 </div></section>
 
+
+<section style="padding-top:0"><div class="wrap">
+<div class="split">
+<div class="ph"><img src="/chizhovy2/images/ob-zapis.png" alt="Язык, который родился в зале" loading="lazy"></div>
+<div>
+<p class="eyebrow">Откуда эти слова</p>
+<h2 style="font-size:1.9rem">Язык, который родился в&nbsp;зале</h2>
+<p>Ни&nbsp;одно слово из&nbsp;этого словаря не&nbsp;придумано за&nbsp;столом. Все они появились в&nbsp;работе, прижились в&nbsp;группах и&nbsp;остались с&nbsp;людьми после выпуска: в&nbsp;чатах, на&nbsp;встречах, в&nbsp;обычных разговорах.</p>
+</div>
+</div>
+</div></section>
+
 """)
 
 # ================= КОМУ: ПРЕДПРИНИМАТЕЛИ =================
@@ -2747,6 +2860,18 @@ P["kak-prohodit/index.html"] = ("Как проходит обучение · Н�
 </div>
 </div></section>
 
+
+<section style="padding-top:0"><div class="wrap">
+<div class="split">
+<div class="ph"><img src="/chizhovy2/images/ob-dver.png" alt="Дверь, в которую входят" loading="lazy"></div>
+<div>
+<p class="eyebrow">С чего начинается</p>
+<h2 style="font-size:1.9rem">Дверь, в&nbsp;которую входят</h2>
+<p>Всё начинается с&nbsp;одного разговора на&nbsp;час. Дальше человек сам решает, идти&nbsp;ли дальше: каждый следующий шаг добровольный, и&nbsp;на&nbsp;любом можно остановиться без объяснений.</p>
+</div>
+</div>
+</div></section>
+
 {FINCTA}
 """)
 
@@ -2826,6 +2951,18 @@ P["praktiki/index.html"] = ("Ежедневные практики · Насто
 <p class="eyebrow">Кто это делает</p>
 <h2 style="font-size:1.9rem">Практики держит команда</h2>
 <p>В&nbsp;одиночку ежедневная практика разваливается за&nbsp;пару недель. Поэтому её&nbsp;ведут командой: люди пишут в&nbsp;общий чат, видят друг друга и&nbsp;вытаскивают того, кто выпал. Это те&nbsp;самые люди с&nbsp;фотографии.</p>
+</div>
+</div>
+</div></section>
+
+
+<section style="padding-top:0"><div class="wrap">
+<div class="split">
+<div class="ph"><img src="/chizhovy2/images/ob-chasy.png" alt="Практика живёт по часам" loading="lazy"></div>
+<div>
+<p class="eyebrow">Каждый день</p>
+<h2 style="font-size:1.9rem">Практика живёт по&nbsp;часам</h2>
+<p>Утреннее намерение занимает пять минут, вечерний разбор десять. Сила не&nbsp;в&nbsp;длительности, а&nbsp;в&nbsp;том, что это происходит каждый день, включая те, когда не&nbsp;хочется совсем.</p>
 </div>
 </div>
 </div></section>
@@ -3236,6 +3373,18 @@ P["tehniki-sceny/index.html"] = ("Техники сцены · Настоящи�
 <p class="eyebrow">Где это происходит</p>
 <h2 style="font-size:1.9rem">Зал, в&nbsp;котором работают техники</h2>
 <p>Ни&nbsp;сцены, ни&nbsp;рядов, ни&nbsp;кафедры. Стулья по&nbsp;кругу, свободная середина и&nbsp;двое ведущих. Всё, что описано выше, разворачивается вот в&nbsp;таком зале, за&nbsp;несколько шагов от&nbsp;остальных участников.</p>
+</div>
+</div>
+</div></section>
+
+
+<section style="padding-top:0"><div class="wrap">
+<div class="split">
+<div class="ph"><img src="/chizhovy2/images/ob-zal-krug.png" alt="Зал, в котором работают техники" loading="lazy"></div>
+<div>
+<p class="eyebrow">Где это происходит</p>
+<h2 style="font-size:1.9rem">Зал, в&nbsp;котором работают техники</h2>
+<p>Ни&nbsp;сцены, ни&nbsp;рядов, ни&nbsp;кафедры. Стулья по&nbsp;кругу, свободная середина и&nbsp;двое ведущих. Всё, что описано выше, разворачивается вот в&nbsp;таком зале, в&nbsp;нескольких шагах от&nbsp;остальных участников.</p>
 </div>
 </div>
 </div></section>

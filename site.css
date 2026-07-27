@@ -13,6 +13,20 @@ a{color:var(--wine)}
 .narrow{max-width:1080px;margin:0 auto;padding:0 24px}
 .narrow>*{max-width:720px}
 /* Двухколоночный разворот: текст слева, врезка справа. Правая пустота заполняется смыслом */
+/* Заголовки секций по центру, текст под ними колонкой по центру */
+section > .wrap > .eyebrow,
+section > .wrap > h2,
+section > .narrow > .eyebrow,
+section > .narrow > h2{text-align:center;max-width:none;margin-left:auto;margin-right:auto}
+section > .wrap > .eyebrow::before,
+section > .narrow > .eyebrow::before{margin:0 10px 3px 0}
+section > .wrap > h2 + .sub,
+section > .narrow > h2 + .sub,
+section > .wrap > h2 + p,
+section > .narrow > h2 + p{text-align:center;max-width:760px;margin-left:auto;margin-right:auto}
+.tside > .col > .eyebrow,
+.tside > .col > h2{text-align:left}
+.tside > .col > h2 + p{text-align:left;max-width:660px;margin-left:0;margin-right:0}
 .tside{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:56px;align-items:start}
 .card{display:flex;flex-direction:column}
 .card>p:last-child:has(>a:only-child){margin-top:auto;padding-top:10px}
