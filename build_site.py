@@ -893,12 +893,12 @@ P["metod/index.html"] = ("Метод школы · Настоящие отнош
 </div></div></section>
 
 <section class="dark"><div class="wrap">
-<div class="diagrow">
-<div>{loop_diagram(dark=True)}</div>
-<div>
 <p class="eyebrow">Механика повтора</p>
 <h2>Событийный круг</h2>
-<div class="legend" style="margin-top:8px">
+<div class="diagrow" style="margin-top:30px">
+<div>{loop_diagram(dark=True)}</div>
+<div>
+<div class="legend">
 <div class="li"><i>1</i><div><b>Событие</b><span>Что-то происходит: слово, взгляд, сумма на&nbsp;счёте. Само по&nbsp;себе оно нейтрально.</span></div></div>
 <div class="li"><i>2</i><div><b>Эмоция</b><span>Реакция тела опережает мысль: аварийный центр мозга получает сигнал за&nbsp;миллисекунды до&nbsp;осмысления.</span></div></div>
 <div class="li"><i>3</i><div><b>Старое решение</b><span>«Злиться опасно», «просить стыдно», «я&nbsp;сам». Принято в&nbsp;детстве, работает во&nbsp;взрослой жизни.</span></div></div>
@@ -1300,11 +1300,11 @@ P["vedushchie/index.html"] = ("Алексей и Ирина Чижовы · На
 </div></section>
 
 <section style="padding-top:0"><div class="wrap">
-<div class="split">
-<div class="ph"><img src="/chizhovy2/images/real/zabeg-selfi.jpg" alt="Алексей и Ирина на набережной после старта" loading="lazy"></div>
-<div>
 <p class="eyebrow">Дисциплина это часть метода</p>
 <h2>Говорят только о&nbsp;том, что&nbsp;прошли сами</h2>
+<div class="split" style="margin-top:28px">
+<div class="ph"><img src="/chizhovy2/images/real/zabeg-selfi.jpg" alt="Алексей и Ирина на набережной после старта" loading="lazy"></div>
+<div>
 <p>Алексей: триатлет, финишер IronMan&nbsp;70.3. Не&nbsp;ради медалей. Длинная дистанция каждый день проверяет то, чему школа учит в&nbsp;зале. На&nbsp;трассе это видно буквально: сначала состояние, решения принимаются из&nbsp;спокойствия, а&nbsp;доходит тот, кто играет в&nbsp;долгую.</p>
 <p>Команды школы выходят на&nbsp;забеги вместе: тело быстро выдаёт, где ты&nbsp;себя обманываешь, и&nbsp;честно радуется, когда ты&nbsp;настоящий.</p>
 </div>
