@@ -137,7 +137,8 @@ svg{max-width:100%}
 img{max-width:100%;display:block}
 a{color:var(--wine)}
 .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
-.narrow{max-width:720px;margin:0 auto;padding:0 24px}
+.narrow{max-width:1080px;margin:0 auto;padding:0 24px}
+.narrow>*{max-width:720px}
 h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;line-height:1.2;text-wrap:balance;margin:0 0 .5em}
 /* Держим последнюю пару слов заголовка вместе там, где она влезает в колонку */
 .kp{white-space:nowrap}@media (max-width:980px){.kp{white-space:normal}}
@@ -230,7 +231,8 @@ section{padding:76px 0}
 .hero{position:relative;background:var(--night);color:var(--ntext)}
 .hero .bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.48}
 .hero .veil{position:absolute;inset:0;background:linear-gradient(165deg,rgba(23,34,44,.5),rgba(23,34,44,.93) 80%)}
-.hero .in{position:relative;z-index:1;max-width:860px;margin:0 auto;padding:110px 24px 92px}
+.hero .in{position:relative;z-index:1;max-width:1080px;margin:0 auto;padding:110px 24px 92px}
+.hero .in>*{max-width:860px}
 .hero.short .in{padding:78px 24px 64px}
 .hero .eyebrow{color:var(--copper)}
 .hero h1{font-size:clamp(2.3rem,6vw,3.7rem);font-weight:500;color:#fff}
