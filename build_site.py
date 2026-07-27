@@ -1641,6 +1641,24 @@ P["sessiya/index.html"] = ("Собеседование в школу · Наст
 </div>
 </div></section>
 
+
+<section style="padding-top:0"><div class="wrap"><div class="tside">
+<div class="col">
+<p class="eyebrow">Как проходит разговор</p>
+<h2>Час, за&nbsp;который становится понятнее</h2>
+<p>Созваниваемся в&nbsp;удобное время, обычно вечером. Никакой подготовки не&nbsp;нужно: не&nbsp;надо формулировать запрос, вспоминать детство или писать список целей. Достаточно прийти с&nbsp;тем, что беспокоит прямо сейчас.</p>
+<p>Начинаем с&nbsp;твоей ситуации. Что происходит, сколько это длится, что уже пробовал и&nbsp;чем закончилось. Мы&nbsp;задаём вопросы, но&nbsp;не&nbsp;по&nbsp;анкете: слушаем, где повторяется одно и&nbsp;то&nbsp;же, и&nbsp;называем это вслух. Часто именно здесь человек впервые видит свой круг целиком.</p>
+<p>Дальше честно говорим, поможет&nbsp;ли тут наш метод. Если задача не&nbsp;наша, скажем прямо и&nbsp;подскажем, куда идти. Если наша, объясним, с&nbsp;чего начинать и&nbsp;почему именно с&nbsp;этого.</p>
+<h3 style="margin-top:26px">Что спросить у&nbsp;нас</h3>
+<p>Спрашивают обычно про формат, про группу, про стоимость и&nbsp;про то, будет&nbsp;ли тяжело. Отвечаем на&nbsp;всё, включая неудобное: сколько стоит каждый модуль, что делать, если не&nbsp;пойдёт, и&nbsp;почему мы&nbsp;не&nbsp;даём гарантий.</p>
+</div>
+<aside class="side">
+<div class="box"><div class="lbl">Когда</div><p>В&nbsp;удобное время, чаще вечером. Созвон или встреча, как тебе&nbsp;удобнее.</p></div>
+<div class="box"><div class="lbl">Подготовка</div><p>Не&nbsp;нужна. Приходи с&nbsp;тем, что беспокоит прямо сейчас.</p></div>
+<div class="box"><div class="lbl">После</div><p>Никаких звонков с&nbsp;напоминаниями. Решение принимаешь сам и&nbsp;в&nbsp;своём темпе.</p></div>
+</aside>
+</div></div></section>
+
 <section class="dark"><div class="narrow">
 <h2>Чего на&nbsp;собеседовании не&nbsp;будет</h2>
 <p>Мы&nbsp;знаем, чего люди опасаются, когда идут «на&nbsp;разговор со&nbsp;школой». Поэтому говорим прямо.</p>
@@ -1676,6 +1694,18 @@ P["sessiya/index.html"] = ("Собеседование в школу · Наст
 <p class="note" style="margin-top:18px">Ещё не&nbsp;готов писать? Начни с&nbsp;<a href="/chizhovy2/gid/">бесплатного гайда</a>: там ядро метода и&nbsp;самодиагностика на&nbsp;десять пунктов.</p>
 </div>
 </div></section>
+
+<section style="padding-top:0"><div class="wrap">
+<div class="split">
+<div class="ph"><img src="/chizhovy2/images/real/real-01.jpg" alt="Группа школы" loading="lazy"></div>
+<div>
+<p class="eyebrow">К чему ведёт разговор</p>
+<h2 style="font-size:1.9rem">Сюда ты&nbsp;попадёшь, если решишь идти</h2>
+<p>Собеседование ничего не&nbsp;обязывает. Но&nbsp;если по&nbsp;итогам вы&nbsp;решите, что дорога общая, дальше будет вот это: небольшая группа, несколько дней очно и&nbsp;люди, которые к&nbsp;концу знают тебя настоящим.</p>
+</div>
+</div>
+</div></section>
+
 """)
 
 # ================= ИСТОКИ МЕТОДА =================
@@ -2513,6 +2543,18 @@ P["slovar/index.html"] = ("Словарь школы · Настоящие от�
 <div class="box"><div class="lbl">Длина списка</div><div class="big">100</div><p>Столько пунктов просят написать на&nbsp;первом модуле. Первые идут легко, дальше список встаёт, и&nbsp;это само по&nbsp;себе&nbsp;открытие.</p></div>
 </aside>
 </div></div></section>
+
+<section style="padding-top:0"><div class="wrap">
+<div class="split">
+<div class="ph"><img src="/chizhovy2/images/real/real-12.jpg" alt="Команда на забеге" loading="lazy"></div>
+<div>
+<p class="eyebrow">Откуда взялись эти слова</p>
+<h2 style="font-size:1.9rem">Язык, который родился в&nbsp;зале</h2>
+<p>Ни&nbsp;одно слово из&nbsp;этого словаря не&nbsp;придумано за&nbsp;столом. Все они появились в&nbsp;работе, прижились в&nbsp;группах и&nbsp;остались с&nbsp;людьми после выпуска: в&nbsp;чатах, на&nbsp;встречах, на&nbsp;забегах вроде этого.</p>
+</div>
+</div>
+</div></section>
+
 """)
 
 # ================= КОМУ: ПРЕДПРИНИМАТЕЛИ =================
@@ -2693,6 +2735,18 @@ P["kak-prohodit/index.html"] = ("Как проходит обучение · Н�
 </aside>
 </div></div></section>
 
+
+<section style="padding-top:0"><div class="wrap">
+<div class="split">
+<div class="ph"><img src="/chizhovy2/images/real/real-03.jpg" alt="Группа после модуля" loading="lazy"></div>
+<div>
+<p class="eyebrow">Путь целиком</p>
+<h2 style="font-size:1.9rem">Как выглядит финал</h2>
+<p>Последний вечер модуля проходит в&nbsp;кругу: каждый говорит, с&nbsp;чем уезжает. Фотографируются уже после, когда всё сказано. На&nbsp;снимках школы почти нет постановки, это просто люди, которые вместе прошли несколько тяжёлых и&nbsp;честных дней.</p>
+</div>
+</div>
+</div></section>
+
 {FINCTA}
 """)
 
@@ -2763,6 +2817,18 @@ P["praktiki/index.html"] = ("Ежедневные практики · Насто
 <div class="box"><div class="lbl">Что сюда попадает</div><p>Сон, тренировка, звонок маме, цена в&nbsp;переговорах и&nbsp;разговор, который откладывали полгода.</p></div>
 </aside>
 </div></div></section>
+
+
+<section style="padding-top:0"><div class="wrap">
+<div class="split">
+<div class="ph"><img src="/chizhovy2/images/real/real-10.jpg" alt="Команда участников" loading="lazy"></div>
+<div>
+<p class="eyebrow">Кто это делает</p>
+<h2 style="font-size:1.9rem">Практики держит команда</h2>
+<p>В&nbsp;одиночку ежедневная практика разваливается за&nbsp;пару недель. Поэтому её&nbsp;ведут командой: люди пишут в&nbsp;общий чат, видят друг друга и&nbsp;вытаскивают того, кто выпал. Это те&nbsp;самые люди с&nbsp;фотографии.</p>
+</div>
+</div>
+</div></section>
 
 {FINCTA}
 """)
@@ -3161,6 +3227,18 @@ P["tehniki-sceny/index.html"] = ("Техники сцены · Настоящи�
 <div class="box"><div class="lbl">Ведущих</div><div class="big">2</div><p>Одному такое не&nbsp;удержать: пока первый ведёт процесс, вторая остаётся рядом с человеком до&nbsp;конца.</p></div>
 </aside>
 </div></div></section>
+
+
+<section style="padding-top:0"><div class="wrap">
+<div class="split">
+<div class="ph"><img src="/chizhovy2/images/real/real-06.jpg" alt="Работа группы в зале" loading="lazy"></div>
+<div>
+<p class="eyebrow">Где это происходит</p>
+<h2 style="font-size:1.9rem">Зал, в&nbsp;котором работают техники</h2>
+<p>Ни&nbsp;сцены, ни&nbsp;рядов, ни&nbsp;кафедры. Стулья по&nbsp;кругу, свободная середина и&nbsp;двое ведущих. Всё, что описано выше, разворачивается вот в&nbsp;таком зале, за&nbsp;несколько шагов от&nbsp;остальных участников.</p>
+</div>
+</div>
+</div></section>
 
 {FINCTA}
 """)
