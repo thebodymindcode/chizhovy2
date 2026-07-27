@@ -269,9 +269,9 @@ section{padding:76px 0}
 .hero{position:relative;background:var(--night);color:var(--ntext)}
 .hero .bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.48}
 .hero .veil{position:absolute;inset:0;background:linear-gradient(165deg,rgba(23,34,44,.5),rgba(23,34,44,.93) 80%)}
-.hero .in{position:relative;z-index:1;max-width:1080px;margin:0 auto;padding:110px 24px 92px;text-align:center}
-.hero .in>*{max-width:880px;margin-left:auto;margin-right:auto}
-.hero .acts{justify-content:center}
+.hero .in{position:relative;z-index:1;max-width:1080px;margin:0 auto;padding:110px 24px 92px;text-align:left}
+.hero .in>*{max-width:860px;margin-left:0;margin-right:0}
+.hero .acts{justify-content:flex-start}
 .hero.short .in{padding:78px 24px 64px}
 .hero .eyebrow{color:var(--copper)}
 .hero h1{font-size:clamp(2.3rem,6vw,3.7rem);font-weight:500;color:#fff}
