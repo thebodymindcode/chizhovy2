@@ -842,9 +842,9 @@ P["index.html"] = ("Настоящие отношения · школа тран
 </div></div>
 </div></section>
 
-<section class="center" style="padding-top:0"><div class="narrow" style="text-align:center">
+<section style="padding-top:0"><div class="narrow">
 <h2>Начни с разговора на час</h2>
-<p class="sub" style="margin:0 auto 26px">Собеседование в&nbsp;школу: час о&nbsp;твоей ситуации и&nbsp;честный ответ, чем школа может помочь. Для читателей сайта&nbsp;бесплатно.</p>
+<p class="sub" style="margin:0 0 26px">Собеседование в&nbsp;школу: час о&nbsp;твоей ситуации и&nbsp;честный ответ, чем школа может помочь. Для читателей сайта&nbsp;бесплатно.</p>
 <a class="btn btn-wine" href="/chizhovy2/sessiya/">Записаться на&nbsp;собеседование</a>
 </div></section>
 """)
@@ -1273,9 +1273,9 @@ P["vedushchie/index.html"] = ("Алексей и Ирина Чижовы · На
 <p>В зале это даёт две вещи. Первое: любую семейную сцену участники разбирают с&nbsp;двух сторон, мужской и&nbsp;женской, без перекоса в&nbsp;чью-то пользу. Второе: ведущие не&nbsp;идеализируют отношения и&nbsp;не&nbsp;делают вид, что у&nbsp;них всё гладко. Об&nbsp;этом прямо сказано в&nbsp;<a href="/chizhovy2/manifest/">манифесте школы</a>.</p>
 </div></section>
 
-<section class="center" style="padding-top:0"><div class="narrow" style="text-align:center">
+<section style="padding-top:0"><div class="narrow">
 <h2>Познакомиться лично</h2>
-<p class="sub" style="margin:0 auto 26px">Собеседование: час разговора о&nbsp;твоей ситуации, честный взгляд со&nbsp;стороны и&nbsp;понятный следующий шаг. Для читателей сайта бесплатно.</p>
+<p class="sub" style="margin:0 0 26px">Собеседование: час разговора о&nbsp;твоей ситуации, честный взгляд со&nbsp;стороны и&nbsp;понятный следующий шаг. Для читателей сайта бесплатно.</p>
 <a class="btn btn-wine" href="/chizhovy2/sessiya/">Записаться</a>
 </div></section>
 """)
@@ -1350,7 +1350,7 @@ P["otzyvy/index.html"] = ("Истории учеников · Настоящие
 <div class="ph"><img src="/chizhovy2/images/real/real-09.jpg" alt="Участники тренинга" loading="lazy"></div>
 <div class="ph"><img src="/chizhovy2/images/real/real-12.jpg" alt="Команда на забеге" loading="lazy"></div>
 </div>
-<p style="margin-top:30px;text-align:center"><a class="btn btn-wine" href="/chizhovy2/sessiya/">Начать свою историю</a></p>
+<p style="margin-top:30px"><a class="btn btn-wine" href="/chizhovy2/sessiya/">Начать свою историю</a></p>
 </div></section>
 """)
 
@@ -1428,7 +1428,7 @@ P["sessiya/index.html"] = ("Собеседование в школу · Наст
 </div></section>
 
 <section style="padding-top:0"><div class="narrow">
-<div style="background:var(--linen);border:1px solid var(--line);border-radius:10px;padding:34px;text-align:center">
+<div style="background:var(--linen);border:1px solid var(--line);border-radius:10px;padding:34px">
 <h3 style="font-size:1.5rem">Записаться</h3>
 <p class="sub" style="margin:10px auto 22px">Напиши слово «собеседование» в&nbsp;наш Telegram, и&nbsp;мы&nbsp;согласуем время. Отвечаем лично, без ботов и&nbsp;рассылок.</p>
 <a class="btn btn-wine" href="https://t.me/+LVptSH6Mt4hhYmFi">Написать в&nbsp;Telegram</a>
@@ -1532,9 +1532,9 @@ MOST = """<section><div class="narrow">
 <p><a class="btn btn-wine" href="/chizhovy2/sessiya/">Записаться на&nbsp;собеседование</a> <a class="btn btn-ghost" href="/chizhovy2/gid/" style="margin-left:8px">Читать гайд</a></p>
 </div></section>"""
 
-MOST = """<section class="center" style="padding-top:0"><div class="narrow" style="text-align:center">
+MOST = """<section style="padding-top:0"><div class="narrow">
 <h2>Читать полезно, а&nbsp;меняет жизнь работа в&nbsp;зале</h2>
-<p class="sub" style="margin:0 auto 26px">Книги дают карту, а&nbsp;сценарий переписывается в&nbsp;зале, телом и&nbsp;эмоцией. Начни с&nbsp;бесплатного гайда или приходи на&nbsp;собеседование: час разговора о&nbsp;твоей&nbsp;ситуации.</p>
+<p class="sub" style="margin:0 0 26px">Книги дают карту, а&nbsp;сценарий переписывается в&nbsp;зале, телом и&nbsp;эмоцией. Начни с&nbsp;бесплатного гайда или приходи на&nbsp;собеседование: час разговора о&nbsp;твоей&nbsp;ситуации.</p>
 <p><a class="btn btn-wine" href="/chizhovy2/sessiya/">Записаться на&nbsp;собеседование</a> <a class="btn btn-ghost" href="/chizhovy2/gid/" style="margin-left:8px">Читать гайд</a></p>
 </div></section>"""
 
@@ -1779,9 +1779,9 @@ P["istorii/index.html"] = ("Истории учеников · Настоящи�
 <p class="note" style="margin-top:20px">Слова, которые здесь звучат, разобраны в&nbsp;<a href="/chizhovy2/slovar/">словаре школы</a>.</p>
 </div></section>
 
-<section class="center" style="padding-top:0"><div class="narrow" style="text-align:center">
+<section style="padding-top:0"><div class="narrow">
 <h2>Начать свою историю</h2>
-<p class="sub" style="margin:0 auto 26px">Первый шаг у&nbsp;всех один: час честного разговора. Для читателей сайта он&nbsp;&#8288;бесплатный.</p>
+<p class="sub" style="margin:0 0 26px">Первый шаг у&nbsp;всех один: час честного разговора. Для читателей сайта он&nbsp;&#8288;бесплатный.</p>
 <a class="btn btn-wine" href="/chizhovy2/sessiya/">Записаться на&nbsp;собеседование</a>
 </div></section>
 """)
@@ -1813,9 +1813,9 @@ P["istorii/predprinimatel/index.html"] = ("Предприниматель: за�
 <p class="note">История личная, поэтому без имени. Суммы и&nbsp;скорость перемен у&nbsp;каждого свои: школа не&nbsp;обещает повторения чужого результата и&nbsp;не&nbsp;берётся предсказывать&nbsp;сроки.</p>
 </div></section>
 
-<section class="center" style="padding-top:0"><div class="narrow" style="text-align:center">
+<section style="padding-top:0"><div class="narrow">
 <h2>Узнал себя в этом?</h2>
-<p class="sub" style="margin:0 auto 26px">Его путь начался с&nbsp;одного честного разговора о&nbsp;том, где он&nbsp;на&nbsp;самом деле находится. Твой может начаться так&nbsp;же. Собеседование для читателей сайта&nbsp;бесплатное.</p>
+<p class="sub" style="margin:0 0 26px">Его путь начался с&nbsp;одного честного разговора о&nbsp;том, где он&nbsp;на&nbsp;самом деле находится. Твой может начаться так&nbsp;же. Собеседование для читателей сайта&nbsp;бесплатное.</p>
 <p><a class="btn btn-wine" href="/chizhovy2/sessiya/">Записаться на&nbsp;собеседование</a> <a class="btn btn-ghost" href="/chizhovy2/istorii/komanda-mir/" style="margin-left:8px">Ещё история: команда «МИР»</a></p>
 </div></section>
 """)
@@ -1854,7 +1854,7 @@ P["istorii/komanda-mir/index.html"] = ("Девяносто дней команд
 <div class="ph"><img src="/chizhovy2/images/real/real-11.jpg" alt="Участники команды" loading="lazy"></div>
 <div class="ph"><img src="/chizhovy2/images/real/real-12.jpg" alt="Команда на забеге" loading="lazy"></div>
 </div>
-<p style="margin-top:30px;text-align:center"><a class="btn btn-wine" href="/chizhovy2/marafon/">Как устроен Марафон</a> <a class="btn btn-ghost" href="/chizhovy2/sessiya/" style="margin-left:8px">Записаться на&nbsp;собеседование</a></p>
+<p style="margin-top:30px"><a class="btn btn-wine" href="/chizhovy2/marafon/">Как устроен Марафон</a> <a class="btn btn-ghost" href="/chizhovy2/sessiya/" style="margin-left:8px">Записаться на&nbsp;собеседование</a></p>
 </div></section>
 """)
 
@@ -1894,17 +1894,17 @@ P["slovar/index.html"] = ("Словарь школы · Настоящие от�
 <p class="note" style="margin-top:22px">Часть слов пришла из&nbsp;истоков метода: подробнее в&nbsp;разделах <a href="/chizhovy2/istoki/zeland-transerfing/">про трансерфинг</a> и&nbsp;<a href="/chizhovy2/istoki/nauka/">про науку</a>.</p>
 </div></section>
 
-<section class="center" style="padding-top:0"><div class="narrow" style="text-align:center">
+<section style="padding-top:0"><div class="narrow">
 <h2>Слова оживают в&nbsp;зале</h2>
-<p class="sub" style="margin:0 auto 26px">Читать словарь полезно, а&nbsp;по-настоящему эти слова понимаешь телом, в&nbsp;зале, когда очередь доходит до&nbsp;твоей сцены. Начни с&nbsp;гайда или запишись на&nbsp;собеседование.</p>
+<p class="sub" style="margin:0 0 26px">Читать словарь полезно, а&nbsp;по-настоящему эти слова понимаешь телом, в&nbsp;зале, когда очередь доходит до&nbsp;твоей сцены. Начни с&nbsp;гайда или запишись на&nbsp;собеседование.</p>
 <p><a class="btn btn-wine" href="/chizhovy2/sessiya/">Записаться на&nbsp;собеседование</a> <a class="btn btn-ghost" href="/chizhovy2/gid/" style="margin-left:8px">Читать гайд</a></p>
 </div></section>
 """)
 
 # ================= КОМУ: ПРЕДПРИНИМАТЕЛИ =================
-FINCTA = """<section class="center" style="padding-top:0"><div class="narrow" style="text-align:center">
+FINCTA = """<section style="padding-top:0"><div class="narrow">
 <h2>Начни с разговора на час</h2>
-<p class="sub" style="margin:0 auto 26px">Собеседование в&nbsp;школу: час о&nbsp;твоей ситуации и&nbsp;честный ответ, чем мы&nbsp;можем помочь. Для читателей сайта&nbsp;бесплатно.</p>
+<p class="sub" style="margin:0 0 26px">Собеседование в&nbsp;школу: час о&nbsp;твоей ситуации и&nbsp;честный ответ, чем мы&nbsp;можем помочь. Для читателей сайта&nbsp;бесплатно.</p>
 <p><a class="btn btn-wine" href="/chizhovy2/sessiya/">Записаться на&nbsp;собеседование</a> <a class="btn btn-ghost" href="/chizhovy2/gid/" style="margin-left:8px">Сначала почитать гайд</a></p>
 </div></section>"""
 
@@ -2394,9 +2394,9 @@ P["stati/index.html"] = ("Статьи школы · Настоящие отно
 <div class="chiplist"><span>Что такое психодрама</span><span>Пустой стул</span><span>Как проходит групповая работа</span><span>Тренинг и&nbsp;терапия: в&nbsp;чём разница</span></div></div>
 </div></section>
 
-<section class="center" style="padding-top:0"><div class="narrow" style="text-align:center">
+<section style="padding-top:0"><div class="narrow">
 <h2>Пока библиотека растёт</h2>
-<p class="sub" style="margin:0 auto 26px">Главное ядро школы уже собрано в&nbsp;бесплатном гайде «Кто пишет сценарий твоей жизни». Полчаса чтения. А&nbsp;живые вопросы можно принести на&nbsp;собеседование: для&nbsp;читателей сайта оно бесплатное.</p>
+<p class="sub" style="margin:0 0 26px">Главное ядро школы уже собрано в&nbsp;бесплатном гайде «Кто пишет сценарий твоей жизни». Полчаса чтения. А&nbsp;живые вопросы можно принести на&nbsp;собеседование: для&nbsp;читателей сайта оно бесплатное.</p>
 <p><a class="btn btn-wine" href="/chizhovy2/gid/">Читать гайд</a> <a class="btn btn-ghost" href="/chizhovy2/sessiya/" style="margin-left:8px">Записаться на&nbsp;собеседование</a></p>
 </div></section>
 """)
