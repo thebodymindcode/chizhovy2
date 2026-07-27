@@ -168,6 +168,13 @@ section > .narrow > h2 + p{text-align:left;max-width:none;margin-left:0;margin-r
 .split > div > *{margin-left:0;margin-right:0;max-width:none}
 
 .tside{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:56px;align-items:start}
+/* если в колонке уже стоит сетка карточек, врезка рядом мешает: уводим её вниз в ряд */
+.tside:has(> .col .grid2),
+.tside:has(> .col .grid3){grid-template-columns:1fr}
+.tside:has(> .col .grid2) > .side,
+.tside:has(> .col .grid3) > .side{position:static;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-top:8px}
+.tside:has(> .col .grid2) > .side .box + .box,
+.tside:has(> .col .grid3) > .side .box + .box{margin-top:0}
 /* если врезок не осталось, колонка исчезает и текст занимает всю ширину */
 .tside:not(:has(.side .box)){grid-template-columns:1fr}
 .tside:not(:has(.side .box)) > .side{display:none}
@@ -2010,7 +2017,7 @@ P["sessiya/index.html"] = ("Собеседование в школу · Наст
 <div class="nails nails3" style="margin-top:28px">
 <div class="nail"><b>60&nbsp;минут</b><span>личного разговора, онлайн или&nbsp;очно</span></div>
 <div class="nail"><b>Бесплатно</b><span>для тех, кто пришёл с этого&nbsp;сайта</span></div>
-<div class="nail"><b>0</b><span>обязательств: решение принимаешь&nbsp;потом</span></div>
+<div class="nail"><b>1</b><span>честный разговор о&nbsp;твоей&nbsp;задаче</span></div>
 </div>
 </div></section>
 
@@ -3678,7 +3685,7 @@ P["soobshchestvo/index.html"] = ("Сообщество выпускников ·
 
 # ================= С ЧЕГО НАЧАТЬ =================
 P["start/index.html"] = ("С чего начать · Настоящие отношения",
-"Маршрут новичка: гайд, собеседование, первый модуль. Три шага без обязательств.", "", f"""
+"Маршрут новичка: гайд, собеседование, первый модуль. Три шага для тех, кто решил менять.", "", f"""
 <div class="hero short"><div class="bg" style="background-image:url('/chizhovy2/images/site-hero.png')"></div><div class="veil"></div>
 <div class="in"><p class="eyebrow">Новичку</p><h1>С чего начать</h1>
 <p class="lead">Не&nbsp;нужно сразу решаться на&nbsp;модуль. Вот короткий маршрут. Каждый шаг бесплатный и добровольный, и&nbsp;после каждого становится понятнее.</p></div></div>
@@ -3719,7 +3726,7 @@ P["start/index.html"] = ("С чего начать · Настоящие отн�
 </div>
 </div>
 <aside class="side">
-<div class="box"><div class="lbl">Собеседование</div><div class="big">0</div><p>Столько обязательств после разговора. Условия обсуждаются там&nbsp;же, а&nbsp;решение принимаешь потом, без давления и&nbsp;сроков.</p></div>
+<div class="box"><div class="lbl">С чем приходят</div><p>С&nbsp;решением что-то менять. Разговор нужен тому, кто уже дозрел, а&nbsp;не&nbsp;тому, кто зашёл посмотреть.</p></div>
 </aside>
 </div></div></section>
 
@@ -4023,7 +4030,7 @@ P["somneniya/index.html"] = ("Частые сомнения · Настоящи�
 <div class="nails nails3" style="margin-top:22px">
 <div class="nail"><b>60&nbsp;минут</b><span>онлайн или очно, без подготовки и правильных&nbsp;слов</span></div>
 <div class="nail"><b>Бесплатно</b><span>для тех, кто пришёл с этого&nbsp;сайта</span></div>
-<div class="nail"><b>0</b><span>обязательств: решение принимаешь&nbsp;потом</span></div>
+<div class="nail"><b>1</b><span>честный разговор о&nbsp;твоей&nbsp;задаче</span></div>
 </div>
 <p style="margin-top:24px">Осталось сомнение, которого здесь нет? Принеси его на&nbsp;разговор: это ровно то&nbsp;место, где на&nbsp;него ответят прямо. Что ещё спрашивают о&nbsp;формате, собрано в&nbsp;разделе <a href="/chizhovy2/voprosy/">вопросов и&nbsp;ответов</a>.</p>
 </div></section>

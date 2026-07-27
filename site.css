@@ -41,6 +41,13 @@ section > .narrow > h2 + p{text-align:left;max-width:none;margin-left:0;margin-r
 .split > div > *{margin-left:0;margin-right:0;max-width:none}
 
 .tside{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:56px;align-items:start}
+/* если в колонке уже стоит сетка карточек, врезка рядом мешает: уводим её вниз в ряд */
+.tside:has(> .col .grid2),
+.tside:has(> .col .grid3){grid-template-columns:1fr}
+.tside:has(> .col .grid2) > .side,
+.tside:has(> .col .grid3) > .side{position:static;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-top:8px}
+.tside:has(> .col .grid2) > .side .box + .box,
+.tside:has(> .col .grid3) > .side .box + .box{margin-top:0}
 /* если врезок не осталось, колонка исчезает и текст занимает всю ширину */
 .tside:not(:has(.side .box)){grid-template-columns:1fr}
 .tside:not(:has(.side .box)) > .side{display:none}
