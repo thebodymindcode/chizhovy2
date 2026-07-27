@@ -24,8 +24,15 @@ section > .wrap > h2 + .sub,
 section > .narrow > h2 + .sub,
 section > .wrap > h2 + p,
 section > .narrow > h2 + p{text-align:center;max-width:760px;margin-left:auto;margin-right:auto}
+/* Система: широкая секция по центру, узкая колонка рядом с фото или врезкой слева */
 .tside > .col > .eyebrow,
-.tside > .col > h2{text-align:center}
+.tside > .col > h2,
+.tside > .col > h3,
+.split > div > .eyebrow,
+.split > div > h2,
+.split > div > h3{text-align:left}
+.tside > .col > *{margin-left:0;margin-right:0}
+.split > div > *{margin-left:0;margin-right:0;max-width:none}
 
 .tside{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:56px;align-items:start}
 .card{display:flex;flex-direction:column}

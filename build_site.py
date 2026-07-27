@@ -151,8 +151,15 @@ section > .wrap > h2 + .sub,
 section > .narrow > h2 + .sub,
 section > .wrap > h2 + p,
 section > .narrow > h2 + p{text-align:center;max-width:760px;margin-left:auto;margin-right:auto}
+/* Система: широкая секция по центру, узкая колонка рядом с фото или врезкой слева */
 .tside > .col > .eyebrow,
-.tside > .col > h2{text-align:center}
+.tside > .col > h2,
+.tside > .col > h3,
+.split > div > .eyebrow,
+.split > div > h2,
+.split > div > h3{text-align:left}
+.tside > .col > *{margin-left:0;margin-right:0}
+.split > div > *{margin-left:0;margin-right:0;max-width:none}
 
 .tside{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:56px;align-items:start}
 .card{display:flex;flex-direction:column}
@@ -770,10 +777,10 @@ P["index.html"] = ("Настоящие отношения · школа тран
 </div></section>
 
 <section class="dark"><div class="wrap">
-<div class="diagrow">
-<div>
 <p class="eyebrow">Метод</p>
 <h2>Мы работаем с&nbsp;причиной</h2>
+<div class="diagrow" style="margin-top:30px">
+<div>
 <p>Повторы держатся не на&nbsp;характере и не на&nbsp;«таком партнёре». Их&nbsp;крутит событийный круг: старое решение включается быстрее сознания и&nbsp;доигрывает знакомый финал.</p>
 <p>Разорвать круг усилием не&nbsp;выходит. Мы&nbsp;разбираем его там, где он&nbsp;записан: в&nbsp;эмоции и&nbsp;теле, в&nbsp;живой групповой работе, где старая сцена проигрывается заново и заканчивается&nbsp;по-другому.</p>
 <p style="margin-top:24px"><a class="btn btn-ghost" href="/chizhovy2/metod/">Разобрать метод подробно</a></p>
