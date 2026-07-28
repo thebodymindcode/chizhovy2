@@ -1,0 +1,705 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Кто пишет сценарий твоей жизни · гайд школы «Настоящие отношения»">
+<meta property="og:description" content="Разговор ещё впереди, а ты уже знаешь, чем он кончится. Разбор: почему всё повторяется и как это переписывают.">
+<meta property="og:image" content="https://thebodymindcode.github.io/chizhovy2/images/g2-hero.jpg">
+<meta property="og:locale" content="ru_RU">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://thebodymindcode.github.io/chizhovy2/gid2/">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Кто пишет сценарий твоей жизни</title>
+<meta name="description" content="Про старую запись, которая повторяет твои дни, ссоры и потолки. И про место, где её власть заканчивается.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='38' cy='50' r='28' fill='none' stroke='%237D8C74' stroke-width='6'/%3E%3Ccircle cx='62' cy='50' r='28' fill='none' stroke='%236E3B4B' stroke-width='6'/%3E%3Cpath d='M50 24.7 A28 28 0 0 1 50 75.3 A28 28 0 0 1 50 24.7 Z' fill='%236E3B4B'/%3E%3C/svg%3E">
+<style>
+@font-face{font-family:'Playfair Display';src:url('../fonts/playfair-cyrillic.woff2') format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-weight:400 900;font-display:swap}
+@font-face{font-family:'Playfair Display';src:url('../fonts/playfair-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+2000-206F;font-weight:400 900;font-display:swap}
+@font-face{font-family:'Lora';src:url('../fonts/lora-cyrillic.woff2') format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-weight:400 700;font-display:swap}
+@font-face{font-family:'Lora';src:url('../fonts/lora-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+2000-206F;font-weight:400 700;font-display:swap}
+@font-face{font-family:'Lora';src:url('../fonts/lora-italic-cyrillic.woff2') format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-weight:400 700;font-style:italic;font-display:swap}
+@font-face{font-family:'Lora';src:url('../fonts/lora-italic-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+2000-206F;font-weight:400 700;font-style:italic;font-display:swap}
+@font-face{font-family:'Manrope';src:url('../fonts/manrope-cyrillic.woff2') format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-weight:200 800;font-display:swap}
+@font-face{font-family:'Manrope';src:url('../fonts/manrope-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+2000-206F;font-weight:200 800;font-display:swap}
+:root{
+  --paper:#FAF7F2; --ink:#2E2A27; --soft:#6B615C; --faint:#8C8378;
+  --wine:#6E3B4B; --wine-deep:#552C3A; --sage:#7D8C74; --sand:#C9A87C;
+  --rule:rgba(46,42,39,.25); --rule-soft:rgba(46,42,39,.12);
+  color-scheme: light;
+}
+*{box-sizing:border-box}
+html{font-size:17.5px;scroll-behavior:smooth}
+body{margin:0;background:#E3DCCE;color:var(--ink);font-family:'Lora',Georgia,serif;line-height:1.78;-webkit-font-smoothing:antialiased}
+.sheet{max-width:880px;margin:0 auto;background:var(--paper);border-left:1px solid rgba(46,42,39,.28);border-right:1px solid rgba(46,42,39,.28);box-shadow:0 0 80px rgba(46,42,39,.22);min-height:100vh;padding-bottom:1px}
+img{max-width:100%;display:block}
+
+/* Одна газетная колонка, по краям чистые поля */
+.col{margin:0 auto;padding:0 56px}
+
+/* Мачтхед */
+.masthead{padding:46px 0 0;text-align:center}
+.masthead .lens{margin:0 auto 18px}
+.masthead .brand{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:clamp(1.2rem,4vw,1.65rem);letter-spacing:.32em;text-indent:.32em;text-transform:uppercase}
+.masthead .issue{display:flex;justify-content:center;gap:18px;font-family:'Manrope',sans-serif;font-size:.66rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--soft);border-top:1px solid var(--rule);padding:9px 2px 0;margin-top:20px}
+.dbl{border-top:3px solid var(--ink);border-bottom:1px solid var(--ink);height:3px;margin-top:9px}
+
+/* Заголовок номера */
+.headline{padding:50px 0 0;text-align:center}
+.headline .kicker{font-family:'Manrope',sans-serif;font-size:.7rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--wine);margin:0 0 20px}
+h1{font-family:'Playfair Display',Georgia,serif;font-weight:500;font-size:clamp(2.4rem,7vw,3.8rem);line-height:1.12;margin:0;text-wrap:balance}
+.standfirst{font-style:italic;font-size:1.2rem;line-height:1.62;color:var(--soft);max-width:620px;margin:26px auto 0;text-wrap:pretty}
+.byline{font-family:'Manrope',sans-serif;font-size:.68rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--faint);margin:30px 0 0;display:flex;align-items:center;justify-content:center;gap:16px}
+.byline::before,.byline::after{content:'';flex:0 0 44px;height:1px;background:var(--rule)}
+
+/* Содержание номера */
+.toc{border:1px solid var(--rule);background:#fff;padding:22px 28px 18px;margin:40px 0 6px}
+.toc-t{font-family:'Manrope',sans-serif;font-size:.68rem;font-weight:800;letter-spacing:.24em;text-transform:uppercase;color:var(--wine);margin-bottom:10px;text-align:center}
+.toc ol{margin:0;padding:0;list-style:none;columns:2;column-gap:34px}
+.toc li{padding:7px 0;border-bottom:1px solid var(--rule-soft);break-inside:avoid}
+.toc a{color:var(--ink);text-decoration:none;font-size:.92rem;display:flex;gap:10px;align-items:baseline}
+.toc a:hover{color:var(--wine)}
+.toc i{font-style:normal;font-family:'Playfair Display',Georgia,serif;color:var(--sand);flex:0 0 22px;text-align:right}
+.deck{font-style:italic;color:var(--soft);margin:12px auto 0;max-width:470px;font-size:.98rem;line-height:1.55}
+
+/* Части */
+.part{padding:56px 0 0;text-align:center}
+.part::before{content:'';display:block;width:100%;margin:0 0 42px;border-top:1px solid var(--rule)}
+.part .pn{font-family:'Manrope',sans-serif;font-size:.68rem;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:var(--sand)}
+.part h2{font-family:'Playfair Display',Georgia,serif;font-weight:600;font-size:clamp(1.55rem,4.6vw,2.05rem);line-height:1.22;margin:10px 0 0;text-wrap:balance}
+article{padding-top:30px}
+article p{margin:0 0 1.15em}
+strong{font-weight:700}
+
+/* Буквица */
+.dropcap::first-letter{font-family:'Playfair Display',Georgia,serif;font-size:3.6em;line-height:.82;float:left;padding:8px 12px 0 0;color:var(--wine)}
+
+/* Газетный двухколоночник */
+.twocol{columns:2;column-gap:44px;column-rule:1px solid var(--rule-soft)}
+.twocol p{break-inside:avoid-column}
+
+/* Как звучит запись: реплики */
+.whisper{border:1px solid var(--rule);background:#fff;padding:24px 28px;margin:30px 0}
+.whisper .wt{font-family:'Manrope',sans-serif;font-size:.68rem;font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:var(--wine);text-align:center;margin-bottom:14px}
+.whisper ul{margin:0;padding:0;list-style:none;columns:2;column-gap:36px}
+.whisper li{padding:8px 0 8px 22px;position:relative;font-style:italic;font-size:1.02rem;break-inside:avoid}
+.whisper li::before{content:'';position:absolute;left:0;top:17px;width:11px;height:9px;background:var(--sand);clip-path:ellipse(35% 50% at 50% 50%)}
+
+/* Словарь выпуска */
+.dict{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--rule);border-left:1px solid var(--rule-soft);margin:30px 0}
+.dict .dw{padding:18px 20px 14px;border-right:1px solid var(--rule-soft);border-bottom:1px solid var(--rule-soft)}
+.dict .dw b{display:block;font-family:'Manrope',sans-serif;font-size:.7rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--wine);margin-bottom:6px}
+.dict .dw span{font-size:.92rem;color:var(--soft);line-height:1.6}
+
+/* История из зала */
+.case{border:1px solid var(--rule);border-top:4px solid var(--sage);background:#fff;padding:26px 30px;margin:30px 0}
+.case .ct{font-family:'Manrope',sans-serif;font-size:.68rem;font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:var(--sage);margin-bottom:12px}
+.case p{margin:0 0 .9em}
+.case p:last-child{margin:0}
+
+/* Хроника вечера */
+.chrono{border:1px solid var(--rule);margin:30px 0;background:#fff}
+.chrono .ct2{font-family:'Manrope',sans-serif;font-size:.68rem;font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:var(--wine);padding:14px 22px;border-bottom:1px solid var(--rule)}
+.chrono ol{list-style:none;margin:0;padding:8px 0}
+.chrono li{display:grid;grid-template-columns:64px 1fr;gap:14px;padding:9px 22px;font-size:.98rem}
+.chrono li+li{border-top:1px dashed var(--rule-soft)}
+.chrono time{font-family:'Manrope',sans-serif;font-weight:800;font-size:.82rem;color:var(--wine);padding-top:2px}
+.chrono .fin{background:var(--linen, #F4EEE5)}
+
+/* Вопросы на полях */
+.qa{border-top:2px solid var(--ink);margin:34px 0 0;padding-top:6px}
+.qa dt{font-family:'Playfair Display',serif;font-weight:700;font-size:1.12rem;margin:18px 0 6px}
+.qa dd{margin:0;color:var(--ink-soft, #5C534B);font-size:.99rem}
+
+/* Купон-заявка */
+.coupon{border:2px solid var(--ink);margin:40px 0 8px;background:#fff}
+.coupon .ch{padding:16px 24px;border-bottom:2px solid var(--ink);display:flex;justify-content:space-between;align-items:baseline;gap:14px}
+.coupon .ch b{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:800}
+.coupon .ch span{font-family:'Manrope',sans-serif;font-size:.66rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--wine)}
+.coupon form{padding:20px 24px 24px}
+.coupon .cr{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.coupon label{display:block;margin-bottom:13px}
+.coupon label span{display:block;font-family:'Manrope',sans-serif;font-size:.72rem;letter-spacing:.06em;color:var(--ink-soft,#5C534B);margin-bottom:5px}
+.coupon input,.coupon textarea{width:100%;font:inherit;font-size:1rem;border:none;border-bottom:1.5px solid var(--ink);background:transparent;padding:7px 2px;border-radius:0}
+.coupon textarea{min-height:74px;resize:vertical}
+.coupon input:focus,.coupon textarea:focus{outline:none;border-bottom-color:var(--wine)}
+.coupon input.zerr,.coupon textarea.zerr{border-bottom-color:#C0574F}
+.coupon .btn{width:100%;margin-top:10px}
+.coupon .cnote{font-size:.8rem;color:var(--ink-soft,#5C534B);margin:12px 0 0}
+.coupon .zok{display:none;margin-top:12px;padding:12px 14px;border:1.5px dashed var(--sage,#7D8C74);font-size:.9rem}
+.coupon .zok.on{display:block}
+@media (max-width:640px){.coupon .cr{grid-template-columns:1fr}}
+
+/* Эксперимент */
+.try30{border:1.5px dashed var(--wine);padding:22px 26px;margin:30px 0;background:transparent}
+.try30 .tt{font-family:'Manrope',sans-serif;font-size:.68rem;font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:var(--wine);margin-bottom:8px}
+.try30 p{margin:0;font-size:1rem}
+
+/* Мид-CTA на метод */
+.midcta{border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:24px 10px;margin:34px 0;display:flex;justify-content:space-between;align-items:center;gap:20px}
+.midcta p{margin:0;font-family:'Playfair Display',Georgia,serif;font-size:1.15rem}
+.midcta a{white-space:nowrap}
+
+/* Подвал газеты */
+.paperfoot{padding:40px 0 56px;font-family:'Manrope',sans-serif}
+.paperfoot .dblrule{border-top:1px solid var(--ink);border-bottom:3px solid var(--ink);height:3px;margin-bottom:28px;opacity:.85}
+.pf-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:30px;text-align:left}
+.pf-grid b{display:block;font-size:.72rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--wine);margin-bottom:8px}
+.pf-grid p{margin:0;font-size:.85rem;color:var(--soft);line-height:1.6}
+.pf-grid a{display:block;color:var(--ink);text-decoration:none;font-size:.88rem;padding:4px 0;border-bottom:1px solid var(--rule-soft)}
+.pf-grid a:hover{color:var(--wine)}
+.pf-fine{margin-top:30px;padding-top:16px;border-top:1px solid var(--rule);font-size:.72rem;color:var(--faint);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+/* Плитки-инфографика */
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:30px 0}
+.tiles.five{grid-template-columns:repeat(5,1fr)}
+.tile{background:#fff;border:1px solid var(--rule);border-bottom:3px solid var(--wine);padding:18px 16px 14px;text-align:center}
+.tile svg{width:30px;height:30px;stroke:var(--wine);fill:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;margin:0 auto 10px;display:block}
+.tile b{display:block;font-family:'Manrope',sans-serif;font-size:.68rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;margin-bottom:6px}
+.tile span{font-family:'Manrope',sans-serif;font-size:.8rem;color:var(--soft);line-height:1.5;display:block}
+.tile.sage{border-bottom-color:var(--sage)}
+.tile.sand{border-bottom-color:var(--sand)}
+
+/* Коллаут с мыслью */
+.callout{display:flex;gap:20px;align-items:flex-start;background:#F3EEE4;border:1px solid var(--rule);border-left:4px solid var(--wine);padding:24px 26px;margin:30px 0}
+.callout svg{flex:0 0 34px;width:34px;height:28px;margin-top:4px}
+.callout p{margin:0;font-family:'Playfair Display',Georgia,serif;font-size:1.22rem;line-height:1.5}
+
+/* Подпись-плашка под фото */
+.capband{display:flex;justify-content:space-between;gap:14px;align-items:center;background:#EFE9DD;border:1px solid var(--rule);border-top:none;padding:10px 14px;font-family:'Manrope',sans-serif;font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--soft)}
+.capband .chip{border:1px solid var(--wine);color:var(--wine);padding:2px 10px;font-size:.62rem;letter-spacing:.12em;white-space:nowrap}
+
+/* Газетные подразделы */
+.item{border-top:1px solid var(--rule-soft);padding:16px 0 4px}
+.item:first-of-type{border-top:1px solid var(--rule)}
+.item .lbl{font-family:'Manrope',sans-serif;font-size:.66rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--wine);margin:0 0 6px}
+.item p{margin:0 0 12px}
+
+/* Фото номера */
+figure{margin:38px 0;padding:0}
+figure .ph{border:1px solid var(--rule);padding:8px;background:#fff}
+figure img{width:100%}
+figcaption{font-style:italic;font-size:.86rem;color:var(--soft);margin-top:10px;line-height:1.55}
+
+/* Петля из четырёх шагов */
+.loop{border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);margin:30px 0;display:grid;grid-template-columns:repeat(4,1fr)}
+.loop .step{padding:16px 14px;border-left:1px solid var(--rule-soft)}
+.loop .step:first-child{border-left:none}
+.loop i{font-style:normal;font-family:'Playfair Display',Georgia,serif;font-size:1.5rem;color:var(--sand);display:block}
+.loop b{display:block;font-size:.92rem;margin:2px 0 3px}
+.loop span{font-size:.76rem;color:var(--soft);line-height:1.5;font-family:'Manrope',sans-serif;display:block}
+
+/* Цифры-гвозди */
+.nails{display:grid;grid-template-columns:repeat(3,1fr);margin:30px 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.nail{padding:18px 16px;border-left:1px solid var(--rule-soft)}
+.nail:first-child{border-left:none}
+.nail b{display:block;font-family:'Playfair Display',Georgia,serif;font-size:2rem;font-weight:600;color:var(--wine);font-variant-numeric:tabular-nums;line-height:1.1}
+.nail span{font-size:.76rem;color:var(--soft);line-height:1.5;font-family:'Manrope',sans-serif}
+
+/* Волна */
+.wavecap{display:flex;gap:8px 26px;flex-wrap:wrap;font-size:.8rem;color:var(--soft);margin-top:10px;line-height:1.55;font-family:'Manrope',sans-serif}
+.wavecap b{color:var(--ink)}
+
+/* Роли */
+.roles{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--rule);border-left:1px solid var(--rule-soft);margin:30px 0}
+.role{padding:20px 20px 16px;border-right:1px solid var(--rule-soft);border-bottom:1px solid var(--rule-soft)}
+.role .num{font-family:'Playfair Display',Georgia,serif;color:var(--sand);font-size:.95rem;letter-spacing:.1em;margin-bottom:6px}
+.role h3{font-family:'Playfair Display',Georgia,serif;font-size:1.1rem;font-weight:600;margin:0 0 6px}
+.role p{margin:0;font-size:.88rem;color:var(--soft)}
+
+/* Цитата */
+.pull{text-align:center;margin:40px auto;max-width:520px;padding:26px 10px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.pull .q{font-family:'Playfair Display',Georgia,serif;font-size:1.4rem;line-height:1.45;font-weight:500}
+.pull .who{font-family:'Manrope',sans-serif;margin-top:12px;font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--faint)}
+
+/* Этажи */
+.floors{margin:28px 0}
+.floor{border:1px solid var(--rule);padding:18px 22px;background:#fff}
+.floor b{display:block;font-family:'Playfair Display',Georgia,serif;font-size:1.08rem;margin-bottom:4px}
+.floor span{font-size:.86rem;color:var(--soft);line-height:1.6;font-family:'Manrope',sans-serif}
+.floor.deep{background:transparent}
+.floor.deep b{color:var(--wine)}
+.fl-link{display:flex;justify-content:flex-end;align-items:center;gap:8px;padding:6px 4px;color:var(--wine);font-size:.7rem;font-weight:700;letter-spacing:.1em;font-family:'Manrope',sans-serif;text-transform:uppercase}
+.fl-link svg{width:12px;height:20px}
+
+/* Чек-лист */
+.check{border:1px solid var(--rule);background:#fff;padding:28px 30px;margin:30px 0}
+.check label{display:flex;gap:14px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--rule-soft);cursor:pointer;font-size:.94rem;line-height:1.6}
+.check label:last-of-type{border-bottom:none}
+.check input{width:18px;height:18px;margin-top:5px;accent-color:var(--wine);flex:0 0 auto}
+.scale{margin-top:20px;padding-top:16px;border-top:1px solid var(--rule);font-size:.9rem;color:var(--soft)}
+.scale b{color:var(--wine)}
+#counter{font-family:'Playfair Display',Georgia,serif;font-size:1.5rem;color:var(--wine);font-weight:600}
+
+/* Контраст */
+.contrast{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);margin:30px 0}
+.con{padding:20px 22px}
+.con.now{border-right:1px solid var(--rule-soft)}
+.con h3{font-family:'Playfair Display',Georgia,serif;font-size:1.08rem;margin:0 0 10px}
+.con.after h3{color:var(--wine)}
+.con ul{margin:0;padding:0;list-style:none}
+.con li{padding:6px 0 6px 20px;position:relative;font-size:.88rem;line-height:1.55;color:var(--soft);font-family:'Manrope',sans-serif}
+.con li::before{content:'';position:absolute;left:0;top:14px;width:10px;height:8px;background:var(--sand);clip-path:ellipse(35% 50% at 50% 50%)}
+.con.after li::before{background:var(--sage)}
+
+/* Программа */
+.offer{border:1px solid var(--rule);background:#fff;padding:26px 30px;margin:26px 0}
+.offer h3{font-family:'Playfair Display',Georgia,serif;font-size:1.28rem;margin:0 0 12px}
+.offer ul{margin:0;padding:0;list-style:none}
+.offer li{padding:10px 0;border-top:1px solid var(--rule-soft);line-height:1.6}
+.offer li:first-child{border-top:none}
+
+/* Финальное объявление */
+.vin{display:flex;justify-content:center;padding:0 0 10px}
+.vin svg{width:24px;height:20px}
+.ad{border:4px double var(--wine);padding:38px 30px 34px;text-align:center;margin:44px 0 10px;background:#fff}
+.ad h2{font-family:'Playfair Display',Georgia,serif;font-size:1.65rem;font-weight:600;margin:0 0 14px}
+.ad p{margin:0 0 1em}
+.btn{display:inline-block;padding:16px 32px;border-radius:4px;font-family:'Manrope',sans-serif;font-weight:700;font-size:.95rem;text-decoration:none;letter-spacing:.02em;background:var(--wine);color:#FAF5F0}
+.btn:hover{background:var(--wine-deep)}
+.smallnote{font-family:'Manrope',sans-serif;font-size:.76rem;color:var(--faint);margin-top:14px}
+
+footer{padding:34px 0 64px;text-align:center;font-family:'Manrope',sans-serif;font-size:.74rem;color:var(--faint)}
+footer .dblrule{border-top:1px solid var(--ink);border-bottom:3px solid var(--ink);height:3px;margin-bottom:22px;opacity:.8}
+
+@media (max-width:640px){
+  .col{padding:0 22px}
+  .twocol,.whisper ul{columns:1}
+  .dict{grid-template-columns:1fr}
+  .pf-grid{grid-template-columns:1fr}
+  .midcta{flex-direction:column;align-items:flex-start}
+  .tiles,.tiles.five{grid-template-columns:1fr 1fr}
+  .callout{flex-direction:column;gap:10px}
+  .toc ol{columns:1}
+  html{font-size:16.5px}
+  .loop{grid-template-columns:1fr 1fr}
+  .loop .step:nth-child(3){border-left:none}
+  .loop .step:nth-child(n+3){border-top:1px solid var(--rule-soft)}
+  .nails{grid-template-columns:1fr}
+  .nail{border-left:none;border-top:1px solid var(--rule-soft)}
+  .nail:first-child{border-top:none}
+  .roles,.contrast{grid-template-columns:1fr}
+  .con.now{border-right:none;border-bottom:1px solid var(--rule-soft)}
+  .check{padding:20px 16px}
+  .btn{display:block;text-align:center}
+  .masthead .issue{flex-direction:column;gap:2px;align-items:center}
+}
+</style>
+</head>
+<body>
+<div class="sheet">
+
+<div class="col masthead">
+  <svg class="lens" width="44" height="37" viewBox="0 0 100 100" aria-hidden="true">
+    <circle cx="38" cy="50" r="28" fill="none" stroke="#7D8C74" stroke-width="4"/>
+    <circle cx="62" cy="50" r="28" fill="none" stroke="#6E3B4B" stroke-width="4"/>
+    <path d="M50 24.7 A28 28 0 0 1 50 75.3 A28 28 0 0 1 50 24.7 Z" fill="#6E3B4B" opacity=".9"/>
+  </svg>
+  <div class="brand">Настоящие отношения</div>
+  <div class="issue"><span>Издание школы</span><span>·</span><span>Выпуск I · второе издание</span><span>·</span><span>Москва</span><span>·</span><span>Алексей и&nbsp;Ирина Чижовы</span></div>
+  <div class="dbl"></div>
+</div>
+
+<div class="col headline">
+  <p class="kicker">Для тех, у&nbsp;кого всё повторяется</p>
+  <h1>Кто пишет сценарий твоей жизни</h1>
+  <p class="standfirst">Разговор ещё впереди, а&nbsp;ты уже знаешь, чем он&nbsp;кончится. Твоя реплика, его ответ, хлопок двери: всё по&nbsp;написанному. Ниже разберём, кто это написал.</p>
+  <p class="byline">Дочитай до&nbsp;конца. Развидеть это уже не&nbsp;получится</p>
+</div>
+
+<div class="col">
+  <figure>
+    <div class="ph"><img src="../images/g2-hero.jpg" alt="Тёмный кинозал, на экране тёплая кухня" loading="lazy"></div>
+    <div class="capband"><span>Кинозал на&nbsp;одного · Сеанс начался</span><span class="chip">Твоё кино</span></div>
+    <figcaption>Это кино ты&nbsp;смотришь каждый вечер. Сегодня разберём, кто его&nbsp;снял.</figcaption>
+  </figure>
+
+  <figure>
+    <div class="ph"><img src="../images/g2-ssora.jpg" alt="Муж и жена сидят на диване после трудного разговора, напряжённая пауза"></div>
+    <div class="capband"><span>Сцена I · Кухня, 19:19</span><span class="chip">Повтор</span></div>
+    <figcaption>Оба знают эту паузу наизусть. Сейчас кто-то скажет реплику, и&nbsp;кино поедет по&nbsp;знакомой колее.</figcaption>
+  </figure>
+</div>
+
+<div class="col">
+  <nav class="toc">
+    <div class="toc-t">В этом выпуске</div>
+    <ol>
+      <li><a href="#p1"><i>I</i> Ссора, знакомая наизусть</a></li>
+      <li><a href="#p2"><i>II</i> Пять честных попыток мимо цели</a></li>
+      <li><a href="#p3"><i>III</i> Старая запись: механика повтора</a></li>
+      <li><a href="#p4"><i>IV</i> Четыре способа жить по записи</a></li>
+      <li><a href="#p5"><i>V</i> Цена каждого следующего круга</a></li>
+      <li><a href="#p6"><i>VI</i> Перезапись: почему слова не достают</a></li>
+      <li><a href="#p7"><i>VII</i> Проверь себя: десять признаков</a></li>
+      <li><a href="#slovar"><i>◆</i> Словарь выпуска и&nbsp;куда дальше</a></li>
+    </ol>
+  </nav>
+</div>
+
+<div class="col part" id="p1">
+  <div class="pn">Часть I</div>
+  <h2>Вспомни последнюю ссору по&nbsp;знакомому кругу</h2>
+  <p class="deck">Четыре сцены, в&nbsp;которых ты, скорее всего, уже жил</p>
+</div>
+<article class="col">
+  <div class="twocol">
+  <p class="dropcap">Не&nbsp;абстрактно. Конкретную. Кухня или машина, вечер, усталость. Одна фраза цепляет другую, и&nbsp;вот вы&nbsp;уже там&nbsp;же, где были в&nbsp;прошлый раз. И&nbsp;в&nbsp;позапрошлый.</p>
+  <p>Страннее самого повтора другое: ты&nbsp;почувствовал его заранее. Внутри что-то успело шепнуть «сейчас начнётся», и&nbsp;началось. Сцена отыграла себя сама, а&nbsp;тебе досталась роль, которую ты&nbsp;не&nbsp;выбирал.</p>
+  <p>Если бы&nbsp;это касалось только ссор. Присмотрись, тот&nbsp;же повтор идёт по&nbsp;всем главным линиям жизни:</p>
+  </div>
+
+  <div class="tiles">
+<div class="tile"><svg viewBox="0 0 48 48"><circle cx="18" cy="30" r="10"/><circle cx="30" cy="18" r="10"/><path d="M27 18h6M30 15v6"/></svg><b>Деньги</b><span>Лучший месяц, следом провальный. Доход годами у&nbsp;одной цифры.</span></div>
+<div class="tile sage"><svg viewBox="0 0 48 48"><circle cx="19" cy="24" r="12"/><circle cx="29" cy="24" r="12"/></svg><b>Близость</b><span>Люди другие, финал знакомый: обиды, паузы, холод.</span></div>
+<div class="tile sand"><svg viewBox="0 0 48 48"><path d="M24 6l14 5v11c0 9-6 16-14 20-8-4-14-11-14-20V11z"/><path d="M24 14l-3 7h6l-4 9"/></svg><b>Ты сам</b><span>Паркинг, двигатель заглушен. Выходить не&nbsp;хочется.</span></div>
+<div class="tile"><svg viewBox="0 0 48 48"><path d="M8 34h32"/><path d="M16 34a8 8 0 0 1 16 0"/><path d="M24 12v6M12 20l3 3M36 20l-3 3"/></svg><b>Утро</b><span>Будильник, гонка, вечер в&nbsp;телефон. Повтор. Год.</span></div>
+</div>
+<div class="chrono">
+<div class="ct2">Хроника · Семь минут одного вечера</div>
+<ol>
+<li><time>19:12</time><span>Обычный вопрос про планы на&nbsp;выходные. Пока просто разговор.</span></li>
+<li><time>19:13</time><span>В&nbsp;ответе слышится «опять ты&nbsp;решил за&nbsp;нас». Плечи уже напряглись.</span></li>
+<li><time>19:14</time><span>Реплика, сказанная тем самым тоном. Ты&nbsp;его не&nbsp;выбирал, он&nbsp;включился сам.</span></li>
+<li><time>19:15</time><span>Встречный упрёк из&nbsp;прошлого месяца. Спор уже не&nbsp;о&nbsp;выходных.</span></li>
+<li><time>19:17</time><span>Голоса громче, аргументы старше. Оба говорят дословно то&nbsp;же, что в&nbsp;прошлый раз.</span></li>
+<li><time>19:18</time><span>Дверь. Тишина. Чайник остывает.</span></li>
+<li class="fin"><time>19:19</time><span>Ты&nbsp;сидишь и&nbsp;прокручиваешь. Семь минут, и&nbsp;все по&nbsp;написанному. Кто это написал?</span></li>
+</ol>
+</div>
+<div class="callout">
+<svg viewBox="0 0 100 100"><circle cx="38" cy="50" r="28" fill="none" stroke="#6E3B4B" stroke-width="5"/><circle cx="62" cy="50" r="28" fill="none" stroke="#7D8C74" stroke-width="5"/></svg>
+<p>Ты смотрел кино, которое уже видел, и&nbsp;не&nbsp;смог выключить. В&nbsp;деньгах, в&nbsp;близости, в&nbsp;самом себе крутится одна и&nbsp;та&nbsp;же плёнка.</p>
+</div>
+<p style="margin-top:26px">Узнал хотя&nbsp;бы одну сцену? Тогда у&nbsp;меня к&nbsp;тебе вопрос, с&nbsp;которого всё начинается: <strong>если ты&nbsp;каждый раз решаешь по-новому, почему получается одно и&nbsp;то&nbsp;же?</strong></p>
+</article>
+
+<div class="col">
+  <figure>
+    <div class="ph"><img src="../images/g2-parking.jpg" alt="Мужчина сидит один в машине на ночном паркинге" loading="lazy"></div>
+    <div class="capband"><span>Сцена II · Паркинг, 21:47</span><span class="chip">Ты сам</span></div>
+    <figcaption>Дела закрыты, все получили своё. Выходить из&nbsp;машины не&nbsp;хочется.</figcaption>
+  </figure>
+</div>
+
+<div class="col part" id="p2">
+  <div class="pn">Часть II</div>
+  <h2>Сложа руки ты&nbsp;не&nbsp;сидел. В&nbsp;том-то и&nbsp;дело</h2>
+  <p class="deck">Инвентаризация: пять честных попыток и&nbsp;причина, по&nbsp;которой они буксовали</p>
+</div>
+<article class="col">
+  <div class="tiles five">
+<div class="tile"><svg viewBox="0 0 48 48"><path d="M24 12c-4-3-10-4-15-3v26c5-1 11 0 15 3 4-3 10-4 15-3V9c-5-1-11 0-15 3z"/><path d="M24 12v26"/></svg><b>Книги</b><span>Понятнее. Понимание осталось на&nbsp;полке.</span></div>
+<div class="tile sage"><svg viewBox="0 0 48 48"><path d="M8 12h32v20H22l-8 8v-8H8z"/><path d="M15 20h18M15 26h12"/></svg><b>Психолог</b><span>Легче говорить. Проблема слушала и&nbsp;не&nbsp;уходила.</span></div>
+<div class="tile sand"><svg viewBox="0 0 48 48"><circle cx="24" cy="14" r="5"/><circle cx="10" cy="30" r="5"/><circle cx="38" cy="30" r="5"/><path d="M17 20l-3 5M31 20l3 5M16 34h16"/></svg><b>Разговор</b><span>Новый тон держался три дня. Старая интонация вернулась сама.</span></div>
+<div class="tile"><svg viewBox="0 0 48 48"><path d="M12 40V22a8 8 0 0 1 8-8h16"/><path d="M30 8l6 6-6 6"/><circle cx="12" cy="43" r="2.4"/></svg><b>Перемены</b><span>Партнёр, работа, город. В&nbsp;новых декорациях та&nbsp;же пьеса.</span></div>
+<div class="tile sage"><svg viewBox="0 0 48 48"><path d="M24 6c2 6 10 10 10 19a10 10 0 0 1-20 0c0-5 3-8 5-11 1 3 2 4 5 6 0-6-2-9 0-14z"/></svg><b>Воля</b><span>Хватало до&nbsp;первого триггера. Дальше руки разжимались.</span></div>
+</div>
+<p style="margin-top:26px">Напрашивается вывод: «со&nbsp;мной что-то не&nbsp;так». Он&nbsp;неверный. <strong>Бил ты&nbsp;точно, просто мимо этажа.</strong> Всё перечисленное работает со&nbsp;словами и&nbsp;пониманием. А&nbsp;то, что запускает твои повторы, живёт ниже слов. Сейчас покажу.</p>
+</article>
+
+<div class="col part" id="p3">
+  <div class="pn">Часть III</div>
+  <h2>Старая запись</h2>
+  <p class="deck">Механика повтора: от&nbsp;события до&nbsp;знакомого финала за&nbsp;двенадцать миллисекунд</p>
+</div>
+<article class="col">
+  <p>Когда-то давно, чаще всего в&nbsp;детстве, с&nbsp;тобой случилось событие. Ты&nbsp;пережил его с&nbsp;сильной эмоцией и&nbsp;прямо там, не&nbsp;советуясь с&nbsp;тобой взрослым, принял решение: «злиться опасно», «просить стыдно», «любовь надо заслужить», «богатые плохие», «я&nbsp;сам, на&nbsp;других надежды нет».</p>
+  <p>Решение записалось: в&nbsp;тело, в&nbsp;реакции, в&nbsp;интонацию, с&nbsp;которой ты&nbsp;сегодня отвечаешь жене, партнёру, сыну, инвестору. Психологи зовут это сценарием. Мы&nbsp;в&nbsp;школе зовём проще: <strong>старая запись</strong>.</p>
+
+  <div class="whisper">
+    <div class="wt">Как звучит запись изнутри</div>
+    <ul>
+      <li>«Не высовывайся, целее будешь»</li>
+      <li>«Сначала заслужи, потом попросишь»</li>
+      <li>«Покажешь слабость, ударят»</li>
+      <li>«Большие деньги портят людей»</li>
+      <li>«Сам справлюсь, помощь для слабых»</li>
+      <li>«Захочешь слишком сильно, потеряешь»</li>
+    </ul>
+  </div>
+  <p>Узнаёшь интонацию? Она не&nbsp;твоя. Так говорил кто-то из&nbsp;взрослых твоего детства, а&nbsp;ребёнок записал дословно. И&nbsp;вот что важно понять про запись: она не&nbsp;враг. Когда-то она защитила маленького тебя, это была лучшая стратегия из&nbsp;доступных. Просто ты&nbsp;вырос, а&nbsp;стратегия нет.</p>
+
+  <div class="loop">
+    <div class="step"><i>1</i><b>Событие</b><span>слово, взгляд, цифра на&nbsp;счёте</span></div>
+    <div class="step"><i>2</i><b>Эмоция</b><span>тело вспыхивает раньше мысли</span></div>
+    <div class="step"><i>3</i><b>Решение</b><span>включается то&nbsp;самое, давнее</span></div>
+    <div class="step"><i>4</i><b>Сценарий</b><span>финал знакомый, круг замкнулся</span></div>
+  </div>
+
+  <p>Самое неприятное в&nbsp;этой петле&nbsp;то, что она быстрее тебя. Нейробиолог Джозеф ЛеДу показал: сигнал угрозы доходит до&nbsp;миндалины, аварийного центра мозга, за&nbsp;двенадцать миллисекунд. Осмысленная, думающая кора получает его позже и&nbsp;уже подкрашенным. Дэниел Гоулман назвал это захватом: в&nbsp;момент вспышки разумная часть буквально приглушается.</p>
+  <p><strong>Запись не&nbsp;спорит с&nbsp;тобой. Она просто успевает раньше.</strong> Поэтому «взять себя в&nbsp;руки» не&nbsp;срабатывает: к&nbsp;моменту, когда ты&nbsp;вспомнил про руки, реплика уже сказана.</p>
+
+  <div class="try30">
+    <div class="tt">Эксперимент · 30 секунд</div>
+    <p>Вспомни последнюю вспышку и&nbsp;найди её&nbsp;в&nbsp;теле: где она началась? Сжатая челюсть, горячая грудь, ком в&nbsp;горле, холод в&nbsp;животе. Запомни это место. Это адрес, по&nbsp;которому живёт твоя запись, и&nbsp;по&nbsp;этому адресу мы&nbsp;работаем.</p>
+  </div>
+
+  <div class="nails">
+    <div class="nail"><b>12&nbsp;мс</b><span>фора миндалины перед думающей корой (ЛеДу)</span></div>
+    <div class="nail"><b>90&nbsp;сек</b><span>живёт химия эмоции, если её&nbsp;не&nbsp;кормить мыслями (Болте Тейлор)</span></div>
+    <div class="nail"><b>1&nbsp;решение</b><span>детское, способно вести взрослую жизнь десятилетиями</span></div>
+  </div>
+
+  <svg viewBox="0 0 900 230" style="width:100%;height:auto;margin-top:6px" role="img" aria-label="Волна эмоции: пик и спад, пунктиром новая волна при накрутке">
+    <line x1="20" y1="200" x2="880" y2="200" stroke="rgba(46,42,39,.3)" stroke-width="1"/>
+    <path d="M20 200 C 170 200, 230 50, 320 50 C 410 50, 460 200, 590 200" fill="none" stroke="#6E3B4B" stroke-width="3"/>
+    <path d="M550 200 C 615 130, 700 130, 755 200" fill="none" stroke="#C9A87C" stroke-width="2.2" stroke-dasharray="4 6"/>
+  </svg>
+  <div class="wavecap"><span><b>Сплошная линия:</b> волна поднимается и&nbsp;спадает сама, примерно за&nbsp;90&nbsp;секунд</span><span><b>Пунктир:</b> новая волна, если крутить мысли по&nbsp;кругу</span></div>
+</article>
+
+<div class="col">
+  <figure>
+    <div class="ph"><img src="../images/g2-plenka.jpg" alt="Старый катушечный магнитофон с тёплой подсветкой" loading="lazy"></div>
+    <div class="capband"><span>Механика · Старая запись</span><span class="chip">Часть III</span></div>
+    <figcaption>Запись крутится, пока её&nbsp;не&nbsp;увидят. Потом у&nbsp;неё&nbsp;заканчивается власть.</figcaption>
+  </figure>
+</div>
+
+<div class="col part" id="p4">
+  <div class="pn">Часть IV</div>
+  <h2>Четыре способа жить по&nbsp;записи</h2>
+  <p class="deck">Найди свою дорожку: четыре самых частых записи наших групп</p>
+</div>
+<article class="col">
+  <p>Запись у&nbsp;каждого своя, но&nbsp;крутится она по&nbsp;похожим дорожкам. Вот четыре самых частых на&nbsp;наших группах. Читай и&nbsp;отмечай, где кольнуло.</p>
+  <div class="roles">
+    <div class="role"><div class="num">Роль I</div><h3>Тот, кто тянет всё сам</h3><p>Просить запрещено записью. Помощь равна слабости. Вокруг люди, а&nbsp;опереться не&nbsp;на&nbsp;кого, потому что ты&nbsp;сам никого не&nbsp;подпустил. Усталость копится годами и&nbsp;зовётся «нормальным ритмом».</p></div>
+    <div class="role"><div class="num">Роль II</div><h3>Та, что живёт в&nbsp;ожидании</h3><p>Всем всё дала: дому, детям, его делу. Своё «потом» откладывается двадцать лет. Внутри тихий вопрос «а&nbsp;когда я?», и&nbsp;за&nbsp;него сразу стыдно.</p></div>
+    <div class="role"><div class="num">Роль III</div><h3>Партнёры-соседи</h3><p>Быт отлажен, календарь общий, разговоры про логистику. Не&nbsp;ссоритесь, потому что незачем. Близость ушла так тихо, что никто не&nbsp;заметил дату.</p></div>
+    <div class="role"><div class="num">Роль IV</div><h3>Успешный снаружи</h3><p>Бизнес, статус, спортзал, всё по&nbsp;списку. Внутри пусто и&nbsp;тревожно, и&nbsp;чем громче успех, тем страшнее, что «раскроют». Об&nbsp;этом не&nbsp;знает никто. Иногда даже ты.</p></div>
+  </div>
+  <p>Похоже на&nbsp;характер, правда? Только вот <strong>характер приходится терпеть. Запись переписывается.</strong></p>
+</article>
+
+<div class="col part" id="p5">
+  <div class="pn">Часть V</div>
+  <h2>Цена каждого следующего круга</h2>
+  <p class="deck">Тарифы повторов: чем платят близость, дело и&nbsp;тело</p>
+</div>
+<article class="col">
+  <div class="twocol">
+  <p>У&nbsp;повтора есть свойство: он&nbsp;дорожает. Первый круг стоит испорченного вечера. Десятый стоит близости: рядом с&nbsp;тобой живут, но&nbsp;уже не&nbsp;открываются. Сотый начинает забирать здоровье, потому что тело годами носит то, что нельзя положить на&nbsp;пол.</p>
+  <p>Дети выучивают твою запись наизусть, просто глядя на&nbsp;тебя, и&nbsp;уносят её&nbsp;в&nbsp;свои будущие семьи. Дело буксует на&nbsp;том&nbsp;же обороте: расти дальше запись не&nbsp;разрешает, у&nbsp;неё другая инструкция.</p>
+  </div>
+
+  <div class="case">
+    <div class="ct">История из зала</div>
+    <p>Предприниматель, чуть за&nbsp;сорок. Пришёл на&nbsp;дне: кассовый разрыв, долги, расставание, друзья отвернулись. Говорит: «хотелось закрыться в&nbsp;коробочку и&nbsp;сидеть одному». На&nbsp;группе долго сопротивлялся, «как баран».</p>
+    <p>Перелом случился на&nbsp;точке&nbsp;А: признал, где он&nbsp;на&nbsp;самом деле. Увидел свою запись: покупал отношения вместо того, чтобы строить. Дальше пошла перезапись.</p>
+    <p>Сегодня: «строю настоящие отношения везде, деньги начали приходить, цели выросли кратно, научился играть в&nbsp;долгую». Одной фразой: получил новую версию себя.</p>
+  </div>
+  <p>И&nbsp;здесь важно сказать главное. <strong>Ты&nbsp;не&nbsp;ленивый, не&nbsp;слабый и&nbsp;не&nbsp;сломанный.</strong> Двадцать, тридцать, сорок лет ты&nbsp;честно исполняешь решение, принятое ребёнком в&nbsp;плохой день. Ребёнок выбрать не&nbsp;мог. Взрослый может.</p>
+  <div class="pull">
+    <div class="q">«Труднее всего было принять точку&nbsp;А. Признать, где я&nbsp;на&nbsp;самом деле. Дальше всё началось.»</div>
+    <div class="who">Участник тренинга, предприниматель</div>
+  </div>
+</article>
+
+<div class="col">
+  <figure>
+    <div class="ph"><img src="../images/g2-tochka-a.jpg" alt="Женщина у окна на рассвете смотрит на город" loading="lazy"></div>
+    <div class="capband"><span>Сцена III · Рассвет</span><span class="chip">Точка А</span></div>
+    <figcaption>Точка&nbsp;А. Утро, в&nbsp;которое врать себе надоело.</figcaption>
+  </figure>
+</div>
+
+<div class="col part" id="p6">
+  <div class="pn">Часть VI</div>
+  <h2>Запись нельзя переубедить. Её&nbsp;можно только переписать</h2>
+  <p class="deck">Почему слова не&nbsp;достают и&nbsp;что достаёт: психодрама</p>
+</div>
+<article class="col">
+  <p>Теперь понятно, почему книги и&nbsp;разговоры не&nbsp;сработали: они стучались в&nbsp;думающий этаж. Запись хранится этажом ниже, в&nbsp;эмоции и&nbsp;теле. Договариваться с&nbsp;ней словами&nbsp;то&nbsp;же самое, что уговаривать плёнку звучать иначе. Плёнке всё равно, она просто играет, что записано.</p>
+
+  <div class="floors">
+    <div class="floor"><b>Этаж слов</b><span>книги, разговоры, решения «с&nbsp;понедельника». Сюда стучались прошлые попытки</span></div>
+    <div class="fl-link"><span>работа идёт сюда</span><svg viewBox="0 0 14 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 1v17M2 14l5 7 5-7"/></svg></div>
+    <div class="floor deep"><b>Этаж эмоции и&nbsp;тела</b><span>здесь хранится запись. И&nbsp;здесь&nbsp;же её&nbsp;переписывают: в&nbsp;живой сцене</span></div>
+  </div>
+
+  <p>Перезаписывают её&nbsp;там&nbsp;же, где записали: в&nbsp;живой сцене, с&nbsp;живой эмоцией. Для этого сто лет назад психиатр Якоб Морено придумал психодраму: человек не&nbsp;рассказывает о&nbsp;ситуации, а&nbsp;возвращается в&nbsp;неё, проживает заново, видит с&nbsp;позиций других участников и&nbsp;прямо внутри сцены принимает другое решение. Морено называл это спонтанностью: способностью дать новый ответ на&nbsp;старую ситуацию.</p>
+  <p>Такой опыт невозможно получить из&nbsp;текста. Его можно только прожить. Текст способен на&nbsp;меньшее, но&nbsp;важное: <strong>показать тебе твою запись.</strong> Что он, надеюсь, уже сделал.</p>
+  <figure>
+    <div class="ph"><img src="../images/g2-montazh.jpg" alt="Монтажный стол с плёнкой и лампой" loading="lazy"></div>
+    <div class="capband"><span>Монтажная · Здесь переписывают</span><span class="chip">Перезапись</span></div>
+    <figcaption>Плёнку не&nbsp;уговаривают. Её&nbsp;перемонтируют: кадр за&nbsp;кадром, в&nbsp;живой сцене.</figcaption>
+  </figure>
+
+  <div class="midcta">
+    <p>Как выглядит перезапись вживую: сцены, шаги, наука</p>
+    <a class="btn" href="/chizhovy2/metod/">Смотреть метод</a>
+  </div>
+</article>
+
+<div class="col part" id="p7">
+  <div class="pn">Часть VII</div>
+  <h2>Десять признаков, что запись сейчас у&nbsp;пульта</h2>
+  <p class="deck">Самодиагностика и&nbsp;две колонки жизни: до&nbsp;и&nbsp;после</p>
+</div>
+<article class="col">
+  <div class="check">
+    <label><input type="checkbox"><span>Ссоры с&nbsp;близким человеком идут по&nbsp;одному кругу, реплики почти дословные</span></label>
+    <label><input type="checkbox"><span>Доход годами держится у&nbsp;одной цифры, рывки вверх быстро «выравниваются»</span></label>
+    <label><input type="checkbox"><span>С&nbsp;разными людьми повторяется один финал отношений</span></label>
+    <label><input type="checkbox"><span>Просить о&nbsp;помощи тяжелее, чем сделать самому, даже когда сил нет</span></label>
+    <label><input type="checkbox"><span>После вспышки думаешь «ну&nbsp;вот, опять я», и&nbsp;стыдно</span></label>
+    <label><input type="checkbox"><span>Убегаешь от&nbsp;тяжёлых разговоров в&nbsp;дела, спорт, телефон, рюмку</span></label>
+    <label><input type="checkbox"><span>Успеху внутри не&nbsp;веришь: «повезло», «сейчас раскроют»</span></label>
+    <label><input type="checkbox"><span>Про себя всё понимаешь, поведение при этом стоит на&nbsp;месте</span></label>
+    <label><input type="checkbox"><span>Рядом с&nbsp;родителями за&nbsp;пять минут снова становишься ребёнком</span></label>
+    <label><input type="checkbox"><span>Вечером в&nbsp;машине или в&nbsp;ванной сидишь дольше, чем нужно. Там тихо</span></label>
+    <div class="scale">
+      <span id="counter">0</span> из&nbsp;10
+      <p style="margin:10px 0 0">До&nbsp;двух: запись есть, но&nbsp;пульт чаще у&nbsp;тебя. <b>Три и&nbsp;больше:</b> запись водит тебя по&nbsp;кругу регулярно. <b>От&nbsp;шести:</b> ты&nbsp;читаешь этот текст очень вовремя.</p>
+    </div>
+  </div>
+
+  <div class="contrast">
+    <div class="con now">
+      <h3>Сейчас</h3>
+      <ul>
+        <li>Реакция срабатывает раньше тебя</li>
+        <li>Близкие получают интонацию, которую ты&nbsp;не&nbsp;выбирал</li>
+        <li>Деньги упираются в&nbsp;невидимый потолок</li>
+        <li>Усталость от&nbsp;роли, приросшей к&nbsp;коже</li>
+        <li>«Всё понимаю» и&nbsp;ничего не&nbsp;меняется</li>
+      </ul>
+    </div>
+    <div class="con after">
+      <h3>После перезаписи</h3>
+      <ul>
+        <li>Между событием и&nbsp;ответом появляется пауза, и&nbsp;в&nbsp;ней ты&nbsp;выбираешь</li>
+        <li>Трудные разговоры заканчиваются ближе, чем начинались</li>
+        <li>Решения в&nbsp;деле становятся холоднее и&nbsp;точнее</li>
+        <li>Просить, отдыхать и&nbsp;опираться на&nbsp;людей разрешено</li>
+        <li>Своя жизнь на&nbsp;своей стороне стола</li>
+      </ul>
+    </div>
+  </div>
+  <p>Один из&nbsp;наших учеников сказал об&nbsp;этом моменте так: «появилось ощущение, что вижу себя на&nbsp;всей шахматной доске, а&nbsp;не&nbsp;в&nbsp;одной клетке». Мы&nbsp;добавим прозой: жизнь перестаёт случаться с&nbsp;тобой и&nbsp;начинает идти от&nbsp;тебя.</p>
+</article>
+
+<div class="col">
+  <figure>
+    <div class="ph"><img src="../images/g2-posle.jpg" alt="Пара смеётся за завтраком у большого окна" loading="lazy"></div>
+    <div class="capband"><span>Сцена IV · После перезаписи</span><span class="chip">Выход</span></div>
+    <figcaption>Тот&nbsp;же дом, те&nbsp;же двое, другая жизнь.</figcaption>
+  </figure>
+</div>
+
+<div class="col part" id="slovar">
+  <div class="pn">Словарь выпуска</div>
+  <h2>Шесть слов тебе с&nbsp;собой</h2>
+  <p class="deck">Короткий словарь школы: пригодится и&nbsp;в&nbsp;чтении, и&nbsp;в&nbsp;жизни</p>
+</div>
+<article class="col">
+  <div class="dict">
+    <div class="dw"><b>Точка А</b><span>Честное признание, где ты&nbsp;сейчас. Без прикрас и&nbsp;без самобичевания. Самый трудный и&nbsp;самый быстрый шаг.</span></div>
+    <div class="dw"><b>Старая запись</b><span>Решение, принятое давно и&nbsp;не&nbsp;тобой взрослым. Пишет твои реакции, пока ты&nbsp;его не&nbsp;увидел.</span></div>
+    <div class="dw"><b>Событийный круг</b><span>Событие, эмоция, старое решение, знакомый финал. Крутится быстрее сознания, размыкается на&nbsp;третьем шаге.</span></div>
+    <div class="dw"><b>Перезапись</b><span>Новое решение, прожитое в&nbsp;живой сцене телом и&nbsp;эмоцией. Записывается так&nbsp;же глубоко, как старое.</span></div>
+    <div class="dw"><b>Спонтанность</b><span>По&nbsp;Морено: способность дать новый ответ на&nbsp;старую ситуацию. Момент<div class="qa">
+<div class="ct">На этом месте обычно спрашивают</div>
+<dl>
+<dt>Это разве не&nbsp;у&nbsp;всех так?</dt>
+<dd>Повторы есть у&nbsp;всех, вопрос в&nbsp;цене. Пока круг стоит испорченного вечера, с&nbsp;ним можно жить. Когда он&nbsp;начинает забирать близость, дело и&nbsp;сон, жить можно тоже, только всё дороже.</dd>
+<dt>Почему я&nbsp;не&nbsp;вижу свою запись, если она моя?</dt>
+<dd>Потому что смотришь из&nbsp;неё. Изнутри сцены собственных шагов не&nbsp;видно, поэтому в&nbsp;зале запись показывают со&nbsp;стороны: глазами других участников.</dd>
+<dt>Можно переписать её&nbsp;самому, по&nbsp;книге?</dt>
+<dd>Увидеть можно, и&nbsp;этот текст для этого написан. Переписать сложнее: запись хранится в&nbsp;эмоции и&nbsp;теле, а&nbsp;туда в&nbsp;одиночку почти не&nbsp;добраться. Нужна сцена и&nbsp;люди в&nbsp;ней.</dd>
+</dl>
+</div>
+
+, когда пульт возвращается к&nbsp;хозяину.</span></div>
+    <div class="dw"><b>Состояние</b><span>Слон, на&nbsp;котором едет твой день. Пока им&nbsp;не&nbsp;управляешь, любые планы тащит муравей.</span></div>
+  </div>
+</article>
+
+<div class="col part">
+  <div class="pn">Где это делают</div>
+  <h2>Тренинг «Настоящие отношения»</h2>
+</div>
+<article class="col">
+  <p>Мы&nbsp;16&nbsp;лет ведём людей через перезапись сценариев. Очно, в&nbsp;малых группах от&nbsp;10 до&nbsp;20&nbsp;человек, глубоко. Никаких лекций: работа в&nbsp;живых процессах, включая психодраму, с&nbsp;сопровождением после.</p>
+  <div class="offer">
+    <h3>Три модуля, один путь</h3>
+    <ul>
+      <li><strong>Возвращение к&nbsp;себе.</strong> Два с&nbsp;половиной дня: увидеть свою запись и&nbsp;то, откуда она родом.</li>
+      <li><strong>Внутренняя свобода.</strong> Пять дней: страх, вина, обида, чужие ожидания. Перезапись глубинных решений.</li>
+      <li><strong>Создатель реальности.</strong> Три месяца практики за&nbsp;пределами зала: новые действия, команда, результаты, которые остаются.</li>
+    </ul>
+  </div>
+  <p>Начало всегда одно: <strong>собеседование.</strong> Честный разговор о&nbsp;твоей ситуации: чем школа может помочь и&nbsp;подходит&nbsp;ли она тебе вообще. Для читателей этого гайда собеседование бесплатное.</p>
+
+  <div class="ad">
+    <div class="vin"><svg viewBox="0 0 100 100" aria-hidden="true"><path d="M50 24.7 A28 28 0 0 1 50 75.3 A28 28 0 0 1 50 24.7 Z" fill="#6E3B4B"/></svg></div>
+    <h2>Запись не&nbsp;берёт выходных</h2>
+    <p>Каждый день, прожитый по&nbsp;ней, делает колею глубже: нейронные дорожки укрепляются от&nbsp;повторения. Поэтому спрашивать «нужно&nbsp;ли с&nbsp;этим что-то делать» уже поздно. Живой вопрос другой: <strong>сколько ещё кругов ты&nbsp;готов оплатить.</strong></p>
+    <p style="margin-top:24px"><a class="btn" href="/chizhovy2/metod/">Разобрать метод школы</a></p>
+    <p class="smallnote">На&nbsp;странице метода: событийный круг, психодрама по&nbsp;шагам, наука и&nbsp;запись на&nbsp;собеседование.</p>
+  </div>
+</article>
+
+<div class="coupon">
+<div class="ch"><b>Купон читателя</b><span>Заявка на собеседование</span></div>
+<form id="zayavka" novalidate>
+<div class="cr">
+<label><span>Имя</span><input type="text" name="name" autocomplete="name"></label>
+<label><span>Telegram или телефон</span><input type="text" name="contact"></label>
+</div>
+<label><span>Что происходит сейчас, своими словами</span><textarea name="about"></textarea></label>
+<button class="btn" type="submit">Отправить заявку</button>
+<p class="cnote">Кнопка откроет Telegram школы с&nbsp;готовым текстом: останется нажать «отправить». Текст также скопируется, если удобнее вставить вручную. Для читателей гайда собеседование бесплатное.</p>
+<div class="zok" id="zok">Сообщение собрано и&nbsp;скопировано. Открой Telegram и&nbsp;вставь его в&nbsp;чат школы.</div>
+</form>
+</div>
+
+<footer class="paperfoot">
+  <div class="col">
+    <div class="dblrule"></div>
+    <div class="pf-grid">
+      <div>
+        <svg width="40" height="34" viewBox="0 0 100 100" aria-hidden="true" style="margin-bottom:10px"><circle cx="38" cy="50" r="28" fill="none" stroke="#7D8C74" stroke-width="5"/><circle cx="62" cy="50" r="28" fill="none" stroke="#6E3B4B" stroke-width="5"/><path d="M50 24.7 A28 28 0 0 1 50 75.3 A28 28 0 0 1 50 24.7 Z" fill="#6E3B4B"/></svg>
+        <b>Настоящие отношения</b>
+        <p>Издание школы Алексея и&nbsp;Ирины Чижовых. Выпуск I: «Старая запись». Печатается с&nbsp;любовью к&nbsp;живым людям и&nbsp;их&nbsp;настоящим историям.</p>
+      </div>
+      <div>
+        <b>В следующем выпуске</b>
+        <p>«Внутренняя свобода»: что остаётся от&nbsp;страха, когда с&nbsp;него снимают важность. И&nbsp;почему вина всегда приводит за&nbsp;руку наказание.</p>
+      </div>
+      <div>
+        <b>Куда дальше</b>
+        <a href="/chizhovy2/metod/">Метод школы, по&nbsp;шагам</a>
+        <a href="/chizhovy2/vedushchie/">Алексей и&nbsp;Ирина</a>
+        <a href="/chizhovy2/otzyvy/">Истории учеников</a>
+        <a href="/chizhovy2/sessiya/">Собеседование</a>
+      </div>
+    </div>
+    <div class="pf-fine"><span>© Школа «Настоящие отношения»</span><span>Прототип · Результаты участников индивидуальны</span></div>
+  </div>
+</footer>
+</div>
+
+<script>
+const boxes = document.querySelectorAll('.check input');
+const counter = document.getElementById('counter');
+boxes.forEach(b => b.addEventListener('change', () => {
+  counter.textContent = [...boxes].filter(x => x.checked).length;
+}));
+
+var zf=document.getElementById('zayavka');
+if(zf){zf.addEventListener('submit',function(e){e.preventDefault();
+  var f=zf.elements,ok=true;
+  ['name','contact','about'].forEach(function(k){var el=f[k];
+    if(!el.value.trim()){el.classList.add('zerr');ok=false;}else el.classList.remove('zerr');});
+  if(!ok){zf.querySelector('.zerr').focus();return;}
+  var msg='Собеседование (гайд). Имя: '+f['name'].value.trim()+'. Связь: '+f['contact'].value.trim()+'. Ситуация: '+f['about'].value.trim();
+  if(navigator.clipboard)navigator.clipboard.writeText(msg).catch(function(){});
+  document.getElementById('zok').classList.add('on');
+  window.open('https://t.me/+LVptSH6Mt4hhYmFi','_blank','noopener');});
+  zf.addEventListener('input',function(e){e.target.classList.remove('zerr');});}
+</script>
+</body>
+</html>
