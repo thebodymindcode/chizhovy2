@@ -167,6 +167,27 @@ section > .narrow > h2 + p{text-align:left;max-width:none;margin-left:0;margin-r
 .tside > .col > *{margin-left:0;margin-right:0}
 .split > div > *{margin-left:0;margin-right:0;max-width:none}
 
+/* ФОРМА ЗАЯВКИ */
+.zform{background:#fff;border:1px solid var(--line);border-radius:16px;padding:38px 34px;box-shadow:0 18px 50px rgba(27,20,16,.06)}
+.zform .lead-in{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--copper);margin:0 0 10px}
+.zform h3{font-size:1.7rem;margin:0 0 8px}
+.zform .hint{color:var(--ink-soft);font-size:.95rem;margin:0 0 26px;max-width:520px}
+.zrow{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.zfield{display:block;margin-bottom:16px}
+.zfield span{display:block;font-size:.82rem;color:var(--ink-soft);margin-bottom:7px}
+.zfield input,.zfield textarea{width:100%;font:inherit;font-size:1rem;color:var(--ink);
+  background:var(--linen);border:1px solid var(--line);border-radius:10px;padding:13px 15px;transition:border-color .18s,background .18s}
+.zfield textarea{min-height:118px;resize:vertical;line-height:1.5}
+.zfield input:focus,.zfield textarea:focus{outline:none;border-color:var(--wine);background:#fff}
+.zfield input::placeholder,.zfield textarea::placeholder{color:#B3A79C}
+.zform .zbtn{width:100%;margin-top:8px;font-size:1.02rem;padding:16px 22px}
+.zform .znote{font-size:.82rem;color:var(--ink-soft);margin:14px 0 0;text-align:left}
+.zform .zok{display:none;margin-top:16px;padding:14px 16px;border-radius:10px;background:rgba(122,143,110,.14);
+  border:1px solid rgba(122,143,110,.4);font-size:.92rem;color:var(--ink)}
+.zform .zok.on{display:block}
+.zform .zerr{border-color:#C0574F!important}
+@media (max-width:700px){.zrow{grid-template-columns:1fr;gap:0}.zform{padding:26px 20px}}
+
 .tside{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:56px;align-items:start}
 /* если в колонке уже стоит сетка карточек, врезка рядом мешает: уводим её вниз в ряд */
 .tside:has(> .col .grid2),
@@ -860,6 +881,26 @@ def page(title, desc, active, body, rel_url=""):
 {body}
 {typo(FOOTER)}
 <script>
+var zf = document.getElementById('zayavka');
+if (zf) {{
+  zf.addEventListener('submit', function (e) {{
+    e.preventDefault();
+    var f = zf.elements, ok = true;
+    ['name', 'contact', 'about'].forEach(function (k) {{
+      var el = f[k];
+      if (!el.value.trim()) {{ el.classList.add('zerr'); ok = false; }}
+      else el.classList.remove('zerr');
+    }});
+    if (!ok) {{ zf.querySelector('.zerr').focus(); return; }}
+    var msg = 'Собеседование. Имя: ' + f['name'].value.trim()
+            + '. Связь: ' + f['contact'].value.trim()
+            + '. Ситуация: ' + f['about'].value.trim();
+    if (navigator.clipboard) navigator.clipboard.writeText(msg).catch(function () {{}});
+    document.getElementById('zok').classList.add('on');
+    window.open('https://t.me/+LVptSH6Mt4hhYmFi', '_blank', 'noopener');
+  }});
+  zf.addEventListener('input', function (e) {{ e.target.classList.remove('zerr'); }});
+}}
 document.querySelectorAll('.mi > .mtop').forEach(btn => {{
   btn.addEventListener('click', e => {{
     if (window.innerWidth > 980) return;
@@ -890,6 +931,31 @@ floors = """<div class="floors">
 P = {}
 
 # ================= ГЛАВНАЯ =================
+ZAYAVKA = """<section><div class="wrap"><div class="tside">
+<div class="col">
+<div class="zform">
+<p class="lead-in">Заявка на&nbsp;собеседование</p>
+<h3>Оставь контакт, и&nbsp;мы&nbsp;согласуем время</h3>
+<p class="hint">Три поля, полминуты. Дальше мы&nbsp;напишем сами и&nbsp;договоримся, когда удобно поговорить.</p>
+<form id="zayavka" novalidate>
+<div class="zrow">
+<label class="zfield"><span>Как тебя зовут</span><input type="text" name="name" placeholder="Имя" autocomplete="name" required></label>
+<label class="zfield"><span>Как связаться</span><input type="text" name="contact" placeholder="Telegram или телефон" required></label>
+</div>
+<label class="zfield"><span>Что происходит сейчас</span><textarea name="about" placeholder="Пара строк своими словами: с&nbsp;чем живёшь и&nbsp;что хочешь изменить" required></textarea></label>
+<button class="btn btn-wine zbtn" type="submit">Отправить заявку</button>
+<p class="znote">Кнопка откроет Telegram с&nbsp;готовым сообщением: останется только нажать «отправить». Если Telegram не&nbsp;установлен, текст можно скопировать.</p>
+<div class="zok" id="zok">Сообщение собрано и&nbsp;скопировано. Открой Telegram и&nbsp;вставь его в&nbsp;чат школы.</div>
+</form>
+</div>
+</div>
+<aside class="side">
+<div class="box"><div class="lbl">Кто ответит</div><p>Алексей или Ирина, а&nbsp;не&nbsp;администратор. Отвечаем в&nbsp;течение дня.</p></div>
+<div class="box"><div class="lbl">Что дальше</div><p>Согласуем время и&nbsp;поговорим о&nbsp;твоей ситуации. Для&nbsp;читателей сайта бесплатно.</p></div>
+<div class="box"><div class="lbl">Важно</div><p>Разговор нужен тому, кто уже решил менять. Мы&nbsp;не&nbsp;уговариваем и&nbsp;не&nbsp;продаём.</p></div>
+</aside>
+</div></div></section>"""
+
 P["index.html"] = ("Настоящие отношения · школа трансформации Чижовых",
 "Очный тренинг и три месяца сопровождения: выход из повторяющихся сценариев в отношениях, деле и состоянии.", "glavnaya", f"""
 <div class="hero"><div class="bg" style="background-image:url('/chizhovy2/images/site-hero.jpg')"></div><div class="veil"></div>
@@ -1281,6 +1347,7 @@ P["programma/index.html"] = ("Программа · Настоящие отно�
 </div>
 </div></section>
 
+{ZAYAVKA}
 """)
 
 # ================= МОДУЛЬ 1 =================
@@ -2205,6 +2272,7 @@ P["sessiya/index.html"] = ("Собеседование в школу · Наст
 </div>
 </div></section>
 
+{ZAYAVKA}
 """)
 
 # ================= ИСТОКИ МЕТОДА =================
@@ -4158,6 +4226,8 @@ P["start/index.html"] = ("С чего начать · Настоящие отн�
 </div>
 </div></section>
 
+{ZAYAVKA}
+
 {FINCTA}
 """)
 
@@ -4244,6 +4314,8 @@ P["kontakty/index.html"] = ("Контакты · Настоящие отноше
 <div class="card">{icon('calendar','var(--sage-deep)')}<h3>Созвон</h3><p>Если писать неудобно, скажи об&nbsp;этом, и&nbsp;мы&nbsp;согласуем время для&nbsp;разговора голосом.</p></div>
 </div>
 </div></section>
+
+{ZAYAVKA}
 
 {CTA_LYUDI}
 """)
@@ -4428,6 +4500,8 @@ P["somneniya/index.html"] = ("Частые сомнения · Настоящи�
 <section style="padding:0"><div class="wrap">
 <div class="ph" style="aspect-ratio:16/7"><img src="/chizhovy2/images/somneniya-posle.jpg" alt="Осенняя дорожка в парке на закате" loading="lazy" width="1360" height="768"></div>
 </div></section>
+{ZAYAVKA}
+
 {CTA_SOMNENIYA}
 """)
 

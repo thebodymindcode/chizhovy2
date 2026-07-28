@@ -17,7 +17,7 @@
 <link rel="canonical" href="https://thebodymindcode.github.io/chizhovy2/voprosy/">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"EducationalOrganization","name":"Настоящие отношения","alternateName":"Школа Алексея и Ирины Чижовых","url":"https://thebodymindcode.github.io/chizhovy2/","logo":"https://thebodymindcode.github.io/chizhovy2/images/site-hero.jpg","description":"Очный тренинг и три месяца сопровождения: выход из повторяющихся сценариев в отношениях, деле и состоянии.","founder":[{"@type":"Person","name":"Алексей Чижов"},{"@type":"Person","name":"Ирина Чижова"}],"areaServed":"RU","sameAs":["https://t.me/+LVptSH6Mt4hhYmFi"]}</script>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='38' cy='50' r='28' fill='none' stroke='%237D8C74' stroke-width='6'/%3E%3Ccircle cx='62' cy='50' r='28' fill='none' stroke='%236E3B4B' stroke-width='6'/%3E%3Cpath d='M50 24.7 A28 28 0 0 1 50 75.3 A28 28 0 0 1 50 24.7 Z' fill='%236E3B4B'/%3E%3C/svg%3E">
-<link rel="stylesheet" href="/chizhovy2/site.css?v=de2e59ee">
+<link rel="stylesheet" href="/chizhovy2/site.css?v=bb36a7ba">
 </head>
 <body>
 <nav class="nav"><div class="wrap">
@@ -147,6 +147,26 @@
 <div class="fine"><span>«Настоящие отношения» ·&nbsp;chizhovy.ru</span><span>Прототип сайта. Результаты участников&nbsp;индивидуальны.</span></div>
 </div></footer>
 <script>
+var zf = document.getElementById('zayavka');
+if (zf) {
+  zf.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var f = zf.elements, ok = true;
+    ['name', 'contact', 'about'].forEach(function (k) {
+      var el = f[k];
+      if (!el.value.trim()) { el.classList.add('zerr'); ok = false; }
+      else el.classList.remove('zerr');
+    });
+    if (!ok) { zf.querySelector('.zerr').focus(); return; }
+    var msg = 'Собеседование. Имя: ' + f['name'].value.trim()
+            + '. Связь: ' + f['contact'].value.trim()
+            + '. Ситуация: ' + f['about'].value.trim();
+    if (navigator.clipboard) navigator.clipboard.writeText(msg).catch(function () {});
+    document.getElementById('zok').classList.add('on');
+    window.open('https://t.me/+LVptSH6Mt4hhYmFi', '_blank', 'noopener');
+  });
+  zf.addEventListener('input', function (e) { e.target.classList.remove('zerr'); });
+}
 document.querySelectorAll('.mi > .mtop').forEach(btn => {
   btn.addEventListener('click', e => {
     if (window.innerWidth > 980) return;
