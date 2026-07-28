@@ -188,6 +188,20 @@ section > .narrow > h2 + p{text-align:left;max-width:none;margin-left:0;margin-r
 .zform .zerr{border-color:#C0574F!important}
 @media (max-width:700px){.zrow{grid-template-columns:1fr;gap:0}.zform{padding:26px 20px}}
 
+/* ПОЛИРОВКА ВЁРСТКИ */
+.ph{border-radius:12px;overflow:hidden}
+.split .ph img{aspect-ratio:16/9;object-fit:cover;width:100%;height:auto;display:block}
+.card{border-radius:12px}
+.nail{border-radius:12px}
+@media (hover:hover){
+  .card{transition:transform .22s ease, box-shadow .22s ease}
+  .card:hover{transform:translateY(-3px);box-shadow:0 14px 34px rgba(27,20,16,.08)}
+  .btn:hover{transform:translateY(-1px)}
+}
+section.alt{background:var(--linen)}
+section.alt .card,section.alt .nail{background:#fff}
+section.alt .polka{background:#fff}
+
 /* Полка: книги авторов */
 .polka{border:1px solid var(--line);border-radius:12px;background:#fff;padding:24px 26px}
 .polka .pt{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--copper);margin-bottom:14px}
@@ -832,6 +846,22 @@ _BTN_P2 = re.compile(r'<p class="((?:(?!btns)[^"])*)"([^>]*)>(\s*<a class="btn)'
 _BTN_BARE = re.compile(
     r'(<div class="(?:narrow|wrap)"[^>]*>(?:(?!</div>).)*?)\n((?:<a class="btn[^>]*>.*?</a>\s*)+)(\n</div>)',
     re.S)
+
+def zebra_sections(html: str) -> str:
+    """Каждая вторая светлая секция получает льняной фон: страница дышит."""
+    idx = [0]
+    def rep(m):
+        tag = m.group(0)
+        if 'dark' in tag or 'alt' in tag: 
+            idx[0] = 0
+            return tag
+        idx[0] += 1
+        if idx[0] % 2 == 0:
+            if 'class="' in tag:
+                return tag.replace('class="', 'class="alt ')
+            return tag.replace('<section', '<section class="alt"')
+        return tag
+    return re.sub(r'<section[^>]*>', rep, html)
 
 def alternate_splits(html: str) -> str:
     """Каждый второй блок «фото + текст» разворачивается: фото уходит вправо."""
@@ -4826,7 +4856,7 @@ CSS_VER = _h.md5(CSS.encode()).hexdigest()[:8]
 for rel, (title, desc, active, body) in P.items():
     f = ROOT / rel
     f.parent.mkdir(parents=True, exist_ok=True)
-    f.write_text(alternate_splits(btns_class(page(title, desc, active, body, rel.replace("index.html","")))), encoding="utf-8")
+    f.write_text(zebra_sections(alternate_splits(btns_class(page(title, desc, active, body, rel.replace("index.html",""))))), encoding="utf-8")
     n += 1
 print(f"OK v2: site.css + {n} страниц (иконки, диаграмма, таймлайн, мозаика, фавикон)")
 

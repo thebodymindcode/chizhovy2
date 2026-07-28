@@ -61,6 +61,20 @@ section > .narrow > h2 + p{text-align:left;max-width:none;margin-left:0;margin-r
 .zform .zerr{border-color:#C0574F!important}
 @media (max-width:700px){.zrow{grid-template-columns:1fr;gap:0}.zform{padding:26px 20px}}
 
+/* ПОЛИРОВКА ВЁРСТКИ */
+.ph{border-radius:12px;overflow:hidden}
+.split .ph img{aspect-ratio:16/9;object-fit:cover;width:100%;height:auto;display:block}
+.card{border-radius:12px}
+.nail{border-radius:12px}
+@media (hover:hover){
+  .card{transition:transform .22s ease, box-shadow .22s ease}
+  .card:hover{transform:translateY(-3px);box-shadow:0 14px 34px rgba(27,20,16,.08)}
+  .btn:hover{transform:translateY(-1px)}
+}
+section.alt{background:var(--linen)}
+section.alt .card,section.alt .nail{background:#fff}
+section.alt .polka{background:#fff}
+
 /* Полка: книги авторов */
 .polka{border:1px solid var(--line);border-radius:12px;background:#fff;padding:24px 26px}
 .polka .pt{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--copper);margin-bottom:14px}
