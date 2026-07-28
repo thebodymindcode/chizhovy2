@@ -61,6 +61,16 @@ section > .narrow > h2 + p{text-align:left;max-width:none;margin-left:0;margin-r
 .zform .zerr{border-color:#C0574F!important}
 @media (max-width:700px){.zrow{grid-template-columns:1fr;gap:0}.zform{padding:26px 20px}}
 
+/* Полка: книги авторов */
+.polka{border:1px solid var(--line);border-radius:12px;background:#fff;padding:24px 26px}
+.polka .pt{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--copper);margin-bottom:14px}
+.polka ul{list-style:none;margin:0;padding:0}
+.polka li{padding:10px 0;display:grid;grid-template-columns:22px 1fr;gap:10px}
+.polka li+li{border-top:1px dashed var(--line)}
+.polka li::before{content:'▪';color:var(--wine);font-size:.8rem;padding-top:2px}
+.polka b{display:block}
+.polka span{font-size:.88rem;color:var(--ink-soft)}
+
 .tside{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:56px;align-items:start}
 /* если в колонке уже стоит сетка карточек, врезка рядом мешает: уводим её вниз в ряд */
 .tside:has(> .col .grid2),

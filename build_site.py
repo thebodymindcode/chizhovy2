@@ -188,6 +188,16 @@ section > .narrow > h2 + p{text-align:left;max-width:none;margin-left:0;margin-r
 .zform .zerr{border-color:#C0574F!important}
 @media (max-width:700px){.zrow{grid-template-columns:1fr;gap:0}.zform{padding:26px 20px}}
 
+/* Полка: книги авторов */
+.polka{border:1px solid var(--line);border-radius:12px;background:#fff;padding:24px 26px}
+.polka .pt{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--copper);margin-bottom:14px}
+.polka ul{list-style:none;margin:0;padding:0}
+.polka li{padding:10px 0;display:grid;grid-template-columns:22px 1fr;gap:10px}
+.polka li+li{border-top:1px dashed var(--line)}
+.polka li::before{content:'▪';color:var(--wine);font-size:.8rem;padding-top:2px}
+.polka b{display:block}
+.polka span{font-size:.88rem;color:var(--ink-soft)}
+
 .tside{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:56px;align-items:start}
 /* если в колонке уже стоит сетка карточек, врезка рядом мешает: уводим её вниз в ряд */
 .tside:has(> .col .grid2),
@@ -1964,6 +1974,18 @@ P["vedushchie/index.html"] = ("Алексей и Ирина Чижовы · На
 <p class="sub" style="margin:0 0 26px">Разговор о&nbsp;твоей ситуации: смотрим, что происходит, и&nbsp;вместе решаем, по пути ли&nbsp;нам. Для&nbsp;читателей сайта бесплатно.</p>
 <p class="btns"><a class="btn btn-wine" href="/chizhovy2/sessiya/">Записаться на&nbsp;собеседование</a> <a class="btn btn-ghost" href="/chizhovy2/gid/" style="margin-left:8px">Читать гайд</a></p>
 </div></section>
+
+<section><div class="wrap">
+<div class="split">
+<div class="ph"><img src="/chizhovy2/images/f-dva-stula.jpg" alt="Мужская и женская сторона зала" loading="lazy"></div>
+<div>
+<p class="eyebrow">Два ведущих</p>
+<h2 style="font-size:1.9rem">Мужская и женская сторона зала</h2>
+<p>В&nbsp;зале всегда два стула ведущих. Любую семейную сцену группа разбирает с&nbsp;двух сторон: его логика и&nbsp;её&nbsp;логика слышны одновременно, перекоса в&nbsp;чью-то пользу нет.</p>
+</div>
+</div>
+</div></section>
+
 """)
 
 P["otzyvy/index.html"] = ("Истории учеников · Настоящие отношения",
@@ -2156,6 +2178,17 @@ P["voprosy/index.html"] = ("Вопросы и ответы · Настоящие
 <h2 style="font-size:1.9rem">Спроси прямо</h2>
 <p>Мы&nbsp;отвечаем сами, без заготовленных фраз. Если ответа нет на&nbsp;этой странице, напиши в&nbsp;Telegram: разберёмся в&nbsp;твоём случае, а&nbsp;не&nbsp;в&nbsp;среднем по&nbsp;больнице.</p>
 </div>
+</div>
+</div></section>
+
+
+<section><div class="wrap">
+<p class="eyebrow">Перед разговором</p>
+<h2>Как подготовиться к&nbsp;собеседованию</h2>
+<div class="grid3" style="margin-top:30px">
+<div class="card">{icon('speech','var(--copper)')}<h3>Никак</h3><p>Это не&nbsp;экзамен. Не&nbsp;нужно формулировать запрос и&nbsp;репетировать рассказ: разберёмся по&nbsp;ходу, вопросы зададим сами.</p></div>
+<div class="card">{icon('lens')}<h3>Если хочется</h3><p>Вспомни одну конкретную ситуацию, повторившуюся хотя&nbsp;бы дважды. С&nbsp;неё удобно начинать: на&nbsp;живом примере всё видно быстрее.</p></div>
+<div class="card">{icon('shield','var(--sage-deep)')}<h3>Честность</h3><p>Единственное, что реально помогает разговору. Приукрашенная версия ситуации ведёт разбор мимо цели.</p></div>
 </div>
 </div></section>
 
@@ -2583,10 +2616,10 @@ P["istoki/moreno-psihodrama/index.html"] = ("Якоб Морено и психо
 <p class="eyebrow">Инструменты Морено</p>
 <h2>Четыре приёма, дошедшие до&nbsp;наших залов</h2>
 <div class="grid2" style="margin-top:30px">
-<div class="card">{icon('people')}<h3>Обмен ролями</h3><p>Человек встаёт на&nbsp;место другого и&nbsp;отвечает себе его словами. Морено считал это сердцем метода: понять другого можно только изнутри его роли.</p></div>
-<div class="card">{icon('speech','var(--copper)')}<h3>Дублирование</h3><p>Кто-то из&nbsp;группы становится рядом и&nbsp;говорит вслух то, что герой чувствует, но&nbsp;не&nbsp;решается сказать.</p></div>
-<div class="card">{icon('mirror','var(--sage-deep)')}<h3>Зеркало</h3><p>Герой выходит из&nbsp;сцены и&nbsp;смотрит, как её&nbsp;играют без него. Со&nbsp;стороны видно то, чего изнутри не&nbsp;поймать.</p></div>
-<div class="card">{icon('lamp','var(--sand)')}<h3>Пустой стул</h3><p>На&nbsp;стуле «сидит» тот, с&nbsp;кем разговор так и&nbsp;не&nbsp;случился. Отложенный на&nbsp;годы разговор наконец происходит.</p></div>
+<div class="card">{icon('people')}<h3>Обмен ролями</h3><p>Человек встаёт на&nbsp;место другого и&nbsp;отвечает себе его словами. Сердце метода: понять человека можно только изнутри его роли.</p></div>
+<div class="card">{icon('speech','var(--copper)')}<h3>Дублирование</h3><p>Кто-то из&nbsp;группы становится рядом и&nbsp;произносит вслух то, что сам человек чувствует, но&nbsp;держит в&nbsp;себе.</p></div>
+<div class="card">{icon('mirror','var(--sage-deep)')}<h3>Зеркало</h3><p>Человек выходит из&nbsp;сцены и&nbsp;смотрит, как её&nbsp;играют без него. Со&nbsp;стороны видно то, чего изнутри не&nbsp;поймать.</p></div>
+<div class="card">{icon('lamp','var(--sand)')}<h3>Пустой стул</h3><p>На&nbsp;стуле «сидит» тот, с&nbsp;кем так и&nbsp;не&nbsp;поговорили. Отложенный на&nbsp;годы разговор наконец происходит.</p></div>
 </div>
 <p class="sub" style="margin-top:24px">Подробный разбор каждого приёма и&nbsp;порядок работы в&nbsp;сцене собран на&nbsp;странице <a href="/chizhovy2/tehniki-sceny/">техник сцены</a>.</p>
 </div></section>
@@ -2600,6 +2633,14 @@ P["istoki/moreno-psihodrama/index.html"] = ("Якоб Морено и психо
 <h2 style="font-size:1.9rem">Увидеть свою сцену со&nbsp;стороны</h2>
 <p>Морено первым понял: человек не&nbsp;видит собственных шагов, пока стоит внутри сцены. Стоит выйти и&nbsp;посмотреть, как её&nbsp;играют другие, и&nbsp;картинка меняется за&nbsp;минуту.</p>
 </div>
+</div>
+</div></section>
+
+
+<section><div class="wrap">
+<div class="polka">
+<div class="pt">Полка · если хочется к первоисточнику</div>
+<ul><li><b>Якоб Морено, «Психодрама»</b><span>Главная книга создателя метода: как родилась сцена и почему она работает.</span></li><li><b>Якоб Морено, «Театр спонтанности»</b><span>Ранняя работа о театре, где зрители становятся участниками.</span></li></ul>
 </div>
 </div></section>
 
@@ -2681,6 +2722,26 @@ P["istoki/zeland-transerfing/index.html"] = ("Вадим Зеланд и тра�
 </div>
 </div></section>
 
+
+<section><div class="wrap">
+<div class="polka">
+<div class="pt">Полка · если хочется к первоисточнику</div>
+<ul><li><b>Вадим Зеланд, «Трансерфинг реальности»</b><span>Первые ступени: маятники, важность, зеркало мира. На Марафоне входит в список чтения.</span></li></ul>
+</div>
+</div></section>
+
+
+<section><div class="wrap">
+<div class="split">
+<div class="ph"><img src="/chizhovy2/images/f-vesy.jpg" alt="Ставка, которая перевешивает" loading="lazy"></div>
+<div>
+<p class="eyebrow">Важность на весах</p>
+<h2 style="font-size:1.9rem">Ставка, которая перевешивает</h2>
+<p>Важность у&nbsp;Зеланда это раздутая ставка: когда исход значит слишком много, страх сжимает выбор. Снятие важности возвращает равновесие: решение принимается ровно, без дрожи в&nbsp;руках.</p>
+</div>
+</div>
+</div></section>
+
 {MOST}
 """)
 
@@ -2732,7 +2793,7 @@ P["istoki/est-transformaciya/index.html"] = ("est и «Трансформаци�
 <section><div class="wrap"><div class="tside">
 <div class="col">
 <p class="eyebrow">Куда мы это&nbsp;довели</p>
-<h2>Обещание, данное себе в&nbsp;детстве</h2>
+<h2>Обещание себе из&nbsp;детства</h2>
 <p>У&nbsp;Эрхарда была сильная мысль про обещания: личность держится на&nbsp;том, что ты&nbsp;пообещал и&nbsp;выполнил. Мы&nbsp;довели её до&nbsp;конкретной работы. Тяжелее всего давит то, что человек когда-то сказал себе&nbsp;сам.</p>
 <p>В&nbsp;зале такие фразы называют клятвами. Звучат они похоже: «я&nbsp;никогда не&nbsp;буду просить», «я&nbsp;всегда буду сильным», «меня больше никто не&nbsp;увидит слабой». Ребёнок в&nbsp;семь лет принимает решение, которое в&nbsp;тот день его спасает, и&nbsp;живёт по&nbsp;нему до&nbsp;сорока. Взрослый мужчина не&nbsp;может попросить о&nbsp;помощи и&nbsp;искренне считает это&nbsp;характером.</p>
 <p>Работа идёт так: находим клятву, возвращаемся в&nbsp;день, когда она прозвучала, и&nbsp;там человек принимает <a href="/chizhovy2/tehniki-sceny/">новое решение</a> уже взрослыми глазами. Один участник написал в&nbsp;тот же&nbsp;вечер: «Когда работали с&nbsp;клятвой и&nbsp;новым решением, пошло какое-то наполнение что-ли. Прям кайф».</p>
@@ -2770,6 +2831,14 @@ P["istoki/est-transformaciya/index.html"] = ("est и «Трансформаци�
 </div></section>
 
 {MOST2}
+
+<section><div class="wrap">
+<div class="polka">
+<div class="pt">Полка · вокруг темы</div>
+<ul><li><b>Люк Рейнхарт, «Трансформация»</b><span>Тренинг est изнутри, день за днём, с репликами зала.</span></li><li><b>У. Эрхард о слове</b><span>Принцип «слово как обязательство» разобран в записях его семинаров.</span></li></ul>
+</div>
+</div></section>
+
 """)
 
 P["istoki/goddard/index.html"] = ("Невилл Годдард · Истоки метода",
@@ -2868,6 +2937,26 @@ P["istoki/goddard/index.html"] = ("Невилл Годдард · Истоки �
 </div></section>
 
 {MOST2}
+
+<section><div class="wrap">
+<div class="polka">
+<div class="pt">Полка · если хочется к первоисточнику</div>
+<ul><li><b>Невилл Годдард, «Сила осознания»</b><span>Про состояние, из которого складываются события.</span></li><li><b>Невилл Годдард, «Чувство и есть секрет»</b><span>Короткая книга о вечерней практике перед сном.</span></li></ul>
+</div>
+</div></section>
+
+
+<section><div class="wrap">
+<div class="split">
+<div class="ph"><img src="/chizhovy2/images/f-prichal.jpg" alt="Вечер решает больше утра" loading="lazy"></div>
+<div>
+<p class="eyebrow">Практика тишины</p>
+<h2 style="font-size:1.9rem">Вечер решает больше утра</h2>
+<p>Годдард советовал уделить состоянию последние минуты перед сном: с&nbsp;чем засыпаешь, с&nbsp;тем и&nbsp;просыпаешься. У&nbsp;нас эта практика живёт как вечерний разбор дня.</p>
+</div>
+</div>
+</div></section>
+
 """)
 
 P["istoki/nauka/index.html"] = ("Наука за методом · Истоки метода",
@@ -2947,6 +3036,26 @@ P["istoki/nauka/index.html"] = ("Наука за методом · Истоки 
 </div></section>
 
 {MOST2}
+
+<section><div class="wrap">
+<div class="polka">
+<div class="pt">Полка · наука по теме</div>
+<ul><li><b>Джозеф ЛеДу, «Эмоциональный мозг»</b><span>Откуда взялись 12 миллисекунд форы миндалины.</span></li><li><b>Джилл Болте Тейлор, «Мой инсульт был мне наукой»</b><span>История нейроанатома и правило 90 секунд.</span></li><li><b>Дэниел Гоулман, «Эмоциональный интеллект»</b><span>Про захват: почему в вспышке разум приглушается.</span></li></ul>
+</div>
+</div></section>
+
+
+<section><div class="wrap">
+<div class="split">
+<div class="ph"><img src="/chizhovy2/images/f-lupa.jpg" alt="Проверка вместо веры" loading="lazy"></div>
+<div>
+<p class="eyebrow">Зачем науке место в зале</p>
+<h2 style="font-size:1.9rem">Проверка вместо веры</h2>
+<p>Мы&nbsp;не&nbsp;просим верить на&nbsp;слово. Каждый механизм, о&nbsp;котором говорим, можно проверить: в&nbsp;исследовании по&nbsp;ссылке или на&nbsp;собственной практике за&nbsp;девяносто дней.</p>
+</div>
+</div>
+</div></section>
+
 """)
 
 # ================= ИСТОРИИ УЧЕНИКОВ =================
@@ -3166,7 +3275,19 @@ P["istorii/predprinimatel/index.html"] = ("Предприниматель: за�
 <div>
 <p class="eyebrow">Где он&nbsp;сейчас</p>
 <h2 style="font-size:1.9rem">Заново, но&nbsp;по&nbsp;другой дороге</h2>
-<p>Через полтора года после дна: новые направления, выросшие цели, отношения вместо сделок. Он&nbsp;сам говорит, что дело не&nbsp;в&nbsp;удаче, а&nbsp;в&nbsp;том, что перестал ходить по&nbsp;прежнему кругу.</p>
+<p>Через полтора года после дна: новые направления, выросшие цели, отношения вместо сделок. Он&nbsp;сам говорит: удача ни&nbsp;при&nbsp;чём, просто перестал ходить по&nbsp;прежнему кругу.</p>
+</div>
+</div>
+</div></section>
+
+
+<section><div class="wrap">
+<div class="split">
+<div class="ph"><img src="/chizhovy2/images/f-marshrut.jpg" alt="Играть вдолгую" loading="lazy"></div>
+<div>
+<p class="eyebrow">Его главный вывод</p>
+<h2 style="font-size:1.9rem">Играть вдолгую</h2>
+<p>Из&nbsp;его анкеты: «научился играть в&nbsp;долгую, стал меньше суетиться». Спринты сменились дистанцией, и&nbsp;выяснилось, что дорога длиннее и&nbsp;спокойнее, чем казалось со&nbsp;старта.</p>
 </div>
 </div>
 </div></section>
@@ -3342,6 +3463,18 @@ P["slovar/index.html"] = ("Словарь школы · Настоящие от�
 
 
 
+
+
+<section><div class="wrap">
+<div class="split">
+<div class="ph"><img src="/chizhovy2/images/f-slova.jpg" alt="Слова экономят объяснения" loading="lazy"></div>
+<div>
+<p class="eyebrow">Зачем школе свой язык</p>
+<h2 style="font-size:1.9rem">Слова экономят объяснения</h2>
+<p>Когда группа говорит «важность» или «нолик», за&nbsp;словом стоит общий опыт, а&nbsp;не&nbsp;определение из&nbsp;книги. Одно слово заменяет десять минут объяснений, поэтому язык и&nbsp;прижился.</p>
+</div>
+</div>
+</div></section>
 
 """)
 
@@ -3552,6 +3685,18 @@ P["dlya-zhenshchin/index.html"] = ("Для женщин · Настоящие о
 <p class="eyebrow">Про что это</p>
 <h2 style="font-size:1.9rem">Вечер, когда всё уже сказано</h2>
 <p>Он&nbsp;ушёл в&nbsp;телефон, ты&nbsp;сидишь на&nbsp;кухне и&nbsp;прокручиваешь разговор по&nbsp;кругу. Знакомо почти каждой, кто сюда приходит.</p>
+</div>
+</div>
+</div></section>
+
+
+<section><div class="wrap">
+<div class="split">
+<div class="ph"><img src="/chizhovy2/images/f-zapiski.jpg" alt="Записать, что повторяется" loading="lazy"></div>
+<div>
+<p class="eyebrow">Простой первый шаг</p>
+<h2 style="font-size:1.9rem">Записать, что повторяется</h2>
+<p>До&nbsp;всякой школы можно сделать одно: неделю записывать вечером, какая сцена сегодня повторилась. К&nbsp;концу недели узор обычно виден без посторонней помощи. Что с&nbsp;ним делать дальше, уже разговор.</p>
 </div>
 </div>
 </div></section>
@@ -3920,6 +4065,18 @@ P["manifest/index.html"] = ("Манифест школы · Настоящие �
 </div></section>
 
 {CTA_LYUDI}
+
+<section><div class="wrap">
+<div class="split">
+<div class="ph"><img src="/chizhovy2/images/f-kamerton.jpg" alt="Манифест как камертон" loading="lazy"></div>
+<div>
+<p class="eyebrow">Рабочий инструмент</p>
+<h2 style="font-size:1.9rem">Манифест как камертон</h2>
+<p>К&nbsp;этим принципам школа возвращается при&nbsp;каждом спорном решении: брать&nbsp;ли человека, расти&nbsp;ли группе, менять&nbsp;ли формат. Сверяемся со&nbsp;звуком, а&nbsp;не&nbsp;с&nbsp;выгодой.</p>
+</div>
+</div>
+</div></section>
+
 """)
 
 # ================= БЕЗОПАСНОСТЬ =================
@@ -4409,6 +4566,18 @@ P["tehniki-sceny/index.html"] = ("Техники сцены · Настоящи�
 
 
 {CTA_PRAKTIKA}
+
+<section><div class="wrap">
+<div class="split">
+<div class="ph"><img src="/chizhovy2/images/f-teatr.jpg" alt="Сцена старше кино" loading="lazy"></div>
+<div>
+<p class="eyebrow">Откуда приём</p>
+<h2 style="font-size:1.9rem">Сцена старше кино</h2>
+<p>Первые такие сцены шли в&nbsp;венском театре в&nbsp;двадцатые годы прошлого века. С&nbsp;тех пор техника пережила моду на&nbsp;десятки методов: тело верит сцене больше, чем словам.</p>
+</div>
+</div>
+</div></section>
+
 """)
 
 # ================= ТРИ СОМНЕНИЯ =================
@@ -4473,6 +4642,20 @@ P["somneniya/index.html"] = ("Частые сомнения · Настоящи�
 <p>Школу ведёт пара. Алексей говорит на&nbsp;понятном языке: структура, дисциплина, дистанция, результат. <a href="/chizhovy2/dlya-predprinimatelej/">Отдельная страница для тех, кто привык тащить сам</a>.</p>
 <div class="pull"><div class="q">«На тренинге я&nbsp;долго сопротивлялся, как баран. Труднее всего было принять точку&nbsp;А.»</div><div class="who">Из истории ученика-предпринимателя</div></div>
 </div></section>
+
+
+<section><div class="wrap"><div class="tside">
+<div class="col">
+<p class="eyebrow">Вместо вывода</p>
+<h2>Сомнение это нормальная часть дороги</h2>
+<p>Из тех, кто сегодня ведёт команды и&nbsp;приводит на&nbsp;модули близких, почти каждый начинал с&nbsp;«не&nbsp;верю» и&nbsp;«у&nbsp;меня особый случай». Сомнение не&nbsp;мешает работе. Мешает только одно: решать за&nbsp;себя заранее, не&nbsp;проверив.</p>
+<p>Проверка стоит недорого: разговор. На&nbsp;нём можно задать любой вопрос с&nbsp;этой страницы вслух и&nbsp;услышать ответ про свой случай, а&nbsp;не&nbsp;про средний.</p>
+</div>
+<aside class="side">
+<div class="box"><div class="lbl">Из зала</div><p>«Долго упирался, как баран» — слова ученика, который потом привёл на&nbsp;модуль друзей.</p></div>
+<div class="box"><div class="lbl">Честно</div><p>Иногда наш ответ: «сейчас не&nbsp;время». Говорим это прямо, не&nbsp;тянем в&nbsp;группу.</p></div>
+</aside>
+</div></div></section>
 
 <section class="dark"><div class="wrap">
 <p class="eyebrow">Честно</p>
@@ -4619,6 +4802,18 @@ P["stati/index.html"] = ("Статьи школы · Настоящие отно
 <div class="box"><div class="lbl">Пока их&nbsp;нет</div><p>Основа метода уже разобрана на&nbsp;<a href="/chizhovy2/metod/">странице метода</a> и&nbsp;в&nbsp;<a href="/chizhovy2/slovar/">словаре школы</a>.</p></div>
 </aside>
 </div></div></section>
+
+
+<section><div class="wrap">
+<div class="split">
+<div class="ph"><img src="/chizhovy2/images/f-chitalnya.jpg" alt="Десять минут с чашкой чая" loading="lazy"></div>
+<div>
+<p class="eyebrow">Формат чтения</p>
+<h2 style="font-size:1.9rem">Десять минут с чашкой чая</h2>
+<p>Каждый разбор рассчитан на&nbsp;10-15 минут спокойного чтения. Без регистрации, всплывающих окон и&nbsp;требований оставить почту: читаешь и&nbsp;забираешь своё.</p>
+</div>
+</div>
+</div></section>
 
 """)
 
