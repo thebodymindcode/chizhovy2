@@ -111,7 +111,7 @@ strong{font-weight:700}
 .qa dt{font-family:'Playfair Display',serif;font-weight:700;font-size:1.12rem;margin:18px 0 6px}
 .qa dd{margin:0;color:var(--ink-soft, #5C534B);font-size:.99rem}
 
-/* Купон-заявка */
+/* Заявка */
 .coupon{border:2px solid var(--ink);margin:40px 0 8px;background:#fff}
 .coupon .ch{padding:16px 24px;border-bottom:2px solid var(--ink);display:flex;justify-content:space-between;align-items:baseline;gap:14px}
 .coupon .ch b{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:800}
@@ -314,11 +314,7 @@ footer .dblrule{border-top:1px solid var(--ink);border-bottom:3px solid var(--in
     <figcaption>Это кино ты&nbsp;смотришь каждый вечер. Сегодня разберём, кто его&nbsp;снял.</figcaption>
   </figure>
 
-  <figure>
-    <div class="ph"><img src="../images/g2-ssora.jpg" alt="Муж и жена сидят на диване после трудного разговора, напряжённая пауза"></div>
-    <div class="capband"><span>Сцена I · Кухня, 19:19</span><span class="chip">Повтор</span></div>
-    <figcaption>Оба знают эту паузу наизусть. Сейчас кто-то скажет реплику, и&nbsp;кино поедет по&nbsp;знакомой колее.</figcaption>
-  </figure>
+  
 </div>
 
 <div class="col">
@@ -355,6 +351,12 @@ footer .dblrule{border-top:1px solid var(--ink);border-bottom:3px solid var(--in
 <div class="tile sand"><svg viewBox="0 0 48 48"><path d="M24 6l14 5v11c0 9-6 16-14 20-8-4-14-11-14-20V11z"/><path d="M24 14l-3 7h6l-4 9"/></svg><b>Ты сам</b><span>Паркинг, двигатель заглушен. Выходить не&nbsp;хочется.</span></div>
 <div class="tile"><svg viewBox="0 0 48 48"><path d="M8 34h32"/><path d="M16 34a8 8 0 0 1 16 0"/><path d="M24 12v6M12 20l3 3M36 20l-3 3"/></svg><b>Утро</b><span>Будильник, гонка, вечер в&nbsp;телефон. Повтор. Год.</span></div>
 </div>
+<figure>
+    <div class="ph"><img src="../images/g2-ssora.jpg" alt="Муж и жена сидят на диване после трудного разговора, напряжённая пауза"></div>
+    <div class="capband"><span>Сцена I · Кухня, 19:19</span><span class="chip">Повтор</span></div>
+    <figcaption>Оба знают эту паузу наизусть. Сейчас кто-то скажет реплику, и&nbsp;кино поедет по&nbsp;знакомой колее.</figcaption>
+  </figure>
+
 <div class="chrono">
 <div class="ct2">Хроника · Семь минут одного вечера</div>
 <ol>
@@ -642,8 +644,21 @@ footer .dblrule{border-top:1px solid var(--ink);border-bottom:3px solid var(--in
   </div>
 </article>
 
+<div class="col">
+<div class="pn">Последняя страница</div>
+<h2>Ты&nbsp;дочитал. Это уже кое-что значит</h2>
+<p class="deck">Случайные люди до&nbsp;этой строки не&nbsp;доходят</p>
+<p>Если по&nbsp;дороге кольнуло хотя&nbsp;бы раз: на&nbsp;хронике вечера, на&nbsp;одной из&nbsp;четырёх ролей, на&nbsp;признаках из&nbsp;списка, значит, запись ты&nbsp;свою уже увидел. Это была самая трудная часть, и&nbsp;она позади.</p>
+<p>Дальше текст бессилен: показать запись он&nbsp;может, переписать нет. Перезапись происходит в&nbsp;живой сцене, и&nbsp;начинается она с&nbsp;разговора. Вот что на&nbsp;нём будет:</p>
+<ul class="whisper">
+<li>Разберём твою ситуацию: что повторяется и&nbsp;чего это уже стоило</li>
+<li>Покажем, где в&nbsp;твоём круге живёт старая запись</li>
+<li>Честно скажем, поможет&nbsp;ли здесь школа. Если нет, скажем прямо</li>
+</ul>
+</div>
+
 <div class="coupon">
-<div class="ch"><b>Купон читателя</b><span>Заявка на собеседование</span></div>
+<div class="ch"><b>Заявка на&nbsp;собеседование</b><span>Для читателей гайда бесплатно</span></div>
 <form id="zayavka" novalidate>
 <div class="cr">
 <label><span>Имя</span><input type="text" name="name" autocomplete="name"></label>
@@ -651,7 +666,7 @@ footer .dblrule{border-top:1px solid var(--ink);border-bottom:3px solid var(--in
 </div>
 <label><span>Что происходит сейчас, своими словами</span><textarea name="about"></textarea></label>
 <button class="btn" type="submit">Отправить заявку</button>
-<p class="cnote">Кнопка откроет Telegram школы с&nbsp;готовым текстом: останется нажать «отправить». Текст также скопируется, если удобнее вставить вручную. Для читателей гайда собеседование бесплатное.</p>
+<p class="cnote">Кнопка откроет Telegram школы с&nbsp;готовым текстом: останется нажать «отправить». Отвечают Алексей или Ирина, обычно в&nbsp;течение дня.</p>
 <div class="zok" id="zok">Сообщение собрано и&nbsp;скопировано. Открой Telegram и&nbsp;вставь его в&nbsp;чат школы.</div>
 </form>
 </div>
