@@ -1233,16 +1233,7 @@ P["programma/index.html"] = ("Программа · Настоящие отно�
 <p style="margin-top:28px"><a class="btn btn-wine" href="/chizhovy2/sessiya/">Записаться на&nbsp;собеседование</a></p>
 </div></section>
 
-<section><div class="wrap">
-<div class="split">
-<div class="ph"><img src="/chizhovy2/images/ob-lestnica.png" alt="Путь идёт ступенями" loading="lazy"></div>
-<div>
-<p class="eyebrow">Три ступени</p>
-<h2 style="font-size:1.9rem">Путь идёт ступенями</h2>
-<p>Каждая ступень стоит на&nbsp;предыдущей. Перепрыгнуть через одну можно, но&nbsp;тогда верхняя не&nbsp;держит: человек возвращается к&nbsp;той&nbsp;же точке через год, только с&nbsp;бо́льшим разочарованием.</p>
-</div>
-</div>
-</div></section>
+
 
 """)
 
@@ -1494,16 +1485,7 @@ P["modul-2/index.html"] = ("Модуль II. Внутренняя свобода
 </div></div></section>
 
 
-<section><div class="wrap">
-<div class="split">
-<div class="ph"><img src="/chizhovy2/images/ob-zerkalo.png" alt="Взгляд со стороны другого" loading="lazy"></div>
-<div>
-<p class="eyebrow">Что даёт обмен ролями</p>
-<h2 style="font-size:1.9rem">Взгляд со&nbsp;стороны другого</h2>
-<p>Самое сильное на&nbsp;втором модуле обычно происходит не&nbsp;в&nbsp;своей роли, а&nbsp;в&nbsp;чужой. Человек встаёт на&nbsp;место отца, партнёра, начальника и&nbsp;отвечает себе их&nbsp;словами. После этого спорить со&nbsp;своей версией истории уже не&nbsp;выходит.</p>
-</div>
-</div>
-</div></section>
+
 
 <section class="dark"><div class="narrow">
 <h2>Честно о&nbsp;трудностях</h2>
@@ -3032,16 +3014,7 @@ P["slovar/index.html"] = ("Словарь школы · Настоящие от�
 </div></section>
 
 
-<section><div class="wrap">
-<div class="split">
-<div class="ph"><img src="/chizhovy2/images/ob-zapis.png" alt="Язык, который родился в зале" loading="lazy"></div>
-<div>
-<p class="eyebrow">Откуда эти слова</p>
-<h2 style="font-size:1.9rem">Откуда взялись эти слова</h2>
-<p>Ни&nbsp;одно слово из&nbsp;этого словаря не&nbsp;придумано за&nbsp;столом. Все они появились в&nbsp;работе, прижились в&nbsp;группах и&nbsp;остались с&nbsp;людьми после выпуска: в&nbsp;чатах, на&nbsp;встречах, в&nbsp;обычных разговорах.</p>
-</div>
-</div>
-</div></section>
+
 
 """)
 
@@ -3502,16 +3475,7 @@ P["manifest/index.html"] = ("Манифест школы · Настоящие �
 </div></div></section>
 
 
-<section><div class="wrap">
-<div class="split">
-<div class="ph"><img src="/chizhovy2/images/p-manifest.png" alt="Написано без пафоса" loading="lazy"></div>
-<div>
-<p class="eyebrow">Во что верим</p>
-<h2 style="font-size:1.9rem">Написано без пафоса</h2>
-<p>Манифест писали не&nbsp;для&nbsp;сайта, а&nbsp;для&nbsp;себя: чтобы помнить, ради чего собирается зал.</p>
-</div>
-</div>
-</div></section>
+
 
 {FINCTA}
 """)
@@ -3923,16 +3887,7 @@ P["tehniki-sceny/index.html"] = ("Техники сцены · Настоящи�
 </div></section>
 
 
-<section><div class="wrap">
-<div class="split">
-<div class="ph"><img src="/chizhovy2/images/ob-krug-sverhu.png" alt="Круг без первого ряда" loading="lazy"></div>
-<div>
-<p class="eyebrow">Как расставлены люди</p>
-<h2 style="font-size:1.9rem">Круг без первого ряда</h2>
-<p>В&nbsp;зале нет мест лучше и&nbsp;хуже: круг устроен так, что каждый видит каждого. Ведущие садятся в&nbsp;тот&nbsp;же круг, а&nbsp;не&nbsp;напротив. Мелочь, но&nbsp;она задаёт всё остальное: здесь не&nbsp;лечат сверху, а&nbsp;работают вместе.</p>
-</div>
-</div>
-</div></section>
+
 
 {FINCTA}
 """)
