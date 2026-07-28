@@ -317,6 +317,10 @@ section > .narrow > .grid2:last-child{margin-bottom:0}
 .mosaic{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:210px;gap:12px}
 .mosaic .ph:first-child{grid-column:span 2;grid-row:span 2}
 .split{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center}
+/* чередуем сторону фото: класс ставит сборщик каждому второму блоку */
+.split.rev{grid-template-columns:.9fr 1.1fr}
+.split.rev > .ph{order:2}
+@media (max-width:900px){.split.rev{grid-template-columns:1fr}.split.rev > .ph{order:0}}
 .split .ph{aspect-ratio:4/3}
 
 /* Цитаты */
@@ -395,6 +399,17 @@ footer .fine{margin-top:44px;padding-top:20px;border-top:1px solid rgba(242,237,
   footer .cols{grid-template-columns:1fr 1fr}
 }
 @media (max-width:600px){
+  section{padding-top:44px;padding-bottom:44px}
+  section.dark{padding-top:52px;padding-bottom:52px}
+  .hero .in{padding:72px 24px 60px}
+  .card{padding:20px 18px}
+  .box{padding:18px}
+  section > .wrap > h2,section > .narrow > h2,.tside > .col > h2{margin-bottom:18px}
+  section > .wrap > .grid2,section > .wrap > .grid3,section > .wrap > .nails,
+  section > .wrap > .mosaic,section > .wrap > .split,section > .wrap > .tside{margin-top:22px}
+  .split{gap:22px}
+  .grid2,.grid3{gap:12px}
+
   .bignum{display:none}
   .only-d{display:none}
   .only-m{display:block}

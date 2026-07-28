@@ -444,6 +444,10 @@ section > .narrow > .grid2:last-child{margin-bottom:0}
 .mosaic{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:210px;gap:12px}
 .mosaic .ph:first-child{grid-column:span 2;grid-row:span 2}
 .split{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center}
+/* чередуем сторону фото: класс ставит сборщик каждому второму блоку */
+.split.rev{grid-template-columns:.9fr 1.1fr}
+.split.rev > .ph{order:2}
+@media (max-width:900px){.split.rev{grid-template-columns:1fr}.split.rev > .ph{order:0}}
 .split .ph{aspect-ratio:4/3}
 
 /* Цитаты */
@@ -522,6 +526,17 @@ footer .fine{margin-top:44px;padding-top:20px;border-top:1px solid rgba(242,237,
   footer .cols{grid-template-columns:1fr 1fr}
 }
 @media (max-width:600px){
+  section{padding-top:44px;padding-bottom:44px}
+  section.dark{padding-top:52px;padding-bottom:52px}
+  .hero .in{padding:72px 24px 60px}
+  .card{padding:20px 18px}
+  .box{padding:18px}
+  section > .wrap > h2,section > .narrow > h2,.tside > .col > h2{margin-bottom:18px}
+  section > .wrap > .grid2,section > .wrap > .grid3,section > .wrap > .nails,
+  section > .wrap > .mosaic,section > .wrap > .split,section > .wrap > .tside{margin-top:22px}
+  .split{gap:22px}
+  .grid2,.grid3{gap:12px}
+
   .bignum{display:none}
   .only-d{display:none}
   .only-m{display:block}
@@ -786,6 +801,14 @@ _BTN_P2 = re.compile(r'<p class="((?:(?!btns)[^"])*)"([^>]*)>(\s*<a class="btn)'
 _BTN_BARE = re.compile(
     r'(<div class="(?:narrow|wrap)"[^>]*>(?:(?!</div>).)*?)\n((?:<a class="btn[^>]*>.*?</a>\s*)+)(\n</div>)',
     re.S)
+
+def alternate_splits(html: str) -> str:
+    """Каждый второй блок «фото + текст» разворачивается: фото уходит вправо."""
+    idx = [0]
+    def rep(m):
+        idx[0] += 1
+        return '<div class="split rev"' if idx[0] % 2 == 0 else m.group(0)
+    return re.sub(r'<div class="split"', rep, html)
 
 def btns_class(html: str) -> str:
     """Каждая кнопка живёт в контейнере .btns: одно правило выравнивает их все."""
@@ -1755,6 +1778,18 @@ P["para/index.html"] = ("Тренинг для пар · Настоящие от
 </div>
 </div></section>
 
+
+<section><div class="wrap">
+<div class="split">
+<div class="ph"><img src="/chizhovy2/images/w-kuhnya.jpg" alt="Вечер вдвоём и тишина" loading="lazy"></div>
+<div>
+<p class="eyebrow">Про что это</p>
+<h2 style="font-size:1.9rem">Вечер вдвоём и&nbsp;тишина</h2>
+<p>Ужин молча, каждый в&nbsp;телефоне, разговоры про логистику. Ссор нет, потому что незачем. Это не&nbsp;конец отношений: это круг, который держится на&nbsp;двух старых решениях, по&nbsp;одному с&nbsp;каждой стороны.</p>
+</div>
+</div>
+</div></section>
+
 """)
 
 # ================= ВЕДУЩИЕ =================
@@ -2252,8 +2287,14 @@ def istoki_dalee(*items):
 
 MOST = """<section><div class="narrow">
 <h2>Читать полезно, а&nbsp;меняет жизнь работа в&nbsp;зале</h2>
-<p class="sub">Книги дают карту, а&nbsp;сценарий переписывается в&nbsp;зале, телом и&nbsp;эмоцией. Начни с&nbsp;бесплатного гайда или приходи на&nbsp;собеседование: разговор о твоей&nbsp;ситуации.</p>
+<p class="sub" style="margin:0 0 26px">Книги дают карту, а&nbsp;сценарий переписывается в&nbsp;зале, телом и&nbsp;эмоцией. Начни с&nbsp;бесплатного гайда или приходи на&nbsp;собеседование.</p>
 <p class="btns"><a class="btn btn-wine" href="/chizhovy2/sessiya/">Записаться на&nbsp;собеседование</a> <a class="btn btn-ghost" href="/chizhovy2/gid/" style="margin-left:8px">Читать гайд</a></p>
+</div></section>"""
+
+MOST2 = """<section><div class="narrow">
+<h2>Как это выглядит в&nbsp;работе</h2>
+<p class="sub" style="margin:0 0 26px">Теория остаётся теорией, пока человек не&nbsp;выйдет в&nbsp;сцену. Посмотри, как устроены модули, или приходи на&nbsp;разговор.</p>
+<p class="btns"><a class="btn btn-wine" href="/chizhovy2/programma/">Посмотреть программу</a> <a class="btn btn-ghost" href="/chizhovy2/sessiya/" style="margin-left:8px">Записаться на&nbsp;собеседование</a></p>
 </div></section>"""
 
 MOST = """<section><div class="narrow">
@@ -2471,6 +2512,18 @@ P["istoki/moreno-psihodrama/index.html"] = ("Якоб Морено и психо
 <p class="sub" style="margin-top:24px">Подробный разбор каждого приёма и&nbsp;порядок работы в&nbsp;сцене собран на&nbsp;странице <a href="/chizhovy2/tehniki-sceny/">техник сцены</a>.</p>
 </div></section>
 
+
+<section><div class="wrap">
+<div class="split">
+<div class="ph"><img src="/chizhovy2/images/w-zerkalo2.jpg" alt="Увидеть свою сцену со стороны" loading="lazy"></div>
+<div>
+<p class="eyebrow">Что даёт зеркало</p>
+<h2 style="font-size:1.9rem">Увидеть свою сцену со&nbsp;стороны</h2>
+<p>Морено первым понял: человек не&nbsp;видит собственных шагов, пока стоит внутри сцены. Стоит выйти и&nbsp;посмотреть, как её&nbsp;играют другие, и&nbsp;картинка меняется за&nbsp;минуту.</p>
+</div>
+</div>
+</div></section>
+
 {MOST}
 """)
 
@@ -2637,7 +2690,7 @@ P["istoki/est-transformaciya/index.html"] = ("est и «Трансформаци�
 </div>
 </div></section>
 
-{MOST}
+{MOST2}
 """)
 
 P["istoki/goddard/index.html"] = ("Невилл Годдард · Истоки метода",
@@ -2735,7 +2788,7 @@ P["istoki/goddard/index.html"] = ("Невилл Годдард · Истоки �
 </div>
 </div></section>
 
-{MOST}
+{MOST2}
 """)
 
 P["istoki/nauka/index.html"] = ("Наука за методом · Истоки метода",
@@ -2814,7 +2867,7 @@ P["istoki/nauka/index.html"] = ("Наука за методом · Истоки 
 </div>
 </div></section>
 
-{MOST}
+{MOST2}
 """)
 
 # ================= ИСТОРИИ УЧЕНИКОВ =================
@@ -2919,6 +2972,18 @@ P["istorii/index.html"] = ("Истории учеников · Настоящи�
 <p class="eyebrow">Живые истории</p>
 <h2 style="font-size:1.9rem">Люди, а&nbsp;не&nbsp;кейсы</h2>
 <p>Здесь нет отредактированных success story. Есть точка А, сопротивление и&nbsp;то, что изменилось.</p>
+</div>
+</div>
+</div></section>
+
+
+<section><div class="wrap">
+<div class="split">
+<div class="ph"><img src="/chizhovy2/images/w-pismo2.jpg" alt="Со слов самих учеников" loading="lazy"></div>
+<div>
+<p class="eyebrow">Как мы&nbsp;собираем истории</p>
+<h2 style="font-size:1.9rem">Со слов самих учеников</h2>
+<p>Ничего не&nbsp;додумываем и&nbsp;не&nbsp;причёсываем. Люди рассказывают сами, мы&nbsp;только расставляем по&nbsp;порядку: где были, что мешало, что изменилось.</p>
 </div>
 </div>
 </div></section>
@@ -3204,8 +3269,26 @@ P["slovar/index.html"] = ("Словарь школы · Настоящие от�
 # ================= КОМУ: ПРЕДПРИНИМАТЕЛИ =================
 FINCTA = """<section><div class="narrow">
 <h2>Начни с разговора</h2>
-<p class="sub" style="margin:0 0 26px">Собеседование в&nbsp;школу: разговор о&nbsp;твоей ситуации и&nbsp;честный ответ, чем мы&nbsp;можем помочь. Для читателей сайта&nbsp;бесплатно.</p>
+<p class="sub" style="margin:0 0 26px">Собеседование в&nbsp;школу: разбираем твою ситуацию и&nbsp;честно говорим, чем школа может помочь. Для читателей сайта&nbsp;бесплатно.</p>
 <p class="btns"><a class="btn btn-wine" href="/chizhovy2/sessiya/">Записаться на&nbsp;собеседование</a> <a class="btn btn-ghost" href="/chizhovy2/gid/" style="margin-left:8px">Сначала почитать гайд</a></p>
+</div></section>"""
+
+CTA_PRAKTIKA = """<section><div class="narrow">
+<h2>Попробовать в&nbsp;своей жизни</h2>
+<p class="sub" style="margin:0 0 26px">Практики работают в&nbsp;команде, а&nbsp;команда собирается на&nbsp;модуле. Начинается всё с&nbsp;разговора о&nbsp;твоей ситуации.</p>
+<p class="btns"><a class="btn btn-wine" href="/chizhovy2/sessiya/">Записаться на&nbsp;собеседование</a> <a class="btn btn-ghost" href="/chizhovy2/programma/" style="margin-left:8px">Посмотреть программу</a></p>
+</div></section>"""
+
+CTA_LYUDI = """<section><div class="narrow">
+<h2>Познакомиться лично</h2>
+<p class="sub" style="margin:0 0 26px">Прочитать про школу можно бесконечно. Понять, твоё&nbsp;ли это, получается только в&nbsp;живом разговоре.</p>
+<p class="btns"><a class="btn btn-wine" href="/chizhovy2/sessiya/">Записаться на&nbsp;собеседование</a> <a class="btn btn-ghost" href="/chizhovy2/istorii/" style="margin-left:8px">Читать истории учеников</a></p>
+</div></section>"""
+
+CTA_SOMNENIYA = """<section><div class="narrow">
+<h2>Спросить прямо</h2>
+<p class="sub" style="margin:0 0 26px">Если сомнение осталось, задай его вслух. Отвечаем честно, включая случаи, когда наш ответ «сейчас не&nbsp;время».</p>
+<p class="btns"><a class="btn btn-wine" href="/chizhovy2/sessiya/">Записаться на&nbsp;собеседование</a> <a class="btn btn-ghost" href="/chizhovy2/voprosy/" style="margin-left:8px">Частые вопросы</a></p>
 </div></section>"""
 
 P["dlya-predprinimatelej/index.html"] = ("Для предпринимателей · Настоящие отношения",
@@ -3290,6 +3373,18 @@ P["dlya-predprinimatelej/index.html"] = ("Для предпринимателе�
 <p class="eyebrow">Про что это</p>
 <h2 style="font-size:1.9rem">Кабинет после всех</h2>
 <p>Все ушли, дела сделаны, а&nbsp;лёгкости нет. Обороты растут, внутри пусто. С&nbsp;этим и&nbsp;приходят чаще всего.</p>
+</div>
+</div>
+</div></section>
+
+
+<section><div class="wrap">
+<div class="split">
+<div class="ph"><img src="/chizhovy2/images/w-kabinet.jpg" alt="Всё работает, а лёгкости нет" loading="lazy"></div>
+<div>
+<p class="eyebrow">Знакомая картина</p>
+<h2 style="font-size:1.9rem">Всё работает, а&nbsp;лёгкости нет</h2>
+<p>Обороты растут, команда собрана, планы выполняются. И&nbsp;при&nbsp;этом вечером в&nbsp;пустом кабинете накрывает мысль, что живёшь не&nbsp;свою жизнь. С&nbsp;этого начинают почти все, кто сюда приходит.</p>
 </div>
 </div>
 </div></section>
@@ -3506,7 +3601,7 @@ P["kak-prohodit/index.html"] = ("Как проходит обучение · Н�
 </div>
 </div></section>
 
-{FINCTA}
+{CTA_PRAKTIKA}
 """)
 
 # ================= ПРАКТИКИ =================
@@ -3637,7 +3732,7 @@ P["praktiki/index.html"] = ("Ежедневные практики · Насто
 </div>
 </div></section>
 
-{FINCTA}
+{CTA_PRAKTIKA}
 """)
 
 # ================= МАНИФЕСТ =================
@@ -3745,7 +3840,7 @@ P["manifest/index.html"] = ("Манифест школы · Настоящие �
 </div>
 </div></section>
 
-{FINCTA}
+{CTA_LYUDI}
 """)
 
 # ================= БЕЗОПАСНОСТЬ =================
@@ -3838,7 +3933,19 @@ P["bezopasnost/index.html"] = ("Безопасность и границы · Н
 </div>
 </div></section>
 
-{FINCTA}
+{CTA_SOMNENIYA}
+
+<section><div class="wrap">
+<div class="split">
+<div class="ph"><img src="/chizhovy2/images/w-put.jpg" alt="Глубину выбирает сам человек" loading="lazy"></div>
+<div>
+<p class="eyebrow">Про темп</p>
+<h2 style="font-size:1.9rem">Глубину выбирает сам человек</h2>
+<p>Никто не&nbsp;тянет в&nbsp;глубину силой и&nbsp;не&nbsp;вскрывает через сопротивление. Человек сам знает свой край, а&nbsp;вытащенное силой всё равно не&nbsp;удержится.</p>
+</div>
+</div>
+</div></section>
+
 """)
 
 # ================= СООБЩЕСТВО =================
@@ -3935,7 +4042,7 @@ P["soobshchestvo/index.html"] = ("Сообщество выпускников ·
 </div>
 </div></section>
 
-{FINCTA}
+{CTA_LYUDI}
 """)
 
 # ================= С ЧЕГО НАЧАТЬ =================
@@ -4127,7 +4234,7 @@ P["kontakty/index.html"] = ("Контакты · Настоящие отноше
 </div>
 </div></section>
 
-{FINCTA}
+{CTA_LYUDI}
 """)
 
 # ================= ТЕХНИКИ СЦЕНЫ =================
@@ -4218,7 +4325,7 @@ P["tehniki-sceny/index.html"] = ("Техники сцены · Настоящи�
 
 
 
-{FINCTA}
+{CTA_PRAKTIKA}
 """)
 
 # ================= ТРИ СОМНЕНИЯ =================
@@ -4310,7 +4417,7 @@ P["somneniya/index.html"] = ("Частые сомнения · Настоящи�
 <section style="padding:0"><div class="wrap">
 <div class="ph" style="aspect-ratio:16/7"><img src="/chizhovy2/images/somneniya-posle.jpg" alt="Осенняя дорожка в парке на закате" loading="lazy"></div>
 </div></section>
-{FINCTA}
+{CTA_SOMNENIYA}
 """)
 
 # ================= СТАТЬИ (ХАБ) =================
@@ -4439,6 +4546,6 @@ CSS_VER = _h.md5(CSS.encode()).hexdigest()[:8]
 for rel, (title, desc, active, body) in P.items():
     f = ROOT / rel
     f.parent.mkdir(parents=True, exist_ok=True)
-    f.write_text(btns_class(page(title, desc, active, body)), encoding="utf-8")
+    f.write_text(alternate_splits(btns_class(page(title, desc, active, body))), encoding="utf-8")
     n += 1
 print(f"OK v2: site.css + {n} страниц (иконки, диаграмма, таймлайн, мозаика, фавикон)")
