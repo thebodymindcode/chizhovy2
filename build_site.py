@@ -440,7 +440,7 @@ section > .narrow > .grid2:last-child{margin-bottom:0}
 
 /* Фото */
 .ph{border-radius:8px;overflow:hidden;border:1px solid var(--line)}
-.ph img{width:100%;height:100%;object-fit:cover}
+.ph img{width:100%;height:100%;object-fit:cover;height:auto;max-width:100%}
 .mosaic{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:210px;gap:12px}
 .mosaic .ph:first-child{grid-column:span 2;grid-row:span 2}
 .split{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center}
@@ -832,7 +832,7 @@ def typo(html: str) -> str:
             _FORCED_LIMIT[0] = None
     return _TEXTBOX_RE.sub(fix_box, html)
 
-def page(title, desc, active, body):
+def page(title, desc, active, body, rel_url=""):
     body = typo(body)
     return f"""<!doctype html>
 <html lang="ru">
@@ -841,6 +841,17 @@ def page(title, desc, active, body):
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{title}</title>
 <meta name="description" content="{desc}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Настоящие отношения">
+<meta property="og:title" content="{title}">
+<meta property="og:description" content="{desc}">
+<meta property="og:image" content="https://thebodymindcode.github.io/chizhovy2/images/site-hero.jpg">
+<meta property="og:image:width" content="1360">
+<meta property="og:image:height" content="768">
+<meta property="og:locale" content="ru_RU">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://thebodymindcode.github.io/chizhovy2/{rel_url}">
+<script type="application/ld+json">{{"@context":"https://schema.org","@type":"EducationalOrganization","name":"Настоящие отношения","alternateName":"Школа Алексея и Ирины Чижовых","url":"https://thebodymindcode.github.io/chizhovy2/","logo":"https://thebodymindcode.github.io/chizhovy2/images/site-hero.jpg","description":"Очный тренинг и три месяца сопровождения: выход из повторяющихся сценариев в отношениях, деле и состоянии.","founder":[{{"@type":"Person","name":"Алексей Чижов"}},{{"@type":"Person","name":"Ирина Чижова"}}],"areaServed":"RU","sameAs":["https://t.me/+LVptSH6Mt4hhYmFi"]}}</script>
 <link rel="icon" href="{FAVICON}">
 <link rel="stylesheet" href="/chizhovy2/site.css?v={CSS_VER}">
 </head>
@@ -949,9 +960,9 @@ P["index.html"] = ("Настоящие отношения · школа тран
 <div class="tm last"><div class="c">III</div><div><b>Создатель реальности</b><span>3 месяца в&nbsp;жизни, результаты&nbsp;остаются</span></div></div>
 </div>
 <div class="grid3" style="margin-top:26px">
-<div class="card white"><div class="ph" style="aspect-ratio:4/3;margin-bottom:18px"><img src="/chizhovy2/images/site-m1.jpg" alt="Утро, женщина пишет в дневник у окна" loading="lazy"></div><h3>I. Возвращение к&nbsp;себе</h3><p>Увидеть, что повторяется, во&nbsp;что веришь и&nbsp;откуда это взялось. Первый честный контакт с&nbsp;собой.</p><p style="margin-top:12px"><a href="/chizhovy2/modul-1/">Про первый модуль</a></p></div>
-<div class="card white"><div class="ph" style="aspect-ratio:4/3;margin-bottom:18px"><img src="/chizhovy2/images/real/real-07.jpg" alt="Группа тренинга в тёплом зале" loading="lazy"></div><h3>II. Внутренняя свобода</h3><p>Страх, вина, обида, чужие ожидания. Меняешь решения, которые управляли тобой годами.</p><p style="margin-top:12px"><a href="/chizhovy2/modul-2/">Про второй модуль</a></p></div>
-<div class="card white"><div class="ph" style="aspect-ratio:4/3;margin-bottom:18px"><img src="/chizhovy2/images/real/real-10.jpg" alt="Команда выпуска тренинга" loading="lazy"></div><h3>III. Создатель реальности</h3><p>Команда, еженедельные встречи, новые действия и&nbsp;результаты, которые остаются.</p><p style="margin-top:12px"><a href="/chizhovy2/marafon/">Про Марафон</a></p></div>
+<div class="card white"><div class="ph" style="aspect-ratio:4/3;margin-bottom:18px"><img src="/chizhovy2/images/site-m1.jpg" alt="Утро, женщина пишет в дневник у окна" loading="lazy" width="1168" height="880"></div><h3>I. Возвращение к&nbsp;себе</h3><p>Увидеть, что повторяется, во&nbsp;что веришь и&nbsp;откуда это взялось. Первый честный контакт с&nbsp;собой.</p><p style="margin-top:12px"><a href="/chizhovy2/modul-1/">Про первый модуль</a></p></div>
+<div class="card white"><div class="ph" style="aspect-ratio:4/3;margin-bottom:18px"><img src="/chizhovy2/images/real/real-07.jpg" alt="Группа тренинга в тёплом зале" loading="lazy" width="1280" height="960"></div><h3>II. Внутренняя свобода</h3><p>Страх, вина, обида, чужие ожидания. Меняешь решения, которые управляли тобой годами.</p><p style="margin-top:12px"><a href="/chizhovy2/modul-2/">Про второй модуль</a></p></div>
+<div class="card white"><div class="ph" style="aspect-ratio:4/3;margin-bottom:18px"><img src="/chizhovy2/images/real/real-10.jpg" alt="Команда выпуска тренинга" loading="lazy" width="1280" height="960"></div><h3>III. Создатель реальности</h3><p>Команда, еженедельные встречи, новые действия и&nbsp;результаты, которые остаются.</p><p style="margin-top:12px"><a href="/chizhovy2/marafon/">Про Марафон</a></p></div>
 </div>
 </div></section>
 
@@ -973,12 +984,12 @@ P["index.html"] = ("Настоящие отношения · школа тран
 <h2>Наши группы</h2>
 <p class="sub">Это живые выпуски школы. Малые группы, очная работа, люди, которых мы&nbsp;знаем по&nbsp;именам и&nbsp;историям.</p>
 <div class="mosaic" style="margin-top:28px">
-<div class="ph"><img src="/chizhovy2/images/real/real-05.jpg" alt="Выпуск группы тренинга" loading="lazy"></div>
-<div class="ph"><img src="/chizhovy2/images/real/real-06.jpg" alt="Группа тренинга в зале" loading="lazy"></div>
-<div class="ph"><img src="/chizhovy2/images/real/real-01.jpg" alt="Группа у камина с сертификатами" loading="lazy"></div>
-<div class="ph"><img src="/chizhovy2/images/real/real-11.jpg" alt="Команда участников" loading="lazy"></div>
-<div class="ph"><img src="/chizhovy2/images/real/real-13.jpg" alt="Выпуск модуля" loading="lazy"></div>
-<div class="ph"><img src="/chizhovy2/images/real/real-04.jpg" alt="Работа в зале" loading="lazy"></div>
+<div class="ph"><img src="/chizhovy2/images/real/real-05.jpg" alt="Выпуск группы тренинга" loading="lazy" width="1280" height="960"></div>
+<div class="ph"><img src="/chizhovy2/images/real/real-06.jpg" alt="Группа тренинга в зале" loading="lazy" width="1280" height="960"></div>
+<div class="ph"><img src="/chizhovy2/images/real/real-01.jpg" alt="Группа у камина с сертификатами" loading="lazy" width="1280" height="960"></div>
+<div class="ph"><img src="/chizhovy2/images/real/real-11.jpg" alt="Команда участников" loading="lazy" width="1280" height="960"></div>
+<div class="ph"><img src="/chizhovy2/images/real/real-13.jpg" alt="Выпуск модуля" loading="lazy" width="1280" height="960"></div>
+<div class="ph"><img src="/chizhovy2/images/real/real-04.jpg" alt="Работа в зале" loading="lazy" width="1280" height="960"></div>
 </div>
 </div></section>
 
@@ -997,7 +1008,7 @@ P["index.html"] = ("Настоящие отношения · школа тран
 <p>Школу ведут Алексей и&nbsp;Ирина. Вместе 17&nbsp;лет: быт, кризисы и&nbsp;выход из&nbsp;них прошли сами.</p>
 <p class="btns" style="margin-top:20px"><a class="btn btn-ghost" href="/chizhovy2/vedushchie/">Познакомиться</a></p>
 </div>
-<div class="ph"><img src="/chizhovy2/images/real/portret.jpg" alt="Алексей и Ирина Чижовы, портрет" loading="lazy"></div>
+<div class="ph"><img src="/chizhovy2/images/real/portret.jpg" alt="Алексей и Ирина Чижовы, портрет" loading="lazy" width="640" height="640"></div>
 </div>
 </div></section>
 
@@ -1086,7 +1097,7 @@ P["metod/index.html"] = ("Метод школы · Настоящие отнош
 <h2>Психодрама: старое решение меняют прямо в&nbsp;сцене</h2>
 <p class="sub">Метод психиатра Якоба Морено. Сто лет практики по&nbsp;всему миру. Человек не&nbsp;рассказывает о&nbsp;ситуации, а&nbsp;возвращается в неё и&nbsp;меняет решение прямо внутри сцены.</p>
 <div class="split" style="margin-top:30px">
-<div class="ph"><img src="/chizhovy2/images/metod-scena.jpg" alt="Сцена психодрамы: участник в центре, группа вокруг" loading="lazy"></div>
+<div class="ph"><img src="/chizhovy2/images/metod-scena.jpg" alt="Сцена психодрамы: участник в центре, группа вокруг" loading="lazy" width="1360" height="768"></div>
 <div>
 <p>Со&nbsp;стороны это похоже на&nbsp;живой театр без сценария. Изнутри это самая точная работа, которую мы&nbsp;знаем: сцена достаёт запись целиком, с&nbsp;эмоцией, телом и&nbsp;тем самым решением.</p>
 <p>Морено называл результат спонтанностью: способностью дать новый ответ на&nbsp;старую ситуацию. По-нашему: момент, когда пульт возвращается к&nbsp;хозяину.</p>
@@ -1110,7 +1121,7 @@ P["metod/index.html"] = ("Метод школы · Настоящие отнош
 <p>Иногда сцена строится вокруг пустого стула. На&nbsp;нём сидит тот, с&nbsp;кем так и не&nbsp;поговорил: отец, бывший, ты&nbsp;сам из&nbsp;прошлого. Разговор случается сейчас, и&nbsp;тело отпускает то, что держало.</p>
 <p>После таких процессов участники говорят: «снял рюкзак», «стало легче дышать». Это буквальные ощущения: напряжение, которое тело держало годами, находит выход.</p>
 </div>
-<div class="ph"><img src="/chizhovy2/images/metod-stul.jpg" alt="Пустой стул в луче тёплого света" loading="lazy"></div>
+<div class="ph"><img src="/chizhovy2/images/metod-stul.jpg" alt="Пустой стул в луче тёплого света" loading="lazy" width="1360" height="768"></div>
 </div>
 </div></section>
 
@@ -1140,7 +1151,7 @@ P["metod/index.html"] = ("Метод школы · Настоящие отнош
 
 <section><div class="wrap">
 <div class="split" style="margin-bottom:44px">
-<div class="ph"><img src="/chizhovy2/images/ob-zal-krug.jpg" alt="Зал со стульями по кругу" loading="lazy"></div>
+<div class="ph"><img src="/chizhovy2/images/ob-zal-krug.jpg" alt="Зал со стульями по кругу" loading="lazy" width="1360" height="768"></div>
 <div>
 <p class="eyebrow">Формат работы</p>
 <h2 style="font-size:1.9rem">Как устроен зал</h2>
@@ -1165,7 +1176,7 @@ P["metod/index.html"] = ("Метод школы · Настоящие отнош
 
 <section><div class="wrap">
 <div class="split">
-<div class="ph"><img src="/chizhovy2/images/ob-okno.jpg" alt="Вечер, который повторяется" loading="lazy"></div>
+<div class="ph"><img src="/chizhovy2/images/ob-okno.jpg" alt="Вечер, который повторяется" loading="lazy" width="1360" height="768"></div>
 <div>
 <p class="eyebrow">Почему это не&nbsp;лечится разговором</p>
 <h2 style="font-size:1.9rem">Знакомый вечер</h2>
@@ -1186,9 +1197,9 @@ P["programma/index.html"] = ("Программа · Настоящие отно�
 <section><div class="wrap">
 <div class="timeline">{timeline_svg()}</div>
 <div class="grid3" style="margin-top:26px">
-<div class="card white"><div class="ph" style="aspect-ratio:4/3;margin-bottom:18px"><img src="/chizhovy2/images/site-m1.jpg" alt="Модуль I" loading="lazy"></div><p class="eyebrow" style="margin-bottom:6px">Модуль I · 2,5 дня</p><h3>Возвращение к&nbsp;себе</h3><p>Видишь свои повторяющиеся паттерны, установки и их&nbsp;источники. Результат: осознанность и&nbsp;первый честный контакт с&nbsp;собой.</p><p style="margin-top:12px"><a href="/chizhovy2/modul-1/">Подробнее</a></p></div>
-<div class="card white"><div class="ph" style="aspect-ratio:4/3;margin-bottom:18px"><img src="/chizhovy2/images/real/real-07.jpg" alt="Модуль II" loading="lazy"></div><p class="eyebrow" style="margin-bottom:6px">Модуль II · 5 дней</p><h3>Внутренняя свобода</h3><p>Работа со&nbsp;страхом, виной, обидой и&nbsp;зависимостью от&nbsp;чужого мнения. Дальше приходят сила и&nbsp;спокойствие.</p><p style="margin-top:12px"><a href="/chizhovy2/modul-2/">Подробнее</a></p></div>
-<div class="card white"><div class="ph" style="aspect-ratio:4/3;margin-bottom:18px"><img src="/chizhovy2/images/real/real-13.jpg" alt="Модуль III" loading="lazy"></div><p class="eyebrow" style="margin-bottom:6px">Модуль III · 3 месяца</p><h3>Создатель реальности</h3><p>Три месяца в&nbsp;обычной жизни: команда, ежедневная практика, результаты в&nbsp;деле и&nbsp;отношениях. Это и&nbsp;есть Марафон.</p><p style="margin-top:12px"><a href="/chizhovy2/marafon/">Подробнее</a></p></div>
+<div class="card white"><div class="ph" style="aspect-ratio:4/3;margin-bottom:18px"><img src="/chizhovy2/images/site-m1.jpg" alt="Модуль I" loading="lazy" width="1168" height="880"></div><p class="eyebrow" style="margin-bottom:6px">Модуль I · 2,5 дня</p><h3>Возвращение к&nbsp;себе</h3><p>Видишь свои повторяющиеся паттерны, установки и их&nbsp;источники. Результат: осознанность и&nbsp;первый честный контакт с&nbsp;собой.</p><p style="margin-top:12px"><a href="/chizhovy2/modul-1/">Подробнее</a></p></div>
+<div class="card white"><div class="ph" style="aspect-ratio:4/3;margin-bottom:18px"><img src="/chizhovy2/images/real/real-07.jpg" alt="Модуль II" loading="lazy" width="1280" height="960"></div><p class="eyebrow" style="margin-bottom:6px">Модуль II · 5 дней</p><h3>Внутренняя свобода</h3><p>Работа со&nbsp;страхом, виной, обидой и&nbsp;зависимостью от&nbsp;чужого мнения. Дальше приходят сила и&nbsp;спокойствие.</p><p style="margin-top:12px"><a href="/chizhovy2/modul-2/">Подробнее</a></p></div>
+<div class="card white"><div class="ph" style="aspect-ratio:4/3;margin-bottom:18px"><img src="/chizhovy2/images/real/real-13.jpg" alt="Модуль III" loading="lazy" width="1280" height="960"></div><p class="eyebrow" style="margin-bottom:6px">Модуль III · 3 месяца</p><h3>Создатель реальности</h3><p>Три месяца в&nbsp;обычной жизни: команда, ежедневная практика, результаты в&nbsp;деле и&nbsp;отношениях. Это и&nbsp;есть Марафон.</p><p style="margin-top:12px"><a href="/chizhovy2/marafon/">Подробнее</a></p></div>
 </div>
 </div></section>
 
@@ -1236,7 +1247,7 @@ P["programma/index.html"] = ("Программа · Настоящие отно�
 
 <section><div class="wrap">
 <div class="split">
-<div class="ph"><img src="/chizhovy2/images/ob-lestnica.jpg" alt="Три ступени старой лестницы" loading="lazy"></div>
+<div class="ph"><img src="/chizhovy2/images/ob-lestnica.jpg" alt="Три ступени старой лестницы" loading="lazy" width="1360" height="768"></div>
 <div>
 <p class="eyebrow">Чем этот путь отличается</p>
 <h2 style="font-size:1.9rem">Почему три ступени, а&nbsp;не&nbsp;один интенсив</h2>
@@ -1261,7 +1272,7 @@ P["programma/index.html"] = ("Программа · Настоящие отно�
 
 <section><div class="wrap">
 <div class="split">
-<div class="ph"><img src="/chizhovy2/images/q-lestnica2.jpg" alt="Ступени идут снизу вверх" loading="lazy"></div>
+<div class="ph"><img src="/chizhovy2/images/q-lestnica2.jpg" alt="Ступени идут снизу вверх" loading="lazy" width="1360" height="768"></div>
 <div>
 <p class="eyebrow">Почему по&nbsp;порядку</p>
 <h2 style="font-size:1.9rem">Ступени идут снизу вверх</h2>
@@ -1339,7 +1350,7 @@ P["modul-1/index.html"] = ("Модуль I. Возвращение к себе �
 
 <section><div class="wrap">
 <div class="split">
-<div class="ph"><img src="/chizhovy2/images/ob-doroga.jpg" alt="Дорога через поля на рассвете" loading="lazy"></div>
+<div class="ph"><img src="/chizhovy2/images/ob-doroga.jpg" alt="Дорога через поля на рассвете" loading="lazy" width="1360" height="768"></div>
 <div>
 <p class="eyebrow">После модуля</p>
 <h2 style="font-size:1.9rem">Что происходит в&nbsp;первые недели</h2>
@@ -1387,7 +1398,7 @@ P["modul-1/index.html"] = ("Модуль I. Возвращение к себе �
 
 <section><div class="wrap">
 <div class="split">
-<div class="ph"><img src="/chizhovy2/images/ob-telefon.jpg" alt="Телефоны на входе" loading="lazy"></div>
+<div class="ph"><img src="/chizhovy2/images/ob-telefon.jpg" alt="Телефоны на входе" loading="lazy" width="1360" height="768"></div>
 <div>
 <p class="eyebrow">Правило зала</p>
 <h2 style="font-size:1.9rem">Телефоны на&nbsp;входе</h2>
@@ -1405,7 +1416,7 @@ P["modul-1/index.html"] = ("Модуль I. Возвращение к себе �
 
 <section><div class="wrap">
 <div class="split">
-<div class="ph"><img src="/chizhovy2/images/ob-tetrad.jpg" alt="Тетрадь, с которой всё начинается" loading="lazy"></div>
+<div class="ph"><img src="/chizhovy2/images/ob-tetrad.jpg" alt="Тетрадь, с которой всё начинается" loading="lazy" width="1360" height="768"></div>
 <div>
 <p class="eyebrow">Первые записи</p>
 <h2 style="font-size:1.9rem">Тетрадь и&nbsp;первые записи</h2>
@@ -1478,7 +1489,7 @@ P["modul-2/index.html"] = ("Модуль II. Внутренняя свобода
 
 <section><div class="wrap">
 <div class="split">
-<div class="ph"><img src="/chizhovy2/images/ob-zerkalo.jpg" alt="Зеркало в тёплом коридоре" loading="lazy"></div>
+<div class="ph"><img src="/chizhovy2/images/ob-zerkalo.jpg" alt="Зеркало в тёплом коридоре" loading="lazy" width="1360" height="768"></div>
 <div>
 <p class="eyebrow">Что происходит с&nbsp;группой</p>
 <h2 style="font-size:1.9rem">Чужая сцена работает как&nbsp;своя</h2>
@@ -1535,7 +1546,7 @@ P["modul-2/index.html"] = ("Модуль II. Внутренняя свобода
 
 <section><div class="wrap">
 <div class="split">
-<div class="ph"><img src="/chizhovy2/images/ob-stul.jpg" alt="Тот самый пустой стул" loading="lazy"></div>
+<div class="ph"><img src="/chizhovy2/images/ob-stul.jpg" alt="Тот самый пустой стул" loading="lazy" width="1360" height="768"></div>
 <div>
 <p class="eyebrow">Главный инструмент</p>
 <h2 style="font-size:1.9rem">Тот самый пустой стул</h2>
@@ -1637,7 +1648,7 @@ P["marafon/index.html"] = ("Модуль III. Создатель реально�
 
 <section><div class="wrap">
 <div class="split">
-<div class="ph"><img src="/chizhovy2/images/ob-utro.jpg" alt="Пять минут, которые задают день" loading="lazy"></div>
+<div class="ph"><img src="/chizhovy2/images/ob-utro.jpg" alt="Пять минут, которые задают день" loading="lazy" width="1360" height="768"></div>
 <div>
 <p class="eyebrow">Каждое утро</p>
 <h2 style="font-size:1.9rem">Пять минут утром</h2>
@@ -1655,17 +1666,17 @@ P["marafon/index.html"] = ("Модуль III. Создатель реально�
 <section><div class="wrap">
 <p class="eyebrow">Выпуски Марафона</p>
 <div class="mosaic">
-<div class="ph"><img src="/chizhovy2/images/real/real-10.jpg" alt="Команда Марафона" loading="lazy"></div>
-<div class="ph"><img src="/chizhovy2/images/real/real-11.jpg" alt="Выпуск Марафона" loading="lazy"></div>
-<div class="ph"><img src="/chizhovy2/images/real/real-13.jpg" alt="Финал модуля" loading="lazy"></div>
-<div class="ph"><img src="/chizhovy2/images/real/real-08.jpg" alt="Разбор в кругу" loading="lazy"></div>
+<div class="ph"><img src="/chizhovy2/images/real/real-10.jpg" alt="Команда Марафона" loading="lazy" width="1280" height="960"></div>
+<div class="ph"><img src="/chizhovy2/images/real/real-11.jpg" alt="Выпуск Марафона" loading="lazy" width="1280" height="960"></div>
+<div class="ph"><img src="/chizhovy2/images/real/real-13.jpg" alt="Финал модуля" loading="lazy" width="1280" height="960"></div>
+<div class="ph"><img src="/chizhovy2/images/real/real-08.jpg" alt="Разбор в кругу" loading="lazy" width="960" height="1280"></div>
 </div>
 <p class="btns" style="margin-top:30px"><a class="btn btn-wine" href="/chizhovy2/sessiya/">Обсудить участие на&nbsp;собеседовании</a></p>
 </div></section>
 
 <section><div class="wrap">
 <div class="split">
-<div class="ph"><img src="/chizhovy2/images/ob-tropa.jpg" alt="Дорога длиннее, чем кажется" loading="lazy"></div>
+<div class="ph"><img src="/chizhovy2/images/ob-tropa.jpg" alt="Дорога длиннее, чем кажется" loading="lazy" width="1360" height="768"></div>
 <div>
 <p class="eyebrow">Три месяца</p>
 <h2 style="font-size:1.9rem">Дорога длиннее, чем кажется</h2>
@@ -1769,7 +1780,7 @@ P["para/index.html"] = ("Тренинг для пар · Настоящие от
 
 <section><div class="wrap">
 <div class="split">
-<div class="ph"><img src="/chizhovy2/images/p-para.jpg" alt="Утро на двоих" loading="lazy"></div>
+<div class="ph"><img src="/chizhovy2/images/p-para.jpg" alt="Утро на двоих" loading="lazy" width="1360" height="768"></div>
 <div>
 <p class="eyebrow">Для пар</p>
 <h2 style="font-size:1.9rem">Утро на&nbsp;двоих</h2>
@@ -1781,7 +1792,7 @@ P["para/index.html"] = ("Тренинг для пар · Настоящие от
 
 <section><div class="wrap">
 <div class="split">
-<div class="ph"><img src="/chizhovy2/images/w-kuhnya.jpg" alt="Вечер вдвоём и тишина" loading="lazy"></div>
+<div class="ph"><img src="/chizhovy2/images/w-kuhnya.jpg" alt="Вечер вдвоём и тишина" loading="lazy" width="1360" height="768"></div>
 <div>
 <p class="eyebrow">Про что это</p>
 <h2 style="font-size:1.9rem">Вечер вдвоём и&nbsp;тишина</h2>
@@ -1858,7 +1869,7 @@ P["vedushchie/index.html"] = ("Алексей и Ирина Чижовы · На
 <p class="eyebrow">Дисциплина это часть метода</p>
 <h2>Говорят только о&nbsp;том, что&nbsp;прошли сами</h2>
 <div class="split" style="margin-top:28px">
-<div class="ph"><img src="/chizhovy2/images/real/zabeg-selfi.jpg" alt="Алексей и Ирина на набережной после старта" loading="lazy"></div>
+<div class="ph"><img src="/chizhovy2/images/real/zabeg-selfi.jpg" alt="Алексей и Ирина на набережной после старта" loading="lazy" width="1280" height="960"></div>
 <div>
 <p>Алексей: триатлет, финишер IronMan&nbsp;70.3. Не&nbsp;ради медалей. Длинная дистанция каждый день проверяет то, чему школа учит в&nbsp;зале. На&nbsp;трассе это видно буквально: сначала состояние, решения принимаются из&nbsp;спокойствия, а&nbsp;доходит тот, кто играет в&nbsp;долгую.</p>
 <p>Команды школы выходят на&nbsp;забеги вместе: тело быстро выдаёт, где ты&nbsp;себя обманываешь, и&nbsp;честно радуется, когда ты&nbsp;настоящий.</p>
@@ -1949,9 +1960,9 @@ P["otzyvy/index.html"] = ("Истории учеников · Настоящие
 
 <section><div class="wrap">
 <div class="mosaic">
-<div class="ph"><img src="/chizhovy2/images/real/real-03.jpg" alt="Группа выпуска" loading="lazy"></div>
-<div class="ph"><img src="/chizhovy2/images/real/real-09.jpg" alt="Участники тренинга" loading="lazy"></div>
-<div class="ph"><img src="/chizhovy2/images/real/real-12.jpg" alt="Команда на забеге" loading="lazy"></div>
+<div class="ph"><img src="/chizhovy2/images/real/real-03.jpg" alt="Группа выпуска" loading="lazy" width="1280" height="960"></div>
+<div class="ph"><img src="/chizhovy2/images/real/real-09.jpg" alt="Участники тренинга" loading="lazy" width="1280" height="960"></div>
+<div class="ph"><img src="/chizhovy2/images/real/real-12.jpg" alt="Команда на забеге" loading="lazy" width="960" height="1280"></div>
 </div>
 <p class="btns" style="margin-top:30px"><a class="btn btn-wine" href="/chizhovy2/sessiya/">Начать свою историю</a></p>
 </div></section>
@@ -1973,7 +1984,7 @@ P["otzyvy/index.html"] = ("Истории учеников · Настоящие
 
 <section><div class="wrap">
 <div class="split">
-<div class="ph"><img src="/chizhovy2/images/p-otzyvy.jpg" alt="Записи и письма учеников" loading="lazy"></div>
+<div class="ph"><img src="/chizhovy2/images/p-otzyvy.jpg" alt="Записи и письма учеников" loading="lazy" width="1360" height="768"></div>
 <div>
 <p class="eyebrow">Откуда эти слова</p>
 <h2 style="font-size:1.9rem">Записи и&nbsp;письма учеников</h2>
@@ -1997,7 +2008,7 @@ P["otzyvy/index.html"] = ("Истории учеников · Настоящие
 
 <section><div class="wrap">
 <div class="split">
-<div class="ph"><img src="/chizhovy2/images/q-otzyv.jpg" alt="Слова берутся из первых рук" loading="lazy"></div>
+<div class="ph"><img src="/chizhovy2/images/q-otzyv.jpg" alt="Слова берутся из первых рук" loading="lazy" width="1360" height="768"></div>
 <div>
 <p class="eyebrow">Как мы&nbsp;их&nbsp;собираем</p>
 <h2 style="font-size:1.9rem">Слова берутся из&nbsp;первых рук</h2>
@@ -2048,7 +2059,7 @@ P["voprosy/index.html"] = ("Вопросы и ответы · Настоящие
 
 <section><div class="wrap">
 <div class="split">
-<div class="ph"><img src="/chizhovy2/images/p-voprosy.jpg" alt="Спрашивают почти все" loading="lazy"></div>
+<div class="ph"><img src="/chizhovy2/images/p-voprosy.jpg" alt="Спрашивают почти все" loading="lazy" width="1360" height="768"></div>
 <div>
 <p class="eyebrow">Перед стартом</p>
 <h2 style="font-size:1.9rem">Спрашивают почти все</h2>
@@ -2072,7 +2083,7 @@ P["voprosy/index.html"] = ("Вопросы и ответы · Настоящие
 
 <section><div class="wrap">
 <div class="split">
-<div class="ph"><img src="/chizhovy2/images/q-vopros.jpg" alt="Спроси прямо" loading="lazy"></div>
+<div class="ph"><img src="/chizhovy2/images/q-vopros.jpg" alt="Спроси прямо" loading="lazy" width="1360" height="768"></div>
 <div>
 <p class="eyebrow">Если вопрос остался</p>
 <h2 style="font-size:1.9rem">Спроси прямо</h2>
@@ -2173,7 +2184,7 @@ P["sessiya/index.html"] = ("Собеседование в школу · Наст
 
 <section><div class="wrap">
 <div class="split">
-<div class="ph"><img src="/chizhovy2/images/real/real-01.jpg" alt="Группа школы" loading="lazy"></div>
+<div class="ph"><img src="/chizhovy2/images/real/real-01.jpg" alt="Группа школы" loading="lazy" width="1280" height="960"></div>
 <div>
 <p class="eyebrow">К чему ведёт разговор</p>
 <h2 style="font-size:1.9rem">Что будет дальше</h2>
@@ -2185,7 +2196,7 @@ P["sessiya/index.html"] = ("Собеседование в школу · Наст
 
 <section><div class="wrap">
 <div class="split">
-<div class="ph"><img src="/chizhovy2/images/ob-chashki.jpg" alt="Разговор на двоих" loading="lazy"></div>
+<div class="ph"><img src="/chizhovy2/images/ob-chashki.jpg" alt="Разговор на двоих" loading="lazy" width="1360" height="768"></div>
 <div>
 <p class="eyebrow">Как это выглядит</p>
 <h2 style="font-size:1.9rem">Разговор на&nbsp;двоих</h2>
@@ -2397,7 +2408,7 @@ P["istoki/index.html"] = ("Истоки метода · Настоящие от�
 
 <section><div class="wrap">
 <div class="split">
-<div class="ph"><img src="/chizhovy2/images/p-istoki.jpg" alt="Как они сошлись в один метод" loading="lazy"></div>
+<div class="ph"><img src="/chizhovy2/images/p-istoki.jpg" alt="Как они сошлись в один метод" loading="lazy" width="1360" height="768"></div>
 <div>
 <p class="eyebrow">Пять источников</p>
 <h2 style="font-size:1.9rem">Как они сошлись в&nbsp;один метод</h2>
@@ -2409,7 +2420,7 @@ P["istoki/index.html"] = ("Истоки метода · Настоящие от�
 
 <section><div class="wrap">
 <div class="split">
-<div class="ph"><img src="/chizhovy2/images/q-lodka.jpg" alt="Пять источников, одна работа" loading="lazy"></div>
+<div class="ph"><img src="/chizhovy2/images/q-lodka.jpg" alt="Пять источников, одна работа" loading="lazy" width="1360" height="768"></div>
 <div>
 <p class="eyebrow">Общий вывод</p>
 <h2 style="font-size:1.9rem">Пять источников, одна работа</h2>
@@ -2490,7 +2501,7 @@ P["istoki/moreno-psihodrama/index.html"] = ("Якоб Морено и психо
 
 <section><div class="wrap">
 <div class="split">
-<div class="ph"><img src="/chizhovy2/images/p-moreno.jpg" alt="Сцена вместо рассказа" loading="lazy"></div>
+<div class="ph"><img src="/chizhovy2/images/p-moreno.jpg" alt="Сцена вместо рассказа" loading="lazy" width="1360" height="768"></div>
 <div>
 <p class="eyebrow">Психодрама</p>
 <h2 style="font-size:1.9rem">Главная находка Морено</h2>
@@ -2515,7 +2526,7 @@ P["istoki/moreno-psihodrama/index.html"] = ("Якоб Морено и психо
 
 <section><div class="wrap">
 <div class="split">
-<div class="ph"><img src="/chizhovy2/images/w-zerkalo2.jpg" alt="Увидеть свою сцену со стороны" loading="lazy"></div>
+<div class="ph"><img src="/chizhovy2/images/w-zerkalo2.jpg" alt="Увидеть свою сцену со стороны" loading="lazy" width="1360" height="768"></div>
 <div>
 <p class="eyebrow">Что даёт зеркало</p>
 <h2 style="font-size:1.9rem">Увидеть свою сцену со&nbsp;стороны</h2>
@@ -2582,7 +2593,7 @@ P["istoki/zeland-transerfing/index.html"] = ("Вадим Зеланд и тра�
 
 <section><div class="wrap">
 <div class="split">
-<div class="ph"><img src="/chizhovy2/images/p-zeland.jpg" alt="Маятник, который раскачивает" loading="lazy"></div>
+<div class="ph"><img src="/chizhovy2/images/p-zeland.jpg" alt="Маятник, который раскачивает" loading="lazy" width="1360" height="768"></div>
 <div>
 <p class="eyebrow">Главная метафора</p>
 <h2 style="font-size:1.9rem">Маятник, который раскачивает</h2>
@@ -2670,7 +2681,7 @@ P["istoki/est-transformaciya/index.html"] = ("est и «Трансформаци�
 
 <section><div class="wrap">
 <div class="split">
-<div class="ph"><img src="/chizhovy2/images/p-est.jpg" alt="Зал, где всё началось" loading="lazy"></div>
+<div class="ph"><img src="/chizhovy2/images/p-est.jpg" alt="Зал, где всё началось" loading="lazy" width="1360" height="768"></div>
 <div>
 <p class="eyebrow">Формат</p>
 <h2 style="font-size:1.9rem">Зал, где всё началось</h2>
@@ -2768,7 +2779,7 @@ P["istoki/goddard/index.html"] = ("Невилл Годдард · Истоки �
 
 <section><div class="wrap">
 <div class="split">
-<div class="ph"><img src="/chizhovy2/images/p-goddard.jpg" alt="Состояние вечером" loading="lazy"></div>
+<div class="ph"><img src="/chizhovy2/images/p-goddard.jpg" alt="Состояние вечером" loading="lazy" width="1360" height="768"></div>
 <div>
 <p class="eyebrow">Годдард</p>
 <h2 style="font-size:1.9rem">Состояние вечером</h2>
@@ -2846,7 +2857,7 @@ P["istoki/nauka/index.html"] = ("Наука за методом · Истоки 
 
 <section><div class="wrap">
 <div class="split">
-<div class="ph"><img src="/chizhovy2/images/p-nauka.jpg" alt="Что говорят исследования" loading="lazy"></div>
+<div class="ph"><img src="/chizhovy2/images/p-nauka.jpg" alt="Что говорят исследования" loading="lazy" width="1360" height="768"></div>
 <div>
 <p class="eyebrow">Проверка</p>
 <h2 style="font-size:1.9rem">Что говорят исследования</h2>
@@ -2967,7 +2978,7 @@ P["istorii/index.html"] = ("Истории учеников · Настоящи�
 
 <section><div class="wrap">
 <div class="split">
-<div class="ph"><img src="/chizhovy2/images/p-istorii.jpg" alt="Люди, а не кейсы" loading="lazy"></div>
+<div class="ph"><img src="/chizhovy2/images/p-istorii.jpg" alt="Люди, а не кейсы" loading="lazy" width="1360" height="768"></div>
 <div>
 <p class="eyebrow">Живые истории</p>
 <h2 style="font-size:1.9rem">Люди, а&nbsp;не&nbsp;кейсы</h2>
@@ -2979,7 +2990,7 @@ P["istorii/index.html"] = ("Истории учеников · Настоящи�
 
 <section><div class="wrap">
 <div class="split">
-<div class="ph"><img src="/chizhovy2/images/w-pismo2.jpg" alt="Со слов самих учеников" loading="lazy"></div>
+<div class="ph"><img src="/chizhovy2/images/w-pismo2.jpg" alt="Со слов самих учеников" loading="lazy" width="1360" height="768"></div>
 <div>
 <p class="eyebrow">Как мы&nbsp;собираем истории</p>
 <h2 style="font-size:1.9rem">Со слов самих учеников</h2>
@@ -3083,7 +3094,7 @@ P["istorii/predprinimatel/index.html"] = ("Предприниматель: за�
 
 <section><div class="wrap">
 <div class="split">
-<div class="ph"><img src="/chizhovy2/images/q-restart.jpg" alt="Заново, но по другой дороге" loading="lazy"></div>
+<div class="ph"><img src="/chizhovy2/images/q-restart.jpg" alt="Заново, но по другой дороге" loading="lazy" width="1360" height="768"></div>
 <div>
 <p class="eyebrow">Где он&nbsp;сейчас</p>
 <h2 style="font-size:1.9rem">Заново, но&nbsp;по&nbsp;другой дороге</h2>
@@ -3124,9 +3135,9 @@ P["istorii/komanda-mir/index.html"] = ("Девяносто дней команд
 
 <section><div class="wrap">
 <div class="mosaic">
-<div class="ph"><img src="/chizhovy2/images/real/real-10.jpg" alt="Команда Марафона" loading="lazy"></div>
-<div class="ph"><img src="/chizhovy2/images/real/real-11.jpg" alt="Участники команды" loading="lazy"></div>
-<div class="ph"><img src="/chizhovy2/images/real/real-12.jpg" alt="Команда на забеге" loading="lazy"></div>
+<div class="ph"><img src="/chizhovy2/images/real/real-10.jpg" alt="Команда Марафона" loading="lazy" width="1280" height="960"></div>
+<div class="ph"><img src="/chizhovy2/images/real/real-11.jpg" alt="Участники команды" loading="lazy" width="1280" height="960"></div>
+<div class="ph"><img src="/chizhovy2/images/real/real-12.jpg" alt="Команда на забеге" loading="lazy" width="960" height="1280"></div>
 </div>
 <p class="btns" style="margin-top:30px"><a class="btn btn-wine" href="/chizhovy2/marafon/">Как устроен Марафон</a> <a class="btn btn-ghost" href="/chizhovy2/sessiya/" style="margin-left:8px">Записаться на&nbsp;собеседование</a></p>
 </div></section>
@@ -3252,7 +3263,7 @@ P["slovar/index.html"] = ("Словарь школы · Настоящие от�
 
 <section><div class="wrap">
 <div class="split">
-<div class="ph"><img src="/chizhovy2/images/ob-zapis.jpg" alt="Рукописные страницы на столе" loading="lazy"></div>
+<div class="ph"><img src="/chizhovy2/images/ob-zapis.jpg" alt="Рукописные страницы на столе" loading="lazy" width="1360" height="768"></div>
 <div>
 <p class="eyebrow">Откуда взялись эти слова</p>
 <h2 style="font-size:1.9rem">Откуда взялись эти слова</h2>
@@ -3368,7 +3379,7 @@ P["dlya-predprinimatelej/index.html"] = ("Для предпринимателе�
 
 <section><div class="wrap">
 <div class="split">
-<div class="ph"><img src="/chizhovy2/images/p-biznes.jpg" alt="Кабинет после всех" loading="lazy"></div>
+<div class="ph"><img src="/chizhovy2/images/p-biznes.jpg" alt="Кабинет после всех" loading="lazy" width="1360" height="768"></div>
 <div>
 <p class="eyebrow">Про что это</p>
 <h2 style="font-size:1.9rem">Кабинет после всех</h2>
@@ -3380,7 +3391,7 @@ P["dlya-predprinimatelej/index.html"] = ("Для предпринимателе�
 
 <section><div class="wrap">
 <div class="split">
-<div class="ph"><img src="/chizhovy2/images/w-kabinet.jpg" alt="Всё работает, а лёгкости нет" loading="lazy"></div>
+<div class="ph"><img src="/chizhovy2/images/w-kabinet.jpg" alt="Всё работает, а лёгкости нет" loading="lazy" width="1360" height="768"></div>
 <div>
 <p class="eyebrow">Знакомая картина</p>
 <h2 style="font-size:1.9rem">Всё работает, а&nbsp;лёгкости нет</h2>
@@ -3468,7 +3479,7 @@ P["dlya-zhenshchin/index.html"] = ("Для женщин · Настоящие о
 
 <section><div class="wrap">
 <div class="split">
-<div class="ph"><img src="/chizhovy2/images/p-zhenshchina.jpg" alt="Вечер, когда всё уже сказано" loading="lazy"></div>
+<div class="ph"><img src="/chizhovy2/images/p-zhenshchina.jpg" alt="Вечер, когда всё уже сказано" loading="lazy" width="1360" height="768"></div>
 <div>
 <p class="eyebrow">Про что это</p>
 <h2 style="font-size:1.9rem">Вечер, когда всё уже сказано</h2>
@@ -3568,7 +3579,7 @@ P["kak-prohodit/index.html"] = ("Как проходит обучение · Н�
 
 <section><div class="wrap">
 <div class="split">
-<div class="ph"><img src="/chizhovy2/images/real/real-03.jpg" alt="Группа после модуля" loading="lazy"></div>
+<div class="ph"><img src="/chizhovy2/images/real/real-03.jpg" alt="Группа после модуля" loading="lazy" width="1280" height="960"></div>
 <div>
 <p class="eyebrow">Путь целиком</p>
 <h2 style="font-size:1.9rem">Последний вечер модуля</h2>
@@ -3580,7 +3591,7 @@ P["kak-prohodit/index.html"] = ("Как проходит обучение · Н�
 
 <section><div class="wrap">
 <div class="split">
-<div class="ph"><img src="/chizhovy2/images/ob-dver.jpg" alt="Дверь, в которую входят" loading="lazy"></div>
+<div class="ph"><img src="/chizhovy2/images/ob-dver.jpg" alt="Дверь, в которую входят" loading="lazy" width="1360" height="768"></div>
 <div>
 <p class="eyebrow">С чего начинается</p>
 <h2 style="font-size:1.9rem">С чего начинается путь</h2>
@@ -3592,7 +3603,7 @@ P["kak-prohodit/index.html"] = ("Как проходит обучение · Н�
 
 <section><div class="wrap">
 <div class="split">
-<div class="ph"><img src="/chizhovy2/images/ob-most.jpg" alt="Недели, которые решают" loading="lazy"></div>
+<div class="ph"><img src="/chizhovy2/images/ob-most.jpg" alt="Недели, которые решают" loading="lazy" width="1360" height="768"></div>
 <div>
 <p class="eyebrow">Между модулями</p>
 <h2 style="font-size:1.9rem">Недели между модулями</h2>
@@ -3687,7 +3698,7 @@ P["praktiki/index.html"] = ("Ежедневные практики · Насто
 
 <section><div class="wrap">
 <div class="split">
-<div class="ph"><img src="/chizhovy2/images/real/real-10.jpg" alt="Команда участников" loading="lazy"></div>
+<div class="ph"><img src="/chizhovy2/images/real/real-10.jpg" alt="Команда участников" loading="lazy" width="1280" height="960"></div>
 <div>
 <p class="eyebrow">Кто это делает</p>
 <h2 style="font-size:1.9rem">Практики держит команда</h2>
@@ -3699,7 +3710,7 @@ P["praktiki/index.html"] = ("Ежедневные практики · Насто
 
 <section><div class="wrap">
 <div class="split">
-<div class="ph"><img src="/chizhovy2/images/ob-chasy.jpg" alt="Практика живёт по часам" loading="lazy"></div>
+<div class="ph"><img src="/chizhovy2/images/ob-chasy.jpg" alt="Практика живёт по часам" loading="lazy" width="1360" height="768"></div>
 <div>
 <p class="eyebrow">Каждый день</p>
 <h2 style="font-size:1.9rem">Практика живёт по&nbsp;часам</h2>
@@ -3711,7 +3722,7 @@ P["praktiki/index.html"] = ("Ежедневные практики · Насто
 
 <section><div class="wrap">
 <div class="split">
-<div class="ph"><img src="/chizhovy2/images/ob-svecha.jpg" alt="Разбор дня перед сном" loading="lazy"></div>
+<div class="ph"><img src="/chizhovy2/images/ob-svecha.jpg" alt="Разбор дня перед сном" loading="lazy" width="1360" height="768"></div>
 <div>
 <p class="eyebrow">Каждый вечер</p>
 <h2 style="font-size:1.9rem">Разбор дня перед сном</h2>
@@ -3723,7 +3734,7 @@ P["praktiki/index.html"] = ("Ежедневные практики · Насто
 
 <section><div class="wrap">
 <div class="split">
-<div class="ph"><img src="/chizhovy2/images/q-chasy2.jpg" alt="Пятнадцать минут в сутки" loading="lazy"></div>
+<div class="ph"><img src="/chizhovy2/images/q-chasy2.jpg" alt="Пятнадцать минут в сутки" loading="lazy" width="1360" height="768"></div>
 <div>
 <p class="eyebrow">Сколько это занимает</p>
 <h2 style="font-size:1.9rem">Пятнадцать минут в&nbsp;сутки</h2>
@@ -3831,7 +3842,7 @@ P["manifest/index.html"] = ("Манифест школы · Настоящие �
 
 <section><div class="wrap">
 <div class="split">
-<div class="ph"><img src="/chizhovy2/images/q-okno2.jpg" alt="Почему школа устроена так" loading="lazy"></div>
+<div class="ph"><img src="/chizhovy2/images/q-okno2.jpg" alt="Почему школа устроена так" loading="lazy" width="1360" height="768"></div>
 <div>
 <p class="eyebrow">Простыми словами</p>
 <h2 style="font-size:1.9rem">Почему школа устроена так</h2>
@@ -3913,7 +3924,7 @@ P["bezopasnost/index.html"] = ("Безопасность и границы · Н
 
 <section><div class="wrap">
 <div class="split">
-<div class="ph"><img src="/chizhovy2/images/p-bezopasnost.jpg" alt="Что делает зал безопасным" loading="lazy"></div>
+<div class="ph"><img src="/chizhovy2/images/p-bezopasnost.jpg" alt="Что делает зал безопасным" loading="lazy" width="1360" height="768"></div>
 <div>
 <p class="eyebrow">Границы</p>
 <h2 style="font-size:1.9rem">Правила известны заранее</h2>
@@ -3937,7 +3948,7 @@ P["bezopasnost/index.html"] = ("Безопасность и границы · Н
 
 <section><div class="wrap">
 <div class="split">
-<div class="ph"><img src="/chizhovy2/images/w-put.jpg" alt="Глубину выбирает сам человек" loading="lazy"></div>
+<div class="ph"><img src="/chizhovy2/images/w-put.jpg" alt="Глубину выбирает сам человек" loading="lazy" width="1360" height="768"></div>
 <div>
 <p class="eyebrow">Про темп</p>
 <h2 style="font-size:1.9rem">Глубину выбирает сам человек</h2>
@@ -3967,12 +3978,12 @@ P["soobshchestvo/index.html"] = ("Сообщество выпускников ·
 <section><div class="wrap">
 <p class="eyebrow">Живые кадры</p>
 <div class="mosaic">
-<div class="ph"><img src="/chizhovy2/images/real/real-01.jpg" alt="Группа у камина с сертификатами" loading="lazy"></div>
-<div class="ph"><img src="/chizhovy2/images/real/real-09.jpg" alt="Участники тренинга" loading="lazy"></div>
-<div class="ph"><img src="/chizhovy2/images/real/real-12.jpg" alt="Команда на забеге" loading="lazy"></div>
-<div class="ph"><img src="/chizhovy2/images/real/real-03.jpg" alt="Выпуск группы" loading="lazy"></div>
-<div class="ph"><img src="/chizhovy2/images/real/real-13.jpg" alt="Финал модуля" loading="lazy"></div>
-<div class="ph"><img src="/chizhovy2/images/real/real-08.jpg" alt="Разбор в кругу" loading="lazy"></div>
+<div class="ph"><img src="/chizhovy2/images/real/real-01.jpg" alt="Группа у камина с сертификатами" loading="lazy" width="1280" height="960"></div>
+<div class="ph"><img src="/chizhovy2/images/real/real-09.jpg" alt="Участники тренинга" loading="lazy" width="1280" height="960"></div>
+<div class="ph"><img src="/chizhovy2/images/real/real-12.jpg" alt="Команда на забеге" loading="lazy" width="960" height="1280"></div>
+<div class="ph"><img src="/chizhovy2/images/real/real-03.jpg" alt="Выпуск группы" loading="lazy" width="1280" height="960"></div>
+<div class="ph"><img src="/chizhovy2/images/real/real-13.jpg" alt="Финал модуля" loading="lazy" width="1280" height="960"></div>
+<div class="ph"><img src="/chizhovy2/images/real/real-08.jpg" alt="Разбор в кругу" loading="lazy" width="960" height="1280"></div>
 </div>
 <p style="margin-top:26px"><a class="btn btn-ghost" href="/chizhovy2/istorii/">Истории людей с&nbsp;этих фото</a></p>
 </div></section>
@@ -4033,7 +4044,7 @@ P["soobshchestvo/index.html"] = ("Сообщество выпускников ·
 
 <section><div class="wrap">
 <div class="split">
-<div class="ph"><img src="/chizhovy2/images/q-stol.jpg" alt="Общий стол вместо чата" loading="lazy"></div>
+<div class="ph"><img src="/chizhovy2/images/q-stol.jpg" alt="Общий стол вместо чата" loading="lazy" width="1360" height="768"></div>
 <div>
 <p class="eyebrow">Что остаётся после</p>
 <h2 style="font-size:1.9rem">Общий стол вместо чата</h2>
@@ -4115,7 +4126,7 @@ P["start/index.html"] = ("С чего начать · Настоящие отн�
 
 <section><div class="wrap">
 <div class="split">
-<div class="ph"><img src="/chizhovy2/images/p-start.jpg" alt="Отсюда начинают все" loading="lazy"></div>
+<div class="ph"><img src="/chizhovy2/images/p-start.jpg" alt="Отсюда начинают все" loading="lazy" width="1360" height="768"></div>
 <div>
 <p class="eyebrow">Первый шаг</p>
 <h2 style="font-size:1.9rem">Отсюда начинают все</h2>
@@ -4138,7 +4149,7 @@ P["start/index.html"] = ("С чего начать · Настоящие отн�
 
 <section><div class="wrap">
 <div class="split">
-<div class="ph"><img src="/chizhovy2/images/q-dver2.jpg" alt="Первый шаг ни к чему не принуждает" loading="lazy"></div>
+<div class="ph"><img src="/chizhovy2/images/q-dver2.jpg" alt="Первый шаг ни к чему не принуждает" loading="lazy" width="1360" height="768"></div>
 <div>
 <p class="eyebrow">Дверь открыта</p>
 <h2 style="font-size:1.9rem">Первый шаг ни&nbsp;к&nbsp;чему не&nbsp;принуждает</h2>
@@ -4214,7 +4225,7 @@ P["kontakty/index.html"] = ("Контакты · Настоящие отноше
 
 <section><div class="wrap">
 <div class="split">
-<div class="ph"><img src="/chizhovy2/images/p-kontakty.jpg" alt="Пиши, как удобно" loading="lazy"></div>
+<div class="ph"><img src="/chizhovy2/images/p-kontakty.jpg" alt="Пиши, как удобно" loading="lazy" width="1360" height="768"></div>
 <div>
 <p class="eyebrow">Как связаться</p>
 <h2 style="font-size:1.9rem">Пиши, как удобно</h2>
@@ -4310,7 +4321,7 @@ P["tehniki-sceny/index.html"] = ("Техники сцены · Настоящи�
 
 <section><div class="wrap">
 <div class="split">
-<div class="ph"><img src="/chizhovy2/images/ob-krug-sverhu.jpg" alt="Круг стульев сверху" loading="lazy"></div>
+<div class="ph"><img src="/chizhovy2/images/ob-krug-sverhu.jpg" alt="Круг стульев сверху" loading="lazy" width="1360" height="768"></div>
 <div>
 <p class="eyebrow">Где это происходит</p>
 <h2 style="font-size:1.9rem">Как устроен зал</h2>
@@ -4359,7 +4370,7 @@ P["somneniya/index.html"] = ("Частые сомнения · Настоящи�
 </div></section>
 
 <section style="padding:0"><div class="wrap">
-<div class="ph" style="aspect-ratio:16/7"><img src="/chizhovy2/images/somneniya-gruppa.jpg" alt="Круг участников в зале тренинга" loading="lazy"></div>
+<div class="ph" style="aspect-ratio:16/7"><img src="/chizhovy2/images/somneniya-gruppa.jpg" alt="Круг участников в зале тренинга" loading="lazy" width="1360" height="768"></div>
 </div></section>
 
 <section><div class="narrow">
@@ -4377,7 +4388,7 @@ P["somneniya/index.html"] = ("Частые сомнения · Настоящи�
 </div></section>
 
 <section style="padding:0"><div class="wrap">
-<div class="ph" style="aspect-ratio:16/7"><img src="/chizhovy2/images/somneniya-nedoverie.jpg" alt="Мужчина у окна утром, решение принимается" style="object-position:center 8%" loading="lazy"></div>
+<div class="ph" style="aspect-ratio:16/7"><img src="/chizhovy2/images/somneniya-nedoverie.jpg" alt="Мужчина у окна утром, решение принимается" style="object-position:center 8%" loading="lazy" width="1360" height="768"></div>
 </div></section>
 
 <section><div class="narrow">
@@ -4415,7 +4426,7 @@ P["somneniya/index.html"] = ("Частые сомнения · Настоящи�
 </div></section>
 
 <section style="padding:0"><div class="wrap">
-<div class="ph" style="aspect-ratio:16/7"><img src="/chizhovy2/images/somneniya-posle.jpg" alt="Осенняя дорожка в парке на закате" loading="lazy"></div>
+<div class="ph" style="aspect-ratio:16/7"><img src="/chizhovy2/images/somneniya-posle.jpg" alt="Осенняя дорожка в парке на закате" loading="lazy" width="1360" height="768"></div>
 </div></section>
 {CTA_SOMNENIYA}
 """)
@@ -4546,6 +4557,20 @@ CSS_VER = _h.md5(CSS.encode()).hexdigest()[:8]
 for rel, (title, desc, active, body) in P.items():
     f = ROOT / rel
     f.parent.mkdir(parents=True, exist_ok=True)
-    f.write_text(alternate_splits(btns_class(page(title, desc, active, body))), encoding="utf-8")
+    f.write_text(alternate_splits(btns_class(page(title, desc, active, body, rel.replace("index.html","")))), encoding="utf-8")
     n += 1
 print(f"OK v2: site.css + {n} страниц (иконки, диаграмма, таймлайн, мозаика, фавикон)")
+
+# ── карта сайта и robots для поисковиков
+BASE = "https://thebodymindcode.github.io/chizhovy2/"
+urls = sorted({rel.replace("index.html", "") for rel in P} | {"gid/", "brend/"})
+sm = ['<?xml version="1.0" encoding="UTF-8"?>',
+      '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
+for u in urls:
+    pri = "1.0" if u == "" else ("0.9" if u in ("metod/", "sessiya/", "programma/") else "0.7")
+    sm.append(f"  <url><loc>{BASE}{u}</loc><changefreq>monthly</changefreq><priority>{pri}</priority></url>")
+sm.append("</urlset>")
+(ROOT / "sitemap.xml").write_text("\n".join(sm), encoding="utf-8")
+(ROOT / "robots.txt").write_text(
+    "User-agent: *\nAllow: /\nSitemap: " + BASE + "sitemap.xml\n", encoding="utf-8")
+print("sitemap.xml и robots.txt собраны:", len(urls), "адресов")

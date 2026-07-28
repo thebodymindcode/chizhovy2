@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://thebodymindcode.github.io/chizhovy2/sitemap.xml
