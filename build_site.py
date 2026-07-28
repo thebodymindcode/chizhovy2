@@ -1827,19 +1827,7 @@ P["vedushchie/index.html"] = ("Алексей и Ирина Чижовы · На
 </div></div></section>
 
 
-<section><div class="wrap">
-<p class="eyebrow">Они вне зала</p>
-<h2>Алексей и&nbsp;Ирина вне&nbsp;зала</h2>
-<p class="sub">Обычные выходные: набережная, парк, кофе на&nbsp;веранде.</p>
-<div class="mosaic" style="margin-top:30px">
-<div class="ph"><img src="/chizhovy2/images/para-real/chizhovy-7.jpg" alt="Алексей и Ирина на набережной" loading="lazy"></div>
-<div class="ph"><img src="/chizhovy2/images/para-real/chizhovy-6.jpg" alt="Алексей и Ирина в парке" loading="lazy"></div>
-<div class="ph"><img src="/chizhovy2/images/para-real/chizhovy-4.jpg" alt="Алексей и Ирина на веранде" loading="lazy"></div>
-<div class="ph"><img src="/chizhovy2/images/para-real/chizhovy-3.jpg" alt="Алексей и Ирина вдвоём" loading="lazy"></div>
-<div class="ph"><img src="/chizhovy2/images/para-real/chizhovy-2.jpg" alt="Алексей и Ирина летом" loading="lazy"></div>
-<div class="ph"><img src="/chizhovy2/images/para-real/chizhovy-1.jpg" alt="Алексей и Ирина" loading="lazy"></div>
-</div>
-</div></section>
+
 
 <section><div class="narrow">
 <h2>Познакомиться лично</h2>
