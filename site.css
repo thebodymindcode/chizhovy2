@@ -80,7 +80,10 @@ section.alt .polka{background:#fff}
 .polka{border:1px solid var(--line);border-radius:12px;background:#fff;padding:24px 26px}
 .polka .pt{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--copper);margin-bottom:14px}
 .polka ul{list-style:none;margin:0;padding:0}
-.polka li{padding:10px 0;display:grid;grid-template-columns:22px 1fr;gap:10px}
+.polka li{padding:10px 0;display:grid;grid-template-columns:22px minmax(0,1fr);column-gap:10px;row-gap:3px}
+/* название и пояснение стоят в одной колонке справа от маркера:
+   иначе пояснение уезжает в колонку маркера и сыплется по слову в строку */
+.polka li > b,.polka li > span{grid-column:2}
 .polka li+li{border-top:1px dashed var(--line)}
 .polka li::before{content:'▪';color:var(--wine);font-size:.8rem;padding-top:2px}
 .polka b{display:block}
@@ -122,6 +125,7 @@ section.alt .polka{background:#fff}
 h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;line-height:1.2;text-wrap:balance;margin:0 0 .5em}
 /* Держим последнюю пару слов заголовка вместе там, где она влезает в колонку */
 .kp{white-space:nowrap}@media (max-width:980px){.kp{white-space:normal}}
+.nb{white-space:nowrap}
 .kpm{white-space:nowrap}@media (max-width:399px){.kpm{white-space:normal}}
 h2{font-size:clamp(1.7rem,4vw,2.3rem);font-weight:600}
 h3{font-size:1.22rem;font-weight:600}
@@ -312,7 +316,17 @@ section > .narrow > .grid2:last-child{margin-bottom:0}
 .card{background:var(--linen);border:1px solid var(--line);border-radius:8px;padding:26px 24px}
 .card h3{margin-bottom:8px}
 .card p{margin:0;font-size:.93rem;color:var(--ink-soft)}
+.card p+p{margin-top:.85em}
+/* Пронумерованный разбор: все восемь заголовков одного размера в любом контейнере */
+.doubt h2{font-size:clamp(1.4rem,2.6vw,1.75rem)}
+.doubt .card h3{font-size:1.12rem;line-height:1.3}
 .card a{font-weight:700;font-size:.9rem;text-decoration:none}
+/* карточка с бегущим текстом: ссылка внутри абзаца остаётся ссылкой, а не жирной вставкой */
+.card.rich p a{font-weight:600;font-size:inherit;text-decoration:underline;text-underline-offset:.16em}
+/* метка на карточке: пилюля по размеру текста, а не полоса во всю ширину
+   (карточка это flex-колонка, поэтому span без align-self растягивается) */
+.card .chip{align-self:flex-start;width:auto;border-radius:100px;padding:5px 13px;margin-bottom:12px;
+  font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;line-height:1.5}
 .white{background:#fff}
 .nails{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
 .nails2{grid-template-columns:1fr 1fr}
@@ -327,12 +341,20 @@ section > .narrow > .grid2:last-child{margin-bottom:0}
 .dark .card{background:var(--night2);border-color:rgba(208,138,95,.25)}
 .dark .card h3{color:#fff}
 .dark .card p{color:rgba(242,237,228,.65)}
+.dark .card a{color:var(--copper)}
+.dark .stepline .st{border-color:rgba(208,138,95,.28)}
+.dark .stepline{border-color:rgba(208,138,95,.28)}
+.dark .stepline .st b{color:#fff}
+.dark .stepline .st p{color:rgba(242,237,228,.7)}
+.dark .icwrap{background:rgba(208,138,95,.12)}
 
 /* Лента шагов: номер-бейдж, иконка, текст. Строки на тонких линиях, без «облачков» */
 .stepline{margin:34px 0 0;border-top:1px solid var(--line)}
 .stepline .st{position:relative;display:grid;grid-template-columns:46px minmax(0,1fr);gap:22px;
   align-items:start;padding:26px 92px 26px 0;border-bottom:1px solid var(--line)}
 .stepline .st .icwrap{margin:0;flex:0 0 46px}
+/* без крупного номера справа поле под него не резервируем */
+.stepline .st:not(:has(.bignum)){padding-right:0}
 .stepline .st b{display:block;font-family:'Playfair Display',Georgia,serif;font-size:1.2rem;font-weight:600;margin-bottom:6px}
 .stepline .st p{margin:0;color:var(--ink-soft);font-size:.95rem}
 .stepline .st .bignum{top:22px;right:8px;font-size:3.4rem;-webkit-text-stroke-color:rgba(201,168,124,.85)}
@@ -386,6 +408,15 @@ section > .narrow > .grid2:last-child{margin-bottom:0}
 .split.rev > .ph{order:2}
 @media (max-width:900px){.split.rev{grid-template-columns:1fr}.split.rev > .ph{order:0}}
 .split .ph{aspect-ratio:4/3}
+
+/* Пара кадров в ряд: снимок, надзаголовок, заголовок, абзац. Закрывает страницу без «облачков» */
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:38px;margin:32px 0 0}
+.duo > div{min-width:0}
+.duo .ph{aspect-ratio:16/10;margin-bottom:20px}
+.duo .eyebrow{margin:0 0 10px}
+.duo h3{font-size:1.38rem;margin:0 0 12px}
+.duo p{margin:0;color:var(--ink-soft);font-size:.95rem;line-height:1.65}
+@media (max-width:860px){.duo{grid-template-columns:1fr;gap:34px}}
 
 /* Кадр во всю колонку с подписью */
 .fig{margin:34px 0 0}
