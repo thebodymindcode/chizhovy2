@@ -62,8 +62,9 @@ section > .narrow > h2 + p{text-align:left;max-width:none;margin-left:0;margin-r
 @media (max-width:700px){.zrow{grid-template-columns:1fr;gap:0}.zform{padding:26px 20px}}
 
 /* ПОЛИРОВКА ВЁРСТКИ */
-.ph{border-radius:12px;overflow:hidden}
-.split .ph img{aspect-ratio:16/9;object-fit:cover;width:100%;height:auto;display:block}
+.ph{border-radius:12px;overflow:hidden;line-height:0}
+/* картинка заполняет свою рамку целиком: белых полос под фото не бывает */
+.ph img{width:100%;height:100%;object-fit:cover;display:block}
 .card{border-radius:12px}
 .nail{border-radius:12px}
 @media (hover:hover){
@@ -180,7 +181,8 @@ section > .narrow > p{margin:0 0 20px}
 .split > div > p{margin:0 0 20px}
 section > .wrap > h3,
 section > .narrow > h3,
-.tside > .col > h3{margin:32px 0 12px}
+.tside > .col > h3,
+.split > div > h3{margin:32px 0 12px}
 section > .wrap > .grid2,
 section > .wrap > .grid3,
 section > .wrap > .grid5,
@@ -326,6 +328,23 @@ section > .narrow > .grid2:last-child{margin-bottom:0}
 .dark .card h3{color:#fff}
 .dark .card p{color:rgba(242,237,228,.65)}
 
+/* Лента шагов: номер-бейдж, иконка, текст. Строки на тонких линиях, без «облачков» */
+.stepline{margin:34px 0 0;border-top:1px solid var(--line)}
+.stepline .st{position:relative;display:grid;grid-template-columns:46px minmax(0,1fr);gap:22px;
+  align-items:start;padding:26px 92px 26px 0;border-bottom:1px solid var(--line)}
+.stepline .st .icwrap{margin:0;flex:0 0 46px}
+.stepline .st b{display:block;font-family:'Playfair Display',Georgia,serif;font-size:1.2rem;font-weight:600;margin-bottom:6px}
+.stepline .st p{margin:0;color:var(--ink-soft);font-size:.95rem}
+.stepline .st .bignum{top:22px;right:8px;font-size:3.4rem;-webkit-text-stroke-color:rgba(201,168,124,.85)}
+.alt .stepline .st .icwrap{background:#fff}
+
+/* Тёмная лента пунктов: две колонки строк с иконками, без карточек */
+.dlist{display:grid;grid-template-columns:1fr 1fr;gap:0 44px;margin:32px 0 0}
+.dlist .di{display:grid;grid-template-columns:46px minmax(0,1fr);gap:18px;align-items:start;
+  padding:24px 0;border-top:1px solid rgba(208,138,95,.28)}
+.dlist .di .icwrap{margin:0}
+.dlist .di b{display:block;font-family:'Playfair Display',Georgia,serif;font-size:1.1rem;font-weight:600;color:#fff;margin-bottom:5px}
+.dlist .di p{margin:0;font-size:.92rem;line-height:1.6;color:rgba(242,237,228,.7)}
 
 /* Два этажа */
 .floors{margin:26px 0}
@@ -358,7 +377,7 @@ section > .narrow > .grid2:last-child{margin-bottom:0}
 
 /* Фото */
 .ph{border-radius:8px;overflow:hidden;border:1px solid var(--line)}
-.ph img{width:100%;height:100%;object-fit:cover;height:auto;max-width:100%}
+.ph img{width:100%;height:100%;object-fit:cover;max-width:100%}
 .mosaic{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:210px;gap:12px}
 .mosaic .ph:first-child{grid-column:span 2;grid-row:span 2}
 .split{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center}
@@ -367,6 +386,12 @@ section > .narrow > .grid2:last-child{margin-bottom:0}
 .split.rev > .ph{order:2}
 @media (max-width:900px){.split.rev{grid-template-columns:1fr}.split.rev > .ph{order:0}}
 .split .ph{aspect-ratio:4/3}
+
+/* Кадр во всю колонку с подписью */
+.fig{margin:34px 0 0}
+.fig .ph{aspect-ratio:16/9}
+.fig figcaption{font-size:.85rem;color:var(--ink-soft);margin-top:10px}
+.dark .fig figcaption{color:rgba(255,255,255,.72)}
 
 /* Цитаты */
 .pull{border-left:3px solid var(--wine);padding:4px 0 4px 26px;margin:30px 0}
@@ -441,6 +466,7 @@ footer .fine{margin-top:44px;padding-top:20px;border-top:1px solid rgba(242,237,
   .mosaic{grid-template-columns:1fr 1fr;grid-auto-rows:160px}
   .nails,.spheres{grid-template-columns:1fr 1fr}
   .poster .in{padding:36px 26px}
+  .dlist{grid-template-columns:1fr;gap:0}
   footer .cols{grid-template-columns:1fr 1fr}
 }
 @media (max-width:600px){
@@ -454,6 +480,10 @@ footer .fine{margin-top:44px;padding-top:20px;border-top:1px solid rgba(242,237,
   section > .wrap > .mosaic,section > .wrap > .split,section > .wrap > .tside{margin-top:22px}
   .split{gap:22px}
   .grid2,.grid3{gap:12px}
+  .stepline .st{padding:22px 0;gap:16px;grid-template-columns:42px minmax(0,1fr)}
+  .stepline .st .icwrap{width:42px;height:42px}
+  .dlist .di{padding:20px 0;gap:16px;grid-template-columns:42px minmax(0,1fr)}
+  .dlist .di .icwrap{width:42px;height:42px}
 
   .bignum{display:none}
   .only-d{display:none}
