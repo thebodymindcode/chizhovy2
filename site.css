@@ -91,17 +91,22 @@ section.alt .polka{background:#fff}
 
 .tside{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:56px;align-items:start}
 /* если в колонке уже стоит сетка карточек, врезка рядом мешает: уводим её вниз в ряд */
+/* и то же самое, если текста в колонке всего заголовок и один абзац:
+   короткий текст не держит высокую колонку врезок, слева повисает дыра */
 .tside:has(> .col .grid2),
-.tside:has(> .col .grid3){grid-template-columns:1fr}
+.tside:has(> .col .grid3),
+.tside:has(> .col > h2:first-child + p:last-child){grid-template-columns:1fr}
 .tside:has(> .col .grid2) > .side,
-.tside:has(> .col .grid3) > .side{position:static;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-top:8px}
+.tside:has(> .col .grid3) > .side,
+.tside:has(> .col > h2:first-child + p:last-child) > .side{position:static;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-top:8px}
 .tside:has(> .col .grid2) > .side .box + .box,
-.tside:has(> .col .grid3) > .side .box + .box{margin-top:0}
+.tside:has(> .col .grid3) > .side .box + .box,
+.tside:has(> .col > h2:first-child + p:last-child) > .side .box + .box{margin-top:0}
 /* если врезок не осталось, колонка исчезает и текст занимает всю ширину */
 .tside:not(:has(.side .box)){grid-template-columns:1fr}
 .tside:not(:has(.side .box)) > .side{display:none}
 .card{display:flex;flex-direction:column}
-.card>p:last-child:has(>a:only-child){margin-top:auto;padding-top:10px}
+.card>p.more:last-child{margin-top:auto;padding-top:10px}
 .tside>.col{min-width:0}
 .tside>.col>*{max-width:none}
 .side{min-width:0;position:sticky;top:96px}
@@ -125,8 +130,13 @@ section.alt .polka{background:#fff}
 h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;line-height:1.2;text-wrap:balance;margin:0 0 .5em}
 /* Держим последнюю пару слов заголовка вместе там, где она влезает в колонку */
 .kp{white-space:nowrap}@media (max-width:980px){.kp{white-space:normal}}
-.nb{white-space:nowrap}
-.kpm{white-space:nowrap}@media (max-width:399px){.kpm{white-space:normal}}
+/* .nb это только склейка «10-20» и «по-человечески», вид она не меняет.
+   Двойной класс поднимает вес: иначе правило вида «.sphere span» перекрашивает
+   её внутри крупной цифры и число выглядит мелкой подписью */
+.nb,.nb.nb{white-space:nowrap;font:inherit;font-size:inherit;line-height:inherit;color:inherit;letter-spacing:inherit;display:inline;margin:0;padding:0;background:none;border:0}
+/* пара держится вместе до 390px включительно: там она ещё влезает в колонку.
+   Ниже отпускаем перенос, иначе строка вылезает за край и появляется прокрутка */
+.kpm{white-space:nowrap}@media (max-width:389px){.kpm{white-space:normal}}
 h2{font-size:clamp(1.7rem,4vw,2.3rem);font-weight:600}
 h3{font-size:1.22rem;font-weight:600}
 p{margin:0 0 1.1em}
@@ -332,7 +342,7 @@ section > .narrow > .grid2:last-child{margin-bottom:0}
 .nails2{grid-template-columns:1fr 1fr}
 .nail{background:#fff;border:1px solid var(--line);border-radius:8px;padding:20px}
 .nail b{display:block;font-family:'Playfair Display',Georgia,serif;font-size:1.9rem;font-weight:600;color:var(--wine);font-variant-numeric:tabular-nums}
-.nail span{font-size:.8rem;color:var(--ink-soft);line-height:1.5}
+.nail>span{font-size:.8rem;color:var(--ink-soft);line-height:1.5}
 .dark{background:var(--night);color:var(--ntext)}
 .dark h2,.dark h3{color:#fff}
 .dark p{color:rgba(242,237,228,.8)}
@@ -402,6 +412,9 @@ section > .narrow > .grid2:last-child{margin-bottom:0}
 .ph img{width:100%;height:100%;object-fit:cover;max-width:100%}
 .mosaic{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:210px;gap:12px}
 .mosaic .ph:first-child{grid-column:span 2;grid-row:span 2}
+/* мозаика держит ровный прямоугольник: последний кадр, оставшийся в ряду один,
+   разворачивается на всю ширину и на две высоты, дыры справа не остаётся */
+.mosaic .ph:last-child:nth-child(3n+1){grid-column:span 3;grid-row:span 2}
 .split{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center}
 /* чередуем сторону фото: класс ставит сборщик каждому второму блоку */
 .split.rev{grid-template-columns:.9fr 1.1fr}
@@ -495,6 +508,9 @@ footer .fine{margin-top:44px;padding-top:20px;border-top:1px solid rgba(242,237,
   .grid5>*,.grid5>*:nth-child(4),.grid5>*:nth-child(5){grid-column:auto}
   .nails.nails3{grid-template-columns:1fr 1fr}
   .mosaic{grid-template-columns:1fr 1fr;grid-auto-rows:160px}
+  /* на двух колонках одиноким остаётся кадр с чётным номером: тянем его во всю ширину */
+  .mosaic .ph:last-child:nth-child(3n+1){grid-column:auto;grid-row:auto}
+  .mosaic .ph:last-child:nth-child(2n){grid-column:span 2;grid-row:span 2}
   .nails,.spheres{grid-template-columns:1fr 1fr}
   .poster .in{padding:36px 26px}
   .dlist{grid-template-columns:1fr;gap:0}
@@ -534,4 +550,12 @@ footer .fine{margin-top:44px;padding-top:20px;border-top:1px solid rgba(242,237,
   footer .cols{grid-template-columns:1fr}
   .btn{padding:14px 20px;font-size:.92rem}
   .hero .acts .btn{width:100%;text-align:center}
+}
+/* Совсем узкие экраны (старый iPhone SE, 320px). Типографский проход склеивает
+   хвосты неразрывным пробелом, и на такой ширине один кусок заголовка бывает шире
+   колонки: страница уезжала вбок на 3-35px. Здесь разрешаем колонке сжиматься,
+   а длинному куску переноситься. На 360px и выше ничего не меняется. */
+@media (max-width:360px){
+  .split>*,.tside>*,.duo>*,.grid2>*,.grid3>*{min-width:0}
+  h1,h2,h3,.card,.box,.nail,.st,.split>div,.stat{overflow-wrap:break-word}
 }
