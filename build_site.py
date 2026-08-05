@@ -1289,8 +1289,8 @@ ZAYAVKA = """<section><div class="wrap"><div class="tside">
 <div class="col">
 <div class="zform">
 <p class="lead-in">Заявка на&nbsp;собеседование</p>
-<h3>Собери сообщение за&nbsp;полминуты</h3>
-<p class="hint">Два поля, и&nbsp;всё готово. Кнопка скопирует короткое сообщение и&nbsp;откроет Telegram.</p>
+<h3>Оставь заявку</h3>
+<p class="hint">Имя и&nbsp;связь, этого хватит. Кнопка откроет Telegram школы с&nbsp;готовым сообщением.</p>
 <form id="zayavka" novalidate>
 <div class="zrow">
 <label class="zfield"><span>Как тебя зовут</span><input type="text" name="name" placeholder="Имя" autocomplete="name" required></label>
@@ -4223,7 +4223,7 @@ P["start/index.html"] = ("С чего начать · Настоящие отн�
 <div class="stepline" style="margin-top:0">
 <div class="st">{icon('book')}<div><b>Прочитай гайд</b><p>«Кто пишет сценарий твоей&nbsp;жизни»: главное ядро метода в&nbsp;одном выпуске, с&nbsp;самодиагностикой. Полчаса чтения, чтобы примерить механику на&nbsp;себя. <a href="/chizhovy2/gid2/">Читать&nbsp;гайд</a></p></div><span class="bignum">01</span></div>
 <div class="st">{icon('lens','var(--sage-deep)')}<div><b>Осмотрись</b><p>Как устроен <a href="/chizhovy2/metod/">метод</a> и&nbsp;<a href="/chizhovy2/kak-prohodit/">путь ученика</a>, из&nbsp;чего <a href="/chizhovy2/istoki/">собран подход</a>. Всё открыто, без&nbsp;«узнаете на&nbsp;вебинаре».</p></div><span class="bignum">02</span></div>
-<div class="st">{icon('speech','var(--sand)')}<div><b>Напиши в&nbsp;школу и&nbsp;<span class="kpm">заполни анкету</span></b><p>Форма на&nbsp;сайте соберёт сообщение за&nbsp;полминуты, дальше отправляешь его в&nbsp;чат школы. Анкету заполняешь по&nbsp;<a href="https://forms.yandex.ru/cloud/684dcab0f47e730799e7cb6d" target="_blank" rel="noopener">ссылке</a>, это 15-20&nbsp;минут. Дальше разговор на&nbsp;15-30&nbsp;минут, честный взгляд со&nbsp;стороны и&nbsp;понятный следующий шаг. Для&nbsp;читателей сайта бесплатно. <a href="/chizhovy2/sessiya/">Записаться</a></p></div><span class="bignum">03</span></div>
+<div class="st">{icon('speech','var(--sand)')}<div><b>Напиши в&nbsp;школу и&nbsp;<span class="kpm">заполни анкету</span></b><p>Оставляешь имя и&nbsp;связь, дальше отправляешь сообщение в&nbsp;чат школы. Анкету заполняешь по&nbsp;<a href="https://forms.yandex.ru/cloud/684dcab0f47e730799e7cb6d" target="_blank" rel="noopener">ссылке</a>, это 15-20&nbsp;минут. Дальше разговор на&nbsp;15-30&nbsp;минут, честный взгляд со&nbsp;стороны и&nbsp;понятный следующий шаг. Для&nbsp;читателей сайта бесплатно. <a href="/chizhovy2/sessiya/">Записаться</a></p></div><span class="bignum">03</span></div>
 </div>
 <p class="note" style="margin-top:18px">Дальше всё по&nbsp;порядку: <a href="/chizhovy2/programma/">программа из&nbsp;трёх модулей</a>, между ними недели на&nbsp;проверку в&nbsp;жизни, после: Игра пробуждения и&nbsp;сообщество.</p>
 </div></section>
