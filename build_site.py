@@ -839,6 +839,16 @@ footer .fine{margin-top:44px;padding-top:20px;border-top:1px solid rgba(242,237,
   .btn{padding:14px 20px;font-size:.92rem}
   .hero .acts .btn{width:100%;text-align:center}
 }
+
+/* Узкие телефоны (360 и 375 в ходу до сих пор): длинные слова в заголовках
+   не помещаются в колонку и падают одинокой строкой, а склейки из неразрывных
+   пробелов дают горизонтальную прокрутку. Сбавляем кегль заголовков. */
+@media (max-width:389px){
+  h1{font-size:clamp(1.75rem,7.4vw,2.6rem)}
+  h2{font-size:clamp(1.35rem,5.6vw,1.9rem)}
+  h3{font-size:1.08rem}
+  .hero h1{font-size:clamp(1.8rem,7.6vw,2.7rem)}
+}
 /* Совсем узкие экраны (старый iPhone SE, 320px). Типографский проход склеивает
    хвосты неразрывным пробелом, и на такой ширине один кусок заголовка бывает шире
    колонки: страница уезжала вбок на 3-35px. Здесь разрешаем колонке сжиматься,
@@ -1805,7 +1815,7 @@ P["modul-1/index.html"] = ("Модуль I. Возвращение к себе �
 <h2>О чём спрашивают перед первым модулем</h2>
 <details><summary>Меня заставят рассказывать личное при всех?</summary><p>Нет. Глубину человек выбирает сам, и&nbsp;это записанное правило зала. Можно просидеть весь модуль наблюдателем: часть людей так и&nbsp;делает в&nbsp;первый день, а&nbsp;включается на&nbsp;второй.</p></details>
 <details><summary>А если я&nbsp;расплачусь при чужих людях?</summary><p>Так бывает почти у&nbsp;каждого второго. В&nbsp;зале это обычное дело: никто не&nbsp;утешает и&nbsp;не&nbsp;отводит глаза, потому что все понимают, зачем сюда пришли.</p></details>
-<details><summary>Нужна подготовка, книги, дневник?</summary><p>Ничего не&nbsp;нужно. Приезжай как есть. Тетрадь дадим, остальное появится по&nbsp;ходу.</p></details>
+<details><summary>Нужна подготовка, книги,&nbsp;дневник?</summary><p>Ничего не&nbsp;нужно. Приезжай как есть. Тетрадь дадим, остальное появится по&nbsp;ходу.</p></details>
 <details><summary>Я&nbsp;уже был на&nbsp;тренингах, будет то&nbsp;же самое?</summary><p>Скорее всего нет. Здесь не&nbsp;мотивируют и&nbsp;не&nbsp;дают техник «на&nbsp;каждый день». Работают с&nbsp;одним: где именно ты&nbsp;принимаешь одно и&nbsp;то&nbsp;же решение и&nbsp;что оно тебе стоит.</p></details>
 <details><summary>Можно приехать с&nbsp;партнёром?</summary><p>Можно, и&nbsp;многие приезжают. Работать будете порознь, каждый со&nbsp;своей стороной. Для&nbsp;пар есть <a href="/chizhovy2/para/">особые условия участия</a>, о&nbsp;них говорим на&nbsp;собеседовании.</p></details>
 </div>
@@ -1913,7 +1923,7 @@ P["modul-2/index.html"] = ("Модуль II. Внутренняя свобода
 P["marafon/index.html"] = ("Модуль III. Игра пробуждения · Настоящие отношения",
 "Три месяца практики в жизни: команда, еженедельные встречи, результаты, которые остаются.", "marafon", f"""
 <div class="hero short"><div class="bg" style="background-image:url('/chizhovy2/images/real/real-10.jpg')"></div><div class="veil"></div>
-<div class="in"><p class="eyebrow">Модуль III · три месяца</p><h1>Игра пробуждения. Создатели</h1>
+<div class="in"><p class="eyebrow">Модуль III · три месяца</p><h1 style="font-size:clamp(2rem,6vw,3.5rem)">Игра&nbsp;пробуждения. Создатели</h1>
 <p class="lead">Первые две ступени ты&nbsp;практикуешь в&nbsp;зале, под нашим присмотром и&nbsp;в&nbsp;доверительном кругу. Третья выносит всё это в&nbsp;жизнь: в&nbsp;семью, в&nbsp;работу, в&nbsp;общение с&nbsp;людьми. Девяносто дней подряд.</p></div></div>
 
 <section><div class="narrow">
@@ -2070,7 +2080,7 @@ P["para/index.html"] = ("Парам · Настоящие отношения",
 P["vedushchie/index.html"] = ("Ирина и Алексей Чижовы · Настоящие отношения",
 "Ведущие школы: трансформационный тренер и коуч ICF, вместе 17 лет.", "vedushchie", f"""
 <div class="hero short"><div class="bg" style="background-image:url('/chizhovy2/images/real/portret.jpg');background-position:center 25%"></div><div class="veil"></div>
-<div class="in"><p class="eyebrow">Ведущие</p><h1>Ирина и&nbsp;<span class="kpm">Алексей Чижовы</span></h1>
+<div class="in"><p class="eyebrow">Ведущие</p><h1>Ирина и&nbsp;<span class="kpm">Алексей&nbsp;Чижовы</span></h1>
 <p class="lead">Школу отношений ведёт пара, которая 17&nbsp;лет живёт вместе: быт, кризисы и&nbsp;выход из&nbsp;них они прошли сами. Поэтому в&nbsp;зале нет теории с&nbsp;чужих слов.</p></div></div>
 
 <section><div class="wrap"><div class="tside">
@@ -2450,10 +2460,10 @@ def splav_svg():
     src = [(round(90 + i * шаг), n, c) for i, (n, c) in enumerate(имена)]
     heads = ""
     for x,name,cap in src:
-        heads += f"""<circle cx="{x}" cy="46" r="26" fill="#FFFFFF" stroke="rgba(110,59,75,.3)" stroke-width="1.5"/>
+        heads += f"""<circle cx="{x}" cy="46" r="34" fill="#FFFFFF" stroke="rgba(110,59,75,.3)" stroke-width="1.5"/>
 <text x="{x}" y="42" text-anchor="middle" font-family="Manrope,sans-serif" font-weight="800" font-size="12.5" fill="#322D2B">{name}</text>
 <text x="{x}" y="56" text-anchor="middle" font-family="Manrope,sans-serif" font-size="10" fill="#8C8378">{cap}</text>
-<path d="M{x} 76 C {x} 120 450 116 450 152" fill="none" stroke="#B8935F" stroke-width="1.6"/>"""
+<path d="M{x} 84 C {x} 122 450 118 450 152" fill="none" stroke="#B8935F" stroke-width="1.6"/>"""
     return f"""<svg viewBox="0 0 900 320" role="img" aria-label="Четыре истока сходятся в метод школы" style="width:100%;height:auto">
 {heads}
 <g>
@@ -2551,7 +2561,7 @@ MOST = """<section><div class="narrow">
 </div></section>"""
 
 P["istoki/index.html"] = ("Истоки метода · Настоящие отношения",
-"Психодрама Морено, трансерфинг Зеланда, est, Годдард и наука: из чего собран метод школы и что мы переработали за 16 лет.", "istoki", f"""
+"Психодрама Морено, трансерфинг Зеланда, Годдард и наука: из чего собран метод школы и что мы переработали за 16 лет.", "istoki", f"""
 <div class="hero short"><div class="bg" style="background-image:url('/chizhovy2/images/istoki-hero.jpg')"></div><div class="veil"></div>
 <div class="in"><p class="eyebrow">Истоки метода</p><h1>Из чего собран метод</h1>
 <p class="lead">Любая сильная школа выросла из&nbsp;чужих идей. Мы&nbsp;называем свои опоры открыто: вот авторы, у&nbsp;которых мы&nbsp;взяли лучшее, и&nbsp;вот что мы с&nbsp;этим сделали за 16&nbsp;лет живой практики.</p></div></div>
@@ -2566,13 +2576,13 @@ P["istoki/index.html"] = ("Истоки метода · Настоящие от�
 <p class="eyebrow">Четыре опоры</p>
 <h2>Карта истоков</h2>
 <div class="grid3" style="margin-top:28px">
-<div class="card"><span class="bignum">01</span>{icon('people')}<h3>Якоб Морено: психодрама</h3><p>Живая сцена вместо разговоров о&nbsp;жизни. Академическое ядро метода: обмен ролями, дублирование, работа группой. Психодраме сто лет, и&nbsp;она до&nbsp;сих пор глубже большинства&nbsp;новинок.</p><p><a href="/chizhovy2/istoki/moreno-psihodrama/">Разобрать</a></p></div>
-<div class="card"><span class="bignum">02</span>{icon('loop','var(--sage-deep)')}<h3>Вадим Зеланд: трансерфинг</h3><p>Маятники, важность, намерение, зеркало мира. Язык, на&nbsp;котором ученики школы описывают свою ежедневную практику.</p><p><a href="/chizhovy2/istoki/zeland-transerfing/">Разобрать</a></p></div>
-<div class="card"><span class="bignum">03</span>{icon('sunrise')}<h3>Невилл Годдард: состояние</h3><p>«Реальность откликается на&nbsp;состояние». Основа практики намерения, которую ученики ведут девяносто дней Игры пробуждения.</p><p><a href="/chizhovy2/istoki/goddard/">Разобрать</a></p></div>
+<div class="card"><span class="bignum">01</span>{icon('people')}<h3 style="font-size:1.1rem">Якоб Морено: психодрама</h3><p>Живая сцена вместо разговоров о&nbsp;жизни. Академическое ядро метода: обмен ролями, дублирование, работа группой. Психодраме сто лет, и&nbsp;она до&nbsp;сих пор глубже большинства&nbsp;новинок.</p><p><a href="/chizhovy2/istoki/moreno-psihodrama/">Разобрать</a></p></div>
+<div class="card"><span class="bignum">02</span>{icon('loop','var(--sage-deep)')}<h3 style="font-size:1.1rem">Вадим Зеланд: трансерфинг</h3><p>Маятники, важность, намерение, зеркало мира. Язык, на&nbsp;котором ученики школы описывают свою ежедневную практику.</p><p><a href="/chizhovy2/istoki/zeland-transerfing/">Разобрать</a></p></div>
+<div class="card"><span class="bignum">03</span>{icon('sunrise')}<h3 style="font-size:1.1rem">Невилл Годдард: состояние</h3><p>«Реальность откликается на&nbsp;состояние». Основа практики намерения, которую ученики ведут девяносто дней Игры пробуждения.</p><p><a href="/chizhovy2/istoki/goddard/">Разобрать</a></p></div>
 <div class="card"><span class="bignum">04</span>{icon('lamp','var(--sage-deep)')}<h3>Наука: механизм</h3><p>ЛеДу, Гоулман, Болте Тейлор, Голвитцер, Либерман. Пять исследователей эмоции, тела и&nbsp;намерения.</p></div>
 <div class="card linen"><span class="bignum">05</span>{icon('lens')}<h3>Сплав: наш метод</h3><p>Сцена Морено, язык Зеланда, формат погружения, практика состояния и&nbsp;наука в&nbsp;одном процессе, проверенном 16&nbsp;годами групп.</p><p><a href="/chizhovy2/metod/">Как устроен метод</a></p></div>
 </div>
-<figure class="fig"><div class="ph"><img src="/chizhovy2/images/n-tropy-shodyatsya.jpg" alt="Пять троп сходятся в одну" loading="lazy" width="1360" height="768"></div><figcaption>Каждый корень можно проверить</figcaption></figure>
+<figure class="fig"><div class="ph"><img src="/chizhovy2/images/n-tropy-shodyatsya.jpg" alt="Четыре тропы сходятся в одну" loading="lazy" width="1360" height="768"></div><figcaption>Каждый корень можно проверить</figcaption></figure>
 </div></section>
 
 <section><div class="wrap">
@@ -2647,7 +2657,7 @@ P["istoki/index.html"] = ("Истоки метода · Настоящие от�
 <div>
 <p class="eyebrow">Общий вывод</p>
 <h2 style="font-size:1.9rem">Почему вместе сильнее</h2>
-<p>Сцена, язык, формат, состояние и&nbsp;проверка. Вместе они дают то, чего по&nbsp;отдельности не&nbsp;даёт ни&nbsp;один.</p>
+<p>Сцена, язык, состояние и&nbsp;проверка. Вместе они дают то, чего по&nbsp;отдельности не&nbsp;даёт ни&nbsp;один.</p>
 </div>
 </div>
 </div></section>
@@ -3519,7 +3529,7 @@ P["slovar/index.html"] = ("Словарь школы · Настоящие от�
 # ================= КОМУ: ПРЕДПРИНИМАТЕЛИ =================
 FINCTA = """<section><div class="narrow">
 <h2>Начни с разговора</h2>
-<p class="sub" style="margin:0 0 26px">Собеседование в&nbsp;школу: разбираем твою ситуацию и&nbsp;честно говорим, чем можем помочь. Для читателей сайта&nbsp;бесплатно.</p>
+<p class="sub" style="margin:0 0 26px">Собеседование в&nbsp;школу: разбираем твою ситуацию и&nbsp;честно говорим, чем можем помочь. Для&nbsp;читателей сайта бесплатно.</p>
 <p class="btns"><a class="btn btn-wine" href="/chizhovy2/sessiya/">Записаться на&nbsp;собеседование</a> <a class="btn btn-ghost" href="/chizhovy2/gid2/" style="margin-left:8px">Сначала почитать гайд</a></p>
 </div></section>"""
 
@@ -3590,7 +3600,7 @@ P["dlya-predprinimatelej/index.html"] = ("Для предпринимателе�
 
 <section class="dark"><div class="narrow">
 <p class="eyebrow">Наблюдение, которому сто лет</p>
-<h2>Сотни&nbsp;биографий, один&nbsp;общий&nbsp;знаменатель</h2>
+<h2 style="font-size:clamp(1.35rem,4vw,2.3rem)">Сотни&nbsp;биографий, один&nbsp;общий&nbsp;знаменатель</h2>
 <p>Наполеона Хилла знают по&nbsp;книге «Думай и&nbsp;богатей». Кроме неё он&nbsp;десятилетиями вёл другую работу: разбирал жизнь мужчин с&nbsp;выдающимися результатами и&nbsp;искал, что их&nbsp;объединяет. Происхождение, стартовый капитал, образование, склад характера: здесь они расходились полностью.</p>
 <p>Совпало одно. Рядом с&nbsp;каждым была женщина, с&nbsp;которой держалась живая связь. Чаще жёны, реже любовницы, но&nbsp;муза была у&nbsp;каждого.</p>
 <p>Отсюда мысль, которую мы&nbsp;всегда договариваем до&nbsp;конца: муза нужна не&nbsp;только художнику и&nbsp;писателю. Она стоит за&nbsp;предпринимателем, за&nbsp;спортсменом, за&nbsp;политиком.</p>
