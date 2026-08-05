@@ -76,6 +76,13 @@ section.alt{background:var(--linen)}
 section.alt .card,section.alt .nail{background:#fff}
 section.alt .polka{background:#fff}
 
+/* Список-перечисление внутри текста: вопросы, признаки, шаги.
+   Маркер ромбом на оси текста, строки не уезжают под маркер. */
+.ticks{list-style:none;margin:18px 0 22px;padding:0}
+.ticks li{position:relative;padding:7px 0 7px 26px;line-height:1.6}
+.ticks li::before{content:'';position:absolute;left:2px;top:16px;width:8px;height:8px;background:var(--copper);transform:rotate(45deg)}
+.ticks li+li{border-top:1px dashed var(--line)}
+
 /* Полка: книги авторов */
 .polka{border:1px solid var(--line);border-radius:12px;background:#fff;padding:24px 26px}
 .polka .pt{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--copper);margin-bottom:14px}
