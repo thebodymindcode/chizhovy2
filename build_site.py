@@ -851,7 +851,7 @@ MENU_GROUPS = [
         ("/chizhovy2/programma/", "Программа целиком", "три модуля и сопровождение"),
         ("/chizhovy2/modul-1/", "Модуль I. Возвращение к себе", "2,5 дня очно"),
         ("/chizhovy2/modul-2/", "Модуль II. Внутренняя свобода", "5 дней очно"),
-        ("/chizhovy2/marafon/", "Модуль III. Марафон", "3 месяца в жизни"),
+        ("/chizhovy2/marafon/", "Модуль III. Игра пробуждения", "3 месяца в жизни"),
         ("sep", "", ""),
         ("/chizhovy2/kak-prohodit/", "Как проходит обучение", "путь ученика по шагам"),
     ]),
@@ -985,7 +985,7 @@ _NO_GLUE_HEADS = {
     "Кто пишет сценарий твоей жизни",
     "Модуль II. Внутренняя свобода",
     "О чём договариваемся на старте",
-    "От собеседования до Марафона",
+    "От собеседования до Игры пробуждения",
     "Открытия и благодарности",
     "Почему «Настоящие отношения»",
     "Путь ученика по шагам",
@@ -1365,7 +1365,7 @@ P["index.html"] = ("Настоящие отношения · школа тран
 <div class="grid3" style="margin-top:26px">
 <div class="card white"><div class="ph" style="aspect-ratio:4/3;margin-bottom:18px"><img src="/chizhovy2/images/site-m1.jpg" alt="Утро, женщина пишет в дневник у окна" loading="lazy" width="1168" height="880"></div><h3>I. Возвращение к&nbsp;себе</h3><p>Увидеть, что повторяется, во&nbsp;что веришь и&nbsp;откуда это взялось. Первый честный контакт с&nbsp;собой.</p><p><a href="/chizhovy2/modul-1/">Про первый модуль</a></p></div>
 <div class="card white"><div class="ph" style="aspect-ratio:4/3;margin-bottom:18px"><img src="/chizhovy2/images/real/real-07.jpg" alt="Группа в тёплом зале" loading="lazy" width="1280" height="960"></div><h3>II. Внутренняя свобода</h3><p>Страх, вина, обида, чужие ожидания. Меняешь решения, которые управляли тобой годами.</p><p><a href="/chizhovy2/modul-2/">Про второй модуль</a></p></div>
-<div class="card white"><div class="ph" style="aspect-ratio:4/3;margin-bottom:18px"><img src="/chizhovy2/images/real/real-10.jpg" alt="Команда выпуска" loading="lazy" width="1280" height="960"></div><h3>III. Создатель реальности</h3><p>Команда, еженедельные встречи, новые действия и&nbsp;результаты, которые остаются.</p><p><a href="/chizhovy2/marafon/">Про Марафон</a></p></div>
+<div class="card white"><div class="ph" style="aspect-ratio:4/3;margin-bottom:18px"><img src="/chizhovy2/images/real/real-10.jpg" alt="Команда выпуска" loading="lazy" width="1280" height="960"></div><h3>III. Игра пробуждения</h3><p>Команда, еженедельные встречи, новые действия и&nbsp;результаты, которые остаются.</p><p><a href="/chizhovy2/marafon/">Про Игру пробуждения</a></p></div>
 </div>
 </div></section>
 
@@ -1601,7 +1601,7 @@ P["programma/index.html"] = ("Программа · Настоящие отно�
 <div class="grid3" style="margin-top:26px">
 <div class="card white"><div class="ph" style="aspect-ratio:4/3;margin-bottom:18px"><img src="/chizhovy2/images/site-m1.jpg" alt="Модуль I" loading="lazy" width="1168" height="880"></div><p class="eyebrow" style="margin-bottom:6px">Модуль I · 2,5 дня</p><h3>Возвращение к&nbsp;себе</h3><p>Видишь свои повторяющиеся паттерны, установки и их&nbsp;источники. Результат: осознанность и&nbsp;первый честный контакт с&nbsp;собой.</p><p><a href="/chizhovy2/modul-1/">Подробнее</a></p></div>
 <div class="card white"><div class="ph" style="aspect-ratio:4/3;margin-bottom:18px"><img src="/chizhovy2/images/real/real-07.jpg" alt="Модуль II" loading="lazy" width="1280" height="960"></div><p class="eyebrow" style="margin-bottom:6px">Модуль II · 5 дней</p><h3>Внутренняя свобода</h3><p>Работа со&nbsp;страхом, виной, обидой и&nbsp;зависимостью от&nbsp;чужого мнения. Дальше приходят сила и&nbsp;спокойствие.</p><p><a href="/chizhovy2/modul-2/">Подробнее</a></p></div>
-<div class="card white"><div class="ph" style="aspect-ratio:4/3;margin-bottom:18px"><img src="/chizhovy2/images/real/real-13.jpg" alt="Модуль III" loading="lazy" width="1280" height="960"></div><p class="eyebrow" style="margin-bottom:6px">Модуль III · 3 месяца</p><h3>Создатель реальности</h3><p>Девяносто дней в&nbsp;обычной жизни: команда, ежедневная практика, результаты в&nbsp;деле и&nbsp;отношениях. Это и&nbsp;есть Марафон.</p><p><a href="/chizhovy2/marafon/">Подробнее</a></p></div>
+<div class="card white"><div class="ph" style="aspect-ratio:4/3;margin-bottom:18px"><img src="/chizhovy2/images/real/real-13.jpg" alt="Модуль III" loading="lazy" width="1280" height="960"></div><p class="eyebrow" style="margin-bottom:6px">Модуль III · 3 месяца</p><h3>Игра пробуждения</h3><p>Девяносто дней в&nbsp;обычной жизни: команда, ежедневная практика, результаты в&nbsp;деле и&nbsp;отношениях. Так третий модуль и&nbsp;называется.</p><p><a href="/chizhovy2/marafon/">Подробнее</a></p></div>
 </div>
 <p class="note" style="margin-top:22px">Ближайший поток модуля I идёт в&nbsp;конце августа, точные числа называем на&nbsp;собеседовании. Между ступенями 3-5&nbsp;недель, поэтому даты второго и&nbsp;третьего узнаёшь там&nbsp;же.</p>
 </div></section>
@@ -1680,7 +1680,7 @@ P["programma/index.html"] = ("Программа · Настоящие отно�
 <div>
 <p class="eyebrow">Почему по&nbsp;порядку</p>
 <h2 style="font-size:1.9rem">Ступени идут снизу вверх</h2>
-<p>Второй модуль не&nbsp;работает без первого: человек ещё не&nbsp;видит свою запись, и&nbsp;сцену не&nbsp;на&nbsp;чем строить. Марафон без двух очных ступеней превращается в&nbsp;чат с&nbsp;благими намерениями.</p>
+<p>Второй модуль не&nbsp;работает без первого: человек ещё не&nbsp;видит свою запись, и&nbsp;сцену не&nbsp;на&nbsp;чем строить. Третий модуль без двух очных ступеней превращается в&nbsp;чат с&nbsp;благими намерениями.</p>
 </div>
 </div>
 </div></section>
@@ -1918,17 +1918,17 @@ P["modul-2/index.html"] = ("Модуль II. Внутренняя свобода
 </div></section>
 
 <section><div class="narrow">
-<p>Второй модуль идут те, кто прошёл <a href="/chizhovy2/modul-1/">первый</a> и&nbsp;выдержал недели на проверку в жизни: увидел свою запись в&nbsp;деле и&nbsp;захотел с&nbsp;ней разобраться. После зала снова две недели работы в&nbsp;чате, а&nbsp;дальше <a href="/chizhovy2/marafon/">Марафон</a>, где новое поведение закрепляется девяноста днями практики.</p>
-<p style="margin-top:26px"><a class="btn btn-wine" href="/chizhovy2/sessiya/">Занять место</a> <a class="btn btn-ghost" href="/chizhovy2/marafon/" style="margin-left:8px">Дальше: Марафон</a></p>
+<p>Второй модуль идут те, кто прошёл <a href="/chizhovy2/modul-1/">первый</a> и&nbsp;выдержал недели на проверку в жизни: увидел свою запись в&nbsp;деле и&nbsp;захотел с&nbsp;ней разобраться. После зала снова две недели работы в&nbsp;чате, а&nbsp;дальше <a href="/chizhovy2/marafon/">Игра пробуждения</a>, где новое поведение закрепляется девяноста днями практики.</p>
+<p style="margin-top:26px"><a class="btn btn-wine" href="/chizhovy2/sessiya/">Занять место</a> <a class="btn btn-ghost" href="/chizhovy2/marafon/" style="margin-left:8px">Дальше: Игра пробуждения</a></p>
 </div></section>
 
 """)
 
 # ================= МАРАФОН =================
-P["marafon/index.html"] = ("Модуль III. Создатель реальности · Настоящие отношения",
+P["marafon/index.html"] = ("Модуль III. Игра пробуждения · Настоящие отношения",
 "Три месяца практики в жизни: команда, еженедельные встречи, результаты, которые остаются.", "marafon", f"""
 <div class="hero short"><div class="bg" style="background-image:url('/chizhovy2/images/real/real-10.jpg')"></div><div class="veil"></div>
-<div class="in"><p class="eyebrow">Модуль III · три месяца</p><h1>Создатель реальности</h1>
+<div class="in"><p class="eyebrow">Модуль III · три месяца</p><h1>Игра пробуждения. Создатели</h1>
 <p class="lead">Первые две ступени ты&nbsp;практикуешь в&nbsp;зале, под нашим присмотром и&nbsp;в&nbsp;доверительном кругу. Третья выносит всё это в&nbsp;жизнь: в&nbsp;семью, в&nbsp;работу, в&nbsp;общение с&nbsp;людьми. Девяносто дней подряд.</p></div></div>
 
 <section><div class="narrow">
@@ -1938,7 +1938,7 @@ P["marafon/index.html"] = ("Модуль III. Создатель реально�
 <div class="card white" style="margin-bottom:12px">{icon('sunrise','var(--sand)')}<h3>Ежедневная практика</h3><p>Утром формулируешь главный фокус дня, вечером подводишь итог: открытия и&nbsp;благодарности. Простая дисциплина, которая за 90&nbsp;дней перепрошивает привычный способ&nbsp;жить.</p></div>
 <div class="card white">{icon('target')}<h3>Реальные цели</h3><p>Работа идёт на&nbsp;твоих живых задачах: дело, деньги, отношения, тело.</p></div>
 
-<div class="pull"><div class="q">«Раньше я&nbsp;отсеивал людей по&nbsp;уровню жизни. Сейчас просто строю настоящие отношения, и&nbsp;люди вокруг собрались такие, что доходы выросли сами.»</div><div class="who">Выпускник Марафона, предприниматель</div></div>
+<div class="pull"><div class="q">«Раньше я&nbsp;отсеивал людей по&nbsp;уровню жизни. Сейчас просто строю настоящие отношения, и&nbsp;люди вокруг собрались такие, что доходы выросли сами.»</div><div class="who">Выпускник Игры пробуждения, предприниматель</div></div>
 <p><strong>Итог: другие поступки и&nbsp;новые результаты.</strong> Жизнь продолжает расти и&nbsp;тогда, когда сопровождение&nbsp;закончилось.</p>
 </div></section>
 
@@ -1958,7 +1958,7 @@ P["marafon/index.html"] = ("Модуль III. Создатель реально�
 <div class="col">
 <p class="eyebrow">Как это работает на&nbsp;практике</p>
 <h2>Работа переезжает в&nbsp;чат</h2>
-<p>Марафон почти целиком идёт в&nbsp;обычной жизни. Зал остаётся позади, а&nbsp;работа переезжает в&nbsp;командный чат, куда все пишут каждый день. Утром намерение на&nbsp;день, вечером итог: что сбылось, где не&nbsp;получилось, за&nbsp;что благодарен.</p>
+<p>Игра пробуждения почти целиком идёт в&nbsp;обычной жизни. Зал остаётся позади, а&nbsp;работа переезжает в&nbsp;командный чат, куда все пишут каждый день. Утром намерение на&nbsp;день, вечером итог: что сбылось, где не&nbsp;получилось, за&nbsp;что благодарен.</p>
 <p>К&nbsp;третьему месяцу тон становится другим. Люди перестают отчитываться и&nbsp;пишут простыми словами: «сорвался на&nbsp;сына, увидел откуда», «первый раз попросил помощь и&nbsp;не&nbsp;умер». По&nbsp;таким строчкам и&nbsp;видно, что запись поменялась.</p>
 <h3 style="margin-top:26px">Что делает команда</h3>
 <p>Команда собирается на&nbsp;втором модуле и&nbsp;дальше идёт вместе. Это не&nbsp;чат поддержки с&nbsp;сердечками: у&nbsp;людей общие задачи, они пишут намерения друг за&nbsp;друга, встречаются на&nbsp;забегах и&nbsp;вытаскивают того, кто провалился. Один из&nbsp;участников сформулировал точнее всего: перестаёшь путать «я&nbsp;забыл» и&nbsp;«я&nbsp;подвёл своих».</p>
@@ -1966,7 +1966,7 @@ P["marafon/index.html"] = ("Модуль III. Создатель реально�
 <aside class="side">
 <div class="box"><div class="lbl">Сколько идёт</div><div class="big">3 месяца</div><p>Каждый день практика, раз в&nbsp;неделю разбор с&nbsp;Ириной и&nbsp;Алексеем.</p></div>
 <div class="box"><div class="lbl">Где проходит</div><p>В&nbsp;обычной жизни. Встречи команды онлайн, поэтому город значения не&nbsp;имеет.</p></div>
-<div class="box"><div class="lbl">Условие входа</div><p>Два очных модуля. Марафон закрепляет то, что на&nbsp;них открылось.</p></div>
+<div class="box"><div class="lbl">Условие входа</div><p>Два очных модуля. Игра пробуждения закрепляет то, что на&nbsp;них открылось.</p></div>
 </aside>
 </div></div></section>
 
@@ -1978,10 +1978,10 @@ P["marafon/index.html"] = ("Модуль III. Создатель реально�
 </div></section>
 
 <section><div class="wrap">
-<p class="eyebrow">Выпуски Марафона</p>
+<p class="eyebrow">Выпуски Игры пробуждения</p>
 <div class="mosaic">
-<div class="ph"><img src="/chizhovy2/images/real/real-10.jpg" alt="Команда Марафона" loading="lazy" width="1280" height="960"></div>
-<div class="ph"><img src="/chizhovy2/images/real/real-11.jpg" alt="Выпуск Марафона" loading="lazy" width="1280" height="960"></div>
+<div class="ph"><img src="/chizhovy2/images/real/real-10.jpg" alt="Команда Игры пробуждения" loading="lazy" width="1280" height="960"></div>
+<div class="ph"><img src="/chizhovy2/images/real/real-11.jpg" alt="Выпуск Игры пробуждения" loading="lazy" width="1280" height="960"></div>
 <div class="ph"><img src="/chizhovy2/images/real/real-13.jpg" alt="Финал модуля" loading="lazy" width="1280" height="960"></div>
 <div class="ph"><img src="/chizhovy2/images/real/real-08.jpg" alt="Разбор в кругу" loading="lazy" width="960" height="1280"></div>
 <div class="ph"><img src="/chizhovy2/images/real/real-02.jpg" alt="Общий стол после выезда" loading="lazy" width="1280" height="960"></div>
@@ -1996,7 +1996,7 @@ P["marafon/index.html"] = ("Модуль III. Создатель реально�
 <div>
 <p class="eyebrow">Три месяца</p>
 <h2 style="font-size:1.9rem">Дорога длиннее, чем кажется</h2>
-<p>Марафон устроен как длинная дистанция: дело не&nbsp;в&nbsp;том, как ты&nbsp;стартовал. Важно, доходишь&nbsp;ли. Первые недели идут легко, потом начинается настоящая работа, и&nbsp;именно там команда вытаскивает тех, кто выдохся.</p>
+<p>Три месяца устроены как длинная дистанция: дело не&nbsp;в&nbsp;том, как ты&nbsp;стартовал. Важно, доходишь&nbsp;ли. Первые недели идут легко, потом начинается настоящая работа, и&nbsp;именно там команда вытаскивает тех, кто выдохся.</p>
 </div>
 </div>
 </div></section>
@@ -2215,7 +2215,7 @@ P["otzyvy/index.html"] = ("Короткие отзывы учеников · Н�
 <p style="margin-bottom:0">«Годами затыкала свои боли: научилась обезболивать и не&nbsp;слышать себя, стала чёрствой к&nbsp;себе. На&nbsp;модуле впервые за&nbsp;много лет плакала при людях и&nbsp;поняла, что это не&nbsp;стыдно. Теперь знаю, что могу быть яркой, настоящей, звонкой, сама по&nbsp;себе».</p>
 </div>
 <div class="card white">
-<p class="eyebrow" style="margin-bottom:10px">Выпускница Марафона</p>
+<p class="eyebrow" style="margin-bottom:10px">Выпускница Игры пробуждения</p>
 <p style="margin-bottom:0">«Полгода не&nbsp;могла решиться, даже паспорт найти не&nbsp;могла. А&nbsp;сегодня внутри приняла решение, и&nbsp;паспорт нашёлся. Купила тур, еду на&nbsp;море на&nbsp;Новый год».</p>
 </div>
 
@@ -2234,7 +2234,7 @@ P["otzyvy/index.html"] = ("Короткие отзывы учеников · Н�
 <div class="card white"><p class="eyebrow" style="margin-bottom:10px">После модуля&nbsp;II</p>
 <p class="serif" style="font-style:italic">«Ощущение, что снял рюкзак, который тянул вниз. Как будто вешу килограммов на&nbsp;десять меньше».</p>
 </div>
-<div class="card white"><p class="eyebrow" style="margin-bottom:10px">После Марафона</p>
+<div class="card white"><p class="eyebrow" style="margin-bottom:10px">После Игры пробуждения</p>
 <p class="serif" style="font-style:italic">«Раньше я&nbsp;отсеивал людей по&nbsp;уровню жизни. Сейчас просто строю настоящие отношения, и&nbsp;люди вокруг собрались такие, что доходы выросли сами».</p></div>
 </div>
 </div></section>
@@ -2597,7 +2597,7 @@ P["istoki/index.html"] = ("Истоки метода · Настоящие от�
 <div class="card"><span class="bignum">01</span>{icon('people')}<h3>Якоб Морено: психодрама</h3><p>Живая сцена вместо разговоров о&nbsp;жизни. Академическое ядро метода: обмен ролями, дублирование, работа группой. Психодраме сто лет, и&nbsp;она до&nbsp;сих пор глубже большинства&nbsp;новинок.</p><p><a href="/chizhovy2/istoki/moreno-psihodrama/">Разобрать</a></p></div>
 <div class="card"><span class="bignum">02</span>{icon('loop','var(--sage-deep)')}<h3>Вадим Зеланд: трансерфинг</h3><p>Маятники, важность, намерение, зеркало мира. Язык, на&nbsp;котором ученики школы описывают свою ежедневную практику.</p><p><a href="/chizhovy2/istoki/zeland-transerfing/">Разобрать</a></p></div>
 <div class="card"><span class="bignum">03</span>{icon('flame','var(--sand)')}<h3>est: тренинги погружения</h3><p>Сан-Франциско, 1971&nbsp;год, Вернер Эрхард. Два выходных подряд делили жизнь человека надвое. Корень жанра, в&nbsp;котором работает наша группа.</p><p><a href="/chizhovy2/istoki/est-transformaciya/">Разобрать</a></p></div>
-<div class="card"><span class="bignum">04</span>{icon('sunrise')}<h3>Невилл Годдард: состояние</h3><p>«Реальность откликается на&nbsp;состояние». Основа практики намерения, которую ученики ведут девяносто дней Марафона.</p><p><a href="/chizhovy2/istoki/goddard/">Разобрать</a></p></div>
+<div class="card"><span class="bignum">04</span>{icon('sunrise')}<h3>Невилл Годдард: состояние</h3><p>«Реальность откликается на&nbsp;состояние». Основа практики намерения, которую ученики ведут девяносто дней Игры пробуждения.</p><p><a href="/chizhovy2/istoki/goddard/">Разобрать</a></p></div>
 <div class="card"><span class="bignum">05</span>{icon('lamp','var(--sage-deep)')}<h3>Наука: механизм</h3><p>ЛеДу, Гоулман, Болте Тейлор, Голвитцер, Либерман. Пять исследователей эмоции, тела и&nbsp;намерения.</p></div>
 <div class="card linen"><span class="bignum">06</span>{icon('lens')}<h3>Сплав: наш метод</h3><p>Сцена Морено, язык Зеланда, формат погружения, практика состояния и&nbsp;наука в&nbsp;одном процессе, проверенном 16&nbsp;годами групп.</p><p><a href="/chizhovy2/metod/">Как устроен метод</a></p></div>
 </div>
@@ -2658,7 +2658,7 @@ P["istoki/index.html"] = ("Истоки метода · Настоящие от�
 <p>Своё в&nbsp;методе тоже есть, и&nbsp;это не&nbsp;мелочь. Мы&nbsp;называем это событийным кругом: карта, по&nbsp;которой видно, как давняя ситуация до&nbsp;сих пор управляет сегодняшними реакциями. В&nbsp;неё и&nbsp;собираются все инструменты, иначе они рассыпаются на&nbsp;красивые&nbsp;упражнения.</p>
 <p>За&nbsp;бортом осталось многое. Залы на&nbsp;сотни человек, где ведущий работает с&nbsp;массой. Разовые погружения без&nbsp;продолжения: уезжаешь на&nbsp;подъёме, а&nbsp;через три недели живёшь как жил. И&nbsp;чтение вместо практики, самая распространённая ловушка умного&nbsp;взрослого.</p>
 <h3>Надо ли&nbsp;читать что-то&nbsp;до&nbsp;старта</h3>
-<p>Не&nbsp;обязательно. Книга Зеланда стоит в&nbsp;списке чтения на&nbsp;Марафоне, Рейнхарта берут те, кому интересно устройство жанра, а&nbsp;остальное происходит уже&nbsp;в&nbsp;зале.</p>
+<p>Не&nbsp;обязательно. Книга Зеланда стоит в&nbsp;списке чтения в&nbsp;Игре пробуждения, Рейнхарта берут те, кому интересно устройство жанра, а&nbsp;остальное происходит уже&nbsp;в&nbsp;зале.</p>
 <h3>Я&nbsp;уже проходил другие&nbsp;тренинги</h3>
 <p>Это частый случай. На&nbsp;собеседовании разбираем, что уже пройдено и&nbsp;где именно остановилось: обычно человек упирается не&nbsp;в&nbsp;новую технику, а&nbsp;в&nbsp;одно и&nbsp;то&nbsp;же&nbsp;место своей&nbsp;истории.</p>
 <h3>А&nbsp;если опыта работы над собой нет&nbsp;совсем</h3>
@@ -2709,7 +2709,7 @@ P["istoki/moreno-psihodrama/index.html"] = ("Якоб Морено и психо
 <h2>Что мы&nbsp;взяли и&nbsp;что переработали</h2>
 <p><b style="color:#D08A5F">Взяли:</b> сцену как главный инструмент, группу как усилитель, пустой стул, обмен ролями. Разговор, который не&nbsp;случился в&nbsp;жизни, происходит у&nbsp;нас в&nbsp;зале. Тело проживает его&nbsp;по-настоящему.</p>
 <p><b style="color:#D08A5F">Переработали:</b> у&nbsp;Морено спонтанность сама по&nbsp;себе считалась лекарством. Мы&nbsp;положили работу на&nbsp;карту событийного круга: она ведёт к&nbsp;конкретной точке, к&nbsp;старому решению, и&nbsp;там происходит перезапись. Сцена у&nbsp;нас средство. Цель это новый сценарий в&nbsp;жизни.</p>
-<p>Поэтому после сцены работа не&nbsp;заканчивается. Решение закрепляется практикой между модулями и&nbsp;тремя месяцами&nbsp;Марафона.</p>
+<p>Поэтому после сцены работа не&nbsp;заканчивается. Решение закрепляется практикой между модулями и&nbsp;тремя месяцами Игры пробуждения.</p>
 </div></section>
 {istoki_dalee(("/chizhovy2/istoki/zeland-transerfing/", "Зеланд и трансерфинг"), ("/chizhovy2/istoki/est-transformaciya/", "est и «Трансформация»"), ("/chizhovy2/metod/", "Метод целиком"))}
 <section><div class="wrap"><div class="tside">
@@ -2807,12 +2807,12 @@ P["istoki/zeland-transerfing/index.html"] = ("Вадим Зеланд и тра�
 </div>
 
 <div style="background:#fff;border:1px solid var(--line);border-radius:10px;padding:26px 18px 10px;margin-top:26px">{mayatnik_svg()}</div>
-<div class="pull"><div class="q">«Отследил сегодня несколько маятников, не&nbsp;среагировал, и&nbsp;получилось удержать состояние весь день.»</div><div class="who">Из отчёта ученика на&nbsp;Марафоне</div></div>
+<div class="pull"><div class="q">«Отследил сегодня несколько маятников, не&nbsp;среагировал, и&nbsp;получилось удержать состояние весь день.»</div><div class="who">Из отчёта ученика в&nbsp;Игре пробуждения</div></div>
 </div></section>
 
 <section class="dark"><div class="narrow">
 <h2>Что мы&nbsp;взяли и&nbsp;что переработали</h2>
-<p><b style="color:#D08A5F">Взяли:</b> рабочий язык (он&nbsp;теперь живёт в&nbsp;разговоре наших групп). На&nbsp;Марафоне трансерфинг входит в&nbsp;список чтения, а&nbsp;его термины живут в&nbsp;ежедневной практике: утром намерение, вечером разбор, где катался на&nbsp;маятниках и&nbsp;где удержал состояние.</p>
+<p><b style="color:#D08A5F">Взяли:</b> рабочий язык (он&nbsp;теперь живёт в&nbsp;разговоре наших групп). В&nbsp;Игре пробуждения трансерфинг входит в&nbsp;список чтения, а&nbsp;его термины живут в&nbsp;ежедневной практике: утром намерение, вечером разбор, где катался на&nbsp;маятниках и&nbsp;где удержал состояние.</p>
 <p><b style="color:#D08A5F">Переработали:</b> у&nbsp;Зеланда это философия для самостоятельного чтения, и у&nbsp;неё есть слабое место: прочитал, восхитился, через месяц забыл. Мы&nbsp;дали каждому термину механизм и&nbsp;тренировку. Маятник у&nbsp;нас это твоя знакомая петля реакции, и&nbsp;её видно на&nbsp;событийном круге. Чтение даёт понимание. Держать состояние учат девяносто дней практики с&nbsp;командой и&nbsp;разборами.</p>
 </div></section>
 {istoki_dalee(("/chizhovy2/istoki/goddard/", "Невилл Годдард"), ("/chizhovy2/istoki/est-transformaciya/", "est и «Трансформация»"), ("/chizhovy2/istoki/moreno-psihodrama/", "Морено и психодрама"))}
@@ -2825,7 +2825,7 @@ P["istoki/zeland-transerfing/index.html"] = ("Вадим Зеланд и тра�
 <p>С&nbsp;важностью та же&nbsp;история. После пяти дней второго модуля эта мысль расходится по&nbsp;вечерним отчётам почти дословно: страха нет, есть важность. Раздутая ставка включает тревогу и&nbsp;сжимает выбор до&nbsp;одного варианта, и он&nbsp;обычно худший из&nbsp;возможных.</p>
 </div>
 <aside class="side">
-<div class="box"><div class="lbl">Домашнее чтение</div><div class="big">5 ступеней</div><p>Столько частей у&nbsp;«Трансерфинга реальности». Книга стоит в&nbsp;списке чтения на&nbsp;все три месяца Марафона: одни читают её&nbsp;залпом, другие слушают в аудио за&nbsp;рулём.</p></div>
+<div class="box"><div class="lbl">Домашнее чтение</div><div class="big">5 ступеней</div><p>Столько частей у&nbsp;«Трансерфинга реальности». Книга стоит в&nbsp;списке чтения на&nbsp;все три месяца Игры пробуждения: одни читают её&nbsp;залпом, другие слушают в аудио за&nbsp;рулём.</p></div>
 </aside>
 </div><figure class="fig"><div class="ph"><img src="/chizhovy2/images/n-eskalator-tolpa.jpg" alt="Толпа на эскалаторе метро" loading="lazy" width="1360" height="768"></div><figcaption>Дёрнулся, значит отдал силу</figcaption></figure>
 </div></section>
@@ -2860,7 +2860,7 @@ P["istoki/zeland-transerfing/index.html"] = ("Вадим Зеланд и тра�
 <section><div class="wrap">
 <div class="polka">
 <div class="pt">Полка · если хочется к первоисточнику</div>
-<ul><li><b>Вадим Зеланд, «Трансерфинг реальности»</b><span>Первые ступени: маятники, важность, зеркало мира. На Марафоне входит в список чтения.</span></li></ul>
+<ul><li><b>Вадим Зеланд, «Трансерфинг реальности»</b><span>Первые ступени: маятники, важность, зеркало мира. В Игре пробуждения входит в список чтения.</span></li></ul>
 </div>
 </div></section>
 
@@ -2978,7 +2978,7 @@ P["istoki/est-transformaciya/index.html"] = ("est и «Трансформаци�
 """)
 
 P["istoki/goddard/index.html"] = ("Невилл Годдард · Истоки метода",
-"Состояние готового итога: идея Невилла Годдарда, практика намерения на Марафоне и её научный двойник.", "istoki", f"""
+"Состояние готового итога: идея Невилла Годдарда, практика намерения в Игре пробуждения и её научный двойник.", "istoki", f"""
 <div class="hero short"><div class="bg" style="background-image:url('/chizhovy2/images/istoki-goddard.jpg')"></div><div class="veil"></div>
 <div class="in"><p class="eyebrow">Истоки · Годдард</p><h1>Состояние готового итога</h1>
 <p class="lead">Невилл Годдард, лектор с&nbsp;Барбадоса, полвека собирал залы в&nbsp;Америке с&nbsp;одной мыслью: какое состояние, такие и&nbsp;события. Его идею наши ученики проверяют девяносто дней подряд.</p></div></div>
@@ -2993,7 +2993,7 @@ P["istoki/goddard/index.html"] = ("Невилл Годдард · Истоки �
 
 <section class="dark"><div class="narrow">
 <h2>Что мы&nbsp;взяли и&nbsp;что переработали</h2>
-<p><b style="color:#D08A5F">Взяли:</b> ежедневную практику намерения на&nbsp;Марафоне. Утром формулируешь, из&nbsp;какого состояния идёшь в&nbsp;день и&nbsp;что создаёшь. Вечером записываешь открытия и&nbsp;благодарности. Девяносто дней подряд, с&nbsp;командой и&nbsp;разборами: этого хватает, чтобы новый способ жить стал привычкой.</p>
+<p><b style="color:#D08A5F">Взяли:</b> ежедневную практику намерения в&nbsp;Игре пробуждения. Утром формулируешь, из&nbsp;какого состояния идёшь в&nbsp;день и&nbsp;что создаёшь. Вечером записываешь открытия и&nbsp;благодарности. Девяносто дней подряд, с&nbsp;командой и&nbsp;разборами: этого хватает, чтобы новый способ жить стал привычкой.</p>
 <p><b style="color:#D08A5F">Переработали:</b> рамку. У&nbsp;Годдарда мистика середины прошлого века, мы&nbsp;же показываем механизм: состояние управляет фильтрами внимания и&nbsp;качеством решений. Стоит ему сдвинуться, и&nbsp;человек замечает другие возможности, делает новые шаги, получает иные события. У&nbsp;практики намерения есть и&nbsp;научный двойник: психолог Питер Голвитцер показал, что конкретно сформулированное намерение в&nbsp;разы повышает шанс дойти до&nbsp;действия.</p>
 </div>
 <div class="wrap only-d" style="margin-top:30px">{goddard_shema_svg()}</div>
@@ -3003,7 +3003,7 @@ P["istoki/goddard/index.html"] = ("Невилл Годдард · Истоки �
 <p style="font-size:.72rem;font-weight:800;letter-spacing:.16em;color:#D08A5F;margin-bottom:8px">ХОД ГОДДАРДА</p>
 <div class="card" style="background:#6E3B4B;border-color:#6E3B4B"><p style="margin:0;color:#FAF5F0;font-weight:700">живу состоянием итога → решаю и&nbsp;делаю иначе → события&nbsp;меняются</p></div>
 </div></section>
-{istoki_dalee(("/chizhovy2/istoki/zeland-transerfing/", "Зеланд и трансерфинг"), ("/chizhovy2/istoki/moreno-psihodrama/", "Морено и психодрама"), ("/chizhovy2/marafon/", "Марафон: 90 дней практики"))}
+{istoki_dalee(("/chizhovy2/istoki/zeland-transerfing/", "Зеланд и трансерфинг"), ("/chizhovy2/istoki/moreno-psihodrama/", "Морено и психодрама"), ("/chizhovy2/marafon/", "Игра пробуждения: 90 дней практики"))}
 <section><div class="wrap"><div class="tside">
 <div class="col">
 <p class="eyebrow">Человек и его&nbsp;история</p>
@@ -3042,7 +3042,7 @@ P["istoki/goddard/index.html"] = ("Невилл Годдард · Истоки �
 <p>Уговоры вроде «всё будет отлично» держатся до&nbsp;первой плохой новости, потому что человек внутри знает правду. Здесь работа другая: ты&nbsp;входишь в&nbsp;состояние того, у&nbsp;кого уже получилось, и&nbsp;принимаешь сегодняшние решения из&nbsp;него. Проверяется это делами.</p>
 </div>
 <aside class="side">
-<div class="box"><div class="lbl">Каждый день</div><div class="big">90 дней</div><p>Столько дней подряд ученики Марафона не&nbsp;пропускают ни&nbsp;утра, ни&nbsp;вечера.</p></div>
+<div class="box"><div class="lbl">Каждый день</div><div class="big">90 дней</div><p>Столько дней подряд ученики Игры пробуждения не&nbsp;пропускают ни&nbsp;утра, ни&nbsp;вечера.</p></div>
 </aside>
 </div><figure class="fig"><div class="ph"><img src="/chizhovy2/images/n-nochnik-u-krovati.jpg" alt="Ночник у кровати поздним вечером" loading="lazy" width="1360" height="768"></div><figcaption>Последние минуты перед сном</figcaption></figure>
 </div></section>
@@ -3079,7 +3079,7 @@ P["istoki/nauka/index.html"] = ("Наука за методом · Истоки 
 <div class="card white" style="margin-bottom:12px"><span class="bignum">12&nbsp;мс</span><h3>Джозеф ЛеДу: эмоция быстрее мысли</h3><p>Сигнал об&nbsp;угрозе доходит до&nbsp;эмоционального центра мозга за 12&nbsp;миллисекунд. Думающая кора получает его позже. Поэтому обещание «в&nbsp;следующий раз отвечу спокойно» рассыпается: реакция стартует раньше решения. В&nbsp;зале мы&nbsp;работаем с&nbsp;самой записью, она быстрее любой силы&nbsp;воли.</p></div>
 <div class="card white" style="margin-bottom:12px"><h3>Дэниел Гоулман: эмоции берут верх</h3><p>В&nbsp;острый момент миндалина перехватывает управление, и&nbsp;умный взрослый человек ведёт себя как не&nbsp;свой. Гоулман назвал это захватом. В&nbsp;зале ты&nbsp;учишься видеть его в&nbsp;лицо и&nbsp;выходить из&nbsp;него через тело: пока миндалина рулит, уговоры&nbsp;бессильны.</p></div>
 <div class="card white" style="margin-bottom:12px"><span class="bignum">90&nbsp;с</span><h3>Джилл Болте Тейлор: девяносто секунд</h3><p>Химия эмоции живёт в&nbsp;теле около полутора минут. Всё, что дольше, поддерживает уже мысль, которая крутит её&nbsp;по&nbsp;кругу. Пауза и&nbsp;внимание к&nbsp;телу разжимают этот круг. Тренируем это с первого&nbsp;дня.</p></div>
-<div class="card white" style="margin-bottom:12px"><h3>Питер Голвитцер: сила намерения</h3><p>Точное намерение поднимает шанс действия в&nbsp;разы по&nbsp;сравнению с&nbsp;расплывчатым «надо&nbsp;бы»: голове нужны место, время и&nbsp;первый шаг. Иначе не&nbsp;работает. Наша утренняя практика на&nbsp;Марафоне стоит на этом&nbsp;открытии.</p></div>
+<div class="card white" style="margin-bottom:12px"><h3>Питер Голвитцер: сила намерения</h3><p>Точное намерение поднимает шанс действия в&nbsp;разы по&nbsp;сравнению с&nbsp;расплывчатым «надо&nbsp;бы»: голове нужны место, время и&nbsp;первый шаг. Иначе не&nbsp;работает. Наша утренняя практика в&nbsp;Игре пробуждения стоит на этом&nbsp;открытии.</p></div>
 <div class="card white"><h3>Мэттью Либерман: назови чувство, и&nbsp;оно слабеет</h3><p>Названная вслух эмоция теряет силу: слова снижают активность миндалины. На&nbsp;этом держится половина работы группы. Чувство впервые получает имя и&nbsp;звучит при&nbsp;людях.</p></div>
 
 <p style="margin-top:26px">И&nbsp;над всем этим сто лет психодрамы Морено: групповой формат, где все эти механизмы включаются разом, в&nbsp;одной живой сцене. Наука здесь рамка честности. Мы&nbsp;берём проверенное и не обещаем&nbsp;чудес.</p>
@@ -3180,7 +3180,7 @@ P["istorii/index.html"] = ("Истории учеников · Настоящи�
 <p><a href="/chizhovy2/istorii/predprinimatel/">Читать его историю</a></p></div>
 <div class="card white"><span class="chip" style="background:rgba(92,107,84,.12);color:var(--sage-deep)">Опыт команды</span>
 <h3>Девяносто дней команды «МИР»</h3>
-<p>Пятнадцать человек, три месяца Марафона: практика утром и&nbsp;вечером, живой чат. Всё словами самих участников.</p>
+<p>Пятнадцать человек, три месяца Игры пробуждения: практика утром и&nbsp;вечером, живой чат. Всё словами самих участников.</p>
 <p><a href="/chizhovy2/istorii/komanda-mir/">Как прошли 90&nbsp;дней</a></p></div>
 </div>
 <p class="note" style="margin-top:18px">Раздел пополняется. Ещё несколько историй сейчас на&nbsp;согласовании у&nbsp;авторов.</p>
@@ -3190,9 +3190,9 @@ P["istorii/index.html"] = ("Истории учеников · Настоящи�
 <p class="eyebrow">Короткой строкой</p>
 <h2>Что рассказывают ученики</h2>
 <div class="grid3" style="margin-top:26px">
-<div class="card"><p class="serif" style="font-style:italic">«Намерение это когда я&nbsp;знаю, что в&nbsp;моей жизни возможно только так. Тогда и&nbsp;важности нет, я просто&nbsp;знаю».</p><p class="note" style="margin-top:10px">Участница Марафона</p></div>
-<div class="card"><p class="serif" style="font-style:italic">«Когда убираю фокус с&nbsp;себя и&nbsp;вовлечён в&nbsp;команду, энергия кратно растёт, и&nbsp;люди поворачиваются ко мне&nbsp;лицом».</p><p class="note" style="margin-top:10px">Участник Марафона</p></div>
-<div class="card"><p class="serif" style="font-style:italic">«Когда цель и&nbsp;мечта действительно мои, всё происходит легко, порой на&nbsp;грани фантастики».</p><p class="note" style="margin-top:10px">Участница Марафона</p></div>
+<div class="card"><p class="serif" style="font-style:italic">«Намерение это когда я&nbsp;знаю, что в&nbsp;моей жизни возможно только так. Тогда и&nbsp;важности нет, я просто&nbsp;знаю».</p><p class="note" style="margin-top:10px">Участница Игры пробуждения</p></div>
+<div class="card"><p class="serif" style="font-style:italic">«Когда убираю фокус с&nbsp;себя и&nbsp;вовлечён в&nbsp;команду, энергия кратно растёт, и&nbsp;люди поворачиваются ко мне&nbsp;лицом».</p><p class="note" style="margin-top:10px">Участник Игры пробуждения</p></div>
+<div class="card"><p class="serif" style="font-style:italic">«Когда цель и&nbsp;мечта действительно мои, всё происходит легко, порой на&nbsp;грани фантастики».</p><p class="note" style="margin-top:10px">Участница Игры пробуждения</p></div>
 </div>
 <p style="margin-top:26px"><a class="btn btn-ghost" href="/chizhovy2/otzyvy/">Ещё отзывы о&nbsp;школе</a></p>
 </div></section>
@@ -3363,9 +3363,9 @@ P["istorii/predprinimatel/index.html"] = ("Предприниматель: за�
 """)
 
 P["istorii/komanda-mir/index.html"] = ("Девяносто дней команды «МИР» · Истории учеников",
-"Как выглядит Марафон изнутри: утренние намерения, вечерние благодарности и команда, голосами участников.", "otzyvy", f"""
+"Как выглядит Игра пробуждения изнутри: утренние намерения, вечерние благодарности и команда, голосами участников.", "otzyvy", f"""
 <div class="hero short"><div class="bg" style="background-image:url('/chizhovy2/images/real/real-10.jpg')"></div><div class="veil"></div>
-<div class="in"><p class="eyebrow">Марафон изнутри</p><h1>Девяносто дней команды «МИР»</h1>
+<div class="in"><p class="eyebrow">Игра пробуждения изнутри</p><h1>Девяносто дней команды «МИР»</h1>
 <p class="lead">Осень 2022&nbsp;года, пятнадцать человек, третий модуль «Создатель реальности». Три месяца: раз в&nbsp;неделю разбор с&nbsp;Алексеем и&nbsp;Ириной, между ними ежедневная практика. Ниже их&nbsp;история, собранная из&nbsp;живого командного&nbsp;чата.</p></div></div>
 
 <section><div class="wrap">
@@ -3394,11 +3394,11 @@ P["istorii/komanda-mir/index.html"] = ("Девяносто дней команд
 
 <section><div class="wrap">
 <div class="mosaic">
-<div class="ph"><img src="/chizhovy2/images/real/real-10.jpg" alt="Команда Марафона" loading="lazy" width="1280" height="960"></div>
+<div class="ph"><img src="/chizhovy2/images/real/real-10.jpg" alt="Команда Игры пробуждения" loading="lazy" width="1280" height="960"></div>
 <div class="ph"><img src="/chizhovy2/images/real/real-11.jpg" alt="Участники команды" loading="lazy" width="1280" height="960"></div>
 <div class="ph"><img src="/chizhovy2/images/real/real-12.jpg" alt="Команда на забеге" loading="lazy" width="960" height="1280"></div>
 </div>
-<p class="btns" style="margin-top:30px"><a class="btn btn-wine" href="/chizhovy2/marafon/">Как устроен Марафон</a> <a class="btn btn-ghost" href="/chizhovy2/sessiya/" style="margin-left:8px">Записаться на&nbsp;собеседование</a></p>
+<p class="btns" style="margin-top:30px"><a class="btn btn-wine" href="/chizhovy2/marafon/">Как устроена Игра пробуждения</a> <a class="btn btn-ghost" href="/chizhovy2/sessiya/" style="margin-left:8px">Записаться на&nbsp;собеседование</a></p>
 </div></section>
 <section><div class="wrap"><div class="tside">
 <div class="col">
@@ -3473,7 +3473,7 @@ P["slovar/index.html"] = ("Словарь школы · Настоящие от�
 
 <p class="eyebrow">Про ежедневную практику</p>
 <div class="grid2" style="margin-top:10px">
-<div class="card white">{icon('route')}<h3>Намерение</h3><p>Утренняя практика Марафона: из&nbsp;какого состояния иду в&nbsp;день и&nbsp;что создаю. Желание просит. Намерение спокойно&nbsp;знает.</p></div>
+<div class="card white">{icon('route')}<h3>Намерение</h3><p>Утренняя практика Игры пробуждения: из&nbsp;какого состояния иду в&nbsp;день и&nbsp;что создаю. Желание просит. Намерение спокойно&nbsp;знает.</p></div>
 <div class="card white">{icon('ceiling','var(--sand)')}<h3>Важность</h3><p>Раздутая ставка на&nbsp;результат, которая включает страх и&nbsp;сжимает выбор. Снял важность, вернулась лёгкость. Переговоры, свидания и&nbsp;большие решения идут после этого&nbsp;иначе.</p></div>
 <div class="card white">{icon('pendulum','var(--sage-deep)')}<h3>Маятники</h3><p>Всё, что кормится твоей реакцией: скандал, лента новостей, чужая паника. Дёрнулся, отдал энергию. Навык школы: заметить крючок и не&nbsp;схватиться.</p></div>
 <div class="card white">{icon('people')}<h3>Быть вкладом</h3><p>Развернуть фокус с&nbsp;«что мне дадут» на&nbsp;«что я&nbsp;даю». В&nbsp;паре, в&nbsp;команде, в&nbsp;деле. Участники отмечают: энергии от&nbsp;этого становится больше.</p></div>
@@ -3758,7 +3758,7 @@ P["kak-prohodit/index.html"] = ("Как проходит обучение · Н�
 
 <section><div class="wrap">
 <p class="eyebrow">Маршрут</p>
-<h2>От собеседования до&nbsp;Марафона</h2>
+<h2>От собеседования до&nbsp;Игры пробуждения</h2>
 <div class="timeline" style="margin-top:28px">{timeline_svg()}</div>
 <div class="timeline-m" style="margin-top:28px">
 <div class="tm"><div class="c">I</div><div><b>Возвращение к&nbsp;себе</b><span>2,5 дня очно</span></div></div>
@@ -3770,7 +3770,7 @@ P["kak-prohodit/index.html"] = ("Как проходит обучение · Н�
 <div class="grid3" style="margin-top:26px">
 <div class="card"><span class="bignum">0</span>{icon('speech')}<h3>Анкета и&nbsp;собеседование</h3><p>Сначала несколько вопросов письменно, потом живой разговор на&nbsp;15-30&nbsp;минут: твоя ситуация, честный взгляд и&nbsp;решение с&nbsp;двух сторон, по пути&nbsp;ли нам. Для&nbsp;читателей сайта бесплатно.</p></div>
 <div class="card"><span class="bignum">1-2</span>{icon('people','var(--sage-deep)')}<h3>Очные модули</h3><p>Погружение на&nbsp;несколько дней: сцены, разборы, работа с&nbsp;состоянием в&nbsp;группе 10-20 человек. Между модулями 3-5&nbsp;недель: новое проверяется обычной жизнью.</p></div>
-<div class="card"><span class="bignum">3</span>{icon('calendar','var(--sand)')}<h3>Марафон</h3><p>Три месяца в&nbsp;настоящей жизни: команда, еженедельные разборы с&nbsp;ведущими и&nbsp;ежедневная практика.</p></div>
+<div class="card"><span class="bignum">3</span>{icon('calendar','var(--sand)')}<h3>Игра пробуждения</h3><p>Три месяца в&nbsp;настоящей жизни: команда, еженедельные разборы с&nbsp;ведущими и&nbsp;ежедневная практика.</p></div>
 </div>
 </div></section>
 
@@ -3860,7 +3860,7 @@ P["praktiki/index.html"] = ("Ежедневные практики · Насто
 "Утреннее намерение, вечерние открытия и благодарности, маятники и важность: как выглядит день ученика.", "programma", f"""
 <div class="hero short"><div class="bg" style="background-image:url('/chizhovy2/images/slovar-hero.jpg')"></div><div class="veil"></div>
 <div class="in"><p class="eyebrow">Практики школы</p><h1>Из чего состоит день ученика</h1>
-<p class="lead">Каждый день несколько коротких действий, которые держат состояние и&nbsp;внимание. Ниже практики Марафона, как их&nbsp;ведут наши команды.</p></div></div>
+<p class="lead">Каждый день несколько коротких действий, которые держат состояние и&nbsp;внимание. Ниже практики Игры пробуждения, как их&nbsp;ведут наши команды.</p></div></div>
 
 <section><div class="narrow">
 <div class="timeline-m" style="display:block;margin-bottom:26px">
@@ -4119,7 +4119,7 @@ P["soobshchestvo/index.html"] = ("Сообщество выпускников ·
 <h2>Во что превращается группа</h2>
 </div>
 <div class="wrap"><div class="grid3" style="margin-top:24px">
-<div class="card">{icon('people')}<h3>Команда</h3><p>На&nbsp;Марафоне группа собирается вокруг общей цели, у&nbsp;каждого свой напарник. Такой уровень окружения многим встречается&nbsp;впервые.</p></div>
+<div class="card">{icon('people')}<h3>Команда</h3><p>В&nbsp;Игре пробуждения группа собирается вокруг общей цели, у&nbsp;каждого свой напарник. Такой уровень окружения многим встречается&nbsp;впервые.</p></div>
 <div class="card">{icon('flame','var(--sand)')}<h3>Забеги</h3><p>Команды выходят на&nbsp;старты вместе с&nbsp;Алексеем: тело быстро выдаёт, где ты&nbsp;себя обманываешь, и&nbsp;честно радуется, когда ты&nbsp;настоящий.</p></div>
 <div class="card">{icon('cups','var(--sage-deep)')}<h3>Свои люди</h3><p>Выпускники дружат домами, делают дела вместе и&nbsp;приводят в&nbsp;школу близких.</p></div>
 </div></div></section>
@@ -4194,7 +4194,7 @@ P["start/index.html"] = ("С чего начать · Настоящие отн�
 <div class="st">{icon('lens','var(--sage-deep)')}<div><b>Осмотрись</b><p>Как устроен <a href="/chizhovy2/metod/">метод</a> и&nbsp;<a href="/chizhovy2/kak-prohodit/">путь ученика</a>, из&nbsp;чего <a href="/chizhovy2/istoki/">собран подход</a>. Всё открыто, без&nbsp;«узнаете на&nbsp;вебинаре».</p></div><span class="bignum">02</span></div>
 <div class="st">{icon('speech','var(--sand)')}<div><b>Напиши в&nbsp;школу и&nbsp;<span class="kpm">заполни анкету</span></b><p>Форма на&nbsp;сайте соберёт сообщение за&nbsp;полминуты, дальше отправляешь его в&nbsp;чат школы. В&nbsp;ответ придёт анкета: несколько вопросов до&nbsp;созвона. Дальше разговор на&nbsp;15-30&nbsp;минут, честный взгляд со&nbsp;стороны и&nbsp;понятный следующий шаг. Для&nbsp;читателей сайта бесплатно. <a href="/chizhovy2/sessiya/">Записаться</a></p></div><span class="bignum">03</span></div>
 </div>
-<p class="note" style="margin-top:18px">Дальше всё по&nbsp;порядку: <a href="/chizhovy2/programma/">программа из&nbsp;трёх модулей</a>, между ними недели на&nbsp;проверку в&nbsp;жизни, после: Марафон и&nbsp;сообщество.</p>
+<p class="note" style="margin-top:18px">Дальше всё по&nbsp;порядку: <a href="/chizhovy2/programma/">программа из&nbsp;трёх модулей</a>, между ними недели на&nbsp;проверку в&nbsp;жизни, после: Игра пробуждения и&nbsp;сообщество.</p>
 </div></section>
 
 <section><div class="wrap">
@@ -4217,7 +4217,7 @@ P["start/index.html"] = ("С чего начать · Настоящие отн�
 <div class="card"><h3>Гайд: полчаса&nbsp;чтения</h3><p>Механика повтора, четыре самых частых записи наших групп и&nbsp;короткий словарь. Заканчивается цифрой: сколько пунктов из&nbsp;десяти в&nbsp;самодиагностике оказались про&nbsp;тебя.</p></div>
 <div class="card"><h3>Анкета и&nbsp;разговор: 15-30&nbsp;минут</h3><p>Сначала несколько вопросов письменно, потом созвон, онлайн или очно. Из&nbsp;него выходишь с&nbsp;двумя вещами: свой круг видно со&nbsp;стороны, и&nbsp;понятно, чем школа может помочь именно&nbsp;тебе.</p></div>
 <div class="card"><h3>Первый модуль: два с половиной&nbsp;дня</h3><p>Пятничный вечер и&nbsp;выходные, в&nbsp;зале от&nbsp;десяти до&nbsp;двадцати человек. К&nbsp;последнему дню ты&nbsp;видишь свою запись целиком и&nbsp;понимаешь, в&nbsp;каком возрасте она&nbsp;появилась.</p></div>
-<div class="card"><h3>Пауза: три-пять&nbsp;недель</h3><p>Перерыв между ступенями сделан нарочно: увиденное должно осесть в&nbsp;обычной жизни, среди тех&nbsp;же людей и тех&nbsp;же дел. Дальше пять дней второго модуля и&nbsp;три месяца&nbsp;Марафона.</p></div>
+<div class="card"><h3>Пауза: три-пять&nbsp;недель</h3><p>Перерыв между ступенями сделан нарочно: увиденное должно осесть в&nbsp;обычной жизни, среди тех&nbsp;же людей и тех&nbsp;же дел. Дальше пять дней второго модуля и&nbsp;три месяца Игры пробуждения.</p></div>
 </div>
 </div>
 <aside class="side">
@@ -4592,7 +4592,7 @@ P["stati/index.html"] = ("Статьи школы · Настоящие отно
 <div class="card"><h3>Доход годами у одной&nbsp;цифры</h3><p>Рывок вверх есть, а&nbsp;через месяц всё возвращается к&nbsp;привычной сумме. Разберём, какое детское решение держит эту планку.</p></div>
 <div class="card"><h3>Что такое важность</h3><p>Где вцепился, там и&nbsp;заклинило: раздутая ставка сжимает выбор до&nbsp;одного варианта. Как это выглядит в&nbsp;переговорах, на&nbsp;первом свидании и в&nbsp;большом решении.</p></div>
 <div class="card"><h3>Психодрама и&nbsp;разговор с&nbsp;психологом</h3><p>Один инструмент работает словами, другой живой сценой. Чем они отличаются по&nbsp;глубине, по&nbsp;скорости и по&nbsp;тому, что остаётся после.</p></div>
-<div class="card"><h3>Аффирмации держатся&nbsp;неделю</h3><p>Слова повторяются на&nbsp;верхнем этаже, запись живёт на&nbsp;нижнем. Что вместо них делают на&nbsp;Марафоне каждое утро и&nbsp;почему это срабатывает.</p></div>
+<div class="card"><h3>Аффирмации держатся&nbsp;неделю</h3><p>Слова повторяются на&nbsp;верхнем этаже, запись живёт на&nbsp;нижнем. Что вместо них делают в&nbsp;Игре пробуждения каждое утро и&nbsp;почему это срабатывает.</p></div>
 </div>
 </div>
 <aside class="side">
