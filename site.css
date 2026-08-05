@@ -407,6 +407,13 @@ section > .narrow > .grid2:last-child{margin-bottom:0}
 .timeline-m .tm span{display:block;font-size:.85rem;color:var(--ink-soft)}
 .timeline-m .gap{margin:6px 0 6px 22px;border-left:2px dashed rgba(110,59,75,.35);padding:8px 0 8px 20px;font-size:.8rem;color:var(--sage-deep)}
 
+/* Схема «Муравей и слон». Подписи живут внутри svg, поэтому вместе с картинкой
+   они масштабируются: широкая версия работает от 760px и шире, ниже её сменяет
+   узкая версия, у которой своя раскладка и свой предел ширины. */
+.slon{background:#fff;border:1px solid var(--line);border-radius:10px;padding:30px 26px 22px}
+.slon-d{display:block}
+.slon-m{display:none}
+
 /* Фото */
 .ph{border-radius:8px;overflow:hidden;border:1px solid var(--line)}
 .ph img{width:100%;height:100%;object-fit:cover;max-width:100%}
@@ -499,6 +506,11 @@ footer .fine{margin-top:44px;padding-top:20px;border-top:1px solid rgba(242,237,
 @media (prefers-reduced-motion: reduce){.rv{opacity:1;transform:none;transition:none}}
 
 @media (max-width:860px){
+  /* Схема «Муравей и слон»: узкая раскладка. Предел ширины держит подписи
+     внутри svg в человеческом кегле (они масштабируются вместе с картинкой) */
+  .slon{padding:22px 18px 16px;max-width:520px}
+  .slon-d{display:none}
+  .slon-m{display:block}
   /* Пальцу нужно не меньше 44px: на телефоне поднимаем зоны нажатия */
   .chiplist a,.chiplist span{padding:12px 16px}
   footer a{font-size:.86rem;line-height:1.5;padding:9px 0}

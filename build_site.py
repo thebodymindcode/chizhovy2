@@ -118,6 +118,148 @@ def timeline_svg():
 </g>
 </svg>'''
 
+# ── Схема «Муравей и слон» (главная идея метода).
+# Масштаб и есть сообщение: разум размером с муравья тянет верёвку,
+# состояние размером со слона спокойно уходит в свою сторону.
+# ВАЖНО: подписи живут внутри <svg> как <text>. Типографский проход
+# (nowrap_hyphen) куски внутри <svg> пропускает целиком, поэтому ни один
+# <span class="nb"> сюда не попадает и схему не рвёт.
+
+# силуэт слона: локальная коробка 0..262 x 0..182, земля y=179, идёт вправо
+_SIL_SLON = '''<g fill="none" stroke="{c}" stroke-width="{sw}" stroke-linecap="round" stroke-linejoin="round">
+<g opacity=".3">
+<path d="M92 130 L92 172 C92 177 90 179 86 179 L76 179 C72 179 70 177 70 172 L70 128"/>
+<path d="M146 128 L146 172 C146 177 144 179 140 179 L130 179 C126 179 124 177 124 172 L124 130"/>
+</g>
+<path fill="{fill}" d="M30 92 C 28 62, 56 46, 100 46 C 138 46, 166 50, 180 60
+C 184 44, 200 36, 216 38 C 232 40, 242 54, 242 72 C 242 88, 240 100, 238 110
+C 248 130, 252 152, 258 168 C 260 173, 256 176, 252 172 C 244 160, 238 144, 234 126
+C 232 118, 228 112, 222 110 C 214 112, 208 114, 202 118 C 194 123, 188 129, 184 137
+L 184 172 C 184 177, 181 179, 176 179 L 164 179 C 159 179, 156 177, 156 172 L 156 134
+C 132 142, 92 144, 72 138 L 72 172 C 72 177, 69 179, 64 179
+L 52 179 C 47 179, 44 177, 44 172 L 44 136 C 34 126, 30 110, 30 92 Z"/>
+<path d="M182 52 C 210 48, 226 66, 222 90 C 218 108, 198 114, 186 104 C 179 94, 178 64, 182 52 Z"/>
+<circle cx="232" cy="82" r="3" fill="{c}" stroke="none"/>
+<path d="M30 92 C 20 104, 16 122, 20 138"/>
+<path d="M20 138 l-5 8 M20 138 l5 8 M20 138 v9"/>
+</g>'''
+
+# силуэт муравья: локальная коробка 0..131 x 0..76, земля y=73, идёт вправо
+_SIL_MURAVEJ = '''<g fill="none" stroke="{c}" stroke-width="{sw}" stroke-linecap="round" stroke-linejoin="round">
+<path d="M58 32 L42 22 L30 72"/>
+<path d="M64 34 L54 22 L50 73"/>
+<path d="M72 32 L86 22 L96 71"/>
+<ellipse cx="26" cy="32" rx="19" ry="15" transform="rotate(-8 26 32)" fill="{fill}"/>
+<path d="M45 33 L54 33"/>
+<ellipse cx="66" cy="30" rx="13" ry="10" transform="rotate(-8 66 30)" fill="{fill}"/>
+<path d="M79 26 L85 24"/>
+<ellipse cx="97" cy="22" rx="12" ry="11" fill="{fill}"/>
+<path d="M108 27 l7 4 M107 31 l4 6"/>
+<path d="M102 12 L114 5 L127 8"/>
+<path d="M106 16 L118 13 L129 17"/>
+<circle cx="102" cy="18" r="2" fill="{c}" stroke="none"/>
+</g>'''
+
+
+def _sil(tpl, x, y, s, c, fill, w):
+    """Силуэт в общей системе координат. Толщина линии делится на масштаб,
+    чтобы у слона и муравья она осталась одинаковой."""
+    return ('<g transform="translate(%.0f,%.0f) scale(%s)">' % (x, y, s)
+            + tpl.format(c=c, fill=fill, sw="%.2f" % (w / s)) + '</g>')
+
+
+def _slon(x, y, s, w=2.6):
+    return _sil(_SIL_SLON, x, y, s, "#17222C", "#ECEFF0", w)
+
+
+def _muravej(x, y, s, w=2.6):
+    return _sil(_SIL_MURAVEJ, x, y, s, "#6E3B4B", "#F2EAEC", w)
+
+
+_SLON_ARIA = ('Схема: крошечный муравей тянет верёвку, а огромный слон идёт '
+              'в другую сторону. Порядок обратный: сначала состояние, '
+              'потом решения, дальше жизнь.')
+
+
+def slon_muravej_svg():
+    """Широкая версия: муравей и слон на одной земле, под ними порядок."""
+    G, ss, ms = 282, 1.6, 0.52
+    sx, sy = 470, G - 179 * ss
+    mx, my = 44, G - 73 * ms
+    ax, ay = mx + 116 * ms, my + 28 * ms          # голова муравья
+    ex, ey = sx + 44 * ss, sy + 148 * ss          # задняя нога слона
+    return f'''<svg class="slon-d" viewBox="0 0 940 492" role="img" aria-label="{_SLON_ARIA}" style="width:100%;height:auto">
+<text x="470" y="34" font-family="Manrope,sans-serif" font-size="13.5" fill="#6B615C">идёт в другую сторону</text>
+<path d="M636 29 h54" stroke="#D08A5F" stroke-width="2.2" fill="none"/>
+<path d="M688 22 l11 7 -11 7 z" fill="#D08A5F"/>
+<line x1="24" y1="{G}" x2="916" y2="{G}" stroke="rgba(110,59,75,.25)" stroke-width="2" stroke-dasharray="2 6"/>
+<path d="M{ax:.0f} {ay:.0f} C 230 306, 380 304, {ex:.0f} {ey:.0f}" fill="none" stroke="#D08A5F" stroke-width="2.2" stroke-dasharray="7 5"/>
+{_muravej(mx, my, ms)}
+{_slon(sx, sy, ss)}
+<text x="310" y="306" text-anchor="middle" font-family="Playfair Display,Georgia,serif" font-style="italic" font-size="17" fill="#6B615C" stroke="#fff" stroke-width="6" paint-order="stroke" stroke-linejoin="round">масса не та</text>
+<text x="24" y="340" font-family="Playfair Display,Georgia,serif" font-size="27" fill="#6E3B4B">Муравей</text>
+<text x="24" y="366" font-family="Manrope,sans-serif" font-size="14.5" fill="#6B615C">разум, планы, решения</text>
+<text x="470" y="340" font-family="Playfair Display,Georgia,serif" font-size="31" fill="#17222C">Слон</text>
+<text x="470" y="368" font-family="Manrope,sans-serif" font-size="15.5" fill="#7D8C74">состояние</text>
+<line x1="24" y1="396" x2="916" y2="396" stroke="rgba(110,59,75,.14)" stroke-width="1"/>
+<text x="24" y="424" font-family="Manrope,sans-serif" font-size="12" font-weight="800" letter-spacing="2.2" fill="#D08A5F">СНАЧАЛА СЛОН, ПОТОМ МУРАВЕЙ</text>
+<line x1="24" y1="460" x2="884" y2="460" stroke="#D08A5F" stroke-width="2"/>
+<path d="M886 452 l12 8 -12 8 z" fill="#D08A5F"/>
+{_slon(104, 460 - 179 * 0.2, 0.2, 2.0)}
+{_muravej(424, 460 - 73 * 0.34, 0.34, 2.0)}
+<g font-family="Manrope,sans-serif" font-size="14.5" font-weight="700" fill="#322D2B">
+<circle cx="130" cy="460" r="4.5" fill="#D08A5F"/>
+<circle cx="450" cy="460" r="4.5" fill="#D08A5F"/>
+<circle cx="770" cy="460" r="4.5" fill="#D08A5F"/>
+<text x="130" y="486" text-anchor="middle">состояние</text>
+<text x="450" y="486" text-anchor="middle">решения</text>
+<text x="770" y="486" text-anchor="middle">жизнь</text>
+</g>
+</svg>'''
+
+
+def slon_muravej_svg_m():
+    """Телефонная версия: та же сцена уже, подписи столбиком под ней."""
+    G, ss, ms = 188, 0.86, 0.36
+    sx, sy = 104, G - 179 * ss
+    mx, my = 12, G - 73 * ms
+    ax, ay = mx + 116 * ms, my + 28 * ms
+    ex, ey = sx + 44 * ss, sy + 148 * ss
+    return f'''<svg class="slon-m" viewBox="0 0 340 434" role="img" aria-label="{_SLON_ARIA}" style="width:100%;height:auto">
+<text x="116" y="24" font-family="Manrope,sans-serif" font-size="14" fill="#6B615C">идёт в другую сторону</text>
+<path d="M280 20 h24" stroke="#D08A5F" stroke-width="2" fill="none"/>
+<path d="M302 14 l10 6 -10 6 z" fill="#D08A5F"/>
+<line x1="12" y1="{G}" x2="328" y2="{G}" stroke="rgba(110,59,75,.25)" stroke-width="1.6" stroke-dasharray="2 5"/>
+<path d="M{ax:.0f} {ay:.0f} C 80 206, 110 206, {ex:.0f} {ey:.0f}" fill="none" stroke="#D08A5F" stroke-width="1.8" stroke-dasharray="5 4"/>
+{_muravej(mx, my, ms, 2.2)}
+{_slon(sx, sy, ss, 2.2)}
+<circle cx="16" cy="228" r="4" fill="#6E3B4B"/>
+<text x="30" y="234" font-family="Playfair Display,Georgia,serif" font-size="23" fill="#6E3B4B">Муравей</text>
+<text x="30" y="257" font-family="Manrope,sans-serif" font-size="15" fill="#6B615C">разум, планы, решения</text>
+<circle cx="16" cy="292" r="4" fill="#17222C"/>
+<text x="30" y="298" font-family="Playfair Display,Georgia,serif" font-size="23" fill="#17222C">Слон</text>
+<text x="30" y="321" font-family="Manrope,sans-serif" font-size="15" fill="#7D8C74">состояние</text>
+<line x1="12" y1="346" x2="328" y2="346" stroke="rgba(110,59,75,.14)" stroke-width="1"/>
+<text x="12" y="374" font-family="Manrope,sans-serif" font-size="12" font-weight="800" letter-spacing="1.5" fill="#D08A5F">СНАЧАЛА СЛОН, ПОТОМ МУРАВЕЙ</text>
+<line x1="12" y1="408" x2="310" y2="408" stroke="#D08A5F" stroke-width="1.8"/>
+<path d="M312 402 l10 6 -10 6 z" fill="#D08A5F"/>
+{_slon(41, 408 - 179 * 0.145, 0.145, 1.8)}
+{_muravej(157, 408 - 73 * 0.24, 0.24, 1.8)}
+<g font-family="Manrope,sans-serif" font-size="14" font-weight="700" fill="#322D2B">
+<circle cx="60" cy="408" r="3.6" fill="#D08A5F"/>
+<circle cx="172" cy="408" r="3.6" fill="#D08A5F"/>
+<circle cx="284" cy="408" r="3.6" fill="#D08A5F"/>
+<text x="60" y="430" text-anchor="middle">состояние</text>
+<text x="172" y="430" text-anchor="middle">решения</text>
+<text x="284" y="430" text-anchor="middle">жизнь</text>
+</g>
+</svg>'''
+
+
+def slon_muravej_block():
+    return ('<div class="slon">' + slon_muravej_svg()
+            + slon_muravej_svg_m() + '</div>')
+
 FAVICON = ("data:image/svg+xml,"
   "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E"
   "%3Ccircle cx='38' cy='50' r='28' fill='none' stroke='%237D8C74' stroke-width='6'/%3E"
@@ -534,6 +676,13 @@ section > .narrow > .grid2:last-child{margin-bottom:0}
 .timeline-m .tm span{display:block;font-size:.85rem;color:var(--ink-soft)}
 .timeline-m .gap{margin:6px 0 6px 22px;border-left:2px dashed rgba(110,59,75,.35);padding:8px 0 8px 20px;font-size:.8rem;color:var(--sage-deep)}
 
+/* Схема «Муравей и слон». Подписи живут внутри svg, поэтому вместе с картинкой
+   они масштабируются: широкая версия работает от 760px и шире, ниже её сменяет
+   узкая версия, у которой своя раскладка и свой предел ширины. */
+.slon{background:#fff;border:1px solid var(--line);border-radius:10px;padding:30px 26px 22px}
+.slon-d{display:block}
+.slon-m{display:none}
+
 /* Фото */
 .ph{border-radius:8px;overflow:hidden;border:1px solid var(--line)}
 .ph img{width:100%;height:100%;object-fit:cover;max-width:100%}
@@ -626,6 +775,11 @@ footer .fine{margin-top:44px;padding-top:20px;border-top:1px solid rgba(242,237,
 @media (prefers-reduced-motion: reduce){.rv{opacity:1;transform:none;transition:none}}
 
 @media (max-width:860px){
+  /* Схема «Муравей и слон»: узкая раскладка. Предел ширины держит подписи
+     внутри svg в человеческом кегле (они масштабируются вместе с картинкой) */
+  .slon{padding:22px 18px 16px;max-width:520px}
+  .slon-d{display:none}
+  .slon-m{display:block}
   /* Пальцу нужно не меньше 44px: на телефоне поднимаем зоны нажатия */
   .chiplist a,.chiplist span{padding:12px 16px}
   footer a{font-size:.86rem;line-height:1.5;padding:9px 0}
@@ -1310,6 +1464,7 @@ P["metod/index.html"] = ("Метод школы · Настоящие отнош
 <p>Порядок обратный: сначала слон, потом муравей. Меняется состояние, за&nbsp;ним решения, а&nbsp;дальше и&nbsp;вся жизнь.</p>
 <p>Ученики после модулей говорят об&nbsp;этом коротко: мир зеркалит состояние.</p>
 </div>
+<div class="wrap" style="margin-top:30px">{slon_muravej_block()}</div>
 <div class="wrap"><div class="nails nails3" style="margin-top:26px">
 <div class="nail"><b>95%</b><span>дня человек живёт на&nbsp;автопилоте привычных&nbsp;реакций</span></div>
 <div class="nail"><b>12&nbsp;мс</b><span>фора эмоционального мозга перед&nbsp;думающим</span></div>
