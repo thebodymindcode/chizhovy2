@@ -977,7 +977,7 @@ FOOTER = """<footer><div class="wrap" style="max-width:1180px">
 <a href="https://t.me/+LVptSH6Mt4hhYmFi">Telegram-канал</a>
 </div>
 </div>
-<div class="fine"><span>«Настоящие отношения» · chizhovy.ru</span><span>Прототип сайта. Результаты участников&nbsp;индивидуальны.</span></div>
+<div class="fine"><span>«Настоящие отношения» · chizhovy.ru</span><span>Результаты участников&nbsp;индивидуальны.</span></div>
 </div></footer>"""
 
 # Заголовки, у которых последняя пара слов НЕ влезает в колонку на узком экране.
@@ -1614,8 +1614,8 @@ P["programma/index.html"] = ("Программа · Настоящие отно�
 <div class="timeline">{timeline_svg()}</div>
 <div class="grid3" style="margin-top:26px">
 <div class="card white"><div class="ph" style="aspect-ratio:4/3;margin-bottom:18px"><img src="/chizhovy2/images/site-m1.jpg" alt="Модуль I" loading="lazy" width="1168" height="880"></div><p class="eyebrow" style="margin-bottom:6px">Модуль I · 2,5 дня</p><h3>Возвращение к&nbsp;себе</h3><p>Видишь свои повторяющиеся паттерны, установки и их&nbsp;источники. Результат: осознанность и&nbsp;первый честный контакт с&nbsp;собой.</p><p><a href="/chizhovy2/modul-1/">Подробнее</a></p></div>
-<div class="card white"><div class="ph" style="aspect-ratio:4/3;margin-bottom:18px"><img src="/chizhovy2/images/real/real-07.jpg" alt="Модуль II" loading="lazy" width="1280" height="960"></div><p class="eyebrow" style="margin-bottom:6px">Модуль II · 5 дней</p><h3>Внутренняя свобода</h3><p>Работа со&nbsp;страхом, виной, обидой и&nbsp;зависимостью от&nbsp;чужого мнения. Дальше приходят сила и&nbsp;спокойствие.</p><p><a href="/chizhovy2/modul-2/">Подробнее</a></p></div>
-<div class="card white"><div class="ph" style="aspect-ratio:4/3;margin-bottom:18px"><img src="/chizhovy2/images/real/real-13.jpg" alt="Модуль III" loading="lazy" width="1280" height="960"></div><p class="eyebrow" style="margin-bottom:6px">Модуль III · 3 месяца</p><h3>Игра пробуждения</h3><p>Девяносто дней в&nbsp;обычной жизни: команда, ежедневная практика, результаты в&nbsp;деле и&nbsp;отношениях. Так третий модуль и&nbsp;называется.</p><p><a href="/chizhovy2/marafon/">Подробнее</a></p></div>
+<div class="card white"><div class="ph" style="aspect-ratio:4/3;margin-bottom:18px"><img src="/chizhovy2/images/real/real-13.jpg" alt="Модуль II" loading="lazy" width="1280" height="960"></div><p class="eyebrow" style="margin-bottom:6px">Модуль II · 5 дней</p><h3>Внутренняя свобода</h3><p>Работа со&nbsp;страхом, виной, обидой и&nbsp;зависимостью от&nbsp;чужого мнения. Дальше приходят сила и&nbsp;спокойствие.</p><p><a href="/chizhovy2/modul-2/">Подробнее</a></p></div>
+<div class="card white"><div class="ph" style="aspect-ratio:4/3;margin-bottom:18px"><img src="/chizhovy2/images/real/real-07.jpg" alt="Модуль III" loading="lazy" width="1280" height="960"></div><p class="eyebrow" style="margin-bottom:6px">Модуль III · 3 месяца</p><h3>Игра пробуждения</h3><p>Девяносто дней в&nbsp;обычной жизни: команда, ежедневная практика, результаты в&nbsp;деле и&nbsp;отношениях. Так третий модуль и&nbsp;называется.</p><p><a href="/chizhovy2/marafon/">Подробнее</a></p></div>
 </div>
 <p class="note" style="margin-top:22px">Ближайший поток модуля I идёт в&nbsp;конце августа, точные числа называем на&nbsp;собеседовании. Между ступенями 3-5&nbsp;недель, поэтому даты второго и&nbsp;третьего узнаёшь там&nbsp;же.</p>
 </div></section>
@@ -2430,7 +2430,6 @@ P["sessiya/index.html"] = ("Собеседование в школу · Наст
 </div>
 <aside class="side">
 <div class="box"><div class="lbl">Сколько идёт</div><p>От пятнадцати минут до&nbsp;получаса. Кому-то хватает четверти часа, с&nbsp;кем-то говорим дольше. Второго круга и&nbsp;«мы&nbsp;вам перезвоним» не&nbsp;будет.</p></div>
-<div class="box"><div class="lbl">Сколько стоит</div><div class="big">Бесплатно</div><p>Для читателей сайта. Условия участия обсуждаем только тогда, когда решаешь идти в&nbsp;модуль.</p></div>
 <div class="box"><div class="lbl">После</div><p>Решение принимаешь сам. Мы&nbsp;берём в&nbsp;группу тех, кто пришёл менять, а&nbsp;не&nbsp;пробовать.</p></div>
 <div class="box"><div class="lbl">Если пока рано</div><p>Начни с&nbsp;<a href="/chizhovy2/gid2/">бесплатного гайда</a>: там ядро метода и&nbsp;самодиагностика на&nbsp;десять пунктов.</p></div>
 </aside>
@@ -3462,7 +3461,7 @@ P["slovar/index.html"] = ("Словарь школы · Настоящие от�
 <div class="card white">{icon('calendar')}<h3>Играть в&nbsp;долгую</h3><p>Горизонт вместо суеты: строить отношения и&nbsp;дело на&nbsp;годы, не&nbsp;выжимая быструю выгоду из&nbsp;каждой встречи. Опора выпускников в&nbsp;решениях.</p></div>
 <div class="card white">{icon('sunrise','var(--sand)')}<h3>Открытия и&nbsp;благодарности</h3><p>Вечерняя практика: что понял за&nbsp;день и за&nbsp;что спасибо дню и&nbsp;людям. Держит новый способ жить крепче любой&nbsp;мотивации.</p></div>
 </div>
-<p class="note" style="margin-top:22px">Часть слов пришла из&nbsp;истоков метода: подробнее в&nbsp;разделах <a href="/chizhovy2/istoki/zeland-transerfing/">про трансерфинг</a> и&nbsp;<a href="/chizhovy2/istoki/nauka/">про науку</a>.</p>
+<p class="note" style="margin-top:22px">Часть слов пришла из&nbsp;истоков метода: подробнее в&nbsp;разделе <a href="/chizhovy2/istoki/zeland-transerfing/">про трансерфинг</a>.</p>
 </div></section>
 
 <section><div class="narrow">
@@ -3902,7 +3901,7 @@ P["praktiki/index.html"] = ("Ежедневные практики · Насто
 
 <h2>Разбираем каждую практику</h2>
 <div class="stepline">
-<div class="st">{icon('route')}<div><b>Намерение на&nbsp;день</b><p>Утром формулируешь фокус дня и&nbsp;состояние, из&nbsp;которого в&nbsp;него идёшь: «в&nbsp;моей жизни возможно только так». Желание просит, намерение спокойно&nbsp;знает. Научная опора: <a href="/chizhovy2/istoki/nauka/">исследования Голвитцера</a>.</p></div><span class="bignum">01</span></div>
+<div class="st">{icon('route')}<div><b>Намерение на&nbsp;день</b><p>Утром формулируешь фокус дня и&nbsp;состояние, из&nbsp;которого в&nbsp;него идёшь: «в&nbsp;моей жизни возможно только так». Желание просит, намерение спокойно&nbsp;знает. Научная опора: исследования Питера Голвитцера про точное намерение.</p></div><span class="bignum">01</span></div>
 <div class="st">{icon('pendulum','var(--sage-deep)')}<div><b>Выход из&nbsp;маятников</b><p>Днём замечаешь, что кормится твоей реакцией: скандал, лента, чужая паника. Заметил крючок, не&nbsp;схватился, сохранил энергию. Словами ученика: «отследил, не&nbsp;среагировал, удержал состояние весь день».</p></div><span class="bignum">02</span></div>
 <div class="st">{icon('ceiling','var(--sand)')}<div><b>Снятие важности</b><p>Где вцепился, там и&nbsp;заклинило. Раздутая ставка включает страх и&nbsp;сжимает выбор до&nbsp;одного варианта, который почти всегда хуже остальных. Отпустил, вернулась лёгкость: переговоры, свидания, большие решения идут&nbsp;иначе.</p></div><span class="bignum">03</span></div>
 <div class="st">{icon('people')}<div><b>Быть вкладом</b><p>Развернуть фокус с&nbsp;«что мне дадут» на&nbsp;«что я&nbsp;даю»: дома, в&nbsp;команде, в&nbsp;деле и в&nbsp;разговоре, который не&nbsp;хочется начинать. Участники отмечают: энергия от&nbsp;этого прибывает, и&nbsp;люди поворачиваются&nbsp;лицом.</p></div><span class="bignum">04</span></div>
@@ -3915,7 +3914,7 @@ P["praktiki/index.html"] = ("Ежедневные практики · Насто
 <section><div class="narrow">
 <h2>Почему это работает</h2>
 <p>Практики выглядят обманчиво просто: пара минут утром, пара перед сном. Сила в&nbsp;другом. Каждое утро ты&nbsp;выбираешь состояние сам, вместо того чтобы получить его по&nbsp;умолчанию от&nbsp;новостей и&nbsp;чужого настроения. А&nbsp;вечером закрепляешь то, что сработало.</p>
-<p>За этим стоит понятный механизм: конкретно сформулированное намерение резко повышает шанс дойти до&nbsp;действия, а&nbsp;названные вслух чувства теряют власть. Подробнее в&nbsp;разделе <a href="/chizhovy2/istoki/nauka/">про науку</a>. Плюс эффект накопления. Девяносто повторов подряд делают усилие&nbsp;привычкой.</p>
+<p>За этим стоит понятный механизм: конкретно сформулированное намерение резко повышает шанс дойти до&nbsp;действия, а&nbsp;названные вслух чувства теряют власть.  Плюс эффект накопления. Девяносто повторов подряд делают усилие&nbsp;привычкой.</p>
 </div></section>
 
 
