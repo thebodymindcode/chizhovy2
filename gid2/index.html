@@ -184,6 +184,27 @@ figcaption{font-style:italic;font-size:.86rem;color:var(--soft);margin-top:10px;
 .loop b{display:block;font-size:.92rem;margin:2px 0 3px}
 .loop span{font-size:.76rem;color:var(--soft);line-height:1.5;font-family:'Manrope',sans-serif;display:block}
 
+/* Как ложится запись: одно решение в детстве и годы повторов.
+   Собрано на HTML, а не картинкой: на телефоне подписи остаются читаемыми. */
+.rec{display:flex;align-items:center;gap:26px;margin:34px 0;padding:26px 26px;border:1px solid var(--rule);background:#fff}
+.rec-dot{flex:0 0 auto;width:92px;height:92px;border-radius:50%;background:var(--wine);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1.12;font-family:'Manrope',sans-serif}
+.rec-dot b{font-size:1.05rem;font-weight:800}
+.rec-dot span{font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;opacity:.82;margin-top:3px}
+.rec-mid{flex:1 1 auto;min-width:0}
+.rec-cap{font-family:'Manrope',sans-serif;font-size:.66rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--faint);margin-bottom:12px}
+.rec-track{display:flex;align-items:center;height:16px;position:relative}
+.rec-track::before{content:'';position:absolute;left:-26px;right:0;top:7px;height:2px;background:var(--sand)}
+.rec-track i{position:relative;flex:1 1 0;height:16px}
+.rec-track i::after{content:'';position:absolute;right:0;top:0;width:16px;height:16px;border-radius:50%;background:var(--paper);border:2px solid var(--wine)}
+.rec-note{font-style:italic;color:var(--soft);font-size:.95rem;line-height:1.5;margin-top:14px}
+.rec-end{flex:0 0 auto;font-family:'Manrope',sans-serif;font-size:.7rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--wine);writing-mode:vertical-rl;transform:rotate(180deg)}
+@media (max-width:640px){
+  .rec{flex-direction:column;align-items:stretch;gap:18px;padding:22px 20px}
+  .rec-dot{width:78px;height:78px}
+  .rec-track::before{left:0}
+  .rec-end{writing-mode:horizontal-tb;transform:none;align-self:flex-end}
+}
+
 /* Цифры-гвозди */
 .nails{display:grid;grid-template-columns:repeat(3,1fr);margin:30px 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
 .nail{padding:18px 16px;border-left:1px solid var(--rule-soft)}
@@ -403,6 +424,16 @@ footer .dblrule{border-top:1px solid var(--ink);border-bottom:3px solid var(--in
   <p>Когда-то давно, чаще всего в&nbsp;детстве, с&nbsp;тобой случилось событие. Ты&nbsp;пережил его с&nbsp;сильной эмоцией и&nbsp;прямо там, не&nbsp;советуясь с&nbsp;тобой взрослым, принял решение: «злиться опасно», «просить стыдно», «любовь надо заслужить», «богатые плохие», «я&nbsp;сам, на&nbsp;других надежды нет».</p>
   <p>Решение записалось: в&nbsp;тело, в&nbsp;реакции, в&nbsp;интонацию, с&nbsp;которой ты&nbsp;сегодня отвечаешь жене, партнёру, сыну, инвестору. Психологи зовут это сценарием. Мы&nbsp;в&nbsp;школе зовём проще: <strong>старая запись</strong>.</p>
 
+  <div class="rec">
+    <div class="rec-dot"><b>до 7 лет</b><span>запись</span></div>
+    <div class="rec-mid">
+      <div class="rec-cap">Одно решение · тридцать лет повторов</div>
+      <div class="rec-track"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <div class="rec-note">Событие, сильная эмоция, решение. Принято один раз, маленьким тобой, в&nbsp;испуге. Дальше включается само: в&nbsp;ссоре, в&nbsp;переговорах, в&nbsp;молчании за&nbsp;ужином.</div>
+    </div>
+    <div class="rec-end">сегодня</div>
+  </div>
+
   <div class="whisper">
     <div class="wt">Как звучит запись изнутри</div>
     <ul>
@@ -466,7 +497,12 @@ footer .dblrule{border-top:1px solid var(--ink);border-bottom:3px solid var(--in
     <div class="role"><div class="num">Роль III</div><h3>Партнёры-соседи</h3><p>Быт отлажен, календарь общий, разговоры про логистику. Не&nbsp;ссоритесь, потому что незачем. Близость ушла так тихо, что никто не&nbsp;заметил дату.</p></div>
     <div class="role"><div class="num">Роль IV</div><h3>Успешный снаружи</h3><p>Бизнес, статус, спортзал, всё по&nbsp;списку. Внутри пусто и&nbsp;тревожно, и&nbsp;чем громче успех, тем страшнее, что «раскроют». Об&nbsp;этом не&nbsp;знает никто. Иногда даже ты.</p></div>
   </div>
-  <p>Похоже на&nbsp;характер, правда? Только вот <strong>характер приходится терпеть. Запись переписывается.</strong></p>
+  <figure>
+  <div class="ph"><img src="../images/g2-okna.jpg" alt="Вечерний дом, светящиеся окна" loading="lazy"></div>
+  <figcaption>В&nbsp;каждом окне своя жизнь. Дорожка внутри часто одна и&nbsp;та&nbsp;же.</figcaption>
+</figure>
+
+<p>Похоже на&nbsp;характер, правда? Только вот <strong>характер приходится терпеть. Запись переписывается.</strong></p>
 </article>
 
 <div class="col part" id="p5">

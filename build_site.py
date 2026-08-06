@@ -110,7 +110,7 @@ def timeline_svg():
 <text x="545" y="92" text-anchor="middle" font-size="11.5" fill="#6B615C">на проверку в жизни</text>
 <circle cx="690" cy="70" r="30" fill="#17222C"/>
 <text x="690" y="79" text-anchor="middle" font-family="Playfair Display,Georgia,serif" font-size="22" fill="#D08A5F">III</text>
-<text x="690" y="128" text-anchor="middle" font-weight="700" font-size="15" fill="#322D2B">Создатель реальности</text>
+<text x="690" y="128" text-anchor="middle" font-weight="700" font-size="15" fill="#322D2B">Игра пробуждения</text>
 <text x="690" y="148" text-anchor="middle" font-size="13" fill="#6B615C">3 месяца в жизни</text>
 <path d="M735 70h120" stroke="#D08A5F" stroke-width="3"/>
 <path d="M845 62l14 8-14 8z" fill="#D08A5F"/>
@@ -873,7 +873,7 @@ MENU_GROUPS = [
         ("/chizhovy2/kak-prohodit/", "Как проходит обучение", "путь ученика по шагам"),
     ]),
     ("Истоки", None, [
-        ("/chizhovy2/istoki/", "Из чего собран метод", "обзор пяти опор"),
+        ("/chizhovy2/istoki/", "Из чего собран метод", "обзор четырёх опор"),
         ("sep", "", ""),
         ("/chizhovy2/istoki/moreno-psihodrama/", "Морено и психодрама", "живая сцена"),
         ("/chizhovy2/istoki/zeland-transerfing/", "Зеланд и трансерфинг", "маятники, важность, зеркало"),
@@ -1007,7 +1007,7 @@ _NO_GLUE_HEADS = {
     "Отложенный на&nbsp;годы разговор",
     "Сложа руки ты не сидел. В том-то и дело",
     "Собеседование в школу",
-    "Создатель реальности",
+    "Игра пробуждения",
     "Спокойствие и уверенность",
     "Статьи школы",
     "Тренинг «Настоящие отношения»",
@@ -1375,7 +1375,7 @@ P["index.html"] = ("Настоящие отношения · школа тран
 <div class="gap">3-5 недель на&nbsp;проверку в жизни</div>
 <div class="tm"><div class="c">II</div><div><b>Внутренняя свобода</b><span>5 дней очно</span></div></div>
 <div class="gap">ещё 3-5 недель до&nbsp;финала</div>
-<div class="tm last"><div class="c">III</div><div><b>Создатель реальности</b><span>3 месяца в&nbsp;жизни, результаты&nbsp;остаются</span></div></div>
+<div class="tm last"><div class="c">III</div><div><b>Игра пробуждения</b><span>3 месяца в&nbsp;жизни, результаты&nbsp;остаются</span></div></div>
 </div>
 <div class="grid3" style="margin-top:26px">
 <div class="card white"><div class="ph" style="aspect-ratio:4/3;margin-bottom:18px"><img src="/chizhovy2/images/site-m1.jpg" alt="Утро, женщина пишет в дневник у окна" loading="lazy" width="1168" height="880"></div><h3>I. Возвращение к&nbsp;себе</h3><p>Увидеть, что повторяется, во&nbsp;что веришь и&nbsp;откуда это взялось. Первый честный контакт с&nbsp;собой.</p><p><a href="/chizhovy2/modul-1/">Про первый модуль</a></p></div>
@@ -1605,7 +1605,7 @@ P["metod/index.html"] = ("Метод школы · Настоящие отнош
 
 # ================= ПРОГРАММА =================
 P["programma/index.html"] = ("Программа · Настоящие отношения",
-"Три модуля школы: Возвращение к себе, Внутренняя свобода, Создатель реальности.", "programma", f"""
+"Три модуля школы: Возвращение к себе, Внутренняя свобода, Игра пробуждения.", "programma", f"""
 <div class="hero short"><div class="bg" style="background-image:url('/chizhovy2/images/real/real-06.jpg')"></div><div class="veil"></div>
 <div class="in"><p class="eyebrow">Программа</p><h1>Путь из&nbsp;трёх модулей</h1>
 <p class="lead">У&nbsp;каждой ступени своя задача: увидеть старую запись, переписать её&nbsp;и закрепить новое делами. Между модулями 3-5&nbsp;недель, чтобы всё улеглось в&nbsp;обычной жизни.</p></div></div>
@@ -1945,6 +1945,7 @@ P["marafon/index.html"] = ("Модуль III. Игра пробуждения ·
 <p>К&nbsp;третьему месяцу тон становится другим. Люди перестают отчитываться и&nbsp;пишут простыми словами: «сорвался на&nbsp;сына, увидел откуда», «первый раз попросил помощь и&nbsp;не&nbsp;умер». По&nbsp;таким строчкам и&nbsp;видно, что запись поменялась.</p>
 <h3 style="margin-top:26px">Что делает команда</h3>
 <p>Команда собирается на&nbsp;втором модуле и&nbsp;дальше идёт вместе. Это не&nbsp;чат поддержки с&nbsp;сердечками: у&nbsp;людей общие задачи, они пишут намерения друг за&nbsp;друга, встречаются на&nbsp;забегах и&nbsp;вытаскивают того, кто провалился. Один из&nbsp;участников сформулировал точнее всего: перестаёшь путать «я&nbsp;забыл» и&nbsp;«я&nbsp;подвёл своих».</p>
+<p>Заканчивается всё общим выездом. Живьём, без телефонов и&nbsp;чужих задач: то, что три месяца собиралось по&nbsp;строчке в&nbsp;чате, там сходится в&nbsp;одно.</p>
 </div>
 <aside class="side">
 <div class="box"><div class="lbl">Сколько идёт</div><div class="big">3 месяца</div><p>Каждый день практика, раз в&nbsp;неделю разбор с&nbsp;Ириной и&nbsp;Алексеем.</p></div>
@@ -2357,8 +2358,9 @@ P["sessiya/index.html"] = ("Собеседование в школу · Наст
 <h2>Как проходит</h2>
 <div class="stepline">
 <div class="st">{icon('speech')}<div><b>Ты рассказываешь</b><p>Что происходит и&nbsp;что уже пробовал. Без подготовки и&nbsp;правильных слов: как&nbsp;есть. Сумбурно, с&nbsp;паузами, перескакивая с&nbsp;темы на&nbsp;тему: нормально. Мы&nbsp;слушаем и&nbsp;задаём вопросы.</p></div><span class="bignum">01</span></div>
-<div class="st">{icon('gear','var(--sage-deep)')}<div><b>Разбираем, как это устроено</b><p>Где в&nbsp;твоей истории крутится сценарий и&nbsp;что его держит. Обычно уже здесь появляется первое «вот оно&nbsp;что»: человек видит свой круг со&nbsp;стороны, часто впервые за&nbsp;годы. Опора та&nbsp;же, что и в&nbsp;зале: <a href="/chizhovy2/metod/">событийный круг</a> из&nbsp;четырёх точек.</p></div><span class="bignum">02</span></div>
-<div class="st">{icon('route','var(--sand)')}<div><b>Вместе решаем, что дальше</b><p>Годится&nbsp;ли тебе школа и&nbsp;стоит&nbsp;ли идти сейчас. Заходят все с&nbsp;первого модуля, порядок здесь строгий. Отговорить можем так&nbsp;же честно, как&nbsp;пригласить, а&nbsp;условия участия обсудим тут&nbsp;же, без давления.</p></div><span class="bignum">03</span></div>
+<div class="st">{icon('lens','var(--copper)')}<div><b>Смотрим, где ты&nbsp;и&nbsp;куда хочешь</b><p>Точка, в&nbsp;которой ты&nbsp;сейчас, и&nbsp;точка, в&nbsp;которую хочешь попасть. Дальше самое важное: что стоит между ними и&nbsp;какими силами ты&nbsp;уже располагаешь. Разговор не&nbsp;про то, как обойти препятствие. Он&nbsp;про то, как выбрать другую реальность и&nbsp;начать жить в&nbsp;ней.</p></div><span class="bignum">02</span></div>
+<div class="st">{icon('gear','var(--sage-deep)')}<div><b>Разбираем, как это устроено</b><p>Где в&nbsp;твоей истории крутится сценарий и&nbsp;что его держит. Обычно уже здесь появляется первое «вот оно&nbsp;что»: человек видит свой круг со&nbsp;стороны, часто впервые за&nbsp;годы. Опора та&nbsp;же, что и в&nbsp;зале: <a href="/chizhovy2/metod/">событийный круг</a> из&nbsp;четырёх точек.</p></div><span class="bignum">03</span></div>
+<div class="st">{icon('route','var(--sand)')}<div><b>Вместе решаем, что дальше</b><p>Годится&nbsp;ли тебе школа и&nbsp;стоит&nbsp;ли идти сейчас. Заходят все с&nbsp;первого модуля, порядок здесь строгий. Отговорить можем так&nbsp;же честно, как&nbsp;пригласить, а&nbsp;условия участия обсудим тут&nbsp;же, без давления.</p></div><span class="bignum">04</span></div>
 </div>
 
 <div class="nails">
@@ -3794,7 +3796,7 @@ P["kak-prohodit/index.html"] = ("Как проходит обучение · Н�
 <div class="gap">3-5 недель на&nbsp;проверку в жизни</div>
 <div class="tm"><div class="c">II</div><div><b>Внутренняя свобода</b><span>5 дней очно</span></div></div>
 <div class="gap">ещё 3-5 недель до&nbsp;финала</div>
-<div class="tm last"><div class="c">III</div><div><b>Создатель реальности</b><span>3 месяца в&nbsp;жизни, результаты&nbsp;остаются</span></div></div>
+<div class="tm last"><div class="c">III</div><div><b>Игра пробуждения</b><span>3 месяца в&nbsp;жизни, результаты&nbsp;остаются</span></div></div>
 </div>
 <div class="grid3" style="margin-top:26px">
 <div class="card"><span class="bignum">0</span>{icon('speech')}<h3>Анкета и&nbsp;собеседование</h3><p>Сначала несколько вопросов письменно, потом живой разговор на&nbsp;15-30&nbsp;минут: твоя ситуация, честный взгляд и&nbsp;решение с&nbsp;двух сторон, по пути&nbsp;ли нам. Для&nbsp;читателей сайта бесплатно.</p></div>
@@ -4092,7 +4094,7 @@ P["bezopasnost/index.html"] = ("Безопасность и границы · Н
 <p>Отдельный страх, который называют на&nbsp;собеседовании: «вдруг там окажется кто-то знакомый». Иногда так и&nbsp;бывает. Договорённость снимает вопрос: всё, что прозвучало, остаётся здесь. В&nbsp;одной группе двое коллег узнали друг друга в&nbsp;первый вечер, и&nbsp;работать это никому не&nbsp;помешало.</p>
 </div>
 <aside class="side">
-<div class="box"><div class="lbl">Договорённостей зала</div><div class="big">6</div><p>Ровно столько, и&nbsp;все шесть звучат вслух до&nbsp;первого процесса.</p></div>
+<div class="box"><div class="lbl">Соглашений тренинга</div><div class="big">7</div><p>Ровно столько, и&nbsp;все семь звучат вслух до&nbsp;первого процесса.</p></div>
 <div class="box"><div class="lbl">Слово, которое повторяют чаще&nbsp;всего</div><div class="big">128 раз</div><p>Столько раз в&nbsp;одном командном чате встретилось «пространство». Так участники называют условия, в&nbsp;которых можно быть честным.</p></div>
 </aside>
 </div><figure class="fig"><div class="ph"><img src="/chizhovy2/images/n-ruka-na-pleche.jpg" alt="Рука на плече сидящего человека" loading="lazy" width="1360" height="768"></div><figcaption>Рядом остаются до конца</figcaption></figure>
@@ -4556,7 +4558,7 @@ P["somneniya/index.html"] = ("Частые сомнения · Настоящи�
 <p class="lead" style="color:rgba(242,237,228,.75)">Бывают ситуации, когда правильный ответ «не&nbsp;сейчас» или «не&nbsp;сюда». Мы&nbsp;говорим об&nbsp;этом прямо на&nbsp;собеседовании и не&nbsp;берём человека ради заполненной группы.</p>
 <div class="grid3" style="margin-top:24px">
 <div class="card">{icon('shield','var(--copper)')}<h3>Нужна медицинская помощь</h3><p>Острое состояние, психиатрический диагноз в&nbsp;обострении: работа в&nbsp;группе врача не&nbsp;заменяет. Подскажем, куда идти.</p></div>
-<div class="card">{icon('calendar','var(--copper)')}<h3>Нет сил именно сейчас</h3><p>Переезд, роды, похороны, аврал на&nbsp;работе. Погружение требует сил, лучше прийти через полгода в&nbsp;своём темпе.</p></div>
+<div class="card">{icon('calendar','var(--copper)')}<h3>Сейчас другое время</h3><p>Переезд, роды, похороны, аврал на&nbsp;работе. Всё это забирает ровно тот ресурс, который нужен в&nbsp;зале. Приходи, когда волна пройдёт.</p></div>
 <div class="card">{icon('target','var(--copper)')}<h3>Ищешь быстрый рецепт</h3><p>Если нужен готовый скрипт «как заставить его измениться», мы не&nbsp;поможем: работа идёт с&nbsp;тем, кто пришёл.</p></div>
 </div>
 <p style="margin-top:24px"><a class="btn btn-ghost" href="/chizhovy2/bezopasnost/">Все границы работы</a></p>
