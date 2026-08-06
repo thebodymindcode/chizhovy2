@@ -2206,7 +2206,7 @@ P["vedushchie/index.html"] = ("Ирина и Алексей Чижовы · На
 
 <section><div class="wrap">
 <div class="split">
-<div class="ph"><img src="/chizhovy2/images/f-dva-stula.jpg" alt="Мужская и женская сторона зала" loading="lazy"></div>
+<div class="ph"><img src="/chizhovy2/images/f-dva-stula2.jpg" alt="Мужская и женская сторона зала" loading="lazy"></div>
 <div>
 <p class="eyebrow">Два ведущих</p>
 <h2 style="font-size:1.9rem">Мужская и женская сторона зала</h2>
