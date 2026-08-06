@@ -63,7 +63,7 @@ h1{font-family:'Playfair Display',Georgia,serif;font-weight:500;font-size:clamp(
 .deck{font-style:italic;color:var(--soft);margin:12px auto 0;max-width:470px;font-size:.98rem;line-height:1.55}
 
 /* Части */
-.part{padding:56px 0 0;text-align:center}
+.part{padding:56px 0 22px;text-align:center}
 .part::before{content:'';display:block;width:100%;margin:0 0 42px;border-top:1px solid var(--rule)}
 .part .pn{font-family:'Manrope',sans-serif;font-size:.68rem;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:var(--sand)}
 .part h2{font-family:'Playfair Display',Georgia,serif;font-weight:600;font-size:clamp(1.55rem,4.6vw,2.05rem);line-height:1.22;margin:10px 0 0;text-wrap:balance}
@@ -148,6 +148,7 @@ strong{font-weight:700}
 /* Плитки-инфографика */
 .tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:30px 0}
 .tiles.five{grid-template-columns:repeat(5,1fr)}
+@media (max-width:760px){.tiles.five{grid-template-columns:repeat(2,1fr)}}
 .tile{background:#fff;border:1px solid var(--rule);border-bottom:3px solid var(--wine);padding:18px 16px 14px;text-align:center}
 .tile svg{width:30px;height:30px;stroke:var(--wine);fill:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;margin:0 auto 10px;display:block}
 .tile b{display:block;font-family:'Manrope',sans-serif;font-size:.68rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;margin-bottom:6px}
@@ -186,23 +187,24 @@ figcaption{font-style:italic;font-size:.86rem;color:var(--soft);margin-top:10px;
 
 /* Как ложится запись: одно решение в детстве и годы повторов.
    Собрано на HTML, а не картинкой: на телефоне подписи остаются читаемыми. */
-.rec{display:flex;align-items:center;gap:26px;margin:34px 0;padding:26px 26px;border:1px solid var(--rule);background:#fff}
-.rec-dot{flex:0 0 auto;width:92px;height:92px;border-radius:50%;background:var(--wine);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1.12;font-family:'Manrope',sans-serif}
+.rec{display:flex;align-items:flex-start;gap:26px;margin:34px 0;padding:26px 26px;border:1px solid var(--rule);background:#fff}
+.rec-dot{position:relative;z-index:1;margin-top:-6px;flex:0 0 auto;width:92px;height:92px;border-radius:50%;background:var(--wine);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1.12;font-family:'Manrope',sans-serif}
 .rec-dot b{font-size:1.05rem;font-weight:800}
 .rec-dot span{font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;opacity:.82;margin-top:3px}
 .rec-mid{flex:1 1 auto;min-width:0}
 .rec-cap{font-family:'Manrope',sans-serif;font-size:.66rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--faint);margin-bottom:12px}
 .rec-track{display:flex;align-items:center;height:16px;position:relative}
-.rec-track::before{content:'';position:absolute;left:-26px;right:0;top:7px;height:2px;background:var(--sand)}
+.rec-track::before{content:'';position:absolute;left:-72px;right:0;top:7px;height:2px;background:var(--sand);z-index:0}
 .rec-track i{position:relative;flex:1 1 0;height:16px}
 .rec-track i::after{content:'';position:absolute;right:0;top:0;width:16px;height:16px;border-radius:50%;background:var(--paper);border:2px solid var(--wine)}
 .rec-note{font-style:italic;color:var(--soft);font-size:.95rem;line-height:1.5;margin-top:14px}
-.rec-end{flex:0 0 auto;font-family:'Manrope',sans-serif;font-size:.7rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--wine);writing-mode:vertical-rl;transform:rotate(180deg)}
-@media (max-width:640px){
-  .rec{flex-direction:column;align-items:stretch;gap:18px;padding:22px 20px}
-  .rec-dot{width:78px;height:78px}
+.rec-end{margin-top:-2px;flex:0 0 auto;font-family:'Manrope',sans-serif;font-size:.7rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--wine);writing-mode:vertical-rl;transform:rotate(180deg)}
+@media (max-width:767px){
+  .rec{flex-wrap:wrap;align-items:center;gap:14px 16px;padding:22px 20px}
+  .rec-dot{width:72px;height:72px;margin-top:0}
+  .rec-mid{flex:1 0 100%;order:3}
   .rec-track::before{left:0}
-  .rec-end{writing-mode:horizontal-tb;transform:none;align-self:flex-end}
+  .rec-end{margin:0 0 0 auto;writing-mode:horizontal-tb;transform:none}
 }
 
 /* Цифры-гвозди */
@@ -418,7 +420,7 @@ footer .dblrule{border-top:1px solid var(--ink);border-bottom:3px solid var(--in
 <div class="col part" id="p3">
   <div class="pn">Часть III</div>
   <h2>Старая запись</h2>
-  <p class="deck">Механика повтора: от&nbsp;события до&nbsp;знакомого финала за&nbsp;двенадцать миллисекунд</p>
+  <p class="deck">Механика повтора: от&nbsp;события до&nbsp;знакомого финала за&nbsp;двенадцать&nbsp;миллисекунд</p>
 </div>
 <article class="col">
   <p>В&nbsp;детстве с&nbsp;тобой случилось событие. Ты&nbsp;пережил его с&nbsp;сильной эмоцией и&nbsp;прямо там, на&nbsp;месте, сделал вывод, как теперь жить: «злиться опасно», «просить стыдно», «любовь надо заслужить», «на&nbsp;других надежды нет». Решал ребёнок пяти лет, за&nbsp;секунду, в&nbsp;испуге. Тебя нынешнего он&nbsp;не&nbsp;спрашивал: тебя ещё не&nbsp;было на&nbsp;свете. Самые сильные записи ложатся примерно до&nbsp;семи лет.</p>
@@ -427,7 +429,7 @@ footer .dblrule{border-top:1px solid var(--ink);border-bottom:3px solid var(--in
   <div class="rec">
     <div class="rec-dot"><b>до 7 лет</b><span>запись</span></div>
     <div class="rec-mid">
-      <div class="rec-cap">Одно решение · тридцать лет повторов</div>
+      <div class="rec-cap">Одно решение · тридцать лет&nbsp;повторов</div>
       <div class="rec-track"><i></i><i></i><i></i><i></i><i></i><i></i></div>
       <div class="rec-note">Событие, сильная эмоция, решение. Принято один раз, маленьким тобой, в&nbsp;испуге. Дальше включается само: в&nbsp;ссоре, в&nbsp;переговорах, в&nbsp;молчании за&nbsp;ужином.</div>
     </div>
@@ -451,20 +453,20 @@ footer .dblrule{border-top:1px solid var(--ink);border-bottom:3px solid var(--in
       <li>«Расслаблюсь, всё развалится»</li>
     </ul>
   </div>
-  <p>Узнаёшь интонацию? Она не&nbsp;твоя. Так говорил кто-то из&nbsp;взрослых твоего детства, а&nbsp;ребёнок записал дословно. И&nbsp;вот что важно понять про запись: она не&nbsp;враг. Когда-то она защитила маленького тебя, это была лучшая стратегия из&nbsp;доступных. Просто ты&nbsp;вырос, а&nbsp;стратегия нет.</p>
+  <p>Узнаёшь интонацию? Она не&nbsp;твоя. Так говорил кто-то из&nbsp;взрослых твоего детства, а&nbsp;ребёнок записал дословно. И&nbsp;вот что важно понять про запись: она не&nbsp;враг. Когда&#8209;то она защитила маленького тебя, это была лучшая стратегия из&nbsp;доступных. Просто ты&nbsp;вырос, а&nbsp;стратегия нет.</p>
 
   <div class="case">
     <div class="ct">История из&nbsp;зала</div>
     <p>Мужчина около сорока. Два развода, дети, одинаковый финал: полтора-два года, дальше всё рассыпается. И&nbsp;всякий раз рано или поздно появлялось одно и&nbsp;то&nbsp;же ощущение: его обманывают. Пришёл к&nbsp;нам уже с&nbsp;третьей женщиной и&nbsp;впервые допустил вслух: похоже, дело во&nbsp;мне.</p>
     <p>Самого случая он&nbsp;не&nbsp;помнил. Всплыло в&nbsp;процессе: ему пять или шесть, мать ведёт его по&nbsp;больничному коридору, вокруг белые халаты, страшно. Она успокаивает: полежишь несколько дней, доктор только посмотрит, больно не&nbsp;сделают. Потом его увезли и&nbsp;удалили аденоиды. Мамы рядом не&nbsp;было.</p>
-    <p>Физическая боль прошла. Поверх неё осталась другая: мама обманула.</p>
-    <p>Ребёнок сделал вывод, короткий и&nbsp;окончательный: верить нельзя. Сначала ей, потом всем, кто на&nbsp;неё похож. То&nbsp;есть всем женщинам сразу. До&nbsp;сорока лет каждый роман исправно приносил ему то&nbsp;самое чувство, и&nbsp;подтверждение всегда находилось.</p>
+    <p>Физическая боль прошла. Поверх неё осталась другая: мама&nbsp;обманула.</p>
+    <p>Ребёнок сделал вывод, короткий и&nbsp;окончательный: верить нельзя. Сначала ей, потом всем, кто на&nbsp;неё похож. То&nbsp;есть всем женщинам сразу. До&nbsp;сорока лет каждый роман исправно приносил ему то&nbsp;самое чувство, и&nbsp;подтверждение всегда&nbsp;находилось.</p>
     <p>На&nbsp;группе он&nbsp;вернулся в&nbsp;тот коридор и&nbsp;прошёл его до&nbsp;конца. Отплакал то, что не&nbsp;выплакал в&nbsp;шесть лет. Сейчас десятый год женат, растёт ребёнок, и&nbsp;каждый Новый год школа получает от&nbsp;него поздравление.</p>
   </div>
 
   <figure>
     <div class="ph"><img src="../images/g2-koridor.jpg" alt="Пустой больничный коридор, ребёнок стоит спиной" loading="lazy"></div>
-    <figcaption>Ему сказали: несколько дней. Он&nbsp;услышал: навсегда.</figcaption>
+    <figcaption>Ему сказали: несколько дней. Он&nbsp;услышал:&nbsp;навсегда.</figcaption>
   </figure>
 
   <div class="loop">
@@ -474,7 +476,7 @@ footer .dblrule{border-top:1px solid var(--ink);border-bottom:3px solid var(--in
     <div class="step"><i>4</i><b>Действие</b><span>поступок из&nbsp;старой записи</span></div>
   </div>
 
-  <p>Самое неприятное в&nbsp;этой петле&nbsp;то, что она быстрее тебя. Нейробиолог Джозеф ЛеДу показал: сигнал угрозы доходит до&nbsp;миндалины, аварийного центра мозга, за&nbsp;двенадцать миллисекунд. Осмысленная, думающая кора получает его позже и&nbsp;уже подкрашенным. Дэниел Гоулман назвал это захватом: в&nbsp;момент вспышки разумная часть буквально приглушается.</p>
+  <p>Самое неприятное в&nbsp;этой петле&nbsp;то, что она быстрее тебя. Нейробиолог Джозеф ЛеДу показал: сигнал угрозы доходит до&nbsp;миндалины, аварийного центра мозга, за&nbsp;двенадцать&nbsp;миллисекунд. Осмысленная, думающая кора получает его позже и&nbsp;уже подкрашенным. Дэниел Гоулман назвал это захватом: в&nbsp;момент вспышки разумная часть буквально приглушается.</p>
   <p><strong>Запись не&nbsp;спорит с&nbsp;тобой. Она просто успевает раньше.</strong> Поэтому «взять себя в&nbsp;руки» не&nbsp;срабатывает: к&nbsp;моменту, когда ты&nbsp;вспомнил про руки, реплика уже сказана.</p>
 
   <div class="try30">
@@ -484,7 +486,7 @@ footer .dblrule{border-top:1px solid var(--ink);border-bottom:3px solid var(--in
 
   <div class="nails">
     <div class="nail"><b>12&nbsp;мс</b><span>фора миндалины перед думающей корой (ЛеДу)</span></div>
-    <div class="nail"><b>90&nbsp;сек</b><span>живёт химия эмоции, если её&nbsp;не&nbsp;кормить мыслями (Болте Тейлор)</span></div>
+    <div class="nail"><b>90&nbsp;сек</b><span>живёт химия эмоции, если её&nbsp;не&nbsp;кормить мыслями (Болте&nbsp;Тейлор)</span></div>
     <div class="nail"><b>1&nbsp;решение</b><span>детское, способно вести взрослую жизнь десятилетиями</span></div>
   </div>
 
@@ -510,9 +512,9 @@ footer .dblrule{border-top:1px solid var(--ink);border-bottom:3px solid var(--in
   <p class="deck">Найди свою дорожку: четыре самых частых записи наших групп</p>
 </div>
 <article class="col">
-  <p>Запись у&nbsp;каждого своя, но&nbsp;крутится она по&nbsp;похожим дорожкам. Читай и&nbsp;отмечай, где кольнуло.</p>
+  <p>Запись у&nbsp;каждого своя, но&nbsp;крутится она по&nbsp;похожим дорожкам. Читай и&nbsp;отмечай, где&nbsp;кольнуло.</p>
   <div class="roles">
-    <div class="role"><div class="num">Роль I</div><h3>Тот, кто тянет всё сам</h3><p>Просить запрещено записью. Помощь равна слабости. Вокруг люди, а&nbsp;опереться не&nbsp;на&nbsp;кого, потому что ты&nbsp;сам никого не&nbsp;подпустил. Усталость копится годами и&nbsp;зовётся «нормальным ритмом».</p></div>
+    <div class="role"><div class="num">Роль I</div><h3>Тот, кто тянет всё сам</h3><p>Просить запрещено записью. Помощь равна слабости. Вокруг люди, а&nbsp;опереться не&nbsp;на&nbsp;кого, потому что ты&nbsp;сам никого не&nbsp;подпустил. Усталость копится годами и&nbsp;зовётся «нормальным&nbsp;ритмом».</p></div>
     <div class="role"><div class="num">Роль II</div><h3>Та, что живёт в&nbsp;ожидании</h3><p>Всем всё дала: дому, детям, его делу. Своё «потом» откладывается двадцать лет. Внутри тихий вопрос «а&nbsp;когда я?», и&nbsp;за&nbsp;него сразу стыдно.</p></div>
     <div class="role"><div class="num">Роль III</div><h3>Партнёры-соседи</h3><p>Быт отлажен, календарь общий, разговоры про логистику. Не&nbsp;ссоритесь, потому что незачем. Близость ушла так тихо, что никто не&nbsp;заметил дату.</p></div>
     <div class="role"><div class="num">Роль IV</div><h3>Успешный снаружи</h3><p>Бизнес, статус, спортзал, всё по&nbsp;списку. Внутри пусто и&nbsp;тревожно, и&nbsp;чем громче успех, тем страшнее, что «раскроют». Об&nbsp;этом не&nbsp;знает никто. Иногда даже ты.</p></div>
@@ -522,7 +524,7 @@ footer .dblrule{border-top:1px solid var(--ink);border-bottom:3px solid var(--in
   <figcaption>В&nbsp;каждом окне своя жизнь. Дорожка внутри часто одна и&nbsp;та&nbsp;же.</figcaption>
 </figure>
 
-<p>Похоже на&nbsp;характер, правда? Только вот <strong>характер приходится терпеть. Запись переписывается.</strong></p>
+<p>Похоже на&nbsp;характер, правда? Только вот <strong>характер приходится терпеть. Запись&nbsp;переписывается.</strong></p>
 </article>
 
 <div class="col part" id="p5">
