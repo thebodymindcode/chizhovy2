@@ -1225,7 +1225,7 @@ def page(title, desc, active, body, rel_url=""):
 <meta property="og:locale" content="ru_RU">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://thebodymindcode.github.io/chizhovy2/{rel_url}">
-<script type="application/ld+json">{{"@context":"https://schema.org","@type":"EducationalOrganization","name":"Настоящие отношения","alternateName":"Школа Ирины и Алексея Чижовых","url":"https://thebodymindcode.github.io/chizhovy2/","logo":"https://thebodymindcode.github.io/chizhovy2/images/site-hero.jpg","description":"Очный групповой коучинг и три месяца сопровождения: выход из повторяющихся сценариев в отношениях, деле и состоянии.","founder":[{{"@type":"Person","name":"Ирина Чижова"}},{{"@type":"Person","name":"Алексей Чижов"}}],"areaServed":"RU","sameAs":["https://t.me/+LVptSH6Mt4hhYmFi"]}}</script>
+<script type="application/ld+json">{{"@context":"https://schema.org","@type":"EducationalOrganization","name":"Настоящие отношения","alternateName":"Школа Ирины и Алексея Чижовых","url":"https://thebodymindcode.github.io/chizhovy2/","logo":"https://thebodymindcode.github.io/chizhovy2/images/site-hero.jpg","description":"Очный групповой коучинг и третья ступень длиной в три месяца: выход из повторяющихся сценариев в отношениях, деле и состоянии.","founder":[{{"@type":"Person","name":"Ирина Чижова"}},{{"@type":"Person","name":"Алексей Чижов"}}],"areaServed":"RU","sameAs":["https://t.me/+LVptSH6Mt4hhYmFi"]}}</script>
 <link rel="icon" href="{FAVICON}">
 <link rel="stylesheet" href="/chizhovy2/site.css?v={CSS_VER}">
 </head>
@@ -1309,7 +1309,7 @@ ZAYAVKA = """<section><div class="wrap"><div class="tside">
 </div></div></section>"""
 
 P["index.html"] = ("Настоящие отношения · школа трансформации Чижовых",
-"Очный групповой коучинг и три месяца сопровождения: выход из повторяющихся сценариев в отношениях, деле и состоянии.", "glavnaya", f"""
+"Очный групповой коучинг и третья ступень длиной в три месяца: выход из повторяющихся сценариев в отношениях, деле и состоянии.", "glavnaya", f"""
 <div class="hero"><div class="bg" style="background-image:url('/chizhovy2/images/site-hero.jpg')"></div><div class="veil"></div>
 <div class="in">
 <p class="eyebrow">Школа трансформации Ирины и&nbsp;Алексея Чижовых</p>
@@ -1599,7 +1599,7 @@ P["metod/index.html"] = ("Метод школы · Настоящие отнош
 <h2>Кому метод не&nbsp;подойдёт</h2>
 <p>Лечение остаётся врачам, а&nbsp;школа занимается целями и&nbsp;результатом: увидеть свой круг и&nbsp;перейти на&nbsp;другую ветку жизни. Кому сюда сейчас рано и&nbsp;где проходят границы работы, перечислено на&nbsp;<a href="/chizhovy2/bezopasnost/">странице безопасности</a>.</p>
 <p>Для всех остальных вход один. Сначала короткая анкета, её&nbsp;заполняют до&nbsp;разговора. Потом собеседование на&nbsp;15-30&nbsp;минут, где вместе решаем, твой это метод или&nbsp;нет. Для пришедших с&nbsp;сайта бесплатно.</p>
-<p style="margin-top:26px"><a class="btn btn-wine" href="/chizhovy2/sessiya/">Записаться на&nbsp;собеседование</a> <a class="btn btn-ghost" href="/chizhovy2/programma/" style="margin-left:8px">Смотреть программу</a></p>
+<p style="margin-top:26px"><a class="btn btn-wine" href="https://forms.yandex.ru/cloud/684dcab0f47e730799e7cb6d" target="_blank" rel="noopener">Заполнить анкету</a> <a class="btn btn-ghost" href="/chizhovy2/sessiya/" style="margin-left:8px">Как проходит собеседование</a> <a class="btn btn-ghost" href="/chizhovy2/programma/" style="margin-left:8px">Смотреть программу</a></p>
 </div></section>
 
 <section><div class="wrap">
@@ -1641,6 +1641,7 @@ P["programma/index.html"] = ("Программа · Настоящие отно�
 <section><div class="narrow">
 <h2>Зачем нужны недели между модулями</h2>
 <p>Пауза в&nbsp;3-5 недель работает как часть метода, а&nbsp;вовсе не&nbsp;организационная заминка. После погружения человек возвращается в&nbsp;обычную жизнь и&nbsp;там проверяет, что изменилось на&nbsp;самом деле: как теперь идут разговоры дома, что происходит в&nbsp;конфликте, сколько сил остаётся к&nbsp;вечеру.</p>
+<p>Формула у&nbsp;каждой ступени одна: время в&nbsp;зале, а&nbsp;следом две недели работы онлайн в&nbsp;чате, с&nbsp;ведущими рядом. Никто не&nbsp;остаётся один сразу после погружения.</p>
 <p>Именно в&nbsp;эти недели видно, где новое уже работает, а&nbsp;где старая запись держит крепко. С&nbsp;этим человек и&nbsp;приходит на&nbsp;следующее погружение, поэтому разбор идёт по&nbsp;живому.</p>
 </div></section>
 
@@ -1880,7 +1881,7 @@ P["modul-2/index.html"] = ("Модуль II. Внутренняя свобода
 <h2>С чем работаем</h2>
 <div class="grid2" style="margin-top:24px">
 <div class="card">{icon('flame')}<h3>Страх и&nbsp;важность</h3><p>Разбираем, как раздутая ставка парализует действия, и&nbsp;возвращаем способность выбирать спокойно.</p></div>
-<div class="card">{icon('gear','var(--sage-deep)')}<h3>Вина и&nbsp;ответственность</h3><p>Первая сливает энергию и&nbsp;притягивает наказание, вторая возвращает силу. Учимся различать их&nbsp;телом.</p></div>
+<div class="card">{icon('gear','var(--sage-deep)')}<h3>Вина, стыд и&nbsp;ответственность</h3><p>Вина сливает энергию и&nbsp;притягивает наказание, стыд запирает человека внутри себя, ответственность возвращает силу. Учимся различать их&nbsp;телом.</p></div>
 <div class="card">{icon('loop','var(--sand)')}<h3>Обида</h3><p>Старые обиды держат сценарии годами. Проживаем их до&nbsp;конца в&nbsp;безопасном пространстве группы.</p></div>
 <div class="card">{icon('mountain')}<h3>Внутренняя опора</h3><p>Собираем состояние, в&nbsp;котором ты не&nbsp;зависишь от&nbsp;оценки, настроения партнёра и&nbsp;погоды на&nbsp;рынке.</p></div>
 </div>
@@ -2446,7 +2447,7 @@ P["sessiya/index.html"] = ("Собеседование в школу · Наст
 <p>Мы&nbsp;знаем, чего люди опасаются, когда идут «на&nbsp;разговор со&nbsp;школой». Поэтому говорим прямо.</p>
 <div class="dlist">
 <div class="di">{icon('shield','var(--copper)')}<div><b>Уговоров</b><p>Никто не&nbsp;торопит с&nbsp;ответом. Можно подумать неделю и&nbsp;вернуться.</p></div></div>
-<div class="di">{icon('speech','var(--copper)')}<div><b>Скриптов и&nbsp;менеджеров</b><p>Говорит с&nbsp;тобой тот, кто потом стоит рядом в&nbsp;зале. </p></div></div>
+<div class="di">{icon('speech','var(--copper)')}<div><b>Скриптов и&nbsp;менеджеров</b><p>Разговор ведёт кто-то из&nbsp;школы, а не&nbsp;менеджер по&nbsp;скрипту: человек, который сам работает в&nbsp;зале. </p></div></div>
 <div class="di">{icon('lens','var(--copper)')}<div><b>Ярлыков и&nbsp;диагнозов</b><p>Мы не&nbsp;объясняем человеку, какой он, и не&nbsp;выдаём заключений. Смотрим на&nbsp;механику повтора, а не на&nbsp;личность.</p></div></div>
 <div class="di">{icon('gear','var(--copper)')}<div><b>Обещаний чуда</b><p>Гарантий перемен не&nbsp;даём: метод срабатывает там, где человек включается сам. Об&nbsp;этом честно говорим сразу.</p></div></div>
 </div>
@@ -3885,6 +3886,7 @@ P["kak-prohodit/index.html"] = ("Как проходит обучение · Н�
 <h2>Что происходит между модулями</h2>
 <p>Это рабочая часть программы. Ты&nbsp;выходишь в&nbsp;обычные дни и&nbsp;наблюдаешь: где новое уже держится, а&nbsp;где старая запись отыгрывает своё. Никаких заданий на&nbsp;оценку, только честные наблюдения.</p>
 <p>Группа продолжает общаться в&nbsp;чате. Этот материал становится основой следующего погружения: приходишь не с&nbsp;чистого листа, а с&nbsp;конкретными местами, где заклинило.</p>
+<p>Формула у&nbsp;каждой ступени одна: время в&nbsp;зале, а&nbsp;следом две недели работы онлайн в&nbsp;чате, с&nbsp;ведущими рядом. Так после каждого модуля, никто никого не&nbsp;бросает на&nbsp;выходе из&nbsp;зала.</p>
 </div></section>
 
 <section><div class="wrap"><div class="tside">
@@ -4554,7 +4556,7 @@ P["somneniya/index.html"] = ("Частые сомнения · Настоящи�
 <section class="doubt"><div class="narrow">
 <h2>7. «Уже пробовал тренинги. Эффект держался неделю»</h2>
 <p>Знакомо, и&nbsp;причина обычно одна: работа шла на&nbsp;верхнем этаже. Вдохновение, конспект, новые слова, а&nbsp;запись осталась там&nbsp;же, где была, в&nbsp;эмоции и&nbsp;теле. Первый стресс возвращает старую реакцию, и&nbsp;человек решает, что дело в&nbsp;нём.</p>
-<p>Поэтому формат здесь длинный. Сразу после зала идут две недели работы в&nbsp;общем чате: как раз в&nbsp;эти дни старое обычно и&nbsp;возвращает своё, и&nbsp;как раз тогда рядом есть ведущие и&nbsp;группа. Дальше недели на&nbsp;проверку в&nbsp;жизни, а&nbsp;за&nbsp;ними три месяца сопровождения, за&nbsp;которые новое поведение перестаёт быть праздничным и&nbsp;становится обычным.</p>
+<p>Поэтому формат здесь длинный. Сразу после зала идут две недели работы в&nbsp;общем чате: как раз в&nbsp;эти дни старое обычно и&nbsp;возвращает своё, и&nbsp;как раз тогда рядом есть ведущие и&nbsp;группа. Дальше недели на&nbsp;проверку в&nbsp;жизни, второй модуль, а&nbsp;за&nbsp;ним третья ступень длиной в&nbsp;три месяца, за&nbsp;которые новое поведение перестаёт быть праздничным и&nbsp;становится обычным.</p>
 </div></section>
 
 <section class="doubt"><div class="wrap"><div class="tside">
